@@ -1,0 +1,103 @@
+{
+  "$description": "Layer 4 - responsive, mode Desktop. Values that change between desktop and mobile.",
+  "type": {
+    "$type": "dimension",
+    "display": {
+      "size": {
+        "$value": "{font.size.48}"
+      },
+      "line-height": {
+        "$value": "{font.line-height.64}"
+      }
+    },
+    "heading-1": {
+      "size": {
+        "$value": "{font.size.32}"
+      },
+      "line-height": {
+        "$value": "{font.line-height.48}"
+      }
+    },
+    "heading-2": {
+      "size": {
+        "$value": "{font.size.24}"
+      },
+      "line-height": {
+        "$value": "{font.line-height.36}"
+      }
+    },
+    "heading-3": {
+      "size": {
+        "$value": "{font.size.20}"
+      },
+      "line-height": {
+        "$value": "{font.line-height.32}"
+      }
+    },
+    "heading-4": {
+      "size": {
+        "$value": "{font.size.18}"
+      },
+      "line-height": {
+        "$value": "{font.line-height.30}"
+      }
+    },
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "FONT_SIZE",
+          "LINE_HEIGHT"
+        ],
+        "hidden": true
+      }
+    }
+  },
+  "control": {
+    "$type": "dimension",
+    "$description": "Heights of buttons, inputs and selects. Mobile is larger for touch (40 px minimum for default).",
+    "height-sm": {
+      "$value": "{size.32}"
+    },
+    "height-md": {
+      "$value": "{size.36}"
+    },
+    "height-lg": {
+      "$value": "{size.40}"
+    },
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "WIDTH_HEIGHT"
+        ],
+        "hidden": false
+      }
+    }
+  },
+  "layout": {
+    "$type": "dimension",
+    "page-margin": {
+      "$value": "{space.24}",
+      "$description": "Side padding of the page"
+    },
+    "gutter": {
+      "$value": "{space.24}",
+      "$description": "Gap between columns and cards"
+    },
+    "section-gap": {
+      "$value": "{space.48}",
+      "$description": "Vertical gap between page sections"
+    },
+    "content-max-width": {
+      "$value": "{size.1312}"
+    },
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "GAP",
+          "WIDTH_HEIGHT"
+        ],
+        "hidden": false
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Design System Decisions
+
+New decisions go on top. Each one says what was decided, why, and what it changes.
+
+| # | Date | Decision | Why | Impact |
+|---|---|---|---|---|
+| DS-20 | 2026-10-19 | Input border stays light: `border.input` = neutral-300 (1.48:1 on white) | Design lead decision; keeps the shadcn look | Fields must not rely on the border alone: always a visible label, and `bg.muted` fill or focus ring where extra cue is needed |
+| DS-19 | 2026-10-19 | Two deliberate deviations from DTCG: line heights in px (not a multiplier), and our own `manifest.json` for modes instead of the DTCG resolver format | Px matches Figma exactly; resolver tooling is still immature | Revisit when Figma and Style Dictionary support the resolver format |
+| DS-18 | 2026-10-19 | Motion and z-index tokens are code-only | Figma variables can't drive transitions or stacking | Marked `skip` for the Figma sync |
+| DS-17 | 2026-10-19 | Figma scopes and visibility are stored in the token JSON (`$extensions.dkb.figma`) | Set once, applied by the sync; no hand-set Figma settings to drift | Background tokens appear only for fills, text tokens for text and icons, border tokens for strokes |
+| DS-16 | 2026-10-19 | Components may use the space, radius, size and border-width scales directly; colour primitives and the brand ramp are hidden | No semantic spacing layer, so the old "semantic only" rule couldn't be followed | Rule in README principle 2 |
+| DS-15 | 2026-10-19 | Build writes `shadcn-compat.css` and `tailwind-theme.css` | Developers and `@digikala/ui-kit` keep shadcn names while design uses property-based names | No renames needed in code to adopt the tokens |
+| DS-14 | 2026-10-19 | Semantic colours grouped by property: `bg.*`, `text.*`, `border.*` (replaces shadcn names) | Says where each token goes; enables Figma scoping; removes three identical vague tokens (muted, accent, secondary) | Supersedes the "shadcn names" naming rule from v0.1 |
+| DS-13 | 2026-10-19 | Brand layer is an 11-step ramp with the main colour always at step 800 (replaces 10 role tokens) | Role tokens couldn't support dark mode; a fixed step lets one semantic mapping serve every brand | Navy ramp regenerated with `#093672` at 800 (supersedes DS-7). New tenant = one hex |
+| DS-12 | 2026-10-19 | Domain statuses map to tones in component specs, not to tokens | Keeps the token set small; one place to change a status colour | Status badge gets a `tone` prop; the status dictionary lives in its spec |
+| DS-11 | 2026-10-19 | Screen switch at 1024 px: Mobile values below, Desktop from 1024 | Tablets (768–1023) are touch devices and use single-column layouts (B2E responsive rules) | Control heights 36/40/48 on mobile and tablet, 32/36/40 on desktop |
+| DS-10 | 2026-10-19 | Control radius 8 px (`radius.md`); one radius scale (2, 4, 8, 12, 16, 24, full) | Replaces the old double set (shadcn + legacy 4/8/12/16) and the 6 px live value | Buttons, inputs, selects use `radius.control` |
+| DS-9 | 2026-10-19 | Neutral greys are Tailwind `neutral` | Matches the ui-kit default; least migration | Secondary text is neutral-600 (7.8:1 on white), not neutral-500 |
+| DS-8 | 2026-10-19 | B2E primary is `#5B21B6` (violet-800) for now | Matches code; Figma's v4 violet-800 is a slightly different shade. To be reviewed later | B2E `brand.800` = `color.violet.800` |
+| DS-7 | 2026-10-19 | ~~B2R navy ramp generated around `#093672`, which sits at step 900~~ (superseded by DS-13) | `#093672` is a dark colour; placing it at 900 gives usable light tints (50–300) for backgrounds | B2R primary = `color.navy.900` |
+| DS-6 | 2026-10-19 | Light mode only for now; tokens are dark-ready | Shared decision "no dark mode for now" | `semantic` has one mode (Light); a Dark mode can be added without renaming tokens |
+| DS-5 | 2026-10-19 | Status colours use five tokens each (solid, on-solid, subtle, subtle text, border) | Old Theme collection mixed meanings of "foreground" (Gap #17); status colours were hard-coded (Gaps #12, #13) | Badges, alerts and order/payment/cheque statuses all map to these tokens |
+| DS-4 | 2026-10-19 | Repo JSON is the source of truth for token values | Reviewable history; one pipeline instead of three sources (Gap #2) | Figma variables are written from the JSON; edits in Figma count as drift |
+| DS-3 | 2026-10-19 | Brand modes start with B2R and B2E | The two main platforms; portal tenant identities are still pending | Portal tenants use B2R or B2E until they get their own mode |
+| DS-2 | 2026-10-19 | Build fresh Figma libraries: *DKB Foundations* and *DKB Components* | The current DS - Shadcn and DS - Components files are inefficient and drifted | Old files stay as reference until migration |
+| DS-1 | 2026-10-19 | Primary font: Digikala font (replaces IRANYekanX) | Design lead decision | Type tokens and text styles use the Digikala font family |

@@ -1,0 +1,391 @@
+{
+  "$description": "Layer 3 - semantic, mode Light. Components and screens use these, grouped by the property they paint. Values alias brand or primitives. A Dark mode will reuse the same names.",
+  "bg": {
+    "$type": "color",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL"
+        ],
+        "hidden": false
+      }
+    },
+    "default": {
+      "$value": "{color.white}",
+      "$description": "Page background"
+    },
+    "subtle": {
+      "$value": "{color.neutral.50}",
+      "$description": "Section bands, areas behind cards"
+    },
+    "surface": {
+      "$value": "{color.white}",
+      "$description": "Cards, popovers, dropdowns, sheets"
+    },
+    "muted": {
+      "$value": "{color.neutral.100}",
+      "$description": "Quiet fills: secondary buttons, tags, chips, table header, skeleton, read-only fields"
+    },
+    "muted-hover": {
+      "$value": "{color.neutral.200}"
+    },
+    "hover": {
+      "$value": "{color.neutral.100}",
+      "$description": "Hover on ghost buttons, menu items, list and table rows"
+    },
+    "disabled": {
+      "$value": "{color.neutral.100}"
+    },
+    "inverse": {
+      "$value": "{color.neutral.900}",
+      "$description": "Tooltips, dark toasts"
+    },
+    "overlay": {
+      "$value": "{color.black-alpha.50}",
+      "$description": "Backdrop behind dialogs and sheets"
+    },
+    "primary": {
+      "$value": "{brand.800}",
+      "$description": "Primary buttons, selected controls (checkbox, radio, switch), active step"
+    },
+    "primary-hover": {
+      "$value": "{brand.700}"
+    },
+    "primary-active": {
+      "$value": "{brand.900}"
+    },
+    "primary-subtle": {
+      "$value": "{brand.50}",
+      "$description": "Brand tint: selected rows and cards, highlighted bands"
+    },
+    "primary-subtle-hover": {
+      "$value": "{brand.100}"
+    },
+    "destructive": {
+      "$value": "{color.red.600}",
+      "$description": "Destructive button, solid error badge"
+    },
+    "destructive-hover": {
+      "$value": "{color.red.700}"
+    },
+    "destructive-subtle": {
+      "$value": "{color.red.50}",
+      "$description": "Error alert, soft error badge"
+    },
+    "success": {
+      "$value": "{color.green.700}"
+    },
+    "success-subtle": {
+      "$value": "{color.green.50}"
+    },
+    "warning": {
+      "$value": "{color.amber.500}"
+    },
+    "warning-subtle": {
+      "$value": "{color.amber.50}"
+    },
+    "info": {
+      "$value": "{color.blue.600}"
+    },
+    "info-subtle": {
+      "$value": "{color.blue.50}"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "TEXT_FILL",
+          "SHAPE_FILL",
+          "STROKE_COLOR"
+        ],
+        "hidden": false
+      }
+    },
+    "$description": "Also used for icons.",
+    "default": {
+      "$value": "{color.neutral.900}",
+      "$description": "Main text and icons"
+    },
+    "muted": {
+      "$value": "{color.neutral.600}",
+      "$description": "Secondary text: hints, captions, meta, placeholders"
+    },
+    "disabled": {
+      "$value": "{color.neutral.400}",
+      "$description": "Exempt from contrast rules"
+    },
+    "inverse": {
+      "$value": "{color.white}",
+      "$description": "On bg.inverse"
+    },
+    "primary": {
+      "$value": "{brand.800}",
+      "$description": "Brand-coloured text and icons; text on bg.primary-subtle"
+    },
+    "link": {
+      "$value": "{brand.700}"
+    },
+    "on-primary": {
+      "$value": "{color.white}",
+      "$description": "On bg.primary"
+    },
+    "destructive": {
+      "$value": "{color.red.700}",
+      "$description": "Error text, text on bg.destructive-subtle"
+    },
+    "on-destructive": {
+      "$value": "{color.white}"
+    },
+    "success": {
+      "$value": "{color.green.800}"
+    },
+    "on-success": {
+      "$value": "{color.white}"
+    },
+    "warning": {
+      "$value": "{color.amber.800}"
+    },
+    "on-warning": {
+      "$value": "{color.amber.950}",
+      "$description": "Dark text: white fails on amber"
+    },
+    "info": {
+      "$value": "{color.blue.700}"
+    },
+    "on-info": {
+      "$value": "{color.white}"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "STROKE_COLOR"
+        ],
+        "hidden": false
+      }
+    },
+    "default": {
+      "$value": "{color.neutral.200}",
+      "$description": "Dividers, card and table borders"
+    },
+    "strong": {
+      "$value": "{color.neutral.300}"
+    },
+    "input": {
+      "$value": "{color.neutral.300}",
+      "$description": "Form control border"
+    },
+    "focus": {
+      "$value": "{brand.600}",
+      "$description": "Focus ring"
+    },
+    "primary": {
+      "$value": "{brand.800}",
+      "$description": "Selected card or option outline"
+    },
+    "primary-subtle": {
+      "$value": "{brand.200}"
+    },
+    "destructive": {
+      "$value": "{color.red.600}",
+      "$description": "Field in error"
+    },
+    "destructive-subtle": {
+      "$value": "{color.red.200}",
+      "$description": "Error alert border"
+    },
+    "success-subtle": {
+      "$value": "{color.green.200}"
+    },
+    "warning-subtle": {
+      "$value": "{color.amber.200}"
+    },
+    "info-subtle": {
+      "$value": "{color.blue.200}"
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "CORNER_RADIUS"
+        ],
+        "hidden": false
+      }
+    },
+    "control": {
+      "$value": "{radius.md}",
+      "$description": "Buttons, inputs, selects"
+    },
+    "card": {
+      "$value": "{radius.lg}"
+    },
+    "dialog": {
+      "$value": "{radius.xl}"
+    },
+    "badge": {
+      "$value": "{radius.full}"
+    }
+  },
+  "border-width": {
+    "$type": "dimension",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "STROKE_FLOAT"
+        ],
+        "hidden": false
+      }
+    },
+    "default": {
+      "$value": "{border-width.1}"
+    },
+    "focus": {
+      "$value": "{border-width.3}",
+      "$description": "Focus ring width"
+    }
+  },
+  "icon": {
+    "size": {
+      "$type": "dimension",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "hidden": false
+        }
+      },
+      "sm": {
+        "$value": "{size.16}"
+      },
+      "md": {
+        "$value": "{size.20}",
+        "$description": "Default icon size"
+      },
+      "lg": {
+        "$value": "{size.24}"
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "hidden": true
+        }
+      },
+      "sans": {
+        "$value": "{font.family.digikala}"
+      }
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "$extensions": {
+      "dkb.figma": {
+        "as": "effect-style"
+      }
+    },
+    "card": {
+      "$value": "{shadow.sm}"
+    },
+    "dropdown": {
+      "$value": "{shadow.md}"
+    },
+    "sticky": {
+      "$value": "{shadow.lg}",
+      "$description": "Sticky bill box and bottom bars"
+    },
+    "dialog": {
+      "$value": "{shadow.xl}"
+    }
+  },
+  "motion": {
+    "$extensions": {
+      "dkb.figma": {
+        "skip": true
+      }
+    },
+    "$description": "Code only (Figma variables can't drive transitions).",
+    "duration": {
+      "$type": "duration",
+      "fast": {
+        "$value": "100ms"
+      },
+      "normal": {
+        "$value": "200ms"
+      },
+      "slow": {
+        "$value": "300ms"
+      }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": {
+        "$value": [
+          0.2,
+          0,
+          0,
+          1
+        ]
+      },
+      "enter": {
+        "$value": [
+          0,
+          0,
+          0.2,
+          1
+        ]
+      },
+      "exit": {
+        "$value": [
+          0.4,
+          0,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "z-index": {
+    "$type": "number",
+    "$extensions": {
+      "dkb.figma": {
+        "skip": true
+      }
+    },
+    "$description": "Code only.",
+    "base": {
+      "$value": 0
+    },
+    "dropdown": {
+      "$value": 1000
+    },
+    "sticky": {
+      "$value": 1100
+    },
+    "overlay": {
+      "$value": 1300
+    },
+    "dialog": {
+      "$value": 1400
+    },
+    "toast": {
+      "$value": 1500
+    },
+    "tooltip": {
+      "$value": 1600
+    }
+  }
+}

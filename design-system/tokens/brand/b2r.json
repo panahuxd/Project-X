@@ -1,0 +1,48 @@
+{
+  "$description": "Layer 2 - brand, mode B2R. An 11-step ramp aliasing the navy primitives. The main brand colour is always step 800. Hidden in Figma.",
+  "brand": {
+    "$type": "color",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "ALL_FILLS",
+          "STROKE_COLOR"
+        ],
+        "hidden": true
+      }
+    },
+    "50": {
+      "$value": "{color.navy.50}"
+    },
+    "100": {
+      "$value": "{color.navy.100}"
+    },
+    "200": {
+      "$value": "{color.navy.200}"
+    },
+    "300": {
+      "$value": "{color.navy.300}"
+    },
+    "400": {
+      "$value": "{color.navy.400}"
+    },
+    "500": {
+      "$value": "{color.navy.500}"
+    },
+    "600": {
+      "$value": "{color.navy.600}"
+    },
+    "700": {
+      "$value": "{color.navy.700}"
+    },
+    "800": {
+      "$value": "{color.navy.800}"
+    },
+    "900": {
+      "$value": "{color.navy.900}"
+    },
+    "950": {
+      "$value": "{color.navy.950}"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/* Generated. shadcn / @digikala/ui-kit variable names -> DKB tokens. Load after tokens.css. */
+:root, [data-brand] {
+  --background: var(--bg-default);
+  --foreground: var(--text-default);
+  --card: var(--bg-surface);
+  --card-foreground: var(--text-default);
+  --popover: var(--bg-surface);
+  --popover-foreground: var(--text-default);
+  --primary: var(--bg-primary);
+  --primary-foreground: var(--text-on-primary);
+  --secondary: var(--bg-muted);
+  --secondary-foreground: var(--text-default);
+  --muted: var(--bg-muted);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--bg-hover);
+  --accent-foreground: var(--text-default);
+  --destructive: var(--bg-destructive);
+  --destructive-foreground: var(--text-on-destructive);
+  --success: var(--bg-success);
+  --success-foreground: var(--text-on-success);
+  --success-background: var(--bg-success-subtle);
+  --warning: var(--bg-warning);
+  --warning-foreground: var(--text-on-warning);
+  --warning-background: var(--bg-warning-subtle);
+  --info: var(--bg-info);
+  --info-foreground: var(--text-on-info);
+  --info-background: var(--bg-info-subtle);
+  --border: var(--border-default);
+  --input: var(--border-input);
+  --ring: var(--border-focus);
+  --radius: var(--radius-control);
+}
+

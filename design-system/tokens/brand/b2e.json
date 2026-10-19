@@ -1,0 +1,48 @@
+{
+  "$description": "Layer 2 - brand, mode B2E. An 11-step ramp aliasing the violet primitives. The main brand colour is always step 800. Hidden in Figma.",
+  "brand": {
+    "$type": "color",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "ALL_FILLS",
+          "STROKE_COLOR"
+        ],
+        "hidden": true
+      }
+    },
+    "50": {
+      "$value": "{color.violet.50}"
+    },
+    "100": {
+      "$value": "{color.violet.100}"
+    },
+    "200": {
+      "$value": "{color.violet.200}"
+    },
+    "300": {
+      "$value": "{color.violet.300}"
+    },
+    "400": {
+      "$value": "{color.violet.400}"
+    },
+    "500": {
+      "$value": "{color.violet.500}"
+    },
+    "600": {
+      "$value": "{color.violet.600}"
+    },
+    "700": {
+      "$value": "{color.violet.700}"
+    },
+    "800": {
+      "$value": "{color.violet.800}"
+    },
+    "900": {
+      "$value": "{color.violet.900}"
+    },
+    "950": {
+      "$value": "{color.violet.950}"
+    }
+  }
+}

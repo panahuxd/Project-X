@@ -1,0 +1,174 @@
+{
+  "$description": "Text styles (Figma text styles). Composite tokens built from primitives and responsive tokens. dkb.fontFeatures = OpenType features to switch on: ss01 toman sign, ss03 tabular digits.",
+  "text": {
+    "$type": "typography",
+    "display": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{type.display.size}",
+        "fontWeight": "{font.weight.bold}",
+        "lineHeight": "{type.display.line-height}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Hero and campaign titles. Responsive."
+    },
+    "heading-1": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{type.heading-1.size}",
+        "fontWeight": "{font.weight.bold}",
+        "lineHeight": "{type.heading-1.line-height}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Page title. Responsive."
+    },
+    "heading-2": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{type.heading-2.size}",
+        "fontWeight": "{font.weight.bold}",
+        "lineHeight": "{type.heading-2.line-height}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Section title. Responsive."
+    },
+    "heading-3": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{type.heading-3.size}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{type.heading-3.line-height}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Card and dialog title. Responsive."
+    },
+    "heading-4": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{type.heading-4.size}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{type.heading-4.line-height}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Small group title. Responsive."
+    },
+    "body-lg": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.28}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Long reading text, product descriptions"
+    },
+    "body": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.14}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.24}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Default UI text"
+    },
+    "body-sm": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.12}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Hints, helper text, meta"
+    },
+    "label-lg": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.28}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Large buttons, prominent labels"
+    },
+    "label": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.14}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.24}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Buttons, inputs, tabs, menu items, form labels"
+    },
+    "label-sm": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.12}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Small buttons, badges, chips"
+    },
+    "caption": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.10}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.18}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Micro labels only (tiny badges, chart ticks). Avoid for content."
+    },
+    "numeric-lg": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.bold}",
+        "lineHeight": "{font.line-height.28}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Totals and payable amount. Tabular digits.",
+      "$extensions": {
+        "dkb.fontFeatures": [
+          "ss01",
+          "ss03"
+        ]
+      }
+    },
+    "numeric": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.14}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.24}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Prices, quantities, table numbers. Tabular digits.",
+      "$extensions": {
+        "dkb.fontFeatures": [
+          "ss01",
+          "ss03"
+        ]
+      }
+    },
+    "numeric-sm": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.12}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Small prices, unit prices, counters. Tabular digits.",
+      "$extensions": {
+        "dkb.fontFeatures": [
+          "ss01",
+          "ss03"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$description": "How token files map to Figma variable collections and modes. Read by scripts/build.py and the Figma sync.",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": {
+        "Default": "primitives.json"
+      }
+    },
+    {
+      "name": "brand",
+      "modes": {
+        "B2R": "brand/b2r.json",
+        "B2E": "brand/b2e.json"
+      }
+    },
+    {
+      "name": "semantic",
+      "modes": {
+        "Light": "semantic/light.json"
+      }
+    },
+    {
+      "name": "responsive",
+      "modes": {
+        "Desktop": "responsive/desktop.json",
+        "Mobile": "responsive/mobile.json"
+      }
+    }
+  ],
+  "styles": {
+    "text": "typography.json",
+    "effect": "shadow tokens in semantic/light.json"
+  }
+}
