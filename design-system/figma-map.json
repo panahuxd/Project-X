@@ -28,24 +28,31 @@
    "pages": {
     "Cover": "0:1",
     "Icons": "2:2",
+    "Accordion": "54:1388",
     "Alert": "2:11",
     "Alert dialog": "39:575",
+    "Avatar": "54:1389",
     "Badge": "2:10",
     "Button": "2:3",
     "Button group": "28:327",
+    "Card": "54:1390",
     "Checkbox": "2:7",
+    "Collapsible": "54:1391",
     "Combobox": "39:576",
     "Command": "39:577",
     "Context menu": "39:578",
+    "Data table": "54:1392",
     "Dialog": "39:579",
     "Drawer": "39:580",
     "Dropdown menu": "39:581",
+    "Empty": "54:1393",
     "Field": "28:320",
     "Hover card": "39:582",
     "Icon button": "2:4",
     "Input": "28:318",
-    "Input OTP": "28:322",
     "Input group": "28:321",
+    "Input OTP": "28:322",
+    "Item": "54:1394",
     "Kbd": "28:328",
     "Label": "28:317",
     "Menubar": "39:583",
@@ -53,14 +60,18 @@
     "Popover": "39:584",
     "Progress": "28:330",
     "Radio": "2:8",
+    "Resizable": "54:1395",
+    "Scroll area": "54:1396",
     "Select": "2:6",
     "Separator": "28:331",
     "Sheet": "39:585",
     "Skeleton": "28:332",
-    "Slot": "43:575",
     "Slider": "28:324",
+    "Slot": "43:575",
     "Spinner": "28:329",
     "Switch": "2:9",
+    "Table": "54:1397",
+    "Tabs": "54:1398",
     "Textarea": "28:319",
     "Toast": "39:586",
     "Toggle": "28:325",
@@ -74,7 +85,8 @@
    },
    "reviewBoards": {
     "core": "10:11",
-    "overlays": "49:1219"
+    "overlays": "49:1219",
+    "content": "63:2370"
    }
   },
   "sandbox": {
@@ -85,6 +97,18 @@
   }
  },
  "components": {
+  "accordion": {
+   "layer": "core",
+   "set": "61:1384",
+   "variants": 1,
+   "spec": "components/accordion.md"
+  },
+  "accordion-item": {
+   "layer": "core",
+   "set": "61:1365",
+   "variants": 4,
+   "spec": "components/accordion-item.md"
+  },
   "alert": {
    "layer": "core",
    "set": "9:98",
@@ -96,6 +120,12 @@
    "set": "44:673",
    "variants": 2,
    "spec": "components/alert-dialog.md"
+  },
+  "avatar": {
+   "layer": "core",
+   "set": "55:1363",
+   "variants": 8,
+   "spec": "components/avatar.md"
   },
   "badge": {
    "layer": "core",
@@ -115,11 +145,23 @@
    "variants": 6,
    "spec": "components/button-group.md"
   },
+  "card": {
+   "layer": "core",
+   "set": "56:1418",
+   "variants": 2,
+   "spec": "components/card.md"
+  },
   "checkbox": {
    "layer": "core",
    "set": "15:354",
    "variants": 15,
    "spec": "components/checkbox.md"
+  },
+  "collapsible": {
+   "layer": "core",
+   "set": "61:1401",
+   "variants": 2,
+   "spec": "components/collapsible.md"
   },
   "combobox": {
    "layer": "core",
@@ -139,6 +181,12 @@
    "variants": 1,
    "spec": "components/context-menu.md"
   },
+  "data-table": {
+   "layer": "core",
+   "set": "63:2340",
+   "variants": 1,
+   "spec": "components/data-table.md"
+  },
   "dialog": {
    "layer": "core",
    "set": "44:623",
@@ -156,6 +204,12 @@
    "set": "40:755",
    "variants": 2,
    "spec": "components/dropdown-menu.md"
+  },
+  "empty": {
+   "layer": "core",
+   "set": "58:1398",
+   "variants": 2,
+   "spec": "components/empty.md"
   },
   "field": {
    "layer": "core",
@@ -192,6 +246,12 @@
    "set": "32:394",
    "variants": 10,
    "spec": "components/input-otp.md"
+  },
+  "item": {
+   "layer": "core",
+   "set": "57:1436",
+   "variants": 6,
+   "spec": "components/item.md"
   },
   "kbd": {
    "layer": "core",
@@ -247,6 +307,18 @@
    "variants": 10,
    "spec": "components/radio.md"
   },
+  "resizable": {
+   "layer": "core",
+   "set": "63:2369",
+   "variants": 4,
+   "spec": "components/resizable.md"
+  },
+  "scroll-area": {
+   "layer": "core",
+   "set": "63:2353",
+   "variants": 2,
+   "spec": "components/scroll-area.md"
+  },
   "select": {
    "layer": "core",
    "set": "6:200",
@@ -294,6 +366,30 @@
    "set": "17:298",
    "variants": 8,
    "spec": "components/switch.md"
+  },
+  "tab": {
+   "layer": "core",
+   "set": "60:1376",
+   "variants": 8,
+   "spec": "components/tab.md"
+  },
+  "table": {
+   "layer": "core",
+   "set": "63:1671",
+   "variants": 1,
+   "spec": "components/table.md"
+  },
+  "table-cell": {
+   "layer": "core",
+   "set": "63:1424",
+   "variants": 10,
+   "spec": "components/table-cell.md"
+  },
+  "tabs": {
+   "layer": "core",
+   "set": "60:1415",
+   "variants": 2,
+   "spec": "components/tabs.md"
   },
   "textarea": {
    "layer": "core",
@@ -353,7 +449,13 @@
    "shopping-cart": "2:128",
    "calendar": "2:136",
    "user": "2:142",
-   "circle": "2:147"
+   "circle": "2:147",
+   "chevrons-up-down": "54:1346",
+   "grip-vertical": "54:1356",
+   "ellipsis": "54:1363",
+   "inbox": "54:1369",
+   "arrow-up-down": "54:1377",
+   "package": "54:1385"
   }
  }
 }

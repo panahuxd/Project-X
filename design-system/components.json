@@ -6,6 +6,54 @@
     "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp"
   },
   "components": {
+    "accordion": {
+      "layer": "core",
+      "page": "Accordion",
+      "nodeId": "61:1384",
+      "key": "b085642d127dfa18b21c789fd2512f8345618aaa",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "single"
+        ]
+      },
+      "defaultVariant": {
+        "type": "single"
+      },
+      "properties": {},
+      "spec": "components/accordion.md"
+    },
+    "accordion-item": {
+      "layer": "core",
+      "page": "Accordion",
+      "nodeId": "61:1365",
+      "key": "7b0f7afcc0af4c29b33a3e6e02df7474e1870e57",
+      "variantCount": 4,
+      "variants": {
+        "state": [
+          "closed",
+          "open",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "state": "closed"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#61:0",
+          "default": "هزینه ارسال سفارش‌های سازمانی چقدر است؟"
+        },
+        "body": {
+          "type": "TEXT",
+          "id": "body#61:5",
+          "default": "برای سفارش‌های بالای ۵ میلیون تومان ارسال رایگان است. برای مبالغ کمتر، هزینه ارسال در مرحله پرداخت نمایش داده می‌شود."
+        }
+      },
+      "spec": "components/accordion-item.md"
+    },
     "alert": {
       "layer": "core",
       "page": "Alert",
@@ -91,6 +139,37 @@
         }
       },
       "spec": "components/alert-dialog.md"
+    },
+    "avatar": {
+      "layer": "core",
+      "page": "Avatar",
+      "nodeId": "55:1363",
+      "key": "2bcf3b722912931029810e01dfe987e2f1c998d9",
+      "variantCount": 8,
+      "variants": {
+        "size": [
+          "md",
+          "sm",
+          "lg",
+          "xl"
+        ],
+        "type": [
+          "initials",
+          "icon"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md",
+        "type": "initials"
+      },
+      "properties": {
+        "initials": {
+          "type": "TEXT",
+          "id": "initials#55:0",
+          "default": "ع‌ر"
+        }
+      },
+      "spec": "components/avatar.md"
     },
     "badge": {
       "layer": "core",
@@ -232,6 +311,60 @@
       "properties": {},
       "spec": "components/button-group.md"
     },
+    "card": {
+      "layer": "core",
+      "page": "Card",
+      "nodeId": "56:1418",
+      "key": "be7a31145a3c9f074330727981fc0b71366ce2f9",
+      "variantCount": 2,
+      "variants": {
+        "size": [
+          "md",
+          "sm"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#56:0",
+          "default": "سفارش‌های اخیر"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#56:3",
+          "default": "۳ سفارش در ۳۰ روز گذشته"
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#56:6",
+          "default": true
+        },
+        "showAction": {
+          "type": "BOOLEAN",
+          "id": "showAction#56:9",
+          "default": false
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#56:12",
+          "default": "slot"
+        },
+        "showContent": {
+          "type": "BOOLEAN",
+          "id": "showContent#56:15",
+          "default": true
+        },
+        "showFooter": {
+          "type": "BOOLEAN",
+          "id": "showFooter#56:18",
+          "default": true
+        }
+      },
+      "spec": "components/card.md"
+    },
     "checkbox": {
       "layer": "core",
       "page": "Checkbox",
@@ -279,6 +412,35 @@
         }
       },
       "spec": "components/checkbox.md"
+    },
+    "collapsible": {
+      "layer": "core",
+      "page": "Collapsible",
+      "nodeId": "61:1401",
+      "key": "7afe1b6c85045d37bf6fe1ec05d2d211da3a32ef",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "closed",
+          "open"
+        ]
+      },
+      "defaultVariant": {
+        "state": "closed"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#61:10",
+          "default": "جزئیات ارسال"
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#61:13",
+          "default": "slot"
+        }
+      },
+      "spec": "components/collapsible.md"
     },
     "combobox": {
       "layer": "core",
@@ -338,6 +500,23 @@
       },
       "properties": {},
       "spec": "components/context-menu.md"
+    },
+    "data-table": {
+      "layer": "core",
+      "page": "Data table",
+      "nodeId": "63:2340",
+      "key": "bbaa059460995673fc2fd21b7164e268697107f5",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {},
+      "spec": "components/data-table.md"
     },
     "dialog": {
       "layer": "core",
@@ -457,6 +636,50 @@
       },
       "properties": {},
       "spec": "components/dropdown-menu.md"
+    },
+    "empty": {
+      "layer": "core",
+      "page": "Empty",
+      "nodeId": "58:1398",
+      "key": "8bf99ee1bbf3eeabd2495106e4666ad0705a7d4f",
+      "variantCount": 2,
+      "variants": {
+        "outline": [
+          "true",
+          "false"
+        ]
+      },
+      "defaultVariant": {
+        "outline": "true"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#58:0",
+          "default": "هنوز سفارشی ثبت نکرده‌اید"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#58:3",
+          "default": "کالاهای مورد نیاز سازمان را پیدا کنید یا برای خرید عمده درخواست خرید ثبت کنید."
+        },
+        "showMedia": {
+          "type": "BOOLEAN",
+          "id": "showMedia#58:6",
+          "default": true
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#58:9",
+          "default": "icon/inbox"
+        },
+        "showActions": {
+          "type": "BOOLEAN",
+          "id": "showActions#58:12",
+          "default": true
+        }
+      },
+      "spec": "components/empty.md"
     },
     "field": {
       "layer": "core",
@@ -725,6 +948,61 @@
       },
       "properties": {},
       "spec": "components/input-otp.md"
+    },
+    "item": {
+      "layer": "core",
+      "page": "Item",
+      "nodeId": "57:1436",
+      "key": "11de5ca87753f1ef35616579f903c80cad638b14",
+      "variantCount": 6,
+      "variants": {
+        "variant": [
+          "default",
+          "outline",
+          "muted"
+        ],
+        "size": [
+          "md",
+          "sm"
+        ]
+      },
+      "defaultVariant": {
+        "variant": "default",
+        "size": "md"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#57:0",
+          "default": "سفارش ۱۲۳۴۵۶"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#57:7",
+          "default": "۴ کالا · ارسال امروز"
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#57:14",
+          "default": true
+        },
+        "showMedia": {
+          "type": "BOOLEAN",
+          "id": "showMedia#57:21",
+          "default": true
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#57:28",
+          "default": "icon/package"
+        },
+        "showActions": {
+          "type": "BOOLEAN",
+          "id": "showActions#57:35",
+          "default": true
+        }
+      },
+      "spec": "components/item.md"
     },
     "kbd": {
       "layer": "core",
@@ -1039,6 +1317,53 @@
       },
       "spec": "components/radio.md"
     },
+    "resizable": {
+      "layer": "core",
+      "page": "Resizable",
+      "nodeId": "63:2369",
+      "key": "40bde9cd7e7f928468249713e6e9dcfe26aa4de2",
+      "variantCount": 4,
+      "variants": {
+        "orientation": [
+          "horizontal",
+          "vertical"
+        ],
+        "withHandle": [
+          "false",
+          "true"
+        ]
+      },
+      "defaultVariant": {
+        "orientation": "horizontal",
+        "withHandle": "false"
+      },
+      "properties": {},
+      "spec": "components/resizable.md"
+    },
+    "scroll-area": {
+      "layer": "core",
+      "page": "Scroll area",
+      "nodeId": "63:2353",
+      "key": "1a64caee581e57de1fed2456d68425876d35fe70",
+      "variantCount": 2,
+      "variants": {
+        "orientation": [
+          "vertical",
+          "horizontal"
+        ]
+      },
+      "defaultVariant": {
+        "orientation": "vertical"
+      },
+      "properties": {
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#63:22",
+          "default": "slot"
+        }
+      },
+      "spec": "components/scroll-area.md"
+    },
     "select": {
       "layer": "core",
       "page": "Select",
@@ -1295,6 +1620,123 @@
         }
       },
       "spec": "components/switch.md"
+    },
+    "tab": {
+      "layer": "core",
+      "page": "Tabs",
+      "nodeId": "60:1376",
+      "key": "0438c5772a33e69f32222fb3742bb4c0e277e773",
+      "variantCount": 8,
+      "variants": {
+        "style": [
+          "default",
+          "line"
+        ],
+        "state": [
+          "default",
+          "active",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "style": "default",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#60:0",
+          "default": "در حال پردازش"
+        },
+        "showIcon": {
+          "type": "BOOLEAN",
+          "id": "showIcon#60:9",
+          "default": false
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#60:18",
+          "default": "icon/package"
+        }
+      },
+      "spec": "components/tab.md"
+    },
+    "table": {
+      "layer": "core",
+      "page": "Table",
+      "nodeId": "63:1671",
+      "key": "c17adb59d1f35e77537984e3aedfd9e98876bd44",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {},
+      "spec": "components/table.md"
+    },
+    "table-cell": {
+      "layer": "core",
+      "page": "Table",
+      "nodeId": "63:1424",
+      "key": "d1ea5d631d9efbe08a7777c686b468bf9388d0ae",
+      "variantCount": 10,
+      "variants": {
+        "type": [
+          "header",
+          "body",
+          "footer"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "selected"
+        ],
+        "align": [
+          "start",
+          "end"
+        ]
+      },
+      "defaultVariant": {
+        "type": "header",
+        "state": "default",
+        "align": "start"
+      },
+      "properties": {
+        "text": {
+          "type": "TEXT",
+          "id": "text#63:0",
+          "default": "متن سلول"
+        },
+        "showCheckbox": {
+          "type": "BOOLEAN",
+          "id": "showCheckbox#63:11",
+          "default": false
+        }
+      },
+      "spec": "components/table-cell.md"
+    },
+    "tabs": {
+      "layer": "core",
+      "page": "Tabs",
+      "nodeId": "60:1415",
+      "key": "9b849e4749c6a73a864516080ce9cfcf115acc48",
+      "variantCount": 2,
+      "variants": {
+        "style": [
+          "default",
+          "line"
+        ]
+      },
+      "defaultVariant": {
+        "style": "default"
+      },
+      "properties": {},
+      "spec": "components/tabs.md"
     },
     "textarea": {
       "layer": "core",
@@ -1568,6 +2010,30 @@
     "circle": {
       "key": "cc786d7a2e97e586bd5a2766f28f09acc9c452ba",
       "nodeId": "2:147"
+    },
+    "chevrons-up-down": {
+      "key": "8254ef31ac2586023bdea395832b29bdf84ef665",
+      "nodeId": "54:1346"
+    },
+    "grip-vertical": {
+      "key": "184698659c5e44597f461d9cdacd8a110878a1ac",
+      "nodeId": "54:1356"
+    },
+    "ellipsis": {
+      "key": "013e750ff5eee8ef0c9f6ccb616037feb32d3999",
+      "nodeId": "54:1363"
+    },
+    "inbox": {
+      "key": "539bf46236ff5163bf7a74042084a8da18ffa3d6",
+      "nodeId": "54:1369"
+    },
+    "arrow-up-down": {
+      "key": "c0c15b53bdc6440071e412ee525f21fc0fbc692a",
+      "nodeId": "54:1377"
+    },
+    "package": {
+      "key": "7ee8613cd21b5fb7114cfb7efc252cb8ae28c719",
+      "nodeId": "54:1385"
     }
   }
 }

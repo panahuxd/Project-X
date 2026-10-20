@@ -2,7 +2,7 @@
 // Checks the current page (or PAGE below) against AGENTS.md rules and returns a report.
 // Pass when every count under `errors` is 0. `warnings` are for review.
 const PAGE = null; // e.g. 'Screens'; null = first page
-const DKB_COMPONENTS = ['alert', 'alert-dialog', 'badge', 'button', 'button-group', 'checkbox', 'combobox', 'command', 'context-menu', 'dialog', 'drawer', 'dropdown-menu', 'field', 'hover-card', 'icon-button', 'input', 'input-group', 'input-otp', 'kbd', 'label', 'menu-item', 'menubar', 'native-select', 'overlay', 'popover', 'progress', 'radio', 'select', 'separator', 'sheet', 'skeleton', 'slider', 'slot', 'spinner', 'switch', 'textarea', 'toast', 'toggle', 'toggle-group', 'tooltip'];
+const DKB_COMPONENTS = ['accordion', 'accordion-item', 'alert', 'alert-dialog', 'avatar', 'badge', 'button', 'button-group', 'card', 'checkbox', 'collapsible', 'combobox', 'command', 'context-menu', 'data-table', 'dialog', 'drawer', 'dropdown-menu', 'empty', 'field', 'hover-card', 'icon-button', 'input', 'input-group', 'input-otp', 'item', 'kbd', 'label', 'menu-item', 'menubar', 'native-select', 'overlay', 'popover', 'progress', 'radio', 'resizable', 'scroll-area', 'select', 'separator', 'sheet', 'skeleton', 'slider', 'slot', 'spinner', 'switch', 'tab', 'table', 'table-cell', 'tabs', 'textarea', 'toast', 'toggle', 'toggle-group', 'tooltip'];
 // ^ keep in sync with design-system/components.json (component set names). Icons: names starting with "icon/".
 const page = PAGE ? figma.root.children.find(p => p.name === PAGE) : figma.root.children[0];
 await figma.setCurrentPageAsync(page);

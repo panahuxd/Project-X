@@ -58,6 +58,7 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - After a library publish, existing instances keep the old version until updated: `instance.swapComponent(<variant from importComponentSetByKeyAsync>)` moves them to the latest and keeps their overrides.
 - To edit a component's nested exposed instances (e.g. the `label` and `control` inside `field`), find them with `instance.findOne(n => n.type === 'INSTANCE' && n.name === 'label')` and call `setProperties` on them.
 - **Overlays (dialog, sheet, drawer, popover, hover-card, alert-dialog) take custom content through a slot**: build the content as a local component named `content/<what>` from DKB components and tokens, then set the overlay instance's `content` property (INSTANCE_SWAP) to it. Put an `overlay` instance behind modal panels. On mobile, use `drawer` instead of `dialog` (DS-32). The audit fails if a `slot` placeholder is still visible.
+- **Tables**: build them from `table-cell` instances, one horizontal auto-layout frame per row, inside a vertical frame named `table/<what>` (never just `table`). First column on the right; amounts `align=end`. On mobile, show the rows as `item`s or cards instead.
 - Mockups with entered values: set the control's `state` to `filled` (input, textarea, select). The `default` state shows the value in the placeholder colour.
 - When binding a paint to a variable, give the placeholder paint a real colour (not white): a binding to the same variable the node already had can keep showing the placeholder.
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.6.0 — 2026-10-20 (batch 3: content and display)
+
+- 11 shadcn components in DKB Components: accordion, avatar, card, collapsible, data-table, empty, item, resizable, scroll-area, table, tabs — plus building blocks `tab`, `accordion-item` and `table-cell`. 54 components in total. Specs in `components/`
+- Spec-only guides: `aspect-ratio` (DKB media ratios), `direction` (RTL rules, mirroring, LTR islands), `typography` (shadcn examples → DKB text styles)
+- Tables are built from `table-cell` rows inside a frame named `table/<what>`; `table` is a ready sample and `data-table` the full pattern (search, columns, selection, pagination)
+- 6 Lucide icons added (30): chevrons-up-down, grip-vertical, ellipsis, inbox, arrow-up-down, package
+- Review board "content" on the Cover page (B2R/B2E × Desktop/Mobile); mobile shows items instead of tables
+- Binding audit: 0 unbound colours, 0 unstyled text in all 14 new sets
+- `components.json` regenerated: 54 components, 30 icons, fingerprint `c9e711fb` (matches `sync_check.py`)
+
 ## 0.5.0 — 2026-10-20 (batch 2: overlays and menus)
 
 - 13 shadcn overlays and menus in DKB Components: alert-dialog, combobox, command, context-menu, dialog, drawer, dropdown-menu, hover-card, menubar, popover, sheet, toast, tooltip — plus helpers `menu-item` (one row type for every menu, 17 variants), `slot` (content placeholder) and `overlay` (backdrop). 40 components in total. Specs in `components/`
