@@ -74,7 +74,7 @@ Pick a component here, then read its spec. Keys and property ids are in `../comp
 | `collapsible` | Show or hide one block of secondary content: shipment details, more filters, the rest of a list. | state: closed/open | [collapsible.md](collapsible.md) |
 | `avatar` | Picture of a person or company: account menu, sellers, company users, comments. | size: md/sm/lg/xl; type: initials/icon | [avatar.md](avatar.md) |
 | `kbd` | Shows a keyboard key or shortcut in help text, tooltips, menus and the command palette (portal admin tools, desktop). | size: md/lg | [kbd.md](kbd.md) |
-| `separator` | A thin line between groups of content: list sections, menu groups, toolbar items, «یا» between login options. | orientation: horizontal/vertical; label: false/true | [separator.md](separator.md) |
+| `separator` | A thin line between groups of content: list sections, menu groups, toolbar items, «یا» between login options. | orientation: horizontal/vertical; withLabel: false/true | [separator.md](separator.md) |
 | `scroll-area` | A region that scrolls with a thin, consistent scrollbar: long lists inside a card or popover, tag rows, horizontal product strips. | orientation: vertical/horizontal | [scroll-area.md](scroll-area.md) |
 | `resizable` | Panels the user can resize by dragging a handle: list + detail views in admin tools. | orientation: horizontal/vertical; withHandle: false/true | [resizable.md](resizable.md) |
 | `chart` | Trends and comparisons in dashboards and reports: spend by month (B2E finance), orders by status, credit usage. | type: bar/line/area | [chart.md](chart.md) |

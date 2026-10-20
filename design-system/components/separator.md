@@ -6,14 +6,14 @@
 A thin line between groups of content: list sections, menu groups, toolbar items, «یا» between login options. **Don't use it** where spacing alone separates things well enough.
 
 ## Anatomy
-`horizontal` / `vertical`: the component is the line. `label=true`: `line` · `label` · `line`.
+`horizontal` / `vertical`: the component is the line. `withLabel=true`: `line` · `label` · `line`.
 
 ## Properties
 | Property (Figma = code) | Type | Values | Default | Notes |
 |---|---|---|---|---|
 | `orientation` | variant | `horizontal`, `vertical` | `horizontal` | |
-| `label` | variant | `false`, `true` | `false` | Labelled version is horizontal only |
-| `label` (text) | text | | «یا» | |
+| `withLabel` | variant | `false`, `true` | `false` | Labelled version is horizontal only |
+| `label` | text | | «یا» | Shown when `withLabel=true` |
 
 ## Tokens
 | Part | Property | Token |

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.2 — 2026-10-20 (separator fix)
+
+- Fix `separator`: variant property `label` renamed to `withLabel`; it clashed with the `label` text property (Figma showed a property conflict, and `setProps(…, { label })` was ambiguous)
+- Library scan: no other component set has a property-name clash or a duplicate variant
+
 ## 0.9.1 — 2026-10-20 (template test, card fix)
 
 - Sandbox test of the template flow: `checkout/payment/mobile` (B2E) started with `startFromTemplate('template/checkout', …)`, all 5 regions found, filled or removed with `fillRegion`; audit 0 errors, 0 warnings
