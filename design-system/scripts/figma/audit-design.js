@@ -2,7 +2,7 @@
 // Checks the current page (or PAGE below) against AGENTS.md rules and returns a report.
 // Pass when every count under `errors` is 0. `warnings` are for review.
 const PAGE = null; // e.g. 'Screens'; null = first page
-const DKB_COMPONENTS = ['button', 'icon-button', 'input-field', 'select', 'checkbox', 'radio', 'switch', 'badge', 'alert'];
+const DKB_COMPONENTS = ['alert', 'badge', 'button', 'button-group', 'checkbox', 'field', 'icon-button', 'input', 'input-group', 'input-otp', 'kbd', 'label', 'native-select', 'progress', 'radio', 'select', 'separator', 'skeleton', 'slider', 'spinner', 'switch', 'textarea', 'toggle', 'toggle-group'];
 // ^ keep in sync with design-system/components.json (component set names). Icons: names starting with "icon/".
 const page = PAGE ? figma.root.children.find(p => p.name === PAGE) : figma.root.children[0];
 await figma.setCurrentPageAsync(page);

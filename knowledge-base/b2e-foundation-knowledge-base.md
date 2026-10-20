@@ -404,7 +404,7 @@ Tenant themes in code override the same variables on `html` (B2E purple; `theme-
 
 ## Components: inventory and mapping
 
-> **New designs use DKB Components** (button, icon-button, input-field, select, checkbox, radio, switch, badge, alert, growing in batches). Their API is in `design-system/components.json` and their specs in `design-system/components/`. The tiers below are the legacy libraries and code, kept as a map of what exists today.
+> **New designs use DKB Components** (24 Core components so far, matching shadcn/ui and growing in batches; status in `design-system/COVERAGE.md`). Their API is in `design-system/components.json` and their specs in `design-system/components/`. The tiers below are the legacy libraries and code, kept as a map of what exists today.
 
 Components live in four tiers; new designs should use tier 1 and 2 only and treat tiers 3 and 4 as things to migrate. Only 3 of about 62 ui-kit components have Storybook stories, and Code Connect is not set up, so the Figma ↔ code mapping below is by name.
 

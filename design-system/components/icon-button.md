@@ -33,4 +33,5 @@ Must have `aria-label`. Mobile size `md` = 40 px touch target.
 Tooltip and `aria-label` use the verb: «حذف از سبد», «بستن».
 
 ## Changelog
+- 0.4.0 — disabled state uses `opacity.disabled` over the normal look (DS-28).
 - 0.3.0 — created (75 variants).

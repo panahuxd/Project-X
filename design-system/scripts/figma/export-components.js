@@ -3,7 +3,7 @@
 // (the agent does this after any component change), then run
 // `python3 scripts/sync_check.py` — it prints the expected component fingerprint,
 // and the `fingerprint` field returned here must match it.
-const LAYER = { button: 'core', 'icon-button': 'core', 'input-field': 'core', select: 'core', checkbox: 'core', radio: 'core', switch: 'core', badge: 'core', alert: 'core' };
+const LAYER = { 'alert': 'core', 'badge': 'core', 'button': 'core', 'button-group': 'core', 'checkbox': 'core', 'field': 'core', 'icon-button': 'core', 'input': 'core', 'input-group': 'core', 'input-otp': 'core', 'kbd': 'core', 'label': 'core', 'native-select': 'core', 'progress': 'core', 'radio': 'core', 'select': 'core', 'separator': 'core', 'skeleton': 'core', 'slider': 'core', 'spinner': 'core', 'switch': 'core', 'textarea': 'core', 'toggle': 'core', 'toggle-group': 'core' };
 const fnv = s => { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
 const components = {};
 const lines = [];

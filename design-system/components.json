@@ -1,597 +1,1022 @@
 {
- "$description": "Generated from Figma by scripts/figma/export-components.js. The agent's API for DKB Components: import a component set with figma.importComponentSetByKeyAsync(key) (or an icon with importComponentByKeyAsync), pick a variant by its variant properties, then set properties with instance.setProperties({ [properties.<name>.id]: value }). Do not edit by hand.",
- "file": {
-  "name": "DKB Components",
-  "key": "12ErQ1NZV5xHhVCXpvH5Bp",
-  "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp"
- },
- "components": {
-  "button": {
-   "layer": "core",
-   "page": "Button",
-   "nodeId": "3:794",
-   "key": "6b140ee484f9f6dc1b2c9981bcf1905910509f49",
-   "variantCount": 90,
-   "variants": {
-    "variant": [
-     "primary",
-     "secondary",
-     "outline",
-     "ghost",
-     "destructive",
-     "link"
-    ],
-    "size": [
-     "sm",
-     "md",
-     "lg"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "pressed",
-     "focus",
-     "disabled"
-    ]
-   },
-   "defaultVariant": {
-    "variant": "primary",
-    "size": "md",
-    "state": "default"
-   },
-   "properties": {
+  "$description": "Generated from Figma by scripts/figma/export-components.js. The agent's API for DKB Components: import a component set with figma.importComponentSetByKeyAsync(key) (or an icon with importComponentByKeyAsync), pick a variant by its variant properties, then set properties with instance.setProperties({ [properties.<name>.id]: value }). Do not edit by hand.",
+  "file": {
+    "name": "DKB Components",
+    "key": "12ErQ1NZV5xHhVCXpvH5Bp",
+    "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp"
+  },
+  "components": {
+    "alert": {
+      "layer": "core",
+      "page": "Alert",
+      "nodeId": "9:98",
+      "key": "f92ea726b774e27a0b93edea393d3293f5ab9f73",
+      "variantCount": 5,
+      "variants": {
+        "tone": [
+          "info",
+          "success",
+          "warning",
+          "destructive",
+          "neutral"
+        ]
+      },
+      "defaultVariant": {
+        "tone": "info"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#9:0",
+          "default": "عنوان پیام"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#9:6",
+          "default": "توضیح کوتاه درباره‌ی آنچه رخ داده و قدم بعدی کاربر."
+        },
+        "showTitle": {
+          "type": "BOOLEAN",
+          "id": "showTitle#9:12",
+          "default": true
+        },
+        "showAction": {
+          "type": "BOOLEAN",
+          "id": "showAction#9:18",
+          "default": false
+        },
+        "showClose": {
+          "type": "BOOLEAN",
+          "id": "showClose#9:24",
+          "default": false
+        }
+      },
+      "spec": "components/alert.md"
+    },
+    "badge": {
+      "layer": "core",
+      "page": "Badge",
+      "nodeId": "7:191",
+      "key": "b465ba6cc5e40c417ad190e78b9cfce87efc2f78",
+      "variantCount": 36,
+      "variants": {
+        "tone": [
+          "neutral",
+          "primary",
+          "success",
+          "warning",
+          "info",
+          "destructive"
+        ],
+        "style": [
+          "subtle",
+          "solid",
+          "outline"
+        ],
+        "size": [
+          "sm",
+          "md"
+        ]
+      },
+      "defaultVariant": {
+        "tone": "neutral",
+        "style": "subtle",
+        "size": "sm"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#7:0",
+          "default": "برچسب"
+        },
+        "showIcon": {
+          "type": "BOOLEAN",
+          "id": "showIcon#7:37",
+          "default": false
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#7:74",
+          "default": "icon/circle"
+        }
+      },
+      "spec": "components/badge.md"
+    },
+    "button": {
+      "layer": "core",
+      "page": "Button",
+      "nodeId": "3:794",
+      "key": "6b140ee484f9f6dc1b2c9981bcf1905910509f49",
+      "variantCount": 90,
+      "variants": {
+        "variant": [
+          "primary",
+          "secondary",
+          "outline",
+          "ghost",
+          "destructive",
+          "link"
+        ],
+        "size": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "pressed",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "variant": "primary",
+        "size": "md",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#3:0",
+          "default": "ادامه"
+        },
+        "showIconStart": {
+          "type": "BOOLEAN",
+          "id": "showIconStart#3:91",
+          "default": false
+        },
+        "showIconEnd": {
+          "type": "BOOLEAN",
+          "id": "showIconEnd#3:182",
+          "default": false
+        },
+        "isLoading": {
+          "type": "BOOLEAN",
+          "id": "isLoading#3:273",
+          "default": false
+        },
+        "iconStart": {
+          "type": "INSTANCE_SWAP",
+          "id": "iconStart#3:364",
+          "default": "icon/circle"
+        },
+        "iconEnd": {
+          "type": "INSTANCE_SWAP",
+          "id": "iconEnd#3:455",
+          "default": "icon/circle"
+        }
+      },
+      "spec": "components/button.md"
+    },
+    "button-group": {
+      "layer": "core",
+      "page": "Button group",
+      "nodeId": "34:851",
+      "key": "164282bf44d6659d44772f13a1d9265e598acd0f",
+      "variantCount": 6,
+      "variants": {
+        "orientation": [
+          "horizontal",
+          "vertical"
+        ],
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ]
+      },
+      "defaultVariant": {
+        "orientation": "horizontal",
+        "size": "md"
+      },
+      "properties": {},
+      "spec": "components/button-group.md"
+    },
+    "checkbox": {
+      "layer": "core",
+      "page": "Checkbox",
+      "nodeId": "15:354",
+      "key": "01226ad2cc2f4bb828567121f4fee28fcf09e87d",
+      "variantCount": 15,
+      "variants": {
+        "checked": [
+          "false",
+          "true",
+          "indeterminate"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "disabled",
+          "error"
+        ]
+      },
+      "defaultVariant": {
+        "checked": "false",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#15:0",
+          "default": "گزینه"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#15:16",
+          "default": "توضیح کوتاه"
+        },
+        "showLabel": {
+          "type": "BOOLEAN",
+          "id": "showLabel#15:32",
+          "default": true
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#15:48",
+          "default": false
+        }
+      },
+      "spec": "components/checkbox.md"
+    },
+    "field": {
+      "layer": "core",
+      "page": "Field",
+      "nodeId": "30:553",
+      "key": "a9812a8830055b3bc32500012e993d4edac6251b",
+      "variantCount": 9,
+      "variants": {
+        "control": [
+          "input",
+          "textarea",
+          "select"
+        ],
+        "state": [
+          "default",
+          "error",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "control": "input",
+        "state": "default"
+      },
+      "properties": {
+        "helperText": {
+          "type": "TEXT",
+          "id": "helperText#30:8",
+          "default": "متن راهنما"
+        },
+        "showHelper": {
+          "type": "BOOLEAN",
+          "id": "showHelper#30:18",
+          "default": true
+        },
+        "showLabel": {
+          "type": "BOOLEAN",
+          "id": "showLabel#30:28",
+          "default": true
+        }
+      },
+      "spec": "components/field.md"
+    },
+    "icon-button": {
+      "layer": "core",
+      "page": "Icon button",
+      "nodeId": "4:227",
+      "key": "1ee594010fe38d41014c05d42b73b24eebea8231",
+      "variantCount": 75,
+      "variants": {
+        "variant": [
+          "primary",
+          "secondary",
+          "outline",
+          "ghost",
+          "destructive"
+        ],
+        "size": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "pressed",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "variant": "primary",
+        "size": "md",
+        "state": "default"
+      },
+      "properties": {
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#4:0",
+          "default": "icon/plus"
+        }
+      },
+      "spec": "components/icon-button.md"
+    },
+    "input": {
+      "layer": "core",
+      "page": "Input",
+      "nodeId": "29:443",
+      "key": "dd32473806ba606c1c6e58ebdab3daf82ac394a3",
+      "variantCount": 21,
+      "variants": {
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "filled",
+          "error",
+          "disabled",
+          "read-only"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md",
+        "state": "default"
+      },
+      "properties": {
+        "value": {
+          "type": "TEXT",
+          "id": "value#29:0",
+          "default": "متن را وارد کنید"
+        },
+        "showIconStart": {
+          "type": "BOOLEAN",
+          "id": "showIconStart#29:22",
+          "default": false
+        },
+        "showIconEnd": {
+          "type": "BOOLEAN",
+          "id": "showIconEnd#29:44",
+          "default": false
+        },
+        "iconStart": {
+          "type": "INSTANCE_SWAP",
+          "id": "iconStart#29:66",
+          "default": "icon/search"
+        },
+        "iconEnd": {
+          "type": "INSTANCE_SWAP",
+          "id": "iconEnd#29:88",
+          "default": "icon/x"
+        }
+      },
+      "spec": "components/input.md"
+    },
+    "input-group": {
+      "layer": "core",
+      "page": "Input group",
+      "nodeId": "31:421",
+      "key": "a93470eed59d98d2d36b546804233089e7c3d14d",
+      "variantCount": 12,
+      "variants": {
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ],
+        "state": [
+          "default",
+          "focus",
+          "error",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md",
+        "state": "default"
+      },
+      "properties": {
+        "value": {
+          "type": "TEXT",
+          "id": "value#31:0",
+          "default": "۲۵٬۰۰۰٬۰۰۰"
+        },
+        "addonStart": {
+          "type": "TEXT",
+          "id": "addonStart#31:13",
+          "default": "مبلغ"
+        },
+        "addonEnd": {
+          "type": "TEXT",
+          "id": "addonEnd#31:26",
+          "default": "تومان"
+        },
+        "showAddonStart": {
+          "type": "BOOLEAN",
+          "id": "showAddonStart#31:39",
+          "default": false
+        },
+        "showAddonEnd": {
+          "type": "BOOLEAN",
+          "id": "showAddonEnd#31:52",
+          "default": true
+        },
+        "showIconStart": {
+          "type": "BOOLEAN",
+          "id": "showIconStart#31:65",
+          "default": false
+        },
+        "showButton": {
+          "type": "BOOLEAN",
+          "id": "showButton#31:78",
+          "default": false
+        },
+        "iconStart": {
+          "type": "INSTANCE_SWAP",
+          "id": "iconStart#31:91",
+          "default": "icon/search"
+        }
+      },
+      "spec": "components/input-group.md"
+    },
+    "input-otp": {
+      "layer": "core",
+      "page": "Input OTP",
+      "nodeId": "32:394",
+      "key": "2c44d626400edbaa5c1cd85ab36586e97ed28314",
+      "variantCount": 10,
+      "variants": {
+        "length": [
+          "6",
+          "4"
+        ],
+        "state": [
+          "default",
+          "active",
+          "filled",
+          "error",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "length": "6",
+        "state": "default"
+      },
+      "properties": {},
+      "spec": "components/input-otp.md"
+    },
+    "kbd": {
+      "layer": "core",
+      "page": "Kbd",
+      "nodeId": "36:305",
+      "key": "017a5d3f1703a85f4928a31da23a553dd63e3108",
+      "variantCount": 2,
+      "variants": {
+        "size": [
+          "md",
+          "lg"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#36:0",
+          "default": "Ctrl"
+        }
+      },
+      "spec": "components/kbd.md"
+    },
     "label": {
-     "type": "TEXT",
-     "id": "label#3:0",
-     "default": "ادامه"
+      "layer": "core",
+      "page": "Label",
+      "nodeId": "28:444",
+      "key": "025f6e6f8941f76ad81f6fe3a069e8895dcf57b0",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "default",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "text": {
+          "type": "TEXT",
+          "id": "text#28:0",
+          "default": "عنوان فیلد"
+        },
+        "isRequired": {
+          "type": "BOOLEAN",
+          "id": "isRequired#28:3",
+          "default": false
+        },
+        "showOptional": {
+          "type": "BOOLEAN",
+          "id": "showOptional#28:6",
+          "default": false
+        }
+      },
+      "spec": "components/label.md"
     },
-    "showIconStart": {
-     "type": "BOOLEAN",
-     "id": "showIconStart#3:91",
-     "default": false
+    "native-select": {
+      "layer": "core",
+      "page": "Native select",
+      "nodeId": "33:361",
+      "key": "c3323fd07e65c7b830fc9b52ff0e3d4fb2e09bfd",
+      "variantCount": 15,
+      "variants": {
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "error",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md",
+        "state": "default"
+      },
+      "properties": {
+        "value": {
+          "type": "TEXT",
+          "id": "value#33:0",
+          "default": "تهران"
+        }
+      },
+      "spec": "components/native-select.md"
     },
-    "showIconEnd": {
-     "type": "BOOLEAN",
-     "id": "showIconEnd#3:182",
-     "default": false
+    "progress": {
+      "layer": "core",
+      "page": "Progress",
+      "nodeId": "36:354",
+      "key": "61a4cac1aa51d445572a49159112a2fe37a1a3f4",
+      "variantCount": 5,
+      "variants": {
+        "value": [
+          "50",
+          "0",
+          "25",
+          "75",
+          "100"
+        ]
+      },
+      "defaultVariant": {
+        "value": "50"
+      },
+      "properties": {},
+      "spec": "components/progress.md"
     },
-    "isLoading": {
-     "type": "BOOLEAN",
-     "id": "isLoading#3:273",
-     "default": false
+    "radio": {
+      "layer": "core",
+      "page": "Radio",
+      "nodeId": "16:306",
+      "key": "a756db6956e297929a6bdd3f66b010a08985f8a5",
+      "variantCount": 10,
+      "variants": {
+        "checked": [
+          "false",
+          "true"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "disabled",
+          "error"
+        ]
+      },
+      "defaultVariant": {
+        "checked": "false",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#16:0",
+          "default": "گزینه"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#16:11",
+          "default": "توضیح کوتاه"
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#16:22",
+          "default": false
+        }
+      },
+      "spec": "components/radio.md"
     },
-    "iconStart": {
-     "type": "INSTANCE_SWAP",
-     "id": "iconStart#3:364",
-     "default": "icon/circle"
+    "select": {
+      "layer": "core",
+      "page": "Select",
+      "nodeId": "6:200",
+      "key": "75a141f945669aef7f555adf56f2c7a673207f44",
+      "variantCount": 18,
+      "variants": {
+        "size": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "open",
+          "filled",
+          "error",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md",
+        "state": "default"
+      },
+      "properties": {
+        "value": {
+          "type": "TEXT",
+          "id": "value#6:19",
+          "default": "انتخاب کنید"
+        },
+        "showIconStart": {
+          "type": "BOOLEAN",
+          "id": "showIconStart#6:114",
+          "default": false
+        },
+        "iconStart": {
+          "type": "INSTANCE_SWAP",
+          "id": "iconStart#6:133",
+          "default": "icon/circle"
+        }
+      },
+      "spec": "components/select.md"
     },
-    "iconEnd": {
-     "type": "INSTANCE_SWAP",
-     "id": "iconEnd#3:455",
-     "default": "icon/circle"
+    "separator": {
+      "layer": "core",
+      "page": "Separator",
+      "nodeId": "36:364",
+      "key": "33c296c5db94e7d16b456345ac15600ff72599f2",
+      "variantCount": 3,
+      "variants": {
+        "orientation": [
+          "horizontal",
+          "vertical"
+        ],
+        "label": [
+          "false",
+          "true"
+        ]
+      },
+      "defaultVariant": {
+        "orientation": "horizontal",
+        "label": "false"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#36:3",
+          "default": "یا"
+        }
+      },
+      "spec": "components/separator.md"
+    },
+    "skeleton": {
+      "layer": "core",
+      "page": "Skeleton",
+      "nodeId": "36:368",
+      "key": "142a04b4527b5a9ce5a217403cd93dc061bf5cb9",
+      "variantCount": 3,
+      "variants": {
+        "shape": [
+          "line",
+          "circle",
+          "rect"
+        ]
+      },
+      "defaultVariant": {
+        "shape": "line"
+      },
+      "properties": {},
+      "spec": "components/skeleton.md"
+    },
+    "slider": {
+      "layer": "core",
+      "page": "Slider",
+      "nodeId": "33:398",
+      "key": "380df5efc131766908094ae6cd2ae6745c38d356",
+      "variantCount": 8,
+      "variants": {
+        "type": [
+          "single",
+          "range"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "type": "single",
+        "state": "default"
+      },
+      "properties": {},
+      "spec": "components/slider.md"
+    },
+    "spinner": {
+      "layer": "core",
+      "page": "Spinner",
+      "nodeId": "36:343",
+      "key": "a43c5c4dd8e013339600a8a4d9fd8e5056282e7b",
+      "variantCount": 12,
+      "variants": {
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ],
+        "tone": [
+          "default",
+          "muted",
+          "primary",
+          "on-primary"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md",
+        "tone": "default"
+      },
+      "properties": {},
+      "spec": "components/spinner.md"
+    },
+    "switch": {
+      "layer": "core",
+      "page": "Switch",
+      "nodeId": "17:298",
+      "key": "44cb943f7e6270a0d711cab64f9eaecd5740d8bb",
+      "variantCount": 8,
+      "variants": {
+        "checked": [
+          "false",
+          "true"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "checked": "false",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#17:0",
+          "default": "گزینه"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#17:9",
+          "default": "توضیح کوتاه"
+        },
+        "showLabel": {
+          "type": "BOOLEAN",
+          "id": "showLabel#17:18",
+          "default": true
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#17:27",
+          "default": false
+        }
+      },
+      "spec": "components/switch.md"
+    },
+    "textarea": {
+      "layer": "core",
+      "page": "Textarea",
+      "nodeId": "30:332",
+      "key": "e2d769f459b96f7b760693f79d8441b9e415af03",
+      "variantCount": 7,
+      "variants": {
+        "state": [
+          "default",
+          "hover",
+          "focus",
+          "filled",
+          "error",
+          "disabled",
+          "read-only"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "value": {
+          "type": "TEXT",
+          "id": "value#30:0",
+          "default": "توضیحات خود را بنویسید"
+        }
+      },
+      "spec": "components/textarea.md"
+    },
+    "toggle": {
+      "layer": "core",
+      "page": "Toggle",
+      "nodeId": "34:421",
+      "key": "60bac386ed3e45c04c32b340b9c17f2d43b5182b",
+      "variantCount": 30,
+      "variants": {
+        "variant": [
+          "default",
+          "outline"
+        ],
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ],
+        "state": [
+          "off",
+          "hover",
+          "on",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "variant": "default",
+        "size": "md",
+        "state": "off"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#34:0",
+          "default": "برچسب"
+        },
+        "showLabel": {
+          "type": "BOOLEAN",
+          "id": "showLabel#34:31",
+          "default": false
+        },
+        "showIcon": {
+          "type": "BOOLEAN",
+          "id": "showIcon#34:62",
+          "default": true
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#34:93",
+          "default": "icon/check"
+        }
+      },
+      "spec": "components/toggle.md"
+    },
+    "toggle-group": {
+      "layer": "core",
+      "page": "Toggle group",
+      "nodeId": "34:519",
+      "key": "c2933028239ef2b8fd689e67f0814756d633f4ed",
+      "variantCount": 6,
+      "variants": {
+        "variant": [
+          "default",
+          "outline"
+        ],
+        "size": [
+          "md",
+          "sm",
+          "lg"
+        ]
+      },
+      "defaultVariant": {
+        "variant": "default",
+        "size": "md"
+      },
+      "properties": {},
+      "spec": "components/toggle-group.md"
     }
-   },
-   "spec": "components/button.md"
   },
-  "icon-button": {
-   "layer": "core",
-   "page": "Icon button",
-   "nodeId": "4:227",
-   "key": "1ee594010fe38d41014c05d42b73b24eebea8231",
-   "variantCount": 75,
-   "variants": {
-    "variant": [
-     "primary",
-     "secondary",
-     "outline",
-     "ghost",
-     "destructive"
-    ],
-    "size": [
-     "sm",
-     "md",
-     "lg"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "pressed",
-     "focus",
-     "disabled"
-    ]
-   },
-   "defaultVariant": {
-    "variant": "primary",
-    "size": "md",
-    "state": "default"
-   },
-   "properties": {
-    "icon": {
-     "type": "INSTANCE_SWAP",
-     "id": "icon#4:0",
-     "default": "icon/plus"
+  "icons": {
+    "chevron-down": {
+      "key": "005d4071c946bad606a46e1baf9a5f19932b7e8c",
+      "nodeId": "2:19"
+    },
+    "chevron-up": {
+      "key": "ec036bba9d48593fec86177b66fb94247894baac",
+      "nodeId": "2:22"
+    },
+    "chevron-left": {
+      "key": "f7d80a28f8d886a9fe96bcc988741dc1bbbc83b4",
+      "nodeId": "2:25"
+    },
+    "chevron-right": {
+      "key": "2685e0866fa3b569e1f847b02ae615069432b5f9",
+      "nodeId": "2:28"
+    },
+    "arrow-left": {
+      "key": "85b15aaf6946a6513fc3ba4e1a0783b5b63b9a85",
+      "nodeId": "2:32"
+    },
+    "arrow-right": {
+      "key": "b5343b0467d6815f70d9bf6a3f0ddc042d213ffd",
+      "nodeId": "2:38"
+    },
+    "check": {
+      "key": "67d6915306bc6aac04e6eec175d48d69dd217f87",
+      "nodeId": "2:43"
+    },
+    "x": {
+      "key": "62a9af2384c0f4e9f7a8fee0371c416577dcc478",
+      "nodeId": "2:47"
+    },
+    "plus": {
+      "key": "09f2371cbbf3e8ea8a8cccab87003885cbd09f9b",
+      "nodeId": "2:53"
+    },
+    "minus": {
+      "key": "520b64a10815ddbaaab0a402b3c08bb523f52cf9",
+      "nodeId": "2:58"
+    },
+    "search": {
+      "key": "1846917e7d0ce0e41ec66922d8a49e224773ef10",
+      "nodeId": "2:62"
+    },
+    "info": {
+      "key": "e753ea48685db2be349325d59767be3b144b608f",
+      "nodeId": "2:69"
+    },
+    "circle-check": {
+      "key": "b4171e1ddf747e054cd491b6fc446b7e0dd1b3b2",
+      "nodeId": "2:75"
+    },
+    "circle-alert": {
+      "key": "8eb0d03d29b4099083e77c9a13ec6528ab6e746f",
+      "nodeId": "2:82"
+    },
+    "circle-x": {
+      "key": "d297a964ec7946add0b6c380f833b09263370e30",
+      "nodeId": "2:89"
+    },
+    "triangle-alert": {
+      "key": "1479625a2a5a8d02256ca339b5c23efdb870d668",
+      "nodeId": "2:96"
+    },
+    "loader-circle": {
+      "key": "2c85551e6c58f22bce50cd012e4fcc3e03d820c8",
+      "nodeId": "2:101"
+    },
+    "eye": {
+      "key": "86a477ddac47daf767f0e463eb6dc0e868c7f703",
+      "nodeId": "2:105"
+    },
+    "upload": {
+      "key": "12650b095739703df92b82e3e48bee67dbf3f0cf",
+      "nodeId": "2:112"
+    },
+    "trash-2": {
+      "key": "2c786a8b1cbf74e200d3b5c78351cb2396ea7c9b",
+      "nodeId": "2:121"
+    },
+    "shopping-cart": {
+      "key": "54043fbcef2c92cd1e8b63ec95fd26d4958f2310",
+      "nodeId": "2:128"
+    },
+    "calendar": {
+      "key": "2d3730fef7dfb1c116a0a9516b699137d12add12",
+      "nodeId": "2:136"
+    },
+    "user": {
+      "key": "e0354f678cf48467279eca2a5c0ea053ba0da88d",
+      "nodeId": "2:142"
+    },
+    "circle": {
+      "key": "cc786d7a2e97e586bd5a2766f28f09acc9c452ba",
+      "nodeId": "2:147"
     }
-   },
-   "spec": "components/icon-button.md"
-  },
-  "input-field": {
-   "layer": "core",
-   "page": "Input field",
-   "nodeId": "5:243",
-   "key": "47fd3f60887d12650c6feccf6b3b822c35fd152a",
-   "variantCount": 21,
-   "variants": {
-    "size": [
-     "sm",
-     "md",
-     "lg"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "focus",
-     "filled",
-     "error",
-     "disabled",
-     "read-only"
-    ]
-   },
-   "defaultVariant": {
-    "size": "md",
-    "state": "default"
-   },
-   "properties": {
-    "label": {
-     "type": "TEXT",
-     "id": "label#5:0",
-     "default": "عنوان فیلد"
-    },
-    "value": {
-     "type": "TEXT",
-     "id": "value#5:22",
-     "default": "متن را وارد کنید"
-    },
-    "helperText": {
-     "type": "TEXT",
-     "id": "helperText#5:44",
-     "default": "متن راهنما"
-    },
-    "showLabel": {
-     "type": "BOOLEAN",
-     "id": "showLabel#5:66",
-     "default": true
-    },
-    "isRequired": {
-     "type": "BOOLEAN",
-     "id": "isRequired#5:88",
-     "default": false
-    },
-    "showHelper": {
-     "type": "BOOLEAN",
-     "id": "showHelper#5:110",
-     "default": true
-    },
-    "showIconStart": {
-     "type": "BOOLEAN",
-     "id": "showIconStart#5:132",
-     "default": false
-    },
-    "showIconEnd": {
-     "type": "BOOLEAN",
-     "id": "showIconEnd#5:154",
-     "default": false
-    },
-    "iconStart": {
-     "type": "INSTANCE_SWAP",
-     "id": "iconStart#5:176",
-     "default": "icon/search"
-    },
-    "iconEnd": {
-     "type": "INSTANCE_SWAP",
-     "id": "iconEnd#5:198",
-     "default": "icon/x"
-    }
-   },
-   "spec": "components/input-field.md"
-  },
-  "select": {
-   "layer": "core",
-   "page": "Select",
-   "nodeId": "6:200",
-   "key": "75a141f945669aef7f555adf56f2c7a673207f44",
-   "variantCount": 18,
-   "variants": {
-    "size": [
-     "sm",
-     "md",
-     "lg"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "open",
-     "filled",
-     "error",
-     "disabled"
-    ]
-   },
-   "defaultVariant": {
-    "size": "md",
-    "state": "default"
-   },
-   "properties": {
-    "label": {
-     "type": "TEXT",
-     "id": "label#6:0",
-     "default": "عنوان فیلد"
-    },
-    "value": {
-     "type": "TEXT",
-     "id": "value#6:19",
-     "default": "انتخاب کنید"
-    },
-    "helperText": {
-     "type": "TEXT",
-     "id": "helperText#6:38",
-     "default": "متن راهنما"
-    },
-    "showLabel": {
-     "type": "BOOLEAN",
-     "id": "showLabel#6:57",
-     "default": true
-    },
-    "isRequired": {
-     "type": "BOOLEAN",
-     "id": "isRequired#6:76",
-     "default": false
-    },
-    "showHelper": {
-     "type": "BOOLEAN",
-     "id": "showHelper#6:95",
-     "default": false
-    },
-    "showIconStart": {
-     "type": "BOOLEAN",
-     "id": "showIconStart#6:114",
-     "default": false
-    },
-    "iconStart": {
-     "type": "INSTANCE_SWAP",
-     "id": "iconStart#6:133",
-     "default": "icon/circle"
-    }
-   },
-   "spec": "components/select.md"
-  },
-  "checkbox": {
-   "layer": "core",
-   "page": "Checkbox",
-   "nodeId": "15:354",
-   "key": "01226ad2cc2f4bb828567121f4fee28fcf09e87d",
-   "variantCount": 15,
-   "variants": {
-    "checked": [
-     "false",
-     "true",
-     "indeterminate"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "focus",
-     "disabled",
-     "error"
-    ]
-   },
-   "defaultVariant": {
-    "checked": "false",
-    "state": "default"
-   },
-   "properties": {
-    "label": {
-     "type": "TEXT",
-     "id": "label#15:0",
-     "default": "گزینه"
-    },
-    "description": {
-     "type": "TEXT",
-     "id": "description#15:16",
-     "default": "توضیح کوتاه"
-    },
-    "showLabel": {
-     "type": "BOOLEAN",
-     "id": "showLabel#15:32",
-     "default": true
-    },
-    "showDescription": {
-     "type": "BOOLEAN",
-     "id": "showDescription#15:48",
-     "default": false
-    }
-   },
-   "spec": "components/checkbox.md"
-  },
-  "radio": {
-   "layer": "core",
-   "page": "Radio",
-   "nodeId": "16:306",
-   "key": "a756db6956e297929a6bdd3f66b010a08985f8a5",
-   "variantCount": 10,
-   "variants": {
-    "checked": [
-     "false",
-     "true"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "focus",
-     "disabled",
-     "error"
-    ]
-   },
-   "defaultVariant": {
-    "checked": "false",
-    "state": "default"
-   },
-   "properties": {
-    "label": {
-     "type": "TEXT",
-     "id": "label#16:0",
-     "default": "گزینه"
-    },
-    "description": {
-     "type": "TEXT",
-     "id": "description#16:11",
-     "default": "توضیح کوتاه"
-    },
-    "showDescription": {
-     "type": "BOOLEAN",
-     "id": "showDescription#16:22",
-     "default": false
-    }
-   },
-   "spec": "components/radio.md"
-  },
-  "switch": {
-   "layer": "core",
-   "page": "Switch",
-   "nodeId": "17:298",
-   "key": "44cb943f7e6270a0d711cab64f9eaecd5740d8bb",
-   "variantCount": 8,
-   "variants": {
-    "checked": [
-     "false",
-     "true"
-    ],
-    "state": [
-     "default",
-     "hover",
-     "focus",
-     "disabled"
-    ]
-   },
-   "defaultVariant": {
-    "checked": "false",
-    "state": "default"
-   },
-   "properties": {
-    "label": {
-     "type": "TEXT",
-     "id": "label#17:0",
-     "default": "گزینه"
-    },
-    "description": {
-     "type": "TEXT",
-     "id": "description#17:9",
-     "default": "توضیح کوتاه"
-    },
-    "showLabel": {
-     "type": "BOOLEAN",
-     "id": "showLabel#17:18",
-     "default": true
-    },
-    "showDescription": {
-     "type": "BOOLEAN",
-     "id": "showDescription#17:27",
-     "default": false
-    }
-   },
-   "spec": "components/switch.md"
-  },
-  "badge": {
-   "layer": "core",
-   "page": "Badge",
-   "nodeId": "7:191",
-   "key": "b465ba6cc5e40c417ad190e78b9cfce87efc2f78",
-   "variantCount": 36,
-   "variants": {
-    "tone": [
-     "neutral",
-     "primary",
-     "success",
-     "warning",
-     "info",
-     "destructive"
-    ],
-    "style": [
-     "subtle",
-     "solid",
-     "outline"
-    ],
-    "size": [
-     "sm",
-     "md"
-    ]
-   },
-   "defaultVariant": {
-    "tone": "neutral",
-    "style": "subtle",
-    "size": "sm"
-   },
-   "properties": {
-    "label": {
-     "type": "TEXT",
-     "id": "label#7:0",
-     "default": "برچسب"
-    },
-    "showIcon": {
-     "type": "BOOLEAN",
-     "id": "showIcon#7:37",
-     "default": false
-    },
-    "icon": {
-     "type": "INSTANCE_SWAP",
-     "id": "icon#7:74",
-     "default": "icon/circle"
-    }
-   },
-   "spec": "components/badge.md"
-  },
-  "alert": {
-   "layer": "core",
-   "page": "Alert",
-   "nodeId": "9:98",
-   "key": "f92ea726b774e27a0b93edea393d3293f5ab9f73",
-   "variantCount": 5,
-   "variants": {
-    "tone": [
-     "info",
-     "success",
-     "warning",
-     "destructive",
-     "neutral"
-    ]
-   },
-   "defaultVariant": {
-    "tone": "info"
-   },
-   "properties": {
-    "title": {
-     "type": "TEXT",
-     "id": "title#9:0",
-     "default": "عنوان پیام"
-    },
-    "description": {
-     "type": "TEXT",
-     "id": "description#9:6",
-     "default": "توضیح کوتاه درباره‌ی آنچه رخ داده و قدم بعدی کاربر."
-    },
-    "showTitle": {
-     "type": "BOOLEAN",
-     "id": "showTitle#9:12",
-     "default": true
-    },
-    "showAction": {
-     "type": "BOOLEAN",
-     "id": "showAction#9:18",
-     "default": false
-    },
-    "showClose": {
-     "type": "BOOLEAN",
-     "id": "showClose#9:24",
-     "default": false
-    }
-   },
-   "spec": "components/alert.md"
   }
- },
- "icons": {
-  "chevron-down": {
-   "key": "005d4071c946bad606a46e1baf9a5f19932b7e8c",
-   "nodeId": "2:19"
-  },
-  "chevron-up": {
-   "key": "ec036bba9d48593fec86177b66fb94247894baac",
-   "nodeId": "2:22"
-  },
-  "chevron-left": {
-   "key": "f7d80a28f8d886a9fe96bcc988741dc1bbbc83b4",
-   "nodeId": "2:25"
-  },
-  "chevron-right": {
-   "key": "2685e0866fa3b569e1f847b02ae615069432b5f9",
-   "nodeId": "2:28"
-  },
-  "arrow-left": {
-   "key": "85b15aaf6946a6513fc3ba4e1a0783b5b63b9a85",
-   "nodeId": "2:32"
-  },
-  "arrow-right": {
-   "key": "b5343b0467d6815f70d9bf6a3f0ddc042d213ffd",
-   "nodeId": "2:38"
-  },
-  "check": {
-   "key": "67d6915306bc6aac04e6eec175d48d69dd217f87",
-   "nodeId": "2:43"
-  },
-  "x": {
-   "key": "62a9af2384c0f4e9f7a8fee0371c416577dcc478",
-   "nodeId": "2:47"
-  },
-  "plus": {
-   "key": "09f2371cbbf3e8ea8a8cccab87003885cbd09f9b",
-   "nodeId": "2:53"
-  },
-  "minus": {
-   "key": "520b64a10815ddbaaab0a402b3c08bb523f52cf9",
-   "nodeId": "2:58"
-  },
-  "search": {
-   "key": "1846917e7d0ce0e41ec66922d8a49e224773ef10",
-   "nodeId": "2:62"
-  },
-  "info": {
-   "key": "e753ea48685db2be349325d59767be3b144b608f",
-   "nodeId": "2:69"
-  },
-  "circle-check": {
-   "key": "b4171e1ddf747e054cd491b6fc446b7e0dd1b3b2",
-   "nodeId": "2:75"
-  },
-  "circle-alert": {
-   "key": "8eb0d03d29b4099083e77c9a13ec6528ab6e746f",
-   "nodeId": "2:82"
-  },
-  "circle-x": {
-   "key": "d297a964ec7946add0b6c380f833b09263370e30",
-   "nodeId": "2:89"
-  },
-  "triangle-alert": {
-   "key": "1479625a2a5a8d02256ca339b5c23efdb870d668",
-   "nodeId": "2:96"
-  },
-  "loader-circle": {
-   "key": "2c85551e6c58f22bce50cd012e4fcc3e03d820c8",
-   "nodeId": "2:101"
-  },
-  "eye": {
-   "key": "86a477ddac47daf767f0e463eb6dc0e868c7f703",
-   "nodeId": "2:105"
-  },
-  "upload": {
-   "key": "12650b095739703df92b82e3e48bee67dbf3f0cf",
-   "nodeId": "2:112"
-  },
-  "trash-2": {
-   "key": "2c786a8b1cbf74e200d3b5c78351cb2396ea7c9b",
-   "nodeId": "2:121"
-  },
-  "shopping-cart": {
-   "key": "54043fbcef2c92cd1e8b63ec95fd26d4958f2310",
-   "nodeId": "2:128"
-  },
-  "calendar": {
-   "key": "2d3730fef7dfb1c116a0a9516b699137d12add12",
-   "nodeId": "2:136"
-  },
-  "user": {
-   "key": "e0354f678cf48467279eca2a5c0ea053ba0da88d",
-   "nodeId": "2:142"
-  },
-  "circle": {
-   "key": "cc786d7a2e97e586bd5a2766f28f09acc9c452ba",
-   "nodeId": "2:147"
-  }
- }
 }

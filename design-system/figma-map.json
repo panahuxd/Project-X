@@ -1,136 +1,246 @@
 {
-  "$description": "Links the repo to Figma. Variables and styles are matched by name (same name in repo and Figma); IDs are here for tools.",
-  "files": {
-    "foundations": {
-      "name": "DKB Foundations",
-      "fileKey": "JRKA3w0gGzh2mDsItotKS3",
-      "url": "https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3",
-      "pages": {
-        "Cover": "0:1",
-        "Foundations": "2:269"
-      },
-      "collections": {
-        "primitives": "VariableCollectionId:2:2",
-        "brand": "VariableCollectionId:2:3",
-        "semantic": "VariableCollectionId:2:4",
-        "responsive": "VariableCollectionId:2:5"
-      },
-      "lastSync": {
-        "date": "2026-10-19",
-        "tokens": "0.2.0",
-        "result": "all fingerprints match"
-      }
-    },
-    "components": {
-      "name": "DKB Components",
-      "fileKey": "12ErQ1NZV5xHhVCXpvH5Bp",
-      "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp",
-      "pages": {
-        "Cover": "0:1",
-        "Icons": "2:2",
-        "Button": "2:3",
-        "Icon button": "2:4",
-        "Input field": "2:5",
-        "Select": "2:6",
-        "Checkbox": "2:7",
-        "Radio": "2:8",
-        "Switch": "2:9",
-        "Badge": "2:10",
-        "Alert": "2:11"
-      },
-      "reviewBoard": "10:11"
-    },
-    "sandbox": {
-      "name": "DKB \u00b7 Agent sandbox",
-      "fileKey": "p3EPUXwCXQpxjriYd1etGW",
-      "url": "https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW",
-      "dryRunFrame": "5:969"
-    }
+ "$description": "Links the repo to Figma. Variables and styles are matched by name (same name in repo and Figma); IDs are here for tools.",
+ "files": {
+  "foundations": {
+   "name": "DKB Foundations",
+   "fileKey": "JRKA3w0gGzh2mDsItotKS3",
+   "url": "https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3",
+   "pages": {
+    "Cover": "0:1",
+    "Foundations": "2:269"
+   },
+   "collections": {
+    "primitives": "VariableCollectionId:2:2",
+    "brand": "VariableCollectionId:2:3",
+    "semantic": "VariableCollectionId:2:4",
+    "responsive": "VariableCollectionId:2:5"
+   },
+   "lastSync": {
+    "date": "2026-10-19",
+    "tokens": "0.2.0",
+    "result": "all fingerprints match"
+   }
   },
   "components": {
-    "button": {
-      "layer": "core",
-      "set": "3:794",
-      "variants": 90,
-      "spec": "components/button.md"
-    },
-    "icon-button": {
-      "layer": "core",
-      "set": "4:227",
-      "variants": 75,
-      "spec": "components/icon-button.md"
-    },
-    "input-field": {
-      "layer": "core",
-      "set": "5:243",
-      "variants": 21,
-      "spec": "components/input-field.md"
-    },
-    "select": {
-      "layer": "core",
-      "set": "6:200",
-      "variants": 18,
-      "spec": "components/select.md"
-    },
-    "badge": {
-      "layer": "core",
-      "set": "7:191",
-      "variants": 36,
-      "spec": "components/badge.md"
-    },
-    "alert": {
-      "layer": "core",
-      "set": "9:98",
-      "variants": 5,
-      "spec": "components/alert.md"
-    },
-    "checkbox": {
-      "layer": "core",
-      "set": "15:354",
-      "variants": 15,
-      "spec": "components/checkbox.md"
-    },
-    "radio": {
-      "layer": "core",
-      "set": "16:306",
-      "variants": 10,
-      "spec": "components/radio.md"
-    },
-    "switch": {
-      "layer": "core",
-      "set": "17:298",
-      "variants": 8,
-      "spec": "components/switch.md"
-    }
+   "name": "DKB Components",
+   "fileKey": "12ErQ1NZV5xHhVCXpvH5Bp",
+   "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp",
+   "pages": {
+    "Cover": "0:1",
+    "Icons": "2:2",
+    "Alert": "2:11",
+    "Badge": "2:10",
+    "Button": "2:3",
+    "Button group": "28:327",
+    "Checkbox": "2:7",
+    "Field": "28:320",
+    "Icon button": "2:4",
+    "Input": "28:318",
+    "Input OTP": "28:322",
+    "Input group": "28:321",
+    "Kbd": "28:328",
+    "Label": "28:317",
+    "Native select": "28:323",
+    "Progress": "28:330",
+    "Radio": "2:8",
+    "Select": "2:6",
+    "Separator": "28:331",
+    "Skeleton": "28:332",
+    "Slider": "28:324",
+    "Spinner": "28:329",
+    "Switch": "2:9",
+    "Textarea": "28:319",
+    "Toggle": "28:325",
+    "Toggle group": "28:326"
+   },
+   "reviewBoard": "10:11",
+   "lastSync": {
+    "date": "2026-10-20",
+    "components": 24,
+    "result": "component fingerprint 0cebd762 matches"
+   }
   },
-  "icons": {
-    "source": "Lucide (SVG redrawn as 24\u00d724 components, stroke 2, glyph stroke bound to text/default)",
-    "page": "2:2",
-    "components": {
-      "chevron-down": "2:19",
-      "chevron-up": "2:22",
-      "chevron-left": "2:25",
-      "chevron-right": "2:28",
-      "arrow-left": "2:32",
-      "arrow-right": "2:38",
-      "check": "2:43",
-      "x": "2:47",
-      "plus": "2:53",
-      "minus": "2:58",
-      "search": "2:62",
-      "info": "2:69",
-      "circle-check": "2:75",
-      "circle-alert": "2:82",
-      "circle-x": "2:89",
-      "triangle-alert": "2:96",
-      "loader-circle": "2:101",
-      "eye": "2:105",
-      "upload": "2:112",
-      "trash-2": "2:121",
-      "shopping-cart": "2:128",
-      "calendar": "2:136",
-      "user": "2:142",
-      "circle": "2:147"
-    }
+  "sandbox": {
+   "name": "DKB · Agent sandbox",
+   "fileKey": "p3EPUXwCXQpxjriYd1etGW",
+   "url": "https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW",
+   "dryRunFrame": "5:969"
   }
+ },
+ "components": {
+  "alert": {
+   "layer": "core",
+   "set": "9:98",
+   "variants": 5,
+   "spec": "components/alert.md"
+  },
+  "badge": {
+   "layer": "core",
+   "set": "7:191",
+   "variants": 36,
+   "spec": "components/badge.md"
+  },
+  "button": {
+   "layer": "core",
+   "set": "3:794",
+   "variants": 90,
+   "spec": "components/button.md"
+  },
+  "button-group": {
+   "layer": "core",
+   "set": "34:851",
+   "variants": 6,
+   "spec": "components/button-group.md"
+  },
+  "checkbox": {
+   "layer": "core",
+   "set": "15:354",
+   "variants": 15,
+   "spec": "components/checkbox.md"
+  },
+  "field": {
+   "layer": "core",
+   "set": "30:553",
+   "variants": 9,
+   "spec": "components/field.md"
+  },
+  "icon-button": {
+   "layer": "core",
+   "set": "4:227",
+   "variants": 75,
+   "spec": "components/icon-button.md"
+  },
+  "input": {
+   "layer": "core",
+   "set": "29:443",
+   "variants": 21,
+   "spec": "components/input.md"
+  },
+  "input-group": {
+   "layer": "core",
+   "set": "31:421",
+   "variants": 12,
+   "spec": "components/input-group.md"
+  },
+  "input-otp": {
+   "layer": "core",
+   "set": "32:394",
+   "variants": 10,
+   "spec": "components/input-otp.md"
+  },
+  "kbd": {
+   "layer": "core",
+   "set": "36:305",
+   "variants": 2,
+   "spec": "components/kbd.md"
+  },
+  "label": {
+   "layer": "core",
+   "set": "28:444",
+   "variants": 2,
+   "spec": "components/label.md"
+  },
+  "native-select": {
+   "layer": "core",
+   "set": "33:361",
+   "variants": 15,
+   "spec": "components/native-select.md"
+  },
+  "progress": {
+   "layer": "core",
+   "set": "36:354",
+   "variants": 5,
+   "spec": "components/progress.md"
+  },
+  "radio": {
+   "layer": "core",
+   "set": "16:306",
+   "variants": 10,
+   "spec": "components/radio.md"
+  },
+  "select": {
+   "layer": "core",
+   "set": "6:200",
+   "variants": 18,
+   "spec": "components/select.md"
+  },
+  "separator": {
+   "layer": "core",
+   "set": "36:364",
+   "variants": 3,
+   "spec": "components/separator.md"
+  },
+  "skeleton": {
+   "layer": "core",
+   "set": "36:368",
+   "variants": 3,
+   "spec": "components/skeleton.md"
+  },
+  "slider": {
+   "layer": "core",
+   "set": "33:398",
+   "variants": 8,
+   "spec": "components/slider.md"
+  },
+  "spinner": {
+   "layer": "core",
+   "set": "36:343",
+   "variants": 12,
+   "spec": "components/spinner.md"
+  },
+  "switch": {
+   "layer": "core",
+   "set": "17:298",
+   "variants": 8,
+   "spec": "components/switch.md"
+  },
+  "textarea": {
+   "layer": "core",
+   "set": "30:332",
+   "variants": 7,
+   "spec": "components/textarea.md"
+  },
+  "toggle": {
+   "layer": "core",
+   "set": "34:421",
+   "variants": 30,
+   "spec": "components/toggle.md"
+  },
+  "toggle-group": {
+   "layer": "core",
+   "set": "34:519",
+   "variants": 6,
+   "spec": "components/toggle-group.md"
+  }
+ },
+ "icons": {
+  "source": "Lucide (SVG redrawn as 24×24 components, stroke 2, glyph stroke bound to text/default)",
+  "page": "2:2",
+  "components": {
+   "chevron-down": "2:19",
+   "chevron-up": "2:22",
+   "chevron-left": "2:25",
+   "chevron-right": "2:28",
+   "arrow-left": "2:32",
+   "arrow-right": "2:38",
+   "check": "2:43",
+   "x": "2:47",
+   "plus": "2:53",
+   "minus": "2:58",
+   "search": "2:62",
+   "info": "2:69",
+   "circle-check": "2:75",
+   "circle-alert": "2:82",
+   "circle-x": "2:89",
+   "triangle-alert": "2:96",
+   "loader-circle": "2:101",
+   "eye": "2:105",
+   "upload": "2:112",
+   "trash-2": "2:121",
+   "shopping-cart": "2:128",
+   "calendar": "2:136",
+   "user": "2:142",
+   "circle": "2:147"
+  }
+ }
 }

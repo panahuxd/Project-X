@@ -36,7 +36,7 @@ RTL order, right to left: `iconStart` · `spinner` · `label` · `iconEnd`. In F
 | destructive | fill / text | `bg.destructive` → `bg.destructive-hover` / `text.on-destructive` |
 | link | text | `text.link` (underline on hover) → pressed `text.primary` |
 | focus | ring | effect style `shadow.focus-ring`: 3 px spread of `ring.default` (neutral-400 at 50%), as shadcn `focus-visible:ring-[3px] ring-ring/50`. Outline variant also turns its border to `border.focus` (shadcn `border-ring`). Figma note: ghost and link have no fill, and Figma can't draw a shadow around a transparent shape, so their ring is drawn as a 3 px outside stroke in `ring.default` (same look) |
-| disabled | fill / text | `bg.disabled` (none for ghost, link) / `text.disabled`; outline border `border.default` |
+| disabled | opacity | Normal look of the variant at `opacity.disabled` (shadcn `disabled:opacity-50`, DS-28) |
 
 ## States
 | State | What changes |
@@ -44,7 +44,7 @@ RTL order, right to left: `iconStart` · `spinner` · `label` · `iconEnd`. In F
 | hover | Fill one step stronger (see tokens) |
 | pressed | Fill two steps stronger |
 | focus | 3 px translucent grey ring around the button (`shadow.focus-ring`); outline border becomes `border.focus`. Keyboard focus only (`:focus-visible`) |
-| disabled | Greyed; not focusable. Prefer explaining why (helper text or tooltip) over a silent disabled button |
+| disabled | Whole button at `opacity.disabled`; not focusable. Prefer explaining why (helper text or tooltip) over a silent disabled button |
 | loading | `isLoading`: spinner on the right, label stays, taps ignored, `aria-busy="true"` |
 
 ## Behaviour and RTL
@@ -62,4 +62,5 @@ RTL order, right to left: `iconStart` · `spinner` · `label` · `iconEnd`. In F
 - No promotional or warning text inside the button (heuristic CRT-11); put notices outside.
 
 ## Changelog
+- 0.4.0 — disabled state uses `opacity.disabled` over the normal look (DS-28).
 - 0.3.0 — created (90 variants).

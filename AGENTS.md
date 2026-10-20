@@ -55,6 +55,9 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - Text properties override the text of every variant; variant-specific sample text needs its own text node.
 - The `brand` collection is hidden from publishing, but its modes still work in other files: reach it through the alias of any brand-coloured token (`setModes` in agent-helpers does this).
 - Library variables, styles and components import by key without enabling the library in the file's UI.
+- After a library publish, existing instances keep the old version until updated: `instance.swapComponent(<variant from importComponentSetByKeyAsync>)` moves them to the latest and keeps their overrides.
+- To edit a component's nested exposed instances (e.g. the `label` and `control` inside `field`), find them with `instance.findOne(n => n.type === 'INSTANCE' && n.name === 'label')` and call `setProperties` on them.
+- When binding a paint to a variable, give the placeholder paint a real colour (not white): a binding to the same variable the node already had can keep showing the placeholder.
 
 ## 6. Sandbox
 
