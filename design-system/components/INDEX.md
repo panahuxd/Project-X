@@ -118,7 +118,7 @@ Pick a component here, then read its spec. Keys, property ids and the library fi
 | `bottom-nav` | Mobile navigation between the 5 main destinations on storefront and account pages. | type: default | [bottom-nav.md](bottom-nav.md) |
 | `action-bar` | The sticky bottom bar on mobile checkout steps and multi-step forms (DS-36 D4): keeps the payable amount and the main action in reach. | type: amount/button | [action-bar.md](action-bar.md) |
 | `account-menu` | The side menu of the account shell (`/profile/*`): who is signed in and the account sections. | type: default | [account-menu.md](account-menu.md) |
-| `logo` | The brand mark in headers, footers and auth pages. | size: md/sm | [logo.md](logo.md) |
+| `logo` | The official brand mark in headers, footers and auth pages, from the brand file *VA - DKB Logos* (Persian, horizontal, primary colour). | size: md/sm | [logo.md](logo.md) |
 | `bottom-nav-item` | One destination (icon + label) inside bottom-nav. | state: default/active | [bottom-nav.md](bottom-nav.md) |
 
 ## Layout templates (DKB Commerce; start every screen from one; patterns/layouts.md)

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.10.2 — 2026-10-20 (official logo, RTL log-out)
+
+- `logo` (DKB Commerce) now uses the official mark from *VA - DKB Logos*: md = smile + «دیجی‌کالا بیزینس» (28 high), sm = wordmark (20 high); one vector bound to `text.primary`. Every header, footer and template picks it up
+- `mobile-header` home: search placeholder shortened to «جستجو» to fit beside the logo
+- `icon/log-out` (DKB Components) mirrored for RTL; `direction.md` notes it
+
+## 0.10.1 — 2026-10-20 (Commerce test)
+
+- Sandbox test after publishing: `account/orders/desktop` (B2E) from the Commerce `template/account`, header rows=2, account-menu item set active; audit 0 errors, 0 warnings
+
 ## 0.10.0 — 2026-10-20 (DKB Commerce: page shell and templates)
 
 - DS-37: three library files with one-way dependencies (Foundations ← Components ← Commerce) and the rules for platform differences (mode → properties → exposed items/slots → `platform` variant → prefixed component)

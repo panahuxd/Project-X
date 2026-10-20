@@ -121,6 +121,6 @@ After a component change also run `python3 design-system/scripts/make_index.py` 
 |---|---|---|
 | DKB Foundations | Variables (4 collections, 264 variables), 15 text styles, 6 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
 | DKB Components | 38 Lucide icons; 69 Core components covering every non-AI shadcn/ui component (batches 1–5) + `template-region`. API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
-| DKB Commerce | Page shell: `header`, `mobile-header`, `footer`, `bottom-nav` (+ `bottom-nav-item`), `action-bar`, `account-menu`, `logo` (placeholder wordmark); 10 layout templates `template/*`. Uses DKB Components and Foundations (DS-37) | [Figma](https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S) |
+| DKB Commerce | Page shell: `header`, `mobile-header`, `footer`, `bottom-nav` (+ `bottom-nav-item`), `action-bar`, `account-menu`, `logo` (official mark); 10 layout templates `template/*`. Uses DKB Components and Foundations (DS-37) | [Figma](https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S) |
 
 The old libraries (*DS - Shadcn*, *DS - Components*) stay as reference until screens are migrated.

@@ -70,9 +70,10 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 
 ## 6. Sandbox and example
 
-*DKB · Agent sandbox* (Figma, Project X) is for trying things. It holds three screens built by following this file, all passing the audit with 0 errors and 0 warnings:
+*DKB · Agent sandbox* (Figma, Project X) is for trying things. It holds four screens built by following this file, all passing the audit with 0 errors and 0 warnings:
 - `auth/login/mobile` (B2E, Mobile): `field`, `alert`, `button`.
 - `order/address-edit/desktop` (B2E, Desktop): `overlay` + `dialog` with a local `content/address-form` swapped into its slot.
 - `checkout/payment/mobile` (B2E, Mobile): started from `template/checkout`; regions replaced by `card`s, a `proposal/mobile-header` and a `proposal/action-bar` (amount + `button`), one region removed (built before the Commerce shell existed; today's templates already contain `mobile-header` and `action-bar`).
+- `account/orders/desktop` (B2E, Desktop): started from the Commerce `template/account`; `header` set to rows=2, `account-menu` relabelled with «سفارش‌ها» active, regions replaced by a token-built page header and a `card`.
 
 [`designs/b2e-address-edit.md`](designs/b2e-address-edit.md) is the matching example of a finished design spec.
