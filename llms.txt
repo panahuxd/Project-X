@@ -5,6 +5,7 @@
 ## Start here
 - [AGENTS.md](AGENTS.md): what to read, hard rules for designs, the design-task workflow, how to change the design system, Figma lessons
 - [Component index](design-system/components/INDEX.md): every DKB component and what it is for
+- [Page layouts](design-system/patterns/layouts.md): grid, shells and the 10 layout templates every screen starts from
 - [Token reference](design-system/build/token-reference.md): every usable token, its value per brand and screen, and its use
 
 ## Design system

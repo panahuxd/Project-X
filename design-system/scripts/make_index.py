@@ -12,10 +12,26 @@ GROUPS = [
     ('Overlays and menus', ['dialog', 'alert-dialog', 'sheet', 'drawer', 'popover', 'hover-card', 'dropdown-menu', 'context-menu', 'menubar', 'command']),
     ('Content and data', ['card', 'item', 'table', 'data-table', 'tabs', 'accordion', 'collapsible', 'avatar', 'kbd', 'separator', 'scroll-area', 'resizable', 'chart']),
     ('Navigation', ['navigation-menu', 'breadcrumb', 'pagination', 'carousel', 'sidebar']),
-    ('Building blocks (used inside other components)', ['menu-item', 'tab', 'accordion-item', 'table-cell', 'pagination-link', 'navigation-menu-trigger', 'navigation-menu-link', 'sidebar-menu-button', 'calendar-day', 'chart-legend', 'chart-tooltip', 'slot', 'overlay']),
+    ('Building blocks (used inside other components)', ['menu-item', 'tab', 'accordion-item', 'table-cell', 'pagination-link', 'navigation-menu-trigger', 'navigation-menu-link', 'sidebar-menu-button', 'calendar-day', 'chart-legend', 'chart-tooltip', 'slot', 'overlay', 'template-region']),
+    ('Layout templates (start every screen from one; patterns/layouts.md)', ['template/home', 'template/listing', 'template/detail', 'template/checkout', 'template/account', 'template/form', 'template/workspace', 'template/content', 'template/result', 'template/auth']),
 ]
 
+TEMPLATE_PURPOSE = {
+    'template-region': 'Placeholder region inside a layout template; replace every one with real content.',
+    'template/home': 'T1 Home and landing pages: optional full-bleed hero, hero row 3·6·3, stacked sections.',
+    'template/listing': 'T2 Product lists and search results: filters 3 cols beside results 9 cols, sticky sort bar.',
+    'template/detail': 'T3 Product and bundle pages: gallery 3 · info 5 · sticky buy box 4.',
+    'template/checkout': 'T4 Cart, shipping, payment and repayment steps: focused shell, cards 8 cols beside a sticky bill box.',
+    'template/account': 'T5 Profile pages: side nav 3 cols beside content 9 cols.',
+    'template/form': 'T6 Forms and tasks (RFQ, KYC, onboarding, credit request): form 8 cols, optional summary 4 cols.',
+    'template/workspace': 'T7 Admin and report pages (B2E company admin, portal admin): sidebar on the right, KPI cards, chart, data table.',
+    'template/content': 'T8 Terms, privacy, help and FAQ: reading column 720 with an optional table of contents.',
+    'template/result': 'T9 Thank-you, payment result, 404 and access gates: centred 480 block.',
+    'template/auth': 'T10 Login, OTP and sign-up: centred 384 card.',
+}
+
 def purpose(name):
+    if name in TEMPLATE_PURPOSE: return TEMPLATE_PURPOSE[name]
     p = os.path.join(ROOT, 'components', name + '.md')
     if not os.path.exists(p): return ''
     s = open(p).read()
@@ -43,7 +59,9 @@ for title, names in GROUPS:
     out += [f'## {title}', '', '| Component | Use it for | Variants | Spec |', '|---|---|---|---|']
     for n in names:
         c = man[n]
-        out.append(f'| `{n}` | {purpose(n)} | {variants(c)} | [{n}.md]({n}.md) |')
+        spec = c.get('spec', f'components/{n}.md')
+        link = f'[{n}.md]({n}.md)' if spec == f'components/{n}.md' else f'[layouts.md](../{spec})'
+        out.append(f'| `{n}` | {purpose(n)} | {variants(c)} | {link} |')
     out.append('')
 out += ['## Written guides (no Figma component)', '', '| Guide | What it covers |', '|---|---|',
         '| [aspect-ratio.md](aspect-ratio.md) | Media ratios for product images, banners, video |',

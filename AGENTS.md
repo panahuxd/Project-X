@@ -9,9 +9,10 @@ This repo is your context and your output destination. Figma is where you design
 |---|---|---|
 | 1 | Design system rules, architecture, naming | `design-system/README.md`, `design-system/DECISIONS.md` |
 | 2 | Every usable token, its value per brand and its use | `design-system/build/token-reference.md` |
-| 3 | Which component to use for what (all 69, grouped) | `design-system/components/INDEX.md` |
+| 3 | Which component to use for what (all 69, grouped) and the 10 layout templates | `design-system/components/INDEX.md` |
 | 4 | Component API: library keys, variants, properties, defaults | `design-system/components.json` |
 | 5 | How each component is used (when, states, RTL, copy) and the RTL rules | `design-system/components/<name>.md`, `design-system/components/direction.md` |
+| 5b | Page layout standard: grid, shells, templates T1–T10 (DS-36) | `design-system/patterns/layouts.md` |
 | 6 | The product you design for: users, rules, statuses, flows, principles, glossary, gaps | `knowledge-base/<platform>-foundation-knowledge-base.md` (B2E first: it holds the shared layers) |
 | 7 | Evidence: interviews, heuristic evaluation, tests, CSAT | `research/research-insights-drive.md` |
 
@@ -19,7 +20,7 @@ Where the knowledge-base docs describe the **legacy** design system (DS - Shadcn
 
 ## 2. Hard rules for designs
 
-1. **Library components only.** Place instances of DKB Components, imported by key from `components.json` (`figma.importComponentSetByKeyAsync(key)`; icons: `importComponentByKeyAsync`). Configure them with their properties (`instance.setProperties({ [properties.<name>.id]: value })`) and variants. Never detach, never redraw a component.
+1. **Library components only.** Place instances of DKB Components, imported by key from `components.json` (`figma.importComponentSetByKeyAsync(key)`; icons: `importComponentByKeyAsync`). Configure them with their properties (`instance.setProperties({ [properties.<name>.id]: value })`) and variants. Never detach, never redraw a component. The one exception is a **layout template** (`template/*`): place it and detach it at once (`startFromTemplate`).
 2. **Tokens only.** Any frame you draw (layout, sections, cards that aren't components yet) binds fills, strokes, radius, padding and gaps to DKB variables, imported by key (all keys are built into `agent-helpers.js`; the source is `design-system/figma-library-keys.json`). Text uses DKB text styles. No raw hex, no raw px for colour, spacing or radius.
 3. **Missing component?** Don't fake it silently. Build it from tokens in a clearly named frame `proposal/<name>` and list it under *Component requests* in the design spec. The design lead decides whether it joins the library.
 4. **Right-to-left and Persian.** Layouts read right to left (start = right). Copy is Persian, polite «شما», Persian digits, toman with `numeric` text styles, Jalali dates, terms from the platform glossary. Real-looking content, never lorem ipsum.
@@ -31,8 +32,8 @@ Where the knowledge-base docs describe the **legacy** design system (DS - Shadcn
 
 1. **Brief.** Copy `designs/_template.md` to `designs/<platform>-<feature>.md`. Fill problem, users, constraints and the questions you need answered from the knowledge base. Ask the human only for what the sources can't answer.
 2. **Figma file.** One file per feature in the Digikala B2B team, Project X folder, named `<Platform> · <Feature>` (e.g. `B2E · Company admin`). Pages: `Cover`, `Flows`, `Screens`, `States`, `proposals` (only if needed). Both DKB libraries enabled.
-3. **Design.** Build screens from library components and tokens, section by section. Paste `design-system/scripts/figma/agent-helpers.js` (generated, every library key built in) at the top of every `use_figma` script, then `await use({ tokens, styles, components, icons })` with the names you need and build with `paint`, `bind`, `text`, `instance`, `setProps`, `child`, `icon`, `vstack`, `hrow` (RTL-aware) and `setModes`. Name frames `<flow>/<screen>/<breakpoint>` (e.g. `checkout/payment/mobile`).
-4. **Check.** Run `design-system/scripts/figma/audit-design.js` on the Screens page (with `use_figma`). It must report 0 unbound colours, 0 text without a style and 0 non-library instances outside `proposal/` frames. Screenshot each screen in both brand modes and fix clipping, overlap and contrast.
+3. **Design.** Start every screen from its layout template (`design-system/patterns/layouts.md` §6): `startFromTemplate(name, screen, brand, frameName)`, then replace each region with `fillRegion` or remove it. Build the content from library components and tokens, section by section. Paste `design-system/scripts/figma/agent-helpers.js` (generated, every library key built in) at the top of every `use_figma` script, then `await use({ tokens, styles, components, icons })` with the names you need and build with `paint`, `bind`, `text`, `instance`, `setProps`, `child`, `icon`, `vstack`, `hrow` (RTL-aware) and `setModes`. Name frames `<flow>/<screen>/<breakpoint>` (e.g. `checkout/payment/mobile`).
+4. **Check.** Run `design-system/scripts/figma/audit-design.js` on the Screens page (with `use_figma`). It must report 0 unbound colours, 0 text without a style, 0 non-library instances outside `proposal/` frames, and no slot or template region left visible. Screenshot each screen in both brand modes and fix clipping, overlap and contrast.
 5. **Spec.** Complete `designs/<platform>-<feature>.md`: screen table with Figma links, components used, component requests, decisions, open questions.
 6. **Hand over.** Commit on a branch `design/<platform>-<feature>` and open a pull request with the summary and Figma link. If you have no push access, leave the changes in the working tree and tell the human what to review and push.
 
@@ -64,6 +65,7 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - Paint opacity on a variable-bound fill: set it after binding by reassigning (`node.fills = [Object.assign({}, node.fills[0], { opacity: 0.15 })]`); spreading the bound paint before assigning loses it.
 - **Charts**: series colours are `chart.1…5` in that order; text stays in text tokens; one y-axis; time left to right. See `components/chart.md`.
 - When binding a paint to a variable, give the placeholder paint a real colour (not white): a binding to the same variable the node already had can keep showing the placeholder.
+- **Layout templates**: detaching keeps the grid, the bound widths and gaps and the `template-region` instances (they become direct library instances). Asides are fixed widths (3 cols = 310, 4 cols = 421 at 1312); the main column is FILL. Set the `brand` mode after detaching; the `responsive` mode comes with the template.
 
 ## 6. Sandbox and example
 

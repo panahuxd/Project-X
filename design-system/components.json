@@ -2242,6 +2242,210 @@
       "properties": {},
       "spec": "components/tabs.md"
     },
+    "template-region": {
+      "layer": "core",
+      "page": "Templates",
+      "nodeId": "80:3843",
+      "key": "735d686508e7d04d18b4fb58a7a44dd5c4563216",
+      "variantCount": 2,
+      "variants": {
+        "kind": [
+          "area",
+          "bar"
+        ]
+      },
+      "defaultVariant": {
+        "kind": "area"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#80:0",
+          "default": "ناحیه — با محتوای واقعی جایگزین کنید"
+        }
+      },
+      "spec": "patterns/layouts.md"
+    },
+    "template/account": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "82:3947",
+      "key": "86b7aa50ef5ea5f2da0bca3caceef540487ba5f8",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/auth": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "83:4002",
+      "key": "ad61afe8fb34c18d7499eea35507611ec22b5645",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/checkout": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "82:3926",
+      "key": "fd4d0110473e55d952c3b71d3fd0970ccf381b97",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/content": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "83:3972",
+      "key": "fbd94a2bf9ed1a4b03df9c72ae6239323473aefa",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/detail": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "82:3899",
+      "key": "86fcf5d250250d4f6a2caee9f33787ce7f0f82e8",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/form": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "82:3969",
+      "key": "9d114bb0bac5ad55e1372276d887e2e34fa41185",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/home": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "81:3883",
+      "key": "9b0864a2262b6793ef22bb42ce903e208094cd98",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/listing": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "81:3910",
+      "key": "41bfd77086f92e16be071696d9ba258bb3352ebc",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/result": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "83:3989",
+      "key": "ae29b47180e08160674ba9916d74890b7711c253",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
+    "template/workspace": {
+      "layer": "template",
+      "page": "Templates",
+      "nodeId": "83:3948",
+      "key": "0a5f8c66726877f2995a1121f927c98ab7ada1db",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "patterns/layouts.md"
+    },
     "textarea": {
       "layer": "core",
       "page": "Textarea",

@@ -3,7 +3,7 @@
 One design system for all three DKB platforms: **B2R**, **B2E** and **Enterprise Portals**.
 This folder is the **source of truth for token values and component specs**. The Figma libraries mirror it 1:1.
 
-> Status: v0.8 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component. Next: Commerce components. Owner and approver of every token or library change: the design lead.
+> Status: v0.9 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, and 10 layout templates (page standard DS-36). Next: Commerce components (header, bottom nav, footer, action bar first). Owner and approver of every token or library change: the design lead.
 
 ## Principles of the system
 
@@ -73,6 +73,7 @@ design-system/
 ├── build/               generated: CSS, Tailwind theme, shadcn mapping, token reference, contrast report, Figma variables (never edit by hand)
 ├── foundations/         typography.md (more foundation notes as needed)
 ├── components/          INDEX.md (generated) + one spec per component + written guides (aspect-ratio, direction, typography)
+├── patterns/            layouts.md: page layout standard (grid, shells, templates T1–T10)
 ├── components.json      component API for agents: library keys, variants, properties, defaults (generated from Figma)
 ├── figma-map.json       file, page and node IDs in the Figma files
 ├── figma-library-keys.json  library keys of published Foundations variables and styles
@@ -117,6 +118,6 @@ After a component change also run `python3 design-system/scripts/make_index.py` 
 | Library | Contents | Link |
 |---|---|---|
 | DKB Foundations | Variables (4 collections, 264 variables), 15 text styles, 6 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
-| DKB Components | 34 Lucide icons; 69 Core components covering every non-AI shadcn/ui component (batches 1–5). API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
+| DKB Components | 34 Lucide icons; 69 Core components covering every non-AI shadcn/ui component (batches 1–5); 10 layout templates + `template-region` on the Templates page. API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
 
 The old libraries (*DS - Shadcn*, *DS - Components*) stay as reference until screens are migrated.

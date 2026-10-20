@@ -2,13 +2,13 @@
 // Checks the current page (or PAGE below) against AGENTS.md rules and returns a report.
 // Pass when every count under `errors` is 0. `warnings` are for review.
 const PAGE = null; // e.g. 'Screens'; null = first page
-const DKB_COMPONENTS = ['accordion', 'accordion-item', 'alert', 'alert-dialog', 'avatar', 'badge', 'breadcrumb', 'button', 'button-group', 'calendar', 'calendar-day', 'card', 'carousel', 'chart', 'chart-legend', 'chart-tooltip', 'checkbox', 'collapsible', 'combobox', 'command', 'context-menu', 'data-table', 'date-picker', 'dialog', 'drawer', 'dropdown-menu', 'empty', 'field', 'hover-card', 'icon-button', 'input', 'input-group', 'input-otp', 'item', 'kbd', 'label', 'menu-item', 'menubar', 'native-select', 'navigation-menu', 'navigation-menu-link', 'navigation-menu-trigger', 'overlay', 'pagination', 'pagination-link', 'popover', 'progress', 'radio', 'resizable', 'scroll-area', 'select', 'separator', 'sheet', 'sidebar', 'sidebar-menu-button', 'skeleton', 'slider', 'slot', 'spinner', 'switch', 'tab', 'table', 'table-cell', 'tabs', 'textarea', 'toast', 'toggle', 'toggle-group', 'tooltip'];
+const DKB_COMPONENTS = ['accordion', 'accordion-item', 'alert', 'alert-dialog', 'avatar', 'badge', 'breadcrumb', 'button', 'button-group', 'calendar', 'calendar-day', 'card', 'carousel', 'chart', 'chart-legend', 'chart-tooltip', 'checkbox', 'collapsible', 'combobox', 'command', 'context-menu', 'data-table', 'date-picker', 'dialog', 'drawer', 'dropdown-menu', 'empty', 'field', 'hover-card', 'icon-button', 'input', 'input-group', 'input-otp', 'item', 'kbd', 'label', 'menu-item', 'menubar', 'native-select', 'navigation-menu', 'navigation-menu-link', 'navigation-menu-trigger', 'overlay', 'pagination', 'pagination-link', 'popover', 'progress', 'radio', 'resizable', 'scroll-area', 'select', 'separator', 'sheet', 'sidebar', 'sidebar-menu-button', 'skeleton', 'slider', 'slot', 'spinner', 'switch', 'tab', 'table', 'table-cell', 'tabs', 'textarea', 'toast', 'toggle', 'toggle-group', 'tooltip', 'template-region', 'template/home', 'template/listing', 'template/detail', 'template/checkout', 'template/account', 'template/form', 'template/workspace', 'template/content', 'template/result', 'template/auth'];
 // ^ keep in sync with design-system/components.json (component set names). Icons: names starting with "icon/".
 const page = PAGE ? figma.root.children.find(p => p.name === PAGE) : figma.root.children[0];
 await figma.setCurrentPageAsync(page);
 const inProposal = n => { for (let p = n; p && p.type !== 'PAGE'; p = p.parent) if (p.name && p.name.startsWith('proposal/')) return true; return false; };
 const insideInstance = n => { for (let p = n.parent; p && p.type !== 'PAGE'; p = p.parent) if (p.type === 'INSTANCE') return true; return false; };
-const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [] };
+const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [] };
 const warnings = { unboundSpacing: [], effectWithoutStyle: [], noBrandMode: [] };
 const nodes = page.findAll(() => true);
 for (const n of nodes) {
@@ -23,11 +23,13 @@ for (const n of nodes) {
     const mc = await n.getMainComponentAsync();
     const setName = mc && mc.parent && mc.parent.type === 'COMPONENT_SET' ? mc.parent.name : mc && mc.name;
     const ok = mc && mc.remote && (DKB_COMPONENTS.includes(setName) || (setName || '').startsWith('icon/'));
+    if (ok && (setName || '').startsWith('template/')) errors.templateNotDetached.push(`${n.name} (${n.id})`);
     if (!ok) errors.nonLibraryInstance.push(`${n.name} (${n.id}) → ${setName}${mc && !mc.remote ? ' [local]' : ''}`);
   }
   if (n.type === 'INSTANCE' && n.visible) { // an overlay's `content` still showing the library placeholder
     const m = await n.getMainComponentAsync();
     if (m && m.remote && m.parent && m.parent.type === 'COMPONENT_SET' && m.parent.name === 'slot') errors.slotLeftInDesign.push(`${n.name} (${n.id})`);
+    if (m && m.remote && m.parent && m.parent.type === 'COMPONENT_SET' && m.parent.name === 'template-region') errors.regionLeftInDesign.push(`${n.name} (${n.id})`); // a layout-template region not yet replaced
   }
   if (n.type === 'FRAME' && !inInst && DKB_COMPONENTS.some(c => n.name === c || n.name.startsWith(c + ' '))) errors.detachedLooking.push(`${n.name} (${n.id})`);
   if (n.type === 'FRAME' && !inInst && n.layoutMode && n.layoutMode !== 'NONE') {

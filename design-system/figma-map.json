@@ -80,6 +80,7 @@
     "Switch": "2:9",
     "Table": "54:1397",
     "Tabs": "54:1398",
+    "Templates": "80:3840",
     "Textarea": "28:319",
     "Toast": "39:586",
     "Toggle": "28:325",
@@ -88,8 +89,8 @@
    },
    "lastSync": {
     "date": "2026-10-20",
-    "components": 24,
-    "result": "component fingerprint 0cebd762 matches"
+    "components": 80,
+    "result": "component fingerprint 96c6a4e9 matches"
    },
    "reviewBoards": {
     "core": "10:11",

@@ -106,6 +106,22 @@ Pick a component here, then read its spec. Keys and property ids are in `../comp
 | `chart-tooltip` | Part of `chart`. | type: default | [chart-tooltip.md](chart-tooltip.md) |
 | `slot` | Placeholder for custom content inside overlays: `popover`, `hover-card`, `dialog`, `alert-dialog`, `sheet`, `drawer`. | type: default | [slot.md](slot.md) |
 | `overlay` | The dim backdrop behind `dialog`, `alert-dialog`, `sheet` and `drawer`. | type: default | [overlay.md](overlay.md) |
+| `template-region` | Placeholder region inside a layout template; replace every one with real content. | kind: area/bar | [layouts.md](../patterns/layouts.md) |
+
+## Layout templates (start every screen from one; patterns/layouts.md)
+
+| Component | Use it for | Variants | Spec |
+|---|---|---|---|
+| `template/home` | T1 Home and landing pages: optional full-bleed hero, hero row 3·6·3, stacked sections. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/listing` | T2 Product lists and search results: filters 3 cols beside results 9 cols, sticky sort bar. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/detail` | T3 Product and bundle pages: gallery 3 · info 5 · sticky buy box 4. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/checkout` | T4 Cart, shipping, payment and repayment steps: focused shell, cards 8 cols beside a sticky bill box. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/account` | T5 Profile pages: side nav 3 cols beside content 9 cols. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/form` | T6 Forms and tasks (RFQ, KYC, onboarding, credit request): form 8 cols, optional summary 4 cols. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/workspace` | T7 Admin and report pages (B2E company admin, portal admin): sidebar on the right, KPI cards, chart, data table. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/content` | T8 Terms, privacy, help and FAQ: reading column 720 with an optional table of contents. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/result` | T9 Thank-you, payment result, 404 and access gates: centred 480 block. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+| `template/auth` | T10 Login, OTP and sign-up: centred 384 card. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
 
 ## Written guides (no Figma component)
 

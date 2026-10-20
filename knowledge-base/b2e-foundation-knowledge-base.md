@@ -575,7 +575,7 @@ Twenty issues surfaced; the top five block any reliable new design work and shou
 | 3 | Status labels and sets differ between Figma and code (orders, RFQ) | Profile | P1 | Adopt the dictionary in this doc in both | Open |
 | 4 | No company, users or roles in the product | Domain | P1 | Phase 0 designs: company account, invitations, roles | Open |
 | 5 | Gated pages silently redirect to login | Live: credit, wallet, cart | P1 | Explain the gate with a verification CTA | Open |
-| 6 | B2E background grey + dark-grey text vs Figma white + near-black; body forced white | theme-b2e.css | P2 | Decided: white surface (Figma); update theme-b2e.css | Decided |
+| 6 | B2E background grey + dark-grey text vs Figma white + near-black; body forced white | theme-b2e.css | P2 | Decided (DS-36): grey page `bg.subtle` with white cards; text uses DKB text tokens | Decided |
 | 7 | Broken primary scale (400–900 all #5B21B6) and secondary 500 = violet inside a cyan scale | apps/b2e/colors.ts | P2 | Generate a full violet scale | Open |
 | 8 | Two component systems (ui-kit and mega-seeds) and many SCSS modules | Code | P2 | Migration list tier 4 → tier 1 / 2 | Open |
 | 9 | Only 3 Storybook stories; no Code Connect | ui-kit | P2 | Stories + Code Connect for tier 1 and 2 | Open |
@@ -603,7 +603,7 @@ Fifteen decisions are recorded and no questions are open; most decisions change 
 | Backend is migrating from Bagisto to Supernova (in progress) | Don't design around Bagisto limits; expect data shapes to change |
 | Foundation includes Target capabilities, not only what exists | Company, roles, approvals, credit limits are in scope for new designs |
 | Current UI kit, design system and Figma structure are not final | Record them as they are; revise them during new work and log the change here |
-| B2E surface is white (Figma), not grey | Update theme-b2e.css; design on white |
+| B2E page background is grey with white cards (DS-36, 20 Oct 2026; replaces the 19 Oct "white surface" decision) | Use `bg.subtle` for pages and white cards for content, as in `design-system/patterns/layouts.md` |
 | Canonical term for the credit limit is «حد اعتباری» | Use it everywhere; avoid «سقف اعتبار» |
 | Org admins self-serve from day one | Design the company admin space (users, roles, limits) as customer-facing in the first MVP |
 | Proforma and approval are in the first MVP | Request → approve → order and proforma screens are part of phase 1 design |

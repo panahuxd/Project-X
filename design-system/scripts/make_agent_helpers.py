@@ -78,6 +78,30 @@ async function setModes(frame, brand, screen) {
   frame.setExplicitVariableModeForCollection(brandCol, brandCol.modes.find(m => m.name === brand).modeId);
   frame.setExplicitVariableModeForCollection(respCol, respCol.modes.find(m => m.name === screen).modeId);
 }
+// Layout templates (patterns/layouts.md). Start every screen from one:
+// const f = await startFromTemplate('template/checkout', 'mobile', 'B2E', 'checkout/payment/mobile');
+// It places the template, detaches it (templates are the ONE thing you detach), names the frame and sets brand + screen modes.
+async function startFromTemplate(name, screen, brand, frameName, parent = figma.currentPage) {
+  await use({ components: [name] });
+  const v = C[name].children.find(c => c.name === `screen=${screen}`); if (!v) throw new Error(`${name} has no screen=${screen}`);
+  const inst = v.createInstance(); parent.appendChild(inst);
+  const frame = inst.detachInstance(); frame.name = frameName;
+  await setModes(frame, brand, screen === 'desktop' ? 'Desktop' : 'Mobile');
+  return frame;
+}
+// The regions still to fill, by name: const r = await regions(f); r.filters, r['bill-box'] …
+async function regions(frame) {
+  const o = {};
+  for (const n of frame.findAllWithCriteria({ types: ['INSTANCE'] })) { const m = await n.getMainComponentAsync(); if (m && m.parent && m.parent.name === 'template-region') o[n.name] = n; }
+  return o;
+}
+// Put real content where a region is: same place and width behaviour (FILL stays FILL, a fixed region keeps its width); the region is removed.
+function fillRegion(region, node) {
+  const p = region.parent; p.insertChild(p.children.indexOf(region), node);
+  if (region.layoutSizingHorizontal === 'FILL') node.layoutSizingHorizontal = 'FILL';
+  else { const hug = 'layoutMode' in node && node.layoutMode !== 'NONE'; node.resize(region.width, node.height); if (hug) node.layoutSizingVertical = 'HUG'; }
+  region.remove(); return node;
+}
 // ---- end of DKB agent helpers ----
 '''
 out = JS.replace('__KEYS__', json.dumps(keys, ensure_ascii=False, separators=(',', ':')))
