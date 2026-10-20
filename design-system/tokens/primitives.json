@@ -709,7 +709,8 @@
       }
     },
     "50": {
-      "$value": 0.5
+      "$value": 0.5,
+      "$description": "Figma opacity variables are 0-100; CSS value is 0.5"
     }
   }
 }

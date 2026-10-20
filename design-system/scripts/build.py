@@ -221,10 +221,11 @@ tw += ['  --font-sans: var(--font-family-sans);', '  --radius-control: var(--rad
 
 # ---------------------------------------------------------------- Figma variables
 FIGMA_TYPE = {'color': 'COLOR', 'dimension': 'FLOAT', 'fontWeight': 'FLOAT', 'fontFamily': 'STRING', 'number': 'FLOAT'}
-def figma_value(v, typ):
+def figma_value(v, typ, name=''):
     m = REF.match(v) if isinstance(v, str) else None
     if m: return {'alias': m.group(1).replace('.', '/')}
     if typ == 'dimension': return float(str(v).replace('px', ''))
+    if name.startswith('opacity.'): return round(float(v) * 100, 4)  # Figma opacity variables are 0-100
     return v
 fig = {'$description': 'Generated. Input for the Figma sync: one entry per collection.', 'collections': []}
 for col in manifest['collections']:
@@ -237,7 +238,7 @@ for col in manifest['collections']:
         vars_.append({'name': n.replace('.', '/'), 'type': FIGMA_TYPE[t['type']], 'description': t['description'],
                       'scopes': t['figma'].get('scopes', ['ALL_SCOPES']),
                       'hiddenFromPublishing': t['figma'].get('hidden', False),
-                      'values': {m: figma_value(toks[n]['value'], t['type']) for m, toks in modes.items()}})
+                      'values': {m: figma_value(toks[n]['value'], t['type'], n) for m, toks in modes.items()}})
     fig['collections'].append({'name': col['name'], 'modes': list(modes), 'variables': vars_})
 fig['textStyles'] = [{'name': n.replace('text.', ''), 'description': t['description'], 'fontFeatures': t['features'],
                       'bind': {k: v.strip('{}').replace('.', '/') for k, v in t['value'].items()

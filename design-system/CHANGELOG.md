@@ -4,7 +4,7 @@
 
 - **Focus ring = shadcn/ui** (DS-22): `border.focus` → neutral-400; new `ring.default`, `ring.destructive`, alpha primitives, effect styles `shadow.focus-ring` and `shadow.focus-ring-destructive`. Foundations Figma updated, sync check matches
 - New token `border.control` (DS-21)
-- New token `opacity.disabled` (0.5); disabled checkbox, radio and switch now keep their checked/unchecked look at 50% (DS-23)
+- New token `opacity.disabled` (0.5); disabled checkbox, radio and switch now keep their checked/unchecked look at 50% (DS-23). The build writes opacity to Figma as 0-100 (50), since Figma opacity variables use percent
 - DKB Components file: Lucide icon set (24) and 9 components (278 variants): button, icon-button, input-field, select, checkbox, radio, switch, badge, alert; specs in `components/` (+ `_template.md`)
 - All component fills, strokes and text are bound to tokens and text styles (audit: 0 unbound)
 - Review board (Cover page): the components in B2R/B2E × Desktop/Mobile

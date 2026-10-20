@@ -1650,11 +1650,11 @@
     {
      "name": "opacity/50",
      "type": "FLOAT",
-     "description": "",
+     "description": "Figma opacity variables are 0-100; CSS value is 0.5",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
-      "Default": 0.5
+      "Default": 50.0
      }
     }
    ]
