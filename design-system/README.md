@@ -38,6 +38,10 @@ Format: [W3C Design Tokens (DTCG)](https://www.designtokens.org/) JSON. Each lay
 | Commerce | `Commerce/` | Shared buying blocks: price, quantity, product card and row, bill box, payment method item, status badge, stepper, order timeline, filters, header and bottom nav | Built from Core; platform differences via props and slots |
 | Platform | `B2R/`, `B2E/`, `Portal/` | Only what one platform really owns (loyalty, approvals, company admin, tenant gate, allowance) | Thin; built from Core and Commerce |
 
+## Coverage
+
+Every shadcn/ui component gets a DKB equivalent (DS-24). Status and batch per component: [`COVERAGE.md`](COVERAGE.md).
+
 ## Naming conventions
 
 | Thing | Convention | Example |
