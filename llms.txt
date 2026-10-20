@@ -10,7 +10,7 @@
 
 ## Design system
 - [Design system README](design-system/README.md): principles, token and component architecture, naming, build and Figma sync
-- [components.json](design-system/components.json): component API — library keys, variants, property ids, defaults
+- [components.json](design-system/components.json): component API for both libraries (DKB Components = Core, DKB Commerce = shell, templates and shared composite parts) — library keys, variants, property ids, defaults
 - [Component specs](design-system/components/): one file per component (purpose, anatomy, properties, tokens, states, RTL, accessibility, content)
 - [figma-library-keys.json](design-system/figma-library-keys.json): library keys of published variables and styles
 - [Agent helpers](design-system/scripts/figma/agent-helpers.js): prelude for use_figma scripts with every library key built in

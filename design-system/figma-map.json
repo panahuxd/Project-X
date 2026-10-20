@@ -80,7 +80,7 @@
     "Switch": "2:9",
     "Table": "54:1397",
     "Tabs": "54:1398",
-    "Templates": "80:3840",
+    "Template region": "80:3840",
     "Textarea": "28:319",
     "Toast": "39:586",
     "Toggle": "28:325",
@@ -89,8 +89,8 @@
    },
    "lastSync": {
     "date": "2026-10-20",
-    "components": 80,
-    "result": "component fingerprint 50e5a397 matches"
+    "components": 70,
+    "result": "component fingerprint ccfe3e00 matches"
    },
    "reviewBoards": {
     "core": "10:11",
@@ -100,7 +100,22 @@
     "dates-and-charts": "77:2798"
    }
   },
-  "sandbox": {
+  "commerce": {
+      "name": "DKB Commerce",
+      "fileKey": "0xda5d6a7EF5fo2Yiqh91S",
+      "url": "https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S",
+      "pages": {
+        "Cover": "0:1",
+        "Shell": "1:2",
+        "Templates": "1:3"
+      },
+      "lastSync": {
+        "date": "2026-10-20",
+        "components": 18,
+        "result": "commerce fingerprint d68da4b6 matches"
+      }
+    },
+    "sandbox": {
    "name": "DKB · Agent sandbox",
    "fileKey": "p3EPUXwCXQpxjriYd1etGW",
    "url": "https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW",

@@ -45,14 +45,17 @@ cm = os.path.join(ROOT, 'components.json')
 if os.path.exists(cm):
     man = json.load(open(cm))
     js = lambda v: ('true' if v else 'false') if isinstance(v, bool) else str(v)
-    cl = []
+    per = {}
     for name, c in man['components'].items():
+        cl = per.setdefault(c.get('file', 'components'), [])
         cl.append('|'.join([name, c['key'], str(c['variantCount']),
             ';'.join(sorted(f"{k}={'/'.join(v)}" for k, v in c['variants'].items())),
             ';'.join(sorted(f"{k}:{v['type']}:{js(v['default'])}" for k, v in c['properties'].items()))]))
-    cl.append('icons|' + ';'.join(sorted(f"{k}:{v['key']}" for k, v in man['icons'].items())))
-    out['components'] = {'count': len(man['components']), 'icons': len(man['icons']), 'fp': fnv('\n'.join(sorted(cl)))}
-    detail['components'] = sorted(cl)
+    per['components'].append('icons|' + ';'.join(sorted(f"{k}:{v['key']}" for k, v in man['icons'].items())))
+    for f, cl in per.items():  # one fingerprint per library file; export-components.js returns the same per file
+        out[f] = {'count': sum(1 for c in man['components'].values() if c.get('file', 'components') == f), 'fp': fnv('\n'.join(sorted(cl)))}
+        if f == 'components': out[f]['icons'] = len(man['icons'])
+        detail[f] = sorted(cl)
 if len(sys.argv) > 1:
     print('\n'.join(detail[sys.argv[1]]))
 else:

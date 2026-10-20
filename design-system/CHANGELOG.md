@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.10.0 — 2026-10-20 (DKB Commerce: page shell and templates)
+
+- DS-37: three library files with one-way dependencies (Foundations ← Components ← Commerce) and the rules for platform differences (mode → properties → exposed items/slots → `platform` variant → prefixed component)
+- New library *DKB Commerce*: `header` (storefront rows=1|2, focused), `mobile-header` (home, inner), `footer` (desktop, mobile), `bottom-nav` + `bottom-nav-item`, `action-bar` (amount, button), `account-menu`, `logo` (placeholder wordmark until the official SVG is added). Specs in `components/`
+- The 10 layout templates moved from DKB Components to DKB Commerce (new keys) and now contain the real shell parts; `template-region` stays in DKB Components (page renamed *Template region*)
+- DKB Components: 4 Lucide icons (layout-grid, map-pin, log-out, menu); 38 icons
+- `components.json`: `files` + a `file` per component; `export-components.js` runs in either library; `sync_check.py` prints one fingerprint per file (components `ccfe3e00`, commerce `d68da4b6`); audit and index know the Commerce components
+
 ## 0.9.2 — 2026-10-20 (separator fix)
 
 - Fix `separator`: variant property `label` renamed to `withLabel`; it clashed with the `label` text property (Figma showed a property conflict, and `setProps(…, { label })` was ambiguous)

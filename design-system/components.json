@@ -1,12 +1,20 @@
 {
-  "$description": "Generated from Figma by scripts/figma/export-components.js. The agent's API for DKB Components: import a component set with figma.importComponentSetByKeyAsync(key) (or an icon with importComponentByKeyAsync), pick a variant by its variant properties, then set properties with instance.setProperties({ [properties.<name>.id]: value }). Do not edit by hand.",
-  "file": {
-    "name": "DKB Components",
-    "key": "12ErQ1NZV5xHhVCXpvH5Bp",
-    "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp"
+  "$description": "Generated from Figma by scripts/figma/export-components.js (run once in each library file). The agent's API for the DKB libraries: every component names its `file` (components = DKB Components, Core; commerce = DKB Commerce). Import a component set with figma.importComponentSetByKeyAsync(key) (or an icon with importComponentByKeyAsync), pick a variant by its variant properties, then set properties with instance.setProperties({ [properties.<name>.id]: value }). Do not edit by hand.",
+  "files": {
+    "components": {
+      "name": "DKB Components",
+      "key": "12ErQ1NZV5xHhVCXpvH5Bp",
+      "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp"
+    },
+    "commerce": {
+      "name": "DKB Commerce",
+      "key": "0xda5d6a7EF5fo2Yiqh91S",
+      "url": "https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S"
+    }
   },
   "components": {
     "accordion": {
+      "file": "components",
       "layer": "core",
       "page": "Accordion",
       "nodeId": "61:1384",
@@ -24,6 +32,7 @@
       "spec": "components/accordion.md"
     },
     "accordion-item": {
+      "file": "components",
       "layer": "core",
       "page": "Accordion",
       "nodeId": "61:1365",
@@ -54,7 +63,67 @@
       },
       "spec": "components/accordion-item.md"
     },
+    "account-menu": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "7:260",
+      "key": "ff656b3c531d29f1f0dd85c865f99d30192630bb",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "name": {
+          "type": "TEXT",
+          "id": "name#7:9",
+          "default": "فروشگاه آفتاب"
+        },
+        "detail": {
+          "type": "TEXT",
+          "id": "detail#7:11",
+          "default": "۰۹۱۲ ••• ۴۵۶۷"
+        }
+      },
+      "spec": "components/account-menu.md"
+    },
+    "action-bar": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "5:147",
+      "key": "7f51c4881cd02dcbec681c6fe369d8d17c5ae0a4",
+      "variantCount": 2,
+      "variants": {
+        "type": [
+          "amount",
+          "button"
+        ]
+      },
+      "defaultVariant": {
+        "type": "amount"
+      },
+      "properties": {
+        "amountLabel": {
+          "type": "TEXT",
+          "id": "amountLabel#5:6",
+          "default": "مبلغ قابل پرداخت"
+        },
+        "amount": {
+          "type": "TEXT",
+          "id": "amount#5:9",
+          "default": "۱۲٬۴۵۰٬۰۰۰ تومان"
+        }
+      },
+      "spec": "components/action-bar.md"
+    },
     "alert": {
+      "file": "components",
       "layer": "core",
       "page": "Alert",
       "nodeId": "9:98",
@@ -102,6 +171,7 @@
       "spec": "components/alert.md"
     },
     "alert-dialog": {
+      "file": "components",
       "layer": "core",
       "page": "Alert dialog",
       "nodeId": "44:673",
@@ -141,6 +211,7 @@
       "spec": "components/alert-dialog.md"
     },
     "avatar": {
+      "file": "components",
       "layer": "core",
       "page": "Avatar",
       "nodeId": "55:1363",
@@ -172,6 +243,7 @@
       "spec": "components/avatar.md"
     },
     "badge": {
+      "file": "components",
       "layer": "core",
       "page": "Badge",
       "nodeId": "7:191",
@@ -220,7 +292,61 @@
       },
       "spec": "components/badge.md"
     },
+    "bottom-nav": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "7:206",
+      "key": "a5c14669be0697a9a518c8eed1a4b2c4e98de823",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {},
+      "spec": "components/bottom-nav.md"
+    },
+    "bottom-nav-item": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "7:154",
+      "key": "913cd598ebaa97882e811d8d5b49c9b45d90c793",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "default",
+          "active"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#7:0",
+          "default": "خانه"
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#7:3",
+          "default": "icon/house"
+        },
+        "showBadge": {
+          "type": "BOOLEAN",
+          "id": "showBadge#7:6",
+          "default": false
+        }
+      },
+      "spec": "components/bottom-nav.md"
+    },
     "breadcrumb": {
+      "file": "components",
       "layer": "core",
       "page": "Breadcrumb",
       "nodeId": "66:2222",
@@ -270,6 +396,7 @@
       "spec": "components/breadcrumb.md"
     },
     "button": {
+      "file": "components",
       "layer": "core",
       "page": "Button",
       "nodeId": "3:794",
@@ -337,6 +464,7 @@
       "spec": "components/button.md"
     },
     "button-group": {
+      "file": "components",
       "layer": "core",
       "page": "Button group",
       "nodeId": "34:851",
@@ -361,6 +489,7 @@
       "spec": "components/button-group.md"
     },
     "calendar": {
+      "file": "components",
       "layer": "core",
       "page": "Calendar",
       "nodeId": "75:2879",
@@ -385,6 +514,7 @@
       "spec": "components/calendar.md"
     },
     "calendar-day": {
+      "file": "components",
       "layer": "core",
       "page": "Calendar",
       "nodeId": "74:2696",
@@ -416,6 +546,7 @@
       "spec": "components/calendar-day.md"
     },
     "card": {
+      "file": "components",
       "layer": "core",
       "page": "Card",
       "nodeId": "56:1418",
@@ -470,6 +601,7 @@
       "spec": "components/card.md"
     },
     "carousel": {
+      "file": "components",
       "layer": "core",
       "page": "Carousel",
       "nodeId": "68:2199",
@@ -494,6 +626,7 @@
       "spec": "components/carousel.md"
     },
     "chart": {
+      "file": "components",
       "layer": "core",
       "page": "Chart",
       "nodeId": "77:2797",
@@ -513,6 +646,7 @@
       "spec": "components/chart.md"
     },
     "chart-legend": {
+      "file": "components",
       "layer": "core",
       "page": "Chart",
       "nodeId": "76:2704",
@@ -571,6 +705,7 @@
       "spec": "components/chart-legend.md"
     },
     "chart-tooltip": {
+      "file": "components",
       "layer": "core",
       "page": "Chart",
       "nodeId": "76:2727",
@@ -659,6 +794,7 @@
       "spec": "components/chart-tooltip.md"
     },
     "checkbox": {
+      "file": "components",
       "layer": "core",
       "page": "Checkbox",
       "nodeId": "15:354",
@@ -707,6 +843,7 @@
       "spec": "components/checkbox.md"
     },
     "collapsible": {
+      "file": "components",
       "layer": "core",
       "page": "Collapsible",
       "nodeId": "61:1401",
@@ -736,6 +873,7 @@
       "spec": "components/collapsible.md"
     },
     "combobox": {
+      "file": "components",
       "layer": "core",
       "page": "Combobox",
       "nodeId": "48:722",
@@ -754,6 +892,7 @@
       "spec": "components/combobox.md"
     },
     "command": {
+      "file": "components",
       "layer": "core",
       "page": "Command",
       "nodeId": "48:626",
@@ -778,6 +917,7 @@
       "spec": "components/command.md"
     },
     "context-menu": {
+      "file": "components",
       "layer": "core",
       "page": "Context menu",
       "nodeId": "41:605",
@@ -795,6 +935,7 @@
       "spec": "components/context-menu.md"
     },
     "data-table": {
+      "file": "components",
       "layer": "core",
       "page": "Data table",
       "nodeId": "63:2340",
@@ -812,6 +953,7 @@
       "spec": "components/data-table.md"
     },
     "date-picker": {
+      "file": "components",
       "layer": "core",
       "page": "Date picker",
       "nodeId": "75:3138",
@@ -831,6 +973,7 @@
       "spec": "components/date-picker.md"
     },
     "dialog": {
+      "file": "components",
       "layer": "core",
       "page": "Dialog",
       "nodeId": "44:623",
@@ -884,6 +1027,7 @@
       "spec": "components/dialog.md"
     },
     "drawer": {
+      "file": "components",
       "layer": "core",
       "page": "Drawer",
       "nodeId": "46:606",
@@ -932,6 +1076,7 @@
       "spec": "components/drawer.md"
     },
     "dropdown-menu": {
+      "file": "components",
       "layer": "core",
       "page": "Dropdown menu",
       "nodeId": "40:755",
@@ -950,6 +1095,7 @@
       "spec": "components/dropdown-menu.md"
     },
     "empty": {
+      "file": "components",
       "layer": "core",
       "page": "Empty",
       "nodeId": "58:1398",
@@ -994,6 +1140,7 @@
       "spec": "components/empty.md"
     },
     "field": {
+      "file": "components",
       "layer": "core",
       "page": "Field",
       "nodeId": "30:553",
@@ -1034,7 +1181,57 @@
       },
       "spec": "components/field.md"
     },
+    "footer": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "5:122",
+      "key": "38d823964fef07e4e8dc777f9ae3381ec2f795b3",
+      "variantCount": 2,
+      "variants": {
+        "size": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "size": "desktop"
+      },
+      "properties": {},
+      "spec": "components/footer.md"
+    },
+    "header": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "2:1183",
+      "key": "4dfb32ed0b699d4aa0b7443afd32a497fe9a25e6",
+      "variantCount": 3,
+      "variants": {
+        "type": [
+          "storefront",
+          "focused"
+        ],
+        "rows": [
+          "1",
+          "2"
+        ]
+      },
+      "defaultVariant": {
+        "type": "storefront",
+        "rows": "1"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#2:0",
+          "default": "سبد خرید"
+        }
+      },
+      "spec": "components/header.md"
+    },
     "hover-card": {
+      "file": "components",
       "layer": "core",
       "page": "Hover card",
       "nodeId": "43:596",
@@ -1073,6 +1270,7 @@
       "spec": "components/hover-card.md"
     },
     "icon-button": {
+      "file": "components",
       "layer": "core",
       "page": "Icon button",
       "nodeId": "4:227",
@@ -1114,6 +1312,7 @@
       "spec": "components/icon-button.md"
     },
     "input": {
+      "file": "components",
       "layer": "core",
       "page": "Input",
       "nodeId": "29:443",
@@ -1169,6 +1368,7 @@
       "spec": "components/input.md"
     },
     "input-group": {
+      "file": "components",
       "layer": "core",
       "page": "Input group",
       "nodeId": "31:421",
@@ -1236,6 +1436,7 @@
       "spec": "components/input-group.md"
     },
     "input-otp": {
+      "file": "components",
       "layer": "core",
       "page": "Input OTP",
       "nodeId": "32:394",
@@ -1262,6 +1463,7 @@
       "spec": "components/input-otp.md"
     },
     "item": {
+      "file": "components",
       "layer": "core",
       "page": "Item",
       "nodeId": "57:1436",
@@ -1317,6 +1519,7 @@
       "spec": "components/item.md"
     },
     "kbd": {
+      "file": "components",
       "layer": "core",
       "page": "Kbd",
       "nodeId": "36:305",
@@ -1341,6 +1544,7 @@
       "spec": "components/kbd.md"
     },
     "label": {
+      "file": "components",
       "layer": "core",
       "page": "Label",
       "nodeId": "28:444",
@@ -1374,7 +1578,27 @@
       },
       "spec": "components/label.md"
     },
+    "logo": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "2:1058",
+      "key": "dd53db13e1c8c14730e511b6b536118f9444540b",
+      "variantCount": 2,
+      "variants": {
+        "size": [
+          "md",
+          "sm"
+        ]
+      },
+      "defaultVariant": {
+        "size": "md"
+      },
+      "properties": {},
+      "spec": "components/logo.md"
+    },
     "menu-item": {
+      "file": "components",
       "layer": "core",
       "page": "Dropdown menu",
       "nodeId": "40:672",
@@ -1435,6 +1659,7 @@
       "spec": "components/menu-item.md"
     },
     "menubar": {
+      "file": "components",
       "layer": "core",
       "page": "Menubar",
       "nodeId": "41:680",
@@ -1473,7 +1698,38 @@
       },
       "spec": "components/menubar.md"
     },
+    "mobile-header": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "5:87",
+      "key": "d84811a8215f7f1ca511fc077751b8ea4aaf94b0",
+      "variantCount": 2,
+      "variants": {
+        "type": [
+          "home",
+          "inner"
+        ]
+      },
+      "defaultVariant": {
+        "type": "home"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#5:0",
+          "default": "سفارش‌ها"
+        },
+        "showSearch": {
+          "type": "BOOLEAN",
+          "id": "showSearch#5:3",
+          "default": true
+        }
+      },
+      "spec": "components/mobile-header.md"
+    },
     "native-select": {
+      "file": "components",
       "layer": "core",
       "page": "Native select",
       "nodeId": "33:361",
@@ -1507,6 +1763,7 @@
       "spec": "components/native-select.md"
     },
     "navigation-menu": {
+      "file": "components",
       "layer": "core",
       "page": "Navigation menu",
       "nodeId": "69:2232",
@@ -1525,6 +1782,7 @@
       "spec": "components/navigation-menu.md"
     },
     "navigation-menu-link": {
+      "file": "components",
       "layer": "core",
       "page": "Navigation menu",
       "nodeId": "69:2186",
@@ -1559,6 +1817,7 @@
       "spec": "components/navigation-menu-link.md"
     },
     "navigation-menu-trigger": {
+      "file": "components",
       "layer": "core",
       "page": "Navigation menu",
       "nodeId": "69:2179",
@@ -1590,6 +1849,7 @@
       "spec": "components/navigation-menu-trigger.md"
     },
     "overlay": {
+      "file": "components",
       "layer": "core",
       "page": "Dialog",
       "nodeId": "44:589",
@@ -1607,6 +1867,7 @@
       "spec": "components/overlay.md"
     },
     "pagination": {
+      "file": "components",
       "layer": "core",
       "page": "Pagination",
       "nodeId": "67:2227",
@@ -1625,6 +1886,7 @@
       "spec": "components/pagination.md"
     },
     "pagination-link": {
+      "file": "components",
       "layer": "core",
       "page": "Pagination",
       "nodeId": "67:2173",
@@ -1652,6 +1914,7 @@
       "spec": "components/pagination-link.md"
     },
     "popover": {
+      "file": "components",
       "layer": "core",
       "page": "Popover",
       "nodeId": "43:587",
@@ -1695,6 +1958,7 @@
       "spec": "components/popover.md"
     },
     "progress": {
+      "file": "components",
       "layer": "core",
       "page": "Progress",
       "nodeId": "36:354",
@@ -1716,6 +1980,7 @@
       "spec": "components/progress.md"
     },
     "radio": {
+      "file": "components",
       "layer": "core",
       "page": "Radio",
       "nodeId": "16:306",
@@ -1758,6 +2023,7 @@
       "spec": "components/radio.md"
     },
     "resizable": {
+      "file": "components",
       "layer": "core",
       "page": "Resizable",
       "nodeId": "63:2369",
@@ -1781,6 +2047,7 @@
       "spec": "components/resizable.md"
     },
     "scroll-area": {
+      "file": "components",
       "layer": "core",
       "page": "Scroll area",
       "nodeId": "63:2353",
@@ -1805,6 +2072,7 @@
       "spec": "components/scroll-area.md"
     },
     "select": {
+      "file": "components",
       "layer": "core",
       "page": "Select",
       "nodeId": "6:200",
@@ -1849,6 +2117,7 @@
       "spec": "components/select.md"
     },
     "separator": {
+      "file": "components",
       "layer": "core",
       "page": "Separator",
       "nodeId": "36:364",
@@ -1878,6 +2147,7 @@
       "spec": "components/separator.md"
     },
     "sheet": {
+      "file": "components",
       "layer": "core",
       "page": "Sheet",
       "nodeId": "45:695",
@@ -1929,6 +2199,7 @@
       "spec": "components/sheet.md"
     },
     "sidebar": {
+      "file": "components",
       "layer": "core",
       "page": "Sidebar",
       "nodeId": "72:2291",
@@ -1947,6 +2218,7 @@
       "spec": "components/sidebar.md"
     },
     "sidebar-menu-button": {
+      "file": "components",
       "layer": "core",
       "page": "Sidebar",
       "nodeId": "70:2195",
@@ -1993,6 +2265,7 @@
       "spec": "components/sidebar-menu-button.md"
     },
     "skeleton": {
+      "file": "components",
       "layer": "core",
       "page": "Skeleton",
       "nodeId": "36:368",
@@ -2012,6 +2285,7 @@
       "spec": "components/skeleton.md"
     },
     "slider": {
+      "file": "components",
       "layer": "core",
       "page": "Slider",
       "nodeId": "33:398",
@@ -2037,6 +2311,7 @@
       "spec": "components/slider.md"
     },
     "slot": {
+      "file": "components",
       "layer": "core",
       "page": "Slot",
       "nodeId": "43:578",
@@ -2054,6 +2329,7 @@
       "spec": "components/slot.md"
     },
     "spinner": {
+      "file": "components",
       "layer": "core",
       "page": "Spinner",
       "nodeId": "36:343",
@@ -2080,6 +2356,7 @@
       "spec": "components/spinner.md"
     },
     "switch": {
+      "file": "components",
       "layer": "core",
       "page": "Switch",
       "nodeId": "17:298",
@@ -2126,6 +2403,7 @@
       "spec": "components/switch.md"
     },
     "tab": {
+      "file": "components",
       "layer": "core",
       "page": "Tabs",
       "nodeId": "60:1376",
@@ -2167,6 +2445,7 @@
       "spec": "components/tab.md"
     },
     "table": {
+      "file": "components",
       "layer": "core",
       "page": "Table",
       "nodeId": "63:1671",
@@ -2184,6 +2463,7 @@
       "spec": "components/table.md"
     },
     "table-cell": {
+      "file": "components",
       "layer": "core",
       "page": "Table",
       "nodeId": "63:1424",
@@ -2225,6 +2505,7 @@
       "spec": "components/table-cell.md"
     },
     "tabs": {
+      "file": "components",
       "layer": "core",
       "page": "Tabs",
       "nodeId": "60:1415",
@@ -2243,8 +2524,9 @@
       "spec": "components/tabs.md"
     },
     "template-region": {
+      "file": "components",
       "layer": "core",
-      "page": "Templates",
+      "page": "Template region",
       "nodeId": "80:3843",
       "key": "735d686508e7d04d18b4fb58a7a44dd5c4563216",
       "variantCount": 2,
@@ -2267,10 +2549,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/account": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "82:3947",
-      "key": "86b7aa50ef5ea5f2da0bca3caceef540487ba5f8",
+      "nodeId": "8:688",
+      "key": "7589027064ce46fda673c1e0c19f6ed586819bdd",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2285,10 +2568,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/auth": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "83:4002",
-      "key": "ad61afe8fb34c18d7499eea35507611ec22b5645",
+      "nodeId": "9:1074",
+      "key": "45f1b7fc47afb3d0ebb8805120770b3786c4193c",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2303,10 +2587,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/checkout": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "82:3926",
-      "key": "fd4d0110473e55d952c3b71d3fd0970ccf381b97",
+      "nodeId": "8:512",
+      "key": "71a2885034be8dc9c12f11be5394eed67140eddc",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2321,10 +2606,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/content": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "83:3972",
-      "key": "fbd94a2bf9ed1a4b03df9c72ae6239323473aefa",
+      "nodeId": "9:953",
+      "key": "6ede342a42e165b49048171a914814c874f9b205",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2339,10 +2625,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/detail": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "82:3899",
-      "key": "86fcf5d250250d4f6a2caee9f33787ce7f0f82e8",
+      "nodeId": "8:457",
+      "key": "01021e05f3fb55ff0ffb52919436531566fec87e",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2357,10 +2644,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/form": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "82:3969",
-      "key": "9d114bb0bac5ad55e1372276d887e2e34fa41185",
+      "nodeId": "9:676",
+      "key": "31d7f0d8cc881133b241319047ec55e9777848cd",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2375,10 +2663,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/home": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "81:3883",
-      "key": "9b0864a2262b6793ef22bb42ce903e208094cd98",
+      "nodeId": "8:210",
+      "key": "26ed12ba8fa18d91060e5ce9e474ead4e1ae231a",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2393,10 +2682,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/listing": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "81:3910",
-      "key": "41bfd77086f92e16be071696d9ba258bb3352ebc",
+      "nodeId": "8:332",
+      "key": "0d0fd2b777fcc57ecddba15fda28c70deb212086",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2411,10 +2701,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/result": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "83:3989",
-      "key": "ae29b47180e08160674ba9916d74890b7711c253",
+      "nodeId": "9:1061",
+      "key": "07e8fc2e5cf73cfd962c0dbdbb2facc50ddd10cc",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2429,10 +2720,11 @@
       "spec": "patterns/layouts.md"
     },
     "template/workspace": {
+      "file": "commerce",
       "layer": "template",
       "page": "Templates",
-      "nodeId": "83:3948",
-      "key": "0a5f8c66726877f2995a1121f927c98ab7ada1db",
+      "nodeId": "9:829",
+      "key": "cd5b971bb5800854ba573ddadba8048024eb4ce3",
       "variantCount": 2,
       "variants": {
         "screen": [
@@ -2447,6 +2739,7 @@
       "spec": "patterns/layouts.md"
     },
     "textarea": {
+      "file": "components",
       "layer": "core",
       "page": "Textarea",
       "nodeId": "30:332",
@@ -2476,6 +2769,7 @@
       "spec": "components/textarea.md"
     },
     "toast": {
+      "file": "components",
       "layer": "core",
       "page": "Toast",
       "nodeId": "49:662",
@@ -2519,6 +2813,7 @@
       "spec": "components/toast.md"
     },
     "toggle": {
+      "file": "components",
       "layer": "core",
       "page": "Toggle",
       "nodeId": "34:421",
@@ -2572,6 +2867,7 @@
       "spec": "components/toggle.md"
     },
     "toggle-group": {
+      "file": "components",
       "layer": "core",
       "page": "Toggle group",
       "nodeId": "34:519",
@@ -2596,6 +2892,7 @@
       "spec": "components/toggle-group.md"
     },
     "tooltip": {
+      "file": "components",
       "layer": "core",
       "page": "Tooltip",
       "nodeId": "41:701",
@@ -2623,13 +2920,29 @@
     }
   },
   "icons": {
+    "arrow-left": {
+      "key": "85b15aaf6946a6513fc3ba4e1a0783b5b63b9a85",
+      "nodeId": "2:32"
+    },
+    "arrow-right": {
+      "key": "b5343b0467d6815f70d9bf6a3f0ddc042d213ffd",
+      "nodeId": "2:38"
+    },
+    "arrow-up-down": {
+      "key": "c0c15b53bdc6440071e412ee525f21fc0fbc692a",
+      "nodeId": "54:1377"
+    },
+    "calendar": {
+      "key": "2d3730fef7dfb1c116a0a9516b699137d12add12",
+      "nodeId": "2:136"
+    },
+    "check": {
+      "key": "67d6915306bc6aac04e6eec175d48d69dd217f87",
+      "nodeId": "2:43"
+    },
     "chevron-down": {
       "key": "005d4071c946bad606a46e1baf9a5f19932b7e8c",
       "nodeId": "2:19"
-    },
-    "chevron-up": {
-      "key": "ec036bba9d48593fec86177b66fb94247894baac",
-      "nodeId": "2:22"
     },
     "chevron-left": {
       "key": "f7d80a28f8d886a9fe96bcc988741dc1bbbc83b4",
@@ -2639,125 +2952,125 @@
       "key": "2685e0866fa3b569e1f847b02ae615069432b5f9",
       "nodeId": "2:28"
     },
-    "arrow-left": {
-      "key": "85b15aaf6946a6513fc3ba4e1a0783b5b63b9a85",
-      "nodeId": "2:32"
-    },
-    "arrow-right": {
-      "key": "b5343b0467d6815f70d9bf6a3f0ddc042d213ffd",
-      "nodeId": "2:38"
-    },
-    "check": {
-      "key": "67d6915306bc6aac04e6eec175d48d69dd217f87",
-      "nodeId": "2:43"
-    },
-    "x": {
-      "key": "62a9af2384c0f4e9f7a8fee0371c416577dcc478",
-      "nodeId": "2:47"
-    },
-    "plus": {
-      "key": "09f2371cbbf3e8ea8a8cccab87003885cbd09f9b",
-      "nodeId": "2:53"
-    },
-    "minus": {
-      "key": "520b64a10815ddbaaab0a402b3c08bb523f52cf9",
-      "nodeId": "2:58"
-    },
-    "search": {
-      "key": "1846917e7d0ce0e41ec66922d8a49e224773ef10",
-      "nodeId": "2:62"
-    },
-    "info": {
-      "key": "e753ea48685db2be349325d59767be3b144b608f",
-      "nodeId": "2:69"
-    },
-    "circle-check": {
-      "key": "b4171e1ddf747e054cd491b6fc446b7e0dd1b3b2",
-      "nodeId": "2:75"
-    },
-    "circle-alert": {
-      "key": "8eb0d03d29b4099083e77c9a13ec6528ab6e746f",
-      "nodeId": "2:82"
-    },
-    "circle-x": {
-      "key": "d297a964ec7946add0b6c380f833b09263370e30",
-      "nodeId": "2:89"
-    },
-    "triangle-alert": {
-      "key": "1479625a2a5a8d02256ca339b5c23efdb870d668",
-      "nodeId": "2:96"
-    },
-    "loader-circle": {
-      "key": "2c85551e6c58f22bce50cd012e4fcc3e03d820c8",
-      "nodeId": "2:101"
-    },
-    "eye": {
-      "key": "86a477ddac47daf767f0e463eb6dc0e868c7f703",
-      "nodeId": "2:105"
-    },
-    "upload": {
-      "key": "12650b095739703df92b82e3e48bee67dbf3f0cf",
-      "nodeId": "2:112"
-    },
-    "trash-2": {
-      "key": "2c786a8b1cbf74e200d3b5c78351cb2396ea7c9b",
-      "nodeId": "2:121"
-    },
-    "shopping-cart": {
-      "key": "54043fbcef2c92cd1e8b63ec95fd26d4958f2310",
-      "nodeId": "2:128"
-    },
-    "calendar": {
-      "key": "2d3730fef7dfb1c116a0a9516b699137d12add12",
-      "nodeId": "2:136"
-    },
-    "user": {
-      "key": "e0354f678cf48467279eca2a5c0ea053ba0da88d",
-      "nodeId": "2:142"
-    },
-    "circle": {
-      "key": "cc786d7a2e97e586bd5a2766f28f09acc9c452ba",
-      "nodeId": "2:147"
+    "chevron-up": {
+      "key": "ec036bba9d48593fec86177b66fb94247894baac",
+      "nodeId": "2:22"
     },
     "chevrons-up-down": {
       "key": "8254ef31ac2586023bdea395832b29bdf84ef665",
       "nodeId": "54:1346"
     },
-    "grip-vertical": {
-      "key": "184698659c5e44597f461d9cdacd8a110878a1ac",
-      "nodeId": "54:1356"
+    "circle": {
+      "key": "cc786d7a2e97e586bd5a2766f28f09acc9c452ba",
+      "nodeId": "2:147"
     },
-    "ellipsis": {
-      "key": "013e750ff5eee8ef0c9f6ccb616037feb32d3999",
-      "nodeId": "54:1363"
+    "circle-alert": {
+      "key": "8eb0d03d29b4099083e77c9a13ec6528ab6e746f",
+      "nodeId": "2:82"
     },
-    "inbox": {
-      "key": "539bf46236ff5163bf7a74042084a8da18ffa3d6",
-      "nodeId": "54:1369"
+    "circle-check": {
+      "key": "b4171e1ddf747e054cd491b6fc446b7e0dd1b3b2",
+      "nodeId": "2:75"
     },
-    "arrow-up-down": {
-      "key": "c0c15b53bdc6440071e412ee525f21fc0fbc692a",
-      "nodeId": "54:1377"
-    },
-    "package": {
-      "key": "7ee8613cd21b5fb7114cfb7efc252cb8ae28c719",
-      "nodeId": "54:1385"
-    },
-    "house": {
-      "key": "572df996bfd0fbd0cd2347f9285340596bb4385d",
-      "nodeId": "66:2166"
+    "circle-x": {
+      "key": "d297a964ec7946add0b6c380f833b09263370e30",
+      "nodeId": "2:89"
     },
     "credit-card": {
       "key": "4736ccb53732260ac92780eb3a37cdbb4e7ed8be",
       "nodeId": "66:2172"
     },
+    "ellipsis": {
+      "key": "013e750ff5eee8ef0c9f6ccb616037feb32d3999",
+      "nodeId": "54:1363"
+    },
+    "eye": {
+      "key": "86a477ddac47daf767f0e463eb6dc0e868c7f703",
+      "nodeId": "2:105"
+    },
+    "grip-vertical": {
+      "key": "184698659c5e44597f461d9cdacd8a110878a1ac",
+      "nodeId": "54:1356"
+    },
+    "house": {
+      "key": "572df996bfd0fbd0cd2347f9285340596bb4385d",
+      "nodeId": "66:2166"
+    },
+    "inbox": {
+      "key": "539bf46236ff5163bf7a74042084a8da18ffa3d6",
+      "nodeId": "54:1369"
+    },
+    "info": {
+      "key": "e753ea48685db2be349325d59767be3b144b608f",
+      "nodeId": "2:69"
+    },
+    "layout-grid": {
+      "key": "e4e5cecebf5e5ce4f5261cf069ad4978d1752179",
+      "nodeId": "94:3845"
+    },
+    "loader-circle": {
+      "key": "2c85551e6c58f22bce50cd012e4fcc3e03d820c8",
+      "nodeId": "2:101"
+    },
+    "log-out": {
+      "key": "2f975fdd93e35d96a80f96f62537e48d2ea3927f",
+      "nodeId": "94:3858"
+    },
+    "map-pin": {
+      "key": "aaff93bb68d520bafa6d25d4a5e7162c13ae23d6",
+      "nodeId": "94:3851"
+    },
+    "menu": {
+      "key": "dab102f4fc3e0e59deffca407a3cd62bae996666",
+      "nodeId": "94:3865"
+    },
+    "minus": {
+      "key": "520b64a10815ddbaaab0a402b3c08bb523f52cf9",
+      "nodeId": "2:58"
+    },
+    "package": {
+      "key": "7ee8613cd21b5fb7114cfb7efc252cb8ae28c719",
+      "nodeId": "54:1385"
+    },
+    "plus": {
+      "key": "09f2371cbbf3e8ea8a8cccab87003885cbd09f9b",
+      "nodeId": "2:53"
+    },
+    "search": {
+      "key": "1846917e7d0ce0e41ec66922d8a49e224773ef10",
+      "nodeId": "2:62"
+    },
     "settings": {
       "key": "49783bc09efb9180f464ed99e8897702d2e2c5ea",
       "nodeId": "66:2178"
     },
+    "shopping-cart": {
+      "key": "54043fbcef2c92cd1e8b63ec95fd26d4958f2310",
+      "nodeId": "2:128"
+    },
+    "trash-2": {
+      "key": "2c786a8b1cbf74e200d3b5c78351cb2396ea7c9b",
+      "nodeId": "2:121"
+    },
+    "triangle-alert": {
+      "key": "1479625a2a5a8d02256ca339b5c23efdb870d668",
+      "nodeId": "2:96"
+    },
+    "upload": {
+      "key": "12650b095739703df92b82e3e48bee67dbf3f0cf",
+      "nodeId": "2:112"
+    },
+    "user": {
+      "key": "e0354f678cf48467279eca2a5c0ea053ba0da88d",
+      "nodeId": "2:142"
+    },
     "wallet": {
       "key": "2b8855447df2747f1ebfb092487449d0fa89e479",
       "nodeId": "66:2184"
+    },
+    "x": {
+      "key": "62a9af2384c0f4e9f7a8fee0371c416577dcc478",
+      "nodeId": "2:47"
     }
   }
 }

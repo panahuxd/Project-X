@@ -1,6 +1,6 @@
 # Page layouts
 
-> Status: **standard v1** (DS-36, 2026-10-20) — approved by the design lead on 2026-10-20. Built in Figma as 10 layout templates on the *Templates* page of DKB Components (§6). Source: B2R live site b2b.digikala.com measured on 2026-10-20 at 1440 and 375 wide (logged-in account), compared with shadcn/ui blocks (dashboard-01, sidebar-07, login-01/03, the settings and tasks examples). Decisions: content width 1312 (D1), grey page with white cards (D2), header rows chosen per platform (D3), sticky bottom action bar on mobile checkout and forms (D4).
+> Status: **standard v1** (DS-36, 2026-10-20) — approved by the design lead on 2026-10-20. Built in Figma as 10 layout templates on the *Templates* page of DKB Commerce (§6, DS-37). Source: B2R live site b2b.digikala.com measured on 2026-10-20 at 1440 and 375 wide (logged-in account), compared with shadcn/ui blocks (dashboard-01, sidebar-07, login-01/03, the settings and tasks examples). Decisions: content width 1312 (D1), grey page with white cards (D2), header rows chosen per platform (D3), sticky bottom action bar on mobile checkout and forms (D4).
 
 ## 1. What the live B2R site does today
 
@@ -99,7 +99,7 @@ shadcn has no e-commerce layouts (listing, product detail, checkout); those come
 
 Don't set this up by hand: start from a template (§6), which already has the frame size, grid, fill, responsive mode and regions.
 
-Shell parts (header, bottom nav, footer, action bar) are Commerce components still to be built; until then build them from tokens in a `proposal/<name>` frame (AGENTS.md rule 3) and put that frame where the template's `header`, `footer`, `bottom-nav` or `action-bar` region is.
+Shell parts are DKB Commerce components and come placed in every template: `header` (storefront rows=1|2, focused), `mobile-header` (home, inner), `footer` (desktop, mobile), `bottom-nav`, `action-bar` (amount, button), `account-menu`. Configure them (title, rows, active item, amount); don't redraw them.
 
 ## 5. Decisions
 
@@ -112,9 +112,9 @@ Shell parts (header, bottom nav, footer, action bar) are Commerce components sti
 
 ## 6. Templates in Figma
 
-DKB Components → page *Templates*. One component set per template, variants `screen=desktop` (1440, 12-col grid, `responsive` Desktop) and `screen=mobile` (360, 4-col grid, `responsive` Mobile). Every grid gutter and the mobile margin are bound to `layout.gutter` and `layout.page-margin`; the desktop body width is bound to `layout.content-max-width`. Keys are in `components.json`.
+DKB Commerce → page *Templates*. One component set per template, variants `screen=desktop` (1440, 12-col grid, `responsive` Desktop) and `screen=mobile` (360, 4-col grid, `responsive` Mobile). Every grid gutter and the mobile margin are bound to `layout.gutter` and `layout.page-margin`; the desktop body width is bound to `layout.content-max-width`. Keys are in `components.json`.
 
-Each content area is a **`template-region`** instance: its layer name says what it is (`filters`, `bill-box` …) and its label says what goes there, how many columns and whether it is sticky. `kind=area` is a card-sized region (`radius.card`), `kind=bar` a full-width bar (header, footer, bottom nav, action bar, mobile sections).
+Shell parts are real Commerce instances (layer names `header`, `footer`, `bottom-nav`, `action-bar`, `side-nav`); set their properties, e.g. `header` rows=2 for B2E or `title` on a focused header. Workspace uses the Core `sidebar`; its inset header is still a region. Each content area is a **`template-region`** instance (from DKB Components): its layer name says what it is (`filters`, `bill-box` …) and its label says what goes there, how many columns and whether it is sticky. `kind=area` is a card-sized region (`radius.card`), `kind=bar` a full-width bar (header, footer, bottom nav, action bar, mobile sections).
 
 | Set | Template | Shell | Desktop regions (reading order) | Mobile regions |
 |---|---|---|---|---|
