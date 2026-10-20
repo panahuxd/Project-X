@@ -6,6 +6,7 @@
 - Overlay content uses the **slot pattern**: build the content as a local `content/…` component and swap it into the overlay's `content` property (see `components/slot.md`, AGENTS.md). The audit now fails a design that still shows a slot
 - Review board "overlays" on the Cover page (B2R/B2E × Desktop/Mobile)
 - `components.json` regenerated: 40 components, fingerprint `87830bf0`; instance-swap defaults now name the component set (`slot`) instead of the variant
+- Sandbox test (`order/address-edit/desktop`, B2E): dialog over overlay with a local `content/address-form` (two `field`s) swapped into its slot; audit passed (0 errors, 0 warnings). Negative test: an unswapped dialog is caught by the slot check
 - Tokens for overlays (DS-29–31): `z-index.popover` above `dialog`; `shadow.dialog` = lg; `width.hover-card` / `popover` / `sheet` / `dialog` on new size steps 256 / 288 / 384 / 512
 - Sync check now fingerprints effect-style values, not only their names
 - DS-32: dialogs become bottom sheets on mobile
