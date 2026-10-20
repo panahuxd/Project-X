@@ -4,3 +4,4 @@ One spec per design task: `designs/<platform>-<feature>.md`, written from `_temp
 
 | Spec | Platform | Status | Figma |
 |---|---|---|---|
+| [b2e-address-edit.md](b2e-address-edit.md) | B2E | example (agent dry run) | [Sandbox](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=15-97) |

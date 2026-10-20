@@ -15,6 +15,8 @@ The source of truth for the three foundation docs is the living docs on claude.a
 | Folder | File | What it is |
 | --- | --- | --- |
 | — | `AGENTS.md` | Entry point for agents: what to read, hard rules for designs, the design-task workflow, how to change the design system |
+| — | `llms.txt` | Index of the repo for AI tools (llmstxt.org format) |
+| `.github/` | `workflows/design-system.yml`, `copilot-instructions.md` | CI: builds the tokens and fails if generated files are stale · pointer to AGENTS.md for Copilot |
 | `design-system/` | `README.md` and folders | DKB Design System: tokens (source of truth), build, component specs, `components.json` API, Figma sync check. See its README |
 | `designs/` | `<platform>-<feature>.md` | Design-task specs (from `_template.md`), each linked to its Figma file |
 | `knowledge-base/` | `b2e-foundation-knowledge-base.md` | B2E (company procurement) foundation: context, roles, rules, statuses, IA, flows, design system, components, gaps, decisions. Also covers layers shared with B2R and Portals. |
@@ -29,7 +31,7 @@ The source of truth for the three foundation docs is the living docs on claude.a
 
 The full order and rules are in [`AGENTS.md`](AGENTS.md). In short:
 
-1. `design-system/` — README, `build/token-reference.md`, `components.json`, `components/*.md`.
+1. `design-system/` — README, `build/token-reference.md`, `components/INDEX.md`, `components.json`, `components/*.md`.
 2. `knowledge-base/b2e-foundation-knowledge-base.md` — shared product layers (its design-system sections describe the legacy setup still live).
 3. The platform doc you are designing for (B2R or Portals).
 4. `research/research-insights-drive.md` for evidence.

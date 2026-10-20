@@ -3,7 +3,7 @@
 One design system for all three DKB platforms: **B2R**, **B2E** and **Enterprise Portals**.
 This folder is the **source of truth for token values and component specs**. The Figma libraries mirror it 1:1.
 
-> Status: v0.1 (setup). Owner and approver of every token or library change: the design lead.
+> Status: v0.8 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component. Next: Commerce components. Owner and approver of every token or library change: the design lead.
 
 ## Principles of the system
 
@@ -27,16 +27,18 @@ Format: [W3C Design Tokens (DTCG)](https://www.designtokens.org/) JSON. Each lay
 - **Adding a tenant = one hex value.** Run `scripts/make_ramp.py "#hex"` (puts the colour at step 800), add the ramp to primitives, add one mode to `brand`. Nothing else changes.
 - **Dark mode** will be a second mode of `semantic` that picks other brand steps (for example `bg.primary = brand.300`). No token is renamed.
 - **Text styles** live in `tokens/typography.json` (15 roles: display, heading-1…4, body, label, caption, numeric). Headings take their size from `responsive`.
-- **Domain statuses** (order, payment, cheque, RFQ…) are **not** tokens. They map to a tone (`success`, `warning`, `info`, `destructive`, neutral) in the status-badge spec.
-- **Extension groups** (chart colours, B2R loyalty tiers) are added to `semantic` as named groups when their components are built.
+- **Domain statuses** (order, payment, cheque, RFQ…) are **not** tokens. They map to a `badge` tone (`success`, `warning`, `info`, `destructive`, `neutral`, `primary`); the agreed mapping will live in the status-badge spec (Commerce, next).
+- **Extension groups** are added to `semantic` as named groups when their components are built: `chart.1–5` exists (DS-34); B2R loyalty tiers come with their components.
 
 ## Component architecture
 
-| Layer | Figma page prefix | What goes here | Rule |
+| Layer | What goes here | Status | Rule |
 |---|---|---|---|
-| Core | `Core/` | shadcn-based primitives: button, input, select, badge, dialog, sheet, table, tabs, toast… | Platform-agnostic |
-| Commerce | `Commerce/` | Shared buying blocks: price, quantity, product card and row, bill box, payment method item, status badge, stepper, order timeline, filters, header and bottom nav | Built from Core; platform differences via props and slots |
-| Platform | `B2R/`, `B2E/`, `Portal/` | Only what one platform really owns (loyalty, approvals, company admin, tenant gate, allowance) | Thin; built from Core and Commerce |
+| Core | shadcn-based primitives: button, input, select, badge, dialog, sheet, table, tabs, toast… | 69 components, done | Platform-agnostic |
+| Commerce | Shared buying blocks: price, quantity, product card and row, bill box, payment method item, status badge, stepper, order timeline, filters, header and bottom nav | Next | Built from Core; platform differences via props and slots |
+| Platform | Only what one platform really owns (loyalty, approvals, company admin, tenant gate, allowance) | Later | Thin; built from Core and Commerce |
+
+In Figma each component has its own page in *DKB Components*, named after it and sorted A–Z; building blocks share their parent's page (e.g. `menu-item` on *Dropdown menu*, `table-cell` on *Table*). Exact pages and node ids are in `figma-map.json`. The layer is recorded per component in `components.json` (`layer`). Find a component by what it is for in [`components/INDEX.md`](components/INDEX.md).
 
 ## Coverage
 
@@ -65,16 +67,17 @@ Every shadcn/ui component gets a DKB equivalent (DS-24). Status and batch per co
 design-system/
 ├── README.md            this file
 ├── DECISIONS.md         decision log
-├── CHANGELOG.md         versions (semver)
-├── tokens/              DTCG JSON, one file per layer
-├── build/               generated CSS (Tailwind v4 theme + brand classes); never edit by hand
-├── foundations/         colour, typography, spacing, radius, elevation, iconography, layout, motion
-├── components/          one spec per component: anatomy, props, tokens, states, RTL, a11y, Figma link
-├── patterns/            reusable UX patterns (money ledger, gate with a fix, three-outcome result…)
+├── CHANGELOG.md         versions
+├── COVERAGE.md          shadcn/ui → DKB component mapping and status
+├── tokens/              DTCG JSON, one file per layer (source of truth)
+├── build/               generated: CSS, Tailwind theme, shadcn mapping, token reference, contrast report, Figma variables (never edit by hand)
+├── foundations/         typography.md (more foundation notes as needed)
+├── components/          INDEX.md (generated) + one spec per component + written guides (aspect-ratio, direction, typography)
 ├── components.json      component API for agents: library keys, variants, properties, defaults (generated from Figma)
 ├── figma-map.json       file, page and node IDs in the Figma files
 ├── figma-library-keys.json  library keys of published Foundations variables and styles
-└── scripts/             build and Figma sync check
+├── assets/fonts/        Digikala font files (licensed; repo is private)
+└── scripts/             build.py, sync_check.py, make_index.py, make_agent_helpers.py, make_ramp.py; figma/ scripts run with use_figma
 ```
 
 ## Build
@@ -93,7 +96,9 @@ It validates the tokens (types, references, layer rules, same tokens in every mo
 | `tokens.resolved.json` | Final value of every token for each brand × screen |
 | `figma-variables.json` | Collections, modes, aliases, scopes and visibility, text and effect styles: the input for the Figma sync |
 | `token-reference.md` | Every usable token with its values and use. **Read this first when designing** |
-| `contrast-report.md` | WCAG checks for every brand. The build fails if a text pair is below 4.5:1 |
+| `contrast-report.md` | WCAG checks for every brand. The build fails if a text pair is below 4.5:1 (3:1 for UI and chart colours) |
+
+After a component change also run `python3 design-system/scripts/make_index.py` (component index) and `python3 design-system/scripts/make_agent_helpers.py` (agent helpers with every library key). CI (`.github/workflows/design-system.yml`) fails if generated files are out of date.
 
 ## How Figma and the repo stay in sync
 

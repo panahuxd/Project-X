@@ -1,0 +1,22 @@
+name: design-system
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build tokens (validates JSON, references, contrast)
+        run: python3 design-system/scripts/build.py
+      - name: Regenerate component index and agent helpers
+        run: |
+          python3 design-system/scripts/make_index.py
+          python3 design-system/scripts/make_agent_helpers.py
+      - name: Sync fingerprints compute
+        run: python3 design-system/scripts/sync_check.py
+      - name: Generated files are committed and up to date
+        run: git diff --exit-code -- design-system/build design-system/components/INDEX.md design-system/scripts/figma/agent-helpers.js

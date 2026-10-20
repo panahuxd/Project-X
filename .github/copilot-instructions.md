@@ -1,0 +1,1 @@
+Read `AGENTS.md` at the repo root first. It is the entry point for any AI tool working in this repo: what to read, the hard rules for designs (DKB library components and tokens only, RTL and Persian, brand and screen modes), the design-task workflow and how to change the design system.

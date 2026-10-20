@@ -1,0 +1,31 @@
+# Project X — Digikala Business (DKB) product knowledge and design system
+
+> Context for AI agents that design DKB products (B2R retailers, B2E company procurement, Enterprise Portals) in Figma with the DKB Design System. Persian, right-to-left, Jalali dates, toman. Start with AGENTS.md.
+
+## Start here
+- [AGENTS.md](AGENTS.md): what to read, hard rules for designs, the design-task workflow, how to change the design system, Figma lessons
+- [Component index](design-system/components/INDEX.md): every DKB component and what it is for
+- [Token reference](design-system/build/token-reference.md): every usable token, its value per brand and screen, and its use
+
+## Design system
+- [Design system README](design-system/README.md): principles, token and component architecture, naming, build and Figma sync
+- [components.json](design-system/components.json): component API — library keys, variants, property ids, defaults
+- [Component specs](design-system/components/): one file per component (purpose, anatomy, properties, tokens, states, RTL, accessibility, content)
+- [figma-library-keys.json](design-system/figma-library-keys.json): library keys of published variables and styles
+- [Agent helpers](design-system/scripts/figma/agent-helpers.js): prelude for use_figma scripts with every library key built in
+- [Design audit](design-system/scripts/figma/audit-design.js): checks a design page for unbound colours, unstyled text and non-library instances
+- [Decisions](design-system/DECISIONS.md), [Changelog](design-system/CHANGELOG.md), [shadcn coverage](design-system/COVERAGE.md)
+- [Tokens](design-system/tokens/): DTCG JSON source of truth; [build outputs](design-system/build/): CSS, Tailwind theme, shadcn mapping, contrast report
+
+## Product knowledge
+- [B2E foundation](knowledge-base/b2e-foundation-knowledge-base.md): company procurement; also the layers shared with B2R and Portals (roles, rules, statuses, IA, flows, principles, glossary, gaps)
+- [B2R foundation](knowledge-base/b2r-foundation-knowledge-base.md): retailers
+- [Portals foundation](knowledge-base/portals-foundation-knowledge-base.md): enterprise portal tenants
+- [Research insights](research/research-insights-drive.md): interviews, heuristic evaluation, tests, CSAT
+
+## Designs
+- [Design specs](designs/README.md): one spec per design task, from [the template](designs/_template.md); example: [B2E address edit](designs/b2e-address-edit.md)
+
+## Optional
+- [Raw findings](raw-findings/): source notes behind the foundation docs; read only when a detail is missing
+- [Typography foundations](design-system/foundations/typography.md): font facts and OpenType features
