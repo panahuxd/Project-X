@@ -30,7 +30,7 @@ Where the knowledge-base docs describe the **legacy** design system (DS - Shadcn
 
 1. **Brief.** Copy `designs/_template.md` to `designs/<platform>-<feature>.md`. Fill problem, users, constraints and the questions you need answered from the knowledge base. Ask the human only for what the sources can't answer.
 2. **Figma file.** One file per feature in the Digikala B2B team, Project X folder, named `<Platform> · <Feature>` (e.g. `B2E · Company admin`). Pages: `Cover`, `Flows`, `Screens`, `States`, `proposals` (only if needed). Both DKB libraries enabled.
-3. **Design.** Build screens from library components and tokens, section by section. Name frames `<flow>/<screen>/<breakpoint>` (e.g. `checkout/payment/mobile`).
+3. **Design.** Build screens from library components and tokens, section by section. Start every `use_figma` script with `design-system/scripts/figma/agent-helpers.js` (import by key, `paint`, `bind`, `text`, `instance`, `setModes`). Name frames `<flow>/<screen>/<breakpoint>` (e.g. `checkout/payment/mobile`).
 4. **Check.** Run `design-system/scripts/figma/audit-design.js` on the Screens page (with `use_figma`). It must report 0 unbound colours, 0 text without a style and 0 non-library instances outside `proposal/` frames. Screenshot each screen in both brand modes and fix clipping, overlap and contrast.
 5. **Spec.** Complete `designs/<platform>-<feature>.md`: screen table with Figma links, components used, component requests, decisions, open questions.
 6. **Hand over.** Commit on a branch `design/<platform>-<feature>` and open a pull request with the summary and Figma link. If you have no push access, leave the changes in the working tree and tell the human what to review and push.
@@ -53,3 +53,9 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - Nested instances can only be exposed (`isExposedInstance`) after they are inside a component.
 - Assets from a library can be imported by key only after the library is **published**.
 - Text properties override the text of every variant; variant-specific sample text needs its own text node.
+- The `brand` collection is hidden from publishing, but its modes still work in other files: reach it through the alias of any brand-coloured token (`setModes` in agent-helpers does this).
+- Library variables, styles and components import by key without enabling the library in the file's UI.
+
+## 6. Sandbox
+
+*DKB · Agent sandbox* (Figma, Project X) is for trying things. It holds the dry-run screen `auth/login/mobile` (B2E, Mobile) built by following this file; the audit passed with 0 errors and 0 warnings.

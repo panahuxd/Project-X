@@ -39,6 +39,12 @@
         "Alert": "2:11"
       },
       "reviewBoard": "10:11"
+    },
+    "sandbox": {
+      "name": "DKB \u00b7 Agent sandbox",
+      "fileKey": "p3EPUXwCXQpxjriYd1etGW",
+      "url": "https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW",
+      "dryRunFrame": "5:969"
     }
   },
   "components": {
