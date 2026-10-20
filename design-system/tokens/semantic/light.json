@@ -180,9 +180,13 @@
       "$value": "{color.neutral.300}",
       "$description": "Form control border"
     },
+    "control": {
+      "$value": "{color.neutral.500}",
+      "$description": "Boundary of selection controls (checkbox, radio, switch track). Meets 3:1"
+    },
     "focus": {
-      "$value": "{brand.600}",
-      "$description": "Focus ring"
+      "$value": "{color.neutral.400}",
+      "$description": "Border of a focused control (shadcn --ring). Paired with ring.default around it"
     },
     "primary": {
       "$value": "{brand.800}",
@@ -248,7 +252,27 @@
     },
     "focus": {
       "$value": "{border-width.3}",
-      "$description": "Focus ring width"
+      "$description": "Focus ring width (spread of shadow.focus-ring)"
+    }
+  },
+  "ring": {
+    "$type": "color",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "EFFECT_COLOR"
+        ],
+        "hidden": false
+      }
+    },
+    "$description": "Focus ring colours, drawn as a 3 px spread shadow outside the control (shadcn ring-[3px]).",
+    "default": {
+      "$value": "{color.alpha.neutral-400-50}",
+      "$description": "shadcn ring-ring/50: keyboard focus on any control"
+    },
+    "destructive": {
+      "$value": "{color.alpha.red-600-20}",
+      "$description": "shadcn aria-invalid:ring-destructive/20: field in error"
     }
   },
   "icon": {
@@ -274,14 +298,27 @@
       }
     }
   },
+  "opacity": {
+    "$type": "number",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "OPACITY"
+        ],
+        "hidden": false
+      }
+    },
+    "disabled": {
+      "$value": "{opacity.50}",
+      "$description": "Disabled selection controls (checkbox, radio, switch): the normal look at 50% (shadcn disabled:opacity-50)"
+    }
+  },
   "font": {
     "family": {
       "$type": "fontFamily",
       "$extensions": {
         "dkb.figma": {
-          "scopes": [
-            "FONT_FAMILY"
-          ],
+          "scopes": [],
           "hidden": true
         }
       },
@@ -309,6 +346,30 @@
     },
     "dialog": {
       "$value": "{shadow.xl}"
+    },
+    "focus-ring": {
+      "$value": [
+        {
+          "color": "{ring.default}",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "0px",
+          "spread": "3px"
+        }
+      ],
+      "$description": "Keyboard focus ring (shadcn focus-visible:ring-[3px] ring-ring/50)"
+    },
+    "focus-ring-destructive": {
+      "$value": [
+        {
+          "color": "{ring.destructive}",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "blur": "0px",
+          "spread": "3px"
+        }
+      ],
+      "$description": "Ring on a field in error (shadcn aria-invalid:ring-destructive/20)"
     }
   },
   "motion": {

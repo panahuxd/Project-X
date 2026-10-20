@@ -44,10 +44,7 @@
     },
     "$extensions": {
       "dkb.figma": {
-        "scopes": [
-          "FONT_SIZE",
-          "LINE_HEIGHT"
-        ],
+        "scopes": [],
         "hidden": true
       }
     }

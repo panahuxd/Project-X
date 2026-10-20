@@ -4,10 +4,7 @@
     "$type": "color",
     "$extensions": {
       "dkb.figma": {
-        "scopes": [
-          "ALL_FILLS",
-          "STROKE_COLOR"
-        ],
+        "scopes": [],
         "hidden": true
       }
     },

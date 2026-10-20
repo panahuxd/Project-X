@@ -11,11 +11,7 @@
      "name": "color/white",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FFFFFF"
@@ -25,11 +21,7 @@
      "name": "color/black",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#000000"
@@ -40,8 +32,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -54,8 +44,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -68,8 +56,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -82,8 +68,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -96,8 +80,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -110,8 +92,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -124,8 +104,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -138,8 +116,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -152,8 +128,6 @@
      "type": "COLOR",
      "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
@@ -165,11 +139,7 @@
      "name": "color/neutral/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FAFAFA"
@@ -179,11 +149,7 @@
      "name": "color/neutral/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#F5F5F5"
@@ -193,11 +159,7 @@
      "name": "color/neutral/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#E5E5E5"
@@ -207,11 +169,7 @@
      "name": "color/neutral/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#D4D4D4"
@@ -221,11 +179,7 @@
      "name": "color/neutral/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#A3A3A3"
@@ -235,11 +189,7 @@
      "name": "color/neutral/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#737373"
@@ -249,11 +199,7 @@
      "name": "color/neutral/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#525252"
@@ -263,11 +209,7 @@
      "name": "color/neutral/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#404040"
@@ -277,11 +219,7 @@
      "name": "color/neutral/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#262626"
@@ -291,11 +229,7 @@
      "name": "color/neutral/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#171717"
@@ -305,11 +239,7 @@
      "name": "color/neutral/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#0A0A0A"
@@ -319,11 +249,7 @@
      "name": "color/navy/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#F2F5FB"
@@ -333,11 +259,7 @@
      "name": "color/navy/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#DFE7F3"
@@ -347,11 +269,7 @@
      "name": "color/navy/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#C6D5EB"
@@ -361,11 +279,7 @@
      "name": "color/navy/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#A1BBE0"
@@ -375,11 +289,7 @@
      "name": "color/navy/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#7096CE"
@@ -389,11 +299,7 @@
      "name": "color/navy/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#4778BF"
@@ -403,11 +309,7 @@
      "name": "color/navy/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#245CAC"
@@ -417,11 +319,7 @@
      "name": "color/navy/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#0F4996"
@@ -431,11 +329,7 @@
      "name": "color/navy/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#093672"
@@ -445,11 +339,7 @@
      "name": "color/navy/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#12305A"
@@ -459,11 +349,7 @@
      "name": "color/navy/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#0F2038"
@@ -473,11 +359,7 @@
      "name": "color/violet/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#F5F3FF"
@@ -487,11 +369,7 @@
      "name": "color/violet/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#EDE9FE"
@@ -501,11 +379,7 @@
      "name": "color/violet/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#DDD6FE"
@@ -515,11 +389,7 @@
      "name": "color/violet/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#C4B5FD"
@@ -529,11 +399,7 @@
      "name": "color/violet/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#A78BFA"
@@ -543,11 +409,7 @@
      "name": "color/violet/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#8B5CF6"
@@ -557,11 +419,7 @@
      "name": "color/violet/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#7C3AED"
@@ -571,11 +429,7 @@
      "name": "color/violet/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#6D28D9"
@@ -585,11 +439,7 @@
      "name": "color/violet/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#5B21B6"
@@ -599,11 +449,7 @@
      "name": "color/violet/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#4C1D95"
@@ -613,11 +459,7 @@
      "name": "color/violet/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#2E1065"
@@ -627,11 +469,7 @@
      "name": "color/red/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FEF2F2"
@@ -641,11 +479,7 @@
      "name": "color/red/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FEE2E2"
@@ -655,11 +489,7 @@
      "name": "color/red/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FECACA"
@@ -669,11 +499,7 @@
      "name": "color/red/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FCA5A5"
@@ -683,11 +509,7 @@
      "name": "color/red/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#F87171"
@@ -697,11 +519,7 @@
      "name": "color/red/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#EF4444"
@@ -711,11 +529,7 @@
      "name": "color/red/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#DC2626"
@@ -725,11 +539,7 @@
      "name": "color/red/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#B91C1C"
@@ -739,11 +549,7 @@
      "name": "color/red/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#991B1B"
@@ -753,11 +559,7 @@
      "name": "color/red/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#7F1D1D"
@@ -767,11 +569,7 @@
      "name": "color/red/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#450A0A"
@@ -781,11 +579,7 @@
      "name": "color/green/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#F0FDF4"
@@ -795,11 +589,7 @@
      "name": "color/green/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#DCFCE7"
@@ -809,11 +599,7 @@
      "name": "color/green/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#BBF7D0"
@@ -823,11 +609,7 @@
      "name": "color/green/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#86EFAC"
@@ -837,11 +619,7 @@
      "name": "color/green/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#4ADE80"
@@ -851,11 +629,7 @@
      "name": "color/green/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#22C55E"
@@ -865,11 +639,7 @@
      "name": "color/green/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#16A34A"
@@ -879,11 +649,7 @@
      "name": "color/green/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#15803D"
@@ -893,11 +659,7 @@
      "name": "color/green/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#166534"
@@ -907,11 +669,7 @@
      "name": "color/green/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#14532D"
@@ -921,11 +679,7 @@
      "name": "color/green/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#052E16"
@@ -935,11 +689,7 @@
      "name": "color/amber/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FFFBEB"
@@ -949,11 +699,7 @@
      "name": "color/amber/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FEF3C7"
@@ -963,11 +709,7 @@
      "name": "color/amber/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FDE68A"
@@ -977,11 +719,7 @@
      "name": "color/amber/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FCD34D"
@@ -991,11 +729,7 @@
      "name": "color/amber/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#FBBF24"
@@ -1005,11 +739,7 @@
      "name": "color/amber/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#F59E0B"
@@ -1019,11 +749,7 @@
      "name": "color/amber/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#D97706"
@@ -1033,11 +759,7 @@
      "name": "color/amber/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#B45309"
@@ -1047,11 +769,7 @@
      "name": "color/amber/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#92400E"
@@ -1061,11 +779,7 @@
      "name": "color/amber/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#78350F"
@@ -1075,11 +789,7 @@
      "name": "color/amber/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#451A03"
@@ -1089,11 +799,7 @@
      "name": "color/blue/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#EFF6FF"
@@ -1103,11 +809,7 @@
      "name": "color/blue/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#DBEAFE"
@@ -1117,11 +819,7 @@
      "name": "color/blue/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#BFDBFE"
@@ -1131,11 +829,7 @@
      "name": "color/blue/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#93C5FD"
@@ -1145,11 +839,7 @@
      "name": "color/blue/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#60A5FA"
@@ -1159,11 +849,7 @@
      "name": "color/blue/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#3B82F6"
@@ -1173,11 +859,7 @@
      "name": "color/blue/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#2563EB"
@@ -1187,11 +869,7 @@
      "name": "color/blue/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#1D4ED8"
@@ -1201,11 +879,7 @@
      "name": "color/blue/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#1E40AF"
@@ -1215,11 +889,7 @@
      "name": "color/blue/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
-      "EFFECT_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "#1E3A8A"
@@ -1229,14 +899,34 @@
      "name": "color/blue/950",
      "type": "COLOR",
      "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#172554"
+     }
+    },
+    {
+     "name": "color/alpha/neutral-400-50",
+     "type": "COLOR",
+     "description": "",
      "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR",
       "EFFECT_COLOR"
      ],
      "hiddenFromPublishing": true,
      "values": {
-      "Default": "#172554"
+      "Default": "#A3A3A380"
+     }
+    },
+    {
+     "name": "color/alpha/red-600-20",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [
+      "EFFECT_COLOR"
+     ],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#DC262633"
      }
     },
     {
@@ -1651,9 +1341,7 @@
      "name": "font/family/digikala",
      "type": "STRING",
      "description": "",
-     "scopes": [
-      "FONT_FAMILY"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": "Digikala"
@@ -1663,9 +1351,7 @@
      "name": "font/weight/thin",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 100
@@ -1675,9 +1361,7 @@
      "name": "font/weight/extralight",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 200
@@ -1687,9 +1371,7 @@
      "name": "font/weight/light",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 300
@@ -1699,9 +1381,7 @@
      "name": "font/weight/regular",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 400
@@ -1711,9 +1391,7 @@
      "name": "font/weight/medium",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 500
@@ -1723,9 +1401,7 @@
      "name": "font/weight/semibold",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 600
@@ -1735,9 +1411,7 @@
      "name": "font/weight/bold",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 700
@@ -1747,9 +1421,7 @@
      "name": "font/weight/extrabold",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 800
@@ -1759,9 +1431,7 @@
      "name": "font/weight/black",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 900
@@ -1771,9 +1441,7 @@
      "name": "font/weight/fat",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_WEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 1000
@@ -1783,9 +1451,7 @@
      "name": "font/size/10",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 10.0
@@ -1795,9 +1461,7 @@
      "name": "font/size/12",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 12.0
@@ -1807,9 +1471,7 @@
      "name": "font/size/14",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 14.0
@@ -1819,9 +1481,7 @@
      "name": "font/size/16",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 16.0
@@ -1831,9 +1491,7 @@
      "name": "font/size/18",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 18.0
@@ -1843,9 +1501,7 @@
      "name": "font/size/20",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 20.0
@@ -1855,9 +1511,7 @@
      "name": "font/size/24",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 24.0
@@ -1867,9 +1521,7 @@
      "name": "font/size/32",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 32.0
@@ -1879,9 +1531,7 @@
      "name": "font/size/40",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 40.0
@@ -1891,9 +1541,7 @@
      "name": "font/size/48",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 48.0
@@ -1903,9 +1551,7 @@
      "name": "font/line-height/18",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 18.0
@@ -1915,9 +1561,7 @@
      "name": "font/line-height/20",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 20.0
@@ -1927,9 +1571,7 @@
      "name": "font/line-height/24",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 24.0
@@ -1939,9 +1581,7 @@
      "name": "font/line-height/28",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 28.0
@@ -1951,9 +1591,7 @@
      "name": "font/line-height/30",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 30.0
@@ -1963,9 +1601,7 @@
      "name": "font/line-height/32",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 32.0
@@ -1975,9 +1611,7 @@
      "name": "font/line-height/36",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 36.0
@@ -1987,9 +1621,7 @@
      "name": "font/line-height/48",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 48.0
@@ -1999,9 +1631,7 @@
      "name": "font/line-height/56",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 56.0
@@ -2011,12 +1641,20 @@
      "name": "font/line-height/64",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Default": 64.0
+     }
+    },
+    {
+     "name": "opacity/50",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": 0.5
      }
     }
    ]
@@ -2032,10 +1670,7 @@
      "name": "brand/50",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2050,10 +1685,7 @@
      "name": "brand/100",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2068,10 +1700,7 @@
      "name": "brand/200",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2086,10 +1715,7 @@
      "name": "brand/300",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2104,10 +1730,7 @@
      "name": "brand/400",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2122,10 +1745,7 @@
      "name": "brand/500",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2140,10 +1760,7 @@
      "name": "brand/600",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2158,10 +1775,7 @@
      "name": "brand/700",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2176,10 +1790,7 @@
      "name": "brand/800",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2194,10 +1805,7 @@
      "name": "brand/900",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2212,10 +1820,7 @@
      "name": "brand/950",
      "type": "COLOR",
      "description": "",
-     "scopes": [
-      "ALL_FILLS",
-      "STROKE_COLOR"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "B2R": {
@@ -2862,16 +2467,30 @@
      }
     },
     {
-     "name": "border/focus",
+     "name": "border/control",
      "type": "COLOR",
-     "description": "Focus ring",
+     "description": "Boundary of selection controls (checkbox, radio, switch track). Meets 3:1",
      "scopes": [
       "STROKE_COLOR"
      ],
      "hiddenFromPublishing": false,
      "values": {
       "Light": {
-       "alias": "brand/600"
+       "alias": "color/neutral/500"
+      }
+     }
+    },
+    {
+     "name": "border/focus",
+     "type": "COLOR",
+     "description": "Border of a focused control (shadcn --ring). Paired with ring.default around it",
+     "scopes": [
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/neutral/400"
       }
      }
     },
@@ -3046,7 +2665,7 @@
     {
      "name": "border-width/focus",
      "type": "FLOAT",
-     "description": "Focus ring width",
+     "description": "Focus ring width (spread of shadow.focus-ring)",
      "scopes": [
       "STROKE_FLOAT"
      ],
@@ -3054,6 +2673,34 @@
      "values": {
       "Light": {
        "alias": "border-width/3"
+      }
+     }
+    },
+    {
+     "name": "ring/default",
+     "type": "COLOR",
+     "description": "shadcn ring-ring/50: keyboard focus on any control",
+     "scopes": [
+      "EFFECT_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/alpha/neutral-400-50"
+      }
+     }
+    },
+    {
+     "name": "ring/destructive",
+     "type": "COLOR",
+     "description": "shadcn aria-invalid:ring-destructive/20: field in error",
+     "scopes": [
+      "EFFECT_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/alpha/red-600-20"
       }
      }
     },
@@ -3100,12 +2747,24 @@
      }
     },
     {
+     "name": "opacity/disabled",
+     "type": "FLOAT",
+     "description": "Disabled selection controls (checkbox, radio, switch): the normal look at 50% (shadcn disabled:opacity-50)",
+     "scopes": [
+      "OPACITY"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "opacity/50"
+      }
+     }
+    },
+    {
      "name": "font/family/sans",
      "type": "STRING",
      "description": "",
-     "scopes": [
-      "FONT_FAMILY"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Light": {
@@ -3126,10 +2785,7 @@
      "name": "type/display/size",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3144,10 +2800,7 @@
      "name": "type/display/line-height",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3162,10 +2815,7 @@
      "name": "type/heading-1/size",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3180,10 +2830,7 @@
      "name": "type/heading-1/line-height",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3198,10 +2845,7 @@
      "name": "type/heading-2/size",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3216,10 +2860,7 @@
      "name": "type/heading-2/line-height",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3234,10 +2875,7 @@
      "name": "type/heading-3/size",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3252,10 +2890,7 @@
      "name": "type/heading-3/line-height",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3270,10 +2905,7 @@
      "name": "type/heading-4/size",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3288,10 +2920,7 @@
      "name": "type/heading-4/line-height",
      "type": "FLOAT",
      "description": "",
-     "scopes": [
-      "FONT_SIZE",
-      "LINE_HEIGHT"
-     ],
+     "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
       "Desktop": {
@@ -3671,6 +3300,30 @@
      "offsetY": "8px",
      "blur": "10px",
      "spread": "-6px"
+    }
+   ]
+  },
+  {
+   "name": "shadow/focus-ring",
+   "shadows": [
+    {
+     "color": "#A3A3A380",
+     "offsetX": "0px",
+     "offsetY": "0px",
+     "blur": "0px",
+     "spread": "3px"
+    }
+   ]
+  },
+  {
+   "name": "shadow/focus-ring-destructive",
+   "shadows": [
+    {
+     "color": "#DC262633",
+     "offsetX": "0px",
+     "offsetY": "0px",
+     "blur": "0px",
+     "spread": "3px"
     }
    ]
   }

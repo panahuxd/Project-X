@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.0 — 2026-10-20 (components batch 1)
+
+- **Focus ring = shadcn/ui** (DS-22): `border.focus` → neutral-400; new `ring.default`, `ring.destructive`, alpha primitives, effect styles `shadow.focus-ring` and `shadow.focus-ring-destructive`. Foundations Figma updated, sync check matches
+- New token `border.control` (DS-21)
+- New token `opacity.disabled` (0.5); disabled checkbox, radio and switch now keep their checked/unchecked look at 50% (DS-23)
+- DKB Components file: Lucide icon set (24) and 9 components (278 variants): button, icon-button, input-field, select, checkbox, radio, switch, badge, alert; specs in `components/` (+ `_template.md`)
+- All component fills, strokes and text are bound to tokens and text styles (audit: 0 unbound)
+- Review board (Cover page): the components in B2R/B2E × Desktop/Mobile
+- `figma-library-keys.json` (keys of published Foundations assets)
+
+## 0.2.1 — 2026-10-19 (Figma Foundations)
+
+- Figma file *DKB Foundations* created: 4 collections (153 + 11 + 59 + 17 variables), 15 text styles bound to variables, 4 shadow styles bound to alpha variables, Cover and Foundations documentation pages
+- Hidden primitives and brand ramp now have empty Figma scopes (not in any picker); alpha colours keep `EFFECT_COLOR`
+- Sync check: `scripts/sync_check.py` + `scripts/figma/sync-check.js` (fingerprints); first run: everything matches
+- `figma-map.json` with file, page and collection IDs
+
 ## 0.2.0 — 2026-10-19 (structure review)
 
 - **Breaking:** semantic colours renamed by property (`bg.*`, `text.*`, `border.*`); shadcn names move to `build/shadcn-compat.css`

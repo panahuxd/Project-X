@@ -23,6 +23,14 @@
       },
       "80": {
         "$value": "#000000CC"
+      },
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "EFFECT_COLOR"
+          ],
+          "hidden": true
+        }
       }
     },
     "white-alpha": {
@@ -37,6 +45,14 @@
       },
       "80": {
         "$value": "#FFFFFFCC"
+      },
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "EFFECT_COLOR"
+          ],
+          "hidden": true
+        }
       }
     },
     "neutral": {
@@ -288,12 +304,25 @@
     },
     "$extensions": {
       "dkb.figma": {
-        "scopes": [
-          "ALL_FILLS",
-          "STROKE_COLOR",
-          "EFFECT_COLOR"
-        ],
+        "scopes": [],
         "hidden": true
+      }
+    },
+    "alpha": {
+      "$description": "Translucent versions of ramp colours, named {ramp}-{step}-{opacity %}. Used for focus rings (shadcn ring/50, destructive/20).",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "EFFECT_COLOR"
+          ],
+          "hidden": true
+        }
+      },
+      "neutral-400-50": {
+        "$value": "#A3A3A380"
+      },
+      "red-600-20": {
+        "$value": "#DC262633"
       }
     }
   },
@@ -453,9 +482,7 @@
       },
       "$extensions": {
         "dkb.figma": {
-          "scopes": [
-            "FONT_FAMILY"
-          ],
+          "scopes": [],
           "hidden": true
         }
       }
@@ -494,9 +521,7 @@
       },
       "$extensions": {
         "dkb.figma": {
-          "scopes": [
-            "FONT_WEIGHT"
-          ],
+          "scopes": [],
           "hidden": true
         }
       }
@@ -536,9 +561,7 @@
       },
       "$extensions": {
         "dkb.figma": {
-          "scopes": [
-            "FONT_SIZE"
-          ],
+          "scopes": [],
           "hidden": true
         }
       }
@@ -578,9 +601,7 @@
       },
       "$extensions": {
         "dkb.figma": {
-          "scopes": [
-            "LINE_HEIGHT"
-          ],
+          "scopes": [],
           "hidden": true
         }
       }
@@ -676,6 +697,19 @@
       "dkb.figma": {
         "skip": true
       }
+    }
+  },
+  "opacity": {
+    "$type": "number",
+    "$description": "Opacity as 0-1.",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [],
+        "hidden": true
+      }
+    },
+    "50": {
+      "$value": 0.5
     }
   }
 }

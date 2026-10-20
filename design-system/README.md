@@ -93,7 +93,10 @@ It validates the tokens (types, references, layer rules, same tokens in every mo
 
 1. A token change is made in `tokens/*.json` and approved.
 2. It is pushed to the Figma *DKB Foundations* library (variables) and the library is published.
-3. The sync check reads Figma variables back and compares them with the JSON. Any difference is reported as drift.
+3. The sync check compares Figma with the repo using fingerprints:
+   - `python3 scripts/sync_check.py` prints the expected fingerprint of each collection and style group.
+   - `scripts/figma/sync-check.js` is run in Figma (with the `use_figma` tool on DKB Foundations) and returns the actual ones.
+   - Same fingerprint = in sync. If one differs, set `DETAIL` in the JS (and pass the same name to the Python script) to list and diff that collection's lines.
 4. Every component exists in Figma and as a spec in `components/`, with the same name, props and token bindings. `figma-map.json` links them (instead of Code Connect, which needs a Figma Organization plan).
 5. The design agent reads the specs here, designs in Figma with the library components, and writes new or changed specs back here.
 
@@ -101,7 +104,7 @@ It validates the tokens (types, references, layer rules, same tokens in every mo
 
 | Library | Contents | Link |
 |---|---|---|
-| DKB Foundations | Variables (4 collections), text styles, effect styles, icons, documentation pages | to be created |
-| DKB Components | Core, Commerce and Platform components | to be created |
+| DKB Foundations | Variables (4 collections, 240 variables), 15 text styles, 4 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
+| DKB Components | Lucide icons; Core components (batch 1: button, icon-button, input-field, select, checkbox, radio, switch, badge, alert). Specs in `components/` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
 
 The old libraries (*DS - Shadcn*, *DS - Components*) stay as reference until screens are migrated.
