@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0 — 2026-10-20 (batch 2: overlays and menus)
+
+- 13 shadcn overlays and menus in DKB Components: alert-dialog, combobox, command, context-menu, dialog, drawer, dropdown-menu, hover-card, menubar, popover, sheet, toast, tooltip — plus helpers `menu-item` (one row type for every menu, 17 variants), `slot` (content placeholder) and `overlay` (backdrop). 40 components in total. Specs in `components/`
+- Overlay content uses the **slot pattern**: build the content as a local `content/…` component and swap it into the overlay's `content` property (see `components/slot.md`, AGENTS.md). The audit now fails a design that still shows a slot
+- Review board "overlays" on the Cover page (B2R/B2E × Desktop/Mobile)
+- `components.json` regenerated: 40 components, fingerprint `87830bf0`; instance-swap defaults now name the component set (`slot`) instead of the variant
+- Tokens for overlays (DS-29–31): `z-index.popover` above `dialog`; `shadow.dialog` = lg; `width.hover-card` / `popover` / `sheet` / `dialog` on new size steps 256 / 288 / 384 / 512
+- Sync check now fingerprints effect-style values, not only their names
+- DS-32: dialogs become bottom sheets on mobile
+
 ## 0.4.0 — 2026-10-20 (batch 1: form primitives)
 
 - 16 new components in DKB Components, matching shadcn/ui (DS-24): label, input, textarea, field, input-group, input-otp, native-select, slider, toggle, toggle-group, button-group, kbd, spinner, progress, separator, skeleton (165 variants). Specs in `components/`

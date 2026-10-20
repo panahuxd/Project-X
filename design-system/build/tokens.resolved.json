@@ -120,6 +120,10 @@
   "size.36": "36px",
   "size.40": "40px",
   "size.48": "48px",
+  "size.256": "256px",
+  "size.288": "288px",
+  "size.384": "384px",
+  "size.512": "512px",
   "size.1312": "1312px",
   "border-width.1": "1px",
   "border-width.2": "2px",
@@ -283,6 +287,10 @@
   "radius.badge": "9999px",
   "border-width.default": "1px",
   "border-width.focus": "3px",
+  "width.hover-card": "256px",
+  "width.popover": "288px",
+  "width.sheet": "384px",
+  "width.dialog": "512px",
   "ring.default": "#A3A3A380",
   "ring.destructive": "#DC262633",
   "icon.size.sm": "16px",
@@ -335,16 +343,16 @@
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "20px",
-    "blur": "25px",
-    "spread": "-5px"
+    "offsetY": "10px",
+    "blur": "15px",
+    "spread": "-3px"
    },
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "8px",
-    "blur": "10px",
-    "spread": "-6px"
+    "offsetY": "4px",
+    "blur": "6px",
+    "spread": "-4px"
    }
   ],
   "shadow.focus-ring": [
@@ -387,12 +395,12 @@
    1
   ],
   "z-index.base": 0,
-  "z-index.dropdown": 1000,
   "z-index.sticky": 1100,
   "z-index.overlay": 1300,
   "z-index.dialog": 1400,
-  "z-index.toast": 1500,
-  "z-index.tooltip": 1600,
+  "z-index.popover": 1500,
+  "z-index.toast": 1600,
+  "z-index.tooltip": 1700,
   "type.display.size": "48px",
   "type.display.line-height": "64px",
   "type.heading-1.size": "32px",
@@ -637,6 +645,10 @@
   "size.36": "36px",
   "size.40": "40px",
   "size.48": "48px",
+  "size.256": "256px",
+  "size.288": "288px",
+  "size.384": "384px",
+  "size.512": "512px",
   "size.1312": "1312px",
   "border-width.1": "1px",
   "border-width.2": "2px",
@@ -800,6 +812,10 @@
   "radius.badge": "9999px",
   "border-width.default": "1px",
   "border-width.focus": "3px",
+  "width.hover-card": "256px",
+  "width.popover": "288px",
+  "width.sheet": "384px",
+  "width.dialog": "512px",
   "ring.default": "#A3A3A380",
   "ring.destructive": "#DC262633",
   "icon.size.sm": "16px",
@@ -852,16 +868,16 @@
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "20px",
-    "blur": "25px",
-    "spread": "-5px"
+    "offsetY": "10px",
+    "blur": "15px",
+    "spread": "-3px"
    },
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "8px",
-    "blur": "10px",
-    "spread": "-6px"
+    "offsetY": "4px",
+    "blur": "6px",
+    "spread": "-4px"
    }
   ],
   "shadow.focus-ring": [
@@ -904,12 +920,12 @@
    1
   ],
   "z-index.base": 0,
-  "z-index.dropdown": 1000,
   "z-index.sticky": 1100,
   "z-index.overlay": 1300,
   "z-index.dialog": 1400,
-  "z-index.toast": 1500,
-  "z-index.tooltip": 1600,
+  "z-index.popover": 1500,
+  "z-index.toast": 1600,
+  "z-index.tooltip": 1700,
   "type.display.size": "32px",
   "type.display.line-height": "48px",
   "type.heading-1.size": "24px",
@@ -1154,6 +1170,10 @@
   "size.36": "36px",
   "size.40": "40px",
   "size.48": "48px",
+  "size.256": "256px",
+  "size.288": "288px",
+  "size.384": "384px",
+  "size.512": "512px",
   "size.1312": "1312px",
   "border-width.1": "1px",
   "border-width.2": "2px",
@@ -1317,6 +1337,10 @@
   "radius.badge": "9999px",
   "border-width.default": "1px",
   "border-width.focus": "3px",
+  "width.hover-card": "256px",
+  "width.popover": "288px",
+  "width.sheet": "384px",
+  "width.dialog": "512px",
   "ring.default": "#A3A3A380",
   "ring.destructive": "#DC262633",
   "icon.size.sm": "16px",
@@ -1369,16 +1393,16 @@
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "20px",
-    "blur": "25px",
-    "spread": "-5px"
+    "offsetY": "10px",
+    "blur": "15px",
+    "spread": "-3px"
    },
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "8px",
-    "blur": "10px",
-    "spread": "-6px"
+    "offsetY": "4px",
+    "blur": "6px",
+    "spread": "-4px"
    }
   ],
   "shadow.focus-ring": [
@@ -1421,12 +1445,12 @@
    1
   ],
   "z-index.base": 0,
-  "z-index.dropdown": 1000,
   "z-index.sticky": 1100,
   "z-index.overlay": 1300,
   "z-index.dialog": 1400,
-  "z-index.toast": 1500,
-  "z-index.tooltip": 1600,
+  "z-index.popover": 1500,
+  "z-index.toast": 1600,
+  "z-index.tooltip": 1700,
   "type.display.size": "48px",
   "type.display.line-height": "64px",
   "type.heading-1.size": "32px",
@@ -1671,6 +1695,10 @@
   "size.36": "36px",
   "size.40": "40px",
   "size.48": "48px",
+  "size.256": "256px",
+  "size.288": "288px",
+  "size.384": "384px",
+  "size.512": "512px",
   "size.1312": "1312px",
   "border-width.1": "1px",
   "border-width.2": "2px",
@@ -1834,6 +1862,10 @@
   "radius.badge": "9999px",
   "border-width.default": "1px",
   "border-width.focus": "3px",
+  "width.hover-card": "256px",
+  "width.popover": "288px",
+  "width.sheet": "384px",
+  "width.dialog": "512px",
   "ring.default": "#A3A3A380",
   "ring.destructive": "#DC262633",
   "icon.size.sm": "16px",
@@ -1886,16 +1918,16 @@
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "20px",
-    "blur": "25px",
-    "spread": "-5px"
+    "offsetY": "10px",
+    "blur": "15px",
+    "spread": "-3px"
    },
    {
     "color": "#0000001A",
     "offsetX": "0px",
-    "offsetY": "8px",
-    "blur": "10px",
-    "spread": "-6px"
+    "offsetY": "4px",
+    "blur": "6px",
+    "spread": "-4px"
    }
   ],
   "shadow.focus-ring": [
@@ -1938,12 +1970,12 @@
    1
   ],
   "z-index.base": 0,
-  "z-index.dropdown": 1000,
   "z-index.sticky": 1100,
   "z-index.overlay": 1300,
   "z-index.dialog": 1400,
-  "z-index.toast": 1500,
-  "z-index.tooltip": 1600,
+  "z-index.popover": 1500,
+  "z-index.toast": 1600,
+  "z-index.tooltip": 1700,
   "type.display.size": "32px",
   "type.display.line-height": "48px",
   "type.heading-1.size": "24px",

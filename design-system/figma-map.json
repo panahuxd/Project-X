@@ -29,35 +29,52 @@
     "Cover": "0:1",
     "Icons": "2:2",
     "Alert": "2:11",
+    "Alert dialog": "39:575",
     "Badge": "2:10",
     "Button": "2:3",
     "Button group": "28:327",
     "Checkbox": "2:7",
+    "Combobox": "39:576",
+    "Command": "39:577",
+    "Context menu": "39:578",
+    "Dialog": "39:579",
+    "Drawer": "39:580",
+    "Dropdown menu": "39:581",
     "Field": "28:320",
+    "Hover card": "39:582",
     "Icon button": "2:4",
     "Input": "28:318",
     "Input OTP": "28:322",
     "Input group": "28:321",
     "Kbd": "28:328",
     "Label": "28:317",
+    "Menubar": "39:583",
     "Native select": "28:323",
+    "Popover": "39:584",
     "Progress": "28:330",
     "Radio": "2:8",
     "Select": "2:6",
     "Separator": "28:331",
+    "Sheet": "39:585",
     "Skeleton": "28:332",
+    "Slot": "43:575",
     "Slider": "28:324",
     "Spinner": "28:329",
     "Switch": "2:9",
     "Textarea": "28:319",
+    "Toast": "39:586",
     "Toggle": "28:325",
-    "Toggle group": "28:326"
+    "Toggle group": "28:326",
+    "Tooltip": "39:587"
    },
-   "reviewBoard": "10:11",
    "lastSync": {
     "date": "2026-10-20",
     "components": 24,
     "result": "component fingerprint 0cebd762 matches"
+   },
+   "reviewBoards": {
+    "core": "10:11",
+    "overlays": "49:1219"
    }
   },
   "sandbox": {
@@ -73,6 +90,12 @@
    "set": "9:98",
    "variants": 5,
    "spec": "components/alert.md"
+  },
+  "alert-dialog": {
+   "layer": "core",
+   "set": "44:673",
+   "variants": 2,
+   "spec": "components/alert-dialog.md"
   },
   "badge": {
    "layer": "core",
@@ -98,11 +121,53 @@
    "variants": 15,
    "spec": "components/checkbox.md"
   },
+  "combobox": {
+   "layer": "core",
+   "set": "48:722",
+   "variants": 2,
+   "spec": "components/combobox.md"
+  },
+  "command": {
+   "layer": "core",
+   "set": "48:626",
+   "variants": 2,
+   "spec": "components/command.md"
+  },
+  "context-menu": {
+   "layer": "core",
+   "set": "41:605",
+   "variants": 1,
+   "spec": "components/context-menu.md"
+  },
+  "dialog": {
+   "layer": "core",
+   "set": "44:623",
+   "variants": 1,
+   "spec": "components/dialog.md"
+  },
+  "drawer": {
+   "layer": "core",
+   "set": "46:606",
+   "variants": 1,
+   "spec": "components/drawer.md"
+  },
+  "dropdown-menu": {
+   "layer": "core",
+   "set": "40:755",
+   "variants": 2,
+   "spec": "components/dropdown-menu.md"
+  },
   "field": {
    "layer": "core",
    "set": "30:553",
    "variants": 9,
    "spec": "components/field.md"
+  },
+  "hover-card": {
+   "layer": "core",
+   "set": "43:596",
+   "variants": 1,
+   "spec": "components/hover-card.md"
   },
   "icon-button": {
    "layer": "core",
@@ -140,11 +205,35 @@
    "variants": 2,
    "spec": "components/label.md"
   },
+  "menu-item": {
+   "layer": "core",
+   "set": "40:672",
+   "variants": 17,
+   "spec": "components/menu-item.md"
+  },
+  "menubar": {
+   "layer": "core",
+   "set": "41:680",
+   "variants": 2,
+   "spec": "components/menubar.md"
+  },
   "native-select": {
    "layer": "core",
    "set": "33:361",
    "variants": 15,
    "spec": "components/native-select.md"
+  },
+  "overlay": {
+   "layer": "core",
+   "set": "44:589",
+   "variants": 1,
+   "spec": "components/overlay.md"
+  },
+  "popover": {
+   "layer": "core",
+   "set": "43:587",
+   "variants": 1,
+   "spec": "components/popover.md"
   },
   "progress": {
    "layer": "core",
@@ -170,6 +259,12 @@
    "variants": 3,
    "spec": "components/separator.md"
   },
+  "sheet": {
+   "layer": "core",
+   "set": "45:695",
+   "variants": 4,
+   "spec": "components/sheet.md"
+  },
   "skeleton": {
    "layer": "core",
    "set": "36:368",
@@ -181,6 +276,12 @@
    "set": "33:398",
    "variants": 8,
    "spec": "components/slider.md"
+  },
+  "slot": {
+   "layer": "core",
+   "set": "43:578",
+   "variants": 1,
+   "spec": "components/slot.md"
   },
   "spinner": {
    "layer": "core",
@@ -200,6 +301,12 @@
    "variants": 7,
    "spec": "components/textarea.md"
   },
+  "toast": {
+   "layer": "core",
+   "set": "49:662",
+   "variants": 6,
+   "spec": "components/toast.md"
+  },
   "toggle": {
    "layer": "core",
    "set": "34:421",
@@ -211,6 +318,12 @@
    "set": "34:519",
    "variants": 6,
    "spec": "components/toggle-group.md"
+  },
+  "tooltip": {
+   "layer": "core",
+   "set": "41:701",
+   "variants": 4,
+   "spec": "components/tooltip.md"
   }
  },
  "icons": {

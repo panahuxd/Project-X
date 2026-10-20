@@ -57,6 +57,7 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - Library variables, styles and components import by key without enabling the library in the file's UI.
 - After a library publish, existing instances keep the old version until updated: `instance.swapComponent(<variant from importComponentSetByKeyAsync>)` moves them to the latest and keeps their overrides.
 - To edit a component's nested exposed instances (e.g. the `label` and `control` inside `field`), find them with `instance.findOne(n => n.type === 'INSTANCE' && n.name === 'label')` and call `setProperties` on them.
+- **Overlays (dialog, sheet, drawer, popover, hover-card, alert-dialog) take custom content through a slot**: build the content as a local component named `content/<what>` from DKB components and tokens, then set the overlay instance's `content` property (INSTANCE_SWAP) to it. Put an `overlay` instance behind modal panels. On mobile, use `drawer` instead of `dialog` (DS-32). The audit fails if a `slot` placeholder is still visible.
 - When binding a paint to a variable, give the placeholder paint a real colour (not white): a binding to the same variable the node already had can keep showing the placeholder.
 
 ## 6. Sandbox

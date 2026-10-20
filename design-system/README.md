@@ -111,7 +111,7 @@ It validates the tokens (types, references, layer rules, same tokens in every mo
 
 | Library | Contents | Link |
 |---|---|---|
-| DKB Foundations | Variables (4 collections, 240 variables), 15 text styles, 4 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
-| DKB Components | Lucide icons; 24 Core components (button, icon-button, select, checkbox, radio, switch, badge, alert + batch 1 form primitives: label, input, textarea, field, input-group, input-otp, native-select, slider, toggle, toggle-group, button-group, kbd, spinner, progress, separator, skeleton). API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
+| DKB Foundations | Variables (4 collections, 255 variables), 15 text styles, 6 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
+| DKB Components | Lucide icons; 40 Core components: batch 1 form primitives and batch 2 overlays and menus (shadcn parity). API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
 
 The old libraries (*DS - Shadcn*, *DS - Components*) stay as reference until screens are migrated.

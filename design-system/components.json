@@ -53,6 +53,45 @@
       },
       "spec": "components/alert.md"
     },
+    "alert-dialog": {
+      "layer": "core",
+      "page": "Alert dialog",
+      "nodeId": "44:673",
+      "key": "a97158ed49c854e798cfd6a97daf2c1218972d25",
+      "variantCount": 2,
+      "variants": {
+        "tone": [
+          "default",
+          "destructive"
+        ]
+      },
+      "defaultVariant": {
+        "tone": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#44:14",
+          "default": "آیا مطمئن هستید؟"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#44:17",
+          "default": "این کار قابل بازگشت نیست."
+        },
+        "showContent": {
+          "type": "BOOLEAN",
+          "id": "showContent#44:20",
+          "default": false
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#44:23",
+          "default": "slot"
+        }
+      },
+      "spec": "components/alert-dialog.md"
+    },
     "badge": {
       "layer": "core",
       "page": "Badge",
@@ -241,6 +280,184 @@
       },
       "spec": "components/checkbox.md"
     },
+    "combobox": {
+      "layer": "core",
+      "page": "Combobox",
+      "nodeId": "48:722",
+      "key": "35fbb3a07558468a6c81f21a80aca173256b86b4",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "closed",
+          "open"
+        ]
+      },
+      "defaultVariant": {
+        "state": "closed"
+      },
+      "properties": {},
+      "spec": "components/combobox.md"
+    },
+    "command": {
+      "layer": "core",
+      "page": "Command",
+      "nodeId": "48:626",
+      "key": "f803b5f4487c81cdb056b54085c745776e72e00c",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "results",
+          "empty"
+        ]
+      },
+      "defaultVariant": {
+        "state": "results"
+      },
+      "properties": {
+        "placeholder": {
+          "type": "TEXT",
+          "id": "placeholder#48:0",
+          "default": "جستجوی کالا یا دستور…"
+        }
+      },
+      "spec": "components/command.md"
+    },
+    "context-menu": {
+      "layer": "core",
+      "page": "Context menu",
+      "nodeId": "41:605",
+      "key": "5f5fcbfd9e22c48bf78e049ac774248af1f36b05",
+      "variantCount": 1,
+      "variants": {
+        "content": [
+          "row-actions"
+        ]
+      },
+      "defaultVariant": {
+        "content": "row-actions"
+      },
+      "properties": {},
+      "spec": "components/context-menu.md"
+    },
+    "dialog": {
+      "layer": "core",
+      "page": "Dialog",
+      "nodeId": "44:623",
+      "key": "248caede29c2303b34bb029d997ccae69ec1b914",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#44:0",
+          "default": "ویرایش آدرس تحویل"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#44:2",
+          "default": "آدرس را تغییر دهید و ذخیره کنید. سفارش‌های ثبت‌شده تغییر نمی‌کنند."
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#44:4",
+          "default": true
+        },
+        "showContent": {
+          "type": "BOOLEAN",
+          "id": "showContent#44:6",
+          "default": true
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#44:8",
+          "default": "slot"
+        },
+        "showFooter": {
+          "type": "BOOLEAN",
+          "id": "showFooter#44:10",
+          "default": true
+        },
+        "showClose": {
+          "type": "BOOLEAN",
+          "id": "showClose#44:12",
+          "default": true
+        }
+      },
+      "spec": "components/dialog.md"
+    },
+    "drawer": {
+      "layer": "core",
+      "page": "Drawer",
+      "nodeId": "46:606",
+      "key": "7e5cfcaba229882c1c8d6efc3090d59f93f7bc4c",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#46:0",
+          "default": "انتخاب زمان تحویل"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#46:2",
+          "default": "یکی از بازه‌های زیر را برای این مرسوله انتخاب کنید."
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#46:4",
+          "default": true
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#46:6",
+          "default": "slot"
+        },
+        "showFooter": {
+          "type": "BOOLEAN",
+          "id": "showFooter#46:8",
+          "default": true
+        },
+        "showHandle": {
+          "type": "BOOLEAN",
+          "id": "showHandle#46:10",
+          "default": true
+        }
+      },
+      "spec": "components/drawer.md"
+    },
+    "dropdown-menu": {
+      "layer": "core",
+      "page": "Dropdown menu",
+      "nodeId": "40:755",
+      "key": "e82c0ecdb09f6d80ccedd7f34d9d0408b0b27b8e",
+      "variantCount": 2,
+      "variants": {
+        "content": [
+          "actions",
+          "selection"
+        ]
+      },
+      "defaultVariant": {
+        "content": "actions"
+      },
+      "properties": {},
+      "spec": "components/dropdown-menu.md"
+    },
     "field": {
       "layer": "core",
       "page": "Field",
@@ -281,6 +498,44 @@
         }
       },
       "spec": "components/field.md"
+    },
+    "hover-card": {
+      "layer": "core",
+      "page": "Hover card",
+      "nodeId": "43:596",
+      "key": "e64700b6e46360f6780a4d1cb432444ae112af47",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#43:10",
+          "default": "فروشگاه نمونه"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#43:12",
+          "default": "فروشنده برتر در دسته لوازم اداری · عضو از ۱۴۰۲"
+        },
+        "showContent": {
+          "type": "BOOLEAN",
+          "id": "showContent#43:14",
+          "default": false
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#43:16",
+          "default": "slot"
+        }
+      },
+      "spec": "components/hover-card.md"
     },
     "icon-button": {
       "layer": "core",
@@ -529,6 +784,105 @@
       },
       "spec": "components/label.md"
     },
+    "menu-item": {
+      "layer": "core",
+      "page": "Dropdown menu",
+      "nodeId": "40:672",
+      "key": "e1cf18237c87f6a6f13280f534aeb0391a60f2f0",
+      "variantCount": 17,
+      "variants": {
+        "type": [
+          "default",
+          "checkbox",
+          "radio",
+          "submenu",
+          "destructive",
+          "label",
+          "separator"
+        ],
+        "state": [
+          "default",
+          "highlighted",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#40:0",
+          "default": "گزینه منو"
+        },
+        "shortcut": {
+          "type": "TEXT",
+          "id": "shortcut#40:18",
+          "default": "Ctrl+P"
+        },
+        "showShortcut": {
+          "type": "BOOLEAN",
+          "id": "showShortcut#40:36",
+          "default": false
+        },
+        "showIcon": {
+          "type": "BOOLEAN",
+          "id": "showIcon#40:54",
+          "default": false
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#40:72",
+          "default": "icon/user"
+        },
+        "checked": {
+          "type": "BOOLEAN",
+          "id": "checked#40:90",
+          "default": true
+        }
+      },
+      "spec": "components/menu-item.md"
+    },
+    "menubar": {
+      "layer": "core",
+      "page": "Menubar",
+      "nodeId": "41:680",
+      "key": "d9a798d640807b67939d472466388738f6f8fbdc",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "closed",
+          "open"
+        ]
+      },
+      "defaultVariant": {
+        "state": "closed"
+      },
+      "properties": {
+        "menu1": {
+          "type": "TEXT",
+          "id": "menu1#41:0",
+          "default": "فایل"
+        },
+        "menu2": {
+          "type": "TEXT",
+          "id": "menu2#41:3",
+          "default": "ویرایش"
+        },
+        "menu3": {
+          "type": "TEXT",
+          "id": "menu3#41:6",
+          "default": "نمایش"
+        },
+        "menu4": {
+          "type": "TEXT",
+          "id": "menu4#41:9",
+          "default": "راهنما"
+        }
+      },
+      "spec": "components/menubar.md"
+    },
     "native-select": {
       "layer": "core",
       "page": "Native select",
@@ -561,6 +915,66 @@
         }
       },
       "spec": "components/native-select.md"
+    },
+    "overlay": {
+      "layer": "core",
+      "page": "Dialog",
+      "nodeId": "44:589",
+      "key": "88b3c1a36e3a1585c9e4626277344ba2afcaff88",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {},
+      "spec": "components/overlay.md"
+    },
+    "popover": {
+      "layer": "core",
+      "page": "Popover",
+      "nodeId": "43:587",
+      "key": "1be5e47b7f81a2bcff743ec21583fdbdef6b212b",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#43:0",
+          "default": "ابعاد بسته"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#43:2",
+          "default": "ابعاد و وزن بسته را وارد کنید."
+        },
+        "showHeader": {
+          "type": "BOOLEAN",
+          "id": "showHeader#43:4",
+          "default": true
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#43:6",
+          "default": true
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#43:8",
+          "default": "slot"
+        }
+      },
+      "spec": "components/popover.md"
     },
     "progress": {
       "layer": "core",
@@ -698,6 +1112,57 @@
       },
       "spec": "components/separator.md"
     },
+    "sheet": {
+      "layer": "core",
+      "page": "Sheet",
+      "nodeId": "45:695",
+      "key": "ca63617a31d902a88ba1762fa9af67509c401bc7",
+      "variantCount": 4,
+      "variants": {
+        "side": [
+          "right",
+          "left",
+          "top",
+          "bottom"
+        ]
+      },
+      "defaultVariant": {
+        "side": "right"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#45:0",
+          "default": "فیلترها"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#45:5",
+          "default": "نتیجه‌ها را بر اساس برند، قیمت و موجودی محدود کنید."
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#45:10",
+          "default": true
+        },
+        "content": {
+          "type": "INSTANCE_SWAP",
+          "id": "content#45:15",
+          "default": "slot"
+        },
+        "showFooter": {
+          "type": "BOOLEAN",
+          "id": "showFooter#45:20",
+          "default": true
+        },
+        "showClose": {
+          "type": "BOOLEAN",
+          "id": "showClose#45:25",
+          "default": true
+        }
+      },
+      "spec": "components/sheet.md"
+    },
     "skeleton": {
       "layer": "core",
       "page": "Skeleton",
@@ -741,6 +1206,23 @@
       },
       "properties": {},
       "spec": "components/slider.md"
+    },
+    "slot": {
+      "layer": "core",
+      "page": "Slot",
+      "nodeId": "43:578",
+      "key": "4025b6ae0a1efee88b75c13483d93040543b6b99",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {},
+      "spec": "components/slot.md"
     },
     "spinner": {
       "layer": "core",
@@ -843,6 +1325,49 @@
       },
       "spec": "components/textarea.md"
     },
+    "toast": {
+      "layer": "core",
+      "page": "Toast",
+      "nodeId": "49:662",
+      "key": "80ecdb774b20a6b6ef6f350ad87d94311a156164",
+      "variantCount": 6,
+      "variants": {
+        "tone": [
+          "default",
+          "success",
+          "info",
+          "warning",
+          "destructive",
+          "loading"
+        ]
+      },
+      "defaultVariant": {
+        "tone": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#49:0",
+          "default": "کالا به سبد خرید اضافه شد"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#49:7",
+          "default": "۲ عدد · کاغذ A4 بسته ۵۰۰ برگی"
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#49:14",
+          "default": true
+        },
+        "showAction": {
+          "type": "BOOLEAN",
+          "id": "showAction#49:21",
+          "default": false
+        }
+      },
+      "spec": "components/toast.md"
+    },
     "toggle": {
       "layer": "core",
       "page": "Toggle",
@@ -919,6 +1444,32 @@
       },
       "properties": {},
       "spec": "components/toggle-group.md"
+    },
+    "tooltip": {
+      "layer": "core",
+      "page": "Tooltip",
+      "nodeId": "41:701",
+      "key": "e759f028e0ee4026dbe743bc6b3c04e051953f7d",
+      "variantCount": 4,
+      "variants": {
+        "side": [
+          "top",
+          "bottom",
+          "right",
+          "left"
+        ]
+      },
+      "defaultVariant": {
+        "side": "top"
+      },
+      "properties": {
+        "text": {
+          "type": "TEXT",
+          "id": "text#41:12",
+          "default": "افزودن به سبد خرید"
+        }
+      },
+      "spec": "components/tooltip.md"
     }
   },
   "icons": {

@@ -13,7 +13,7 @@ RTL, right to left: `iconStart` (optional) · `value` · `chevron` (left).
 | Property (Figma = code) | Type | Values | Default | Notes |
 |---|---|---|---|---|
 | `size` | variant | `sm`, `md`, `lg` | `md` | |
-| `state` | variant (Figma only) | `default`, `hover`, `open`, `filled`, `error`, `disabled` | `default` | `open` = list is showing (list is `select` content / `dropdown-menu`, batch 2) |
+| `state` | variant (Figma only) | `default`, `hover`, `open`, `filled`, `error`, `disabled` | `default` | `open` = list is showing (the list is a `dropdown-menu` with checkbox-type `menu-item`s) |
 | `value` | text | | «انتخاب کنید» | Placeholder in `text.muted` until something is chosen |
 | `showIconStart` / `iconStart` | boolean / swap | | off / `circle` | |
 

@@ -32,7 +32,11 @@ for c in fig['collections']:
     detail[c['name']] = lines
 ts = sorted('|'.join([t['name'], 'Digikala', W[t['bind']['fontWeight'].split('/')[-1]],
                       t['bind']['fontFamily'], t['bind']['fontSize'], t['bind']['lineHeight']]) for t in fig['textStyles'])
-es = sorted(f"{e['name']}|{len(e['shadows'])}" for e in fig['effectStyles'])
+def shadow_str(x):
+    c = x['color'].lstrip('#').upper(); c = c + 'FF' if len(c) == 6 else c
+    n = lambda v: str(int(round(float(str(v).replace('px', '')))))
+    return ','.join([c, n(x['offsetX']), n(x['offsetY']), n(x['blur']), n(x['spread'])])
+es = sorted(f"{e['name']}|{len(e['shadows'])}|" + ';'.join(shadow_str(x) for x in e['shadows']) for e in fig['effectStyles'])
 out['textStyles'] = {'count': len(ts), 'fp': fnv('\n'.join(ts))}
 out['effectStyles'] = {'count': len(es), 'fp': fnv('\n'.join(es))}
 detail['textStyles'] = ts

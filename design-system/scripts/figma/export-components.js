@@ -3,7 +3,7 @@
 // (the agent does this after any component change), then run
 // `python3 scripts/sync_check.py` — it prints the expected component fingerprint,
 // and the `fingerprint` field returned here must match it.
-const LAYER = { 'alert': 'core', 'badge': 'core', 'button': 'core', 'button-group': 'core', 'checkbox': 'core', 'field': 'core', 'icon-button': 'core', 'input': 'core', 'input-group': 'core', 'input-otp': 'core', 'kbd': 'core', 'label': 'core', 'native-select': 'core', 'progress': 'core', 'radio': 'core', 'select': 'core', 'separator': 'core', 'skeleton': 'core', 'slider': 'core', 'spinner': 'core', 'switch': 'core', 'textarea': 'core', 'toggle': 'core', 'toggle-group': 'core' };
+const LAYER = { 'alert': 'core', 'alert-dialog': 'core', 'badge': 'core', 'button': 'core', 'button-group': 'core', 'checkbox': 'core', 'combobox': 'core', 'command': 'core', 'context-menu': 'core', 'dialog': 'core', 'drawer': 'core', 'dropdown-menu': 'core', 'field': 'core', 'hover-card': 'core', 'icon-button': 'core', 'input': 'core', 'input-group': 'core', 'input-otp': 'core', 'kbd': 'core', 'label': 'core', 'menu-item': 'core', 'menubar': 'core', 'native-select': 'core', 'overlay': 'core', 'popover': 'core', 'progress': 'core', 'radio': 'core', 'select': 'core', 'separator': 'core', 'sheet': 'core', 'skeleton': 'core', 'slider': 'core', 'slot': 'core', 'spinner': 'core', 'switch': 'core', 'textarea': 'core', 'toast': 'core', 'toggle': 'core', 'toggle-group': 'core', 'tooltip': 'core' };
 const fnv = s => { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
 const components = {};
 const lines = [];
@@ -16,7 +16,7 @@ for (const page of figma.root.children) {
       if (d.type === 'VARIANT') variants[id] = d.variantOptions;
       else {
         let def = d.defaultValue;
-        if (d.type === 'INSTANCE_SWAP') { const n = await figma.getNodeByIdAsync(def); def = n ? n.name : def; }
+        if (d.type === 'INSTANCE_SWAP') { const n = await figma.getNodeByIdAsync(def); def = n ? (n.parent && n.parent.type === 'COMPONENT_SET' ? n.parent.name : n.name) : def; }
         properties[id.split('#')[0]] = { type: d.type, id, default: def };
       }
     }

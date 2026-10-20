@@ -255,6 +255,34 @@
       "$description": "Focus ring width (spread of shadow.focus-ring)"
     }
   },
+  "width": {
+    "$type": "dimension",
+    "$description": "Overlay widths, matching shadcn (DS-29). On mobile, dialogs and sheets become full-width bottom sheets.",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "WIDTH_HEIGHT"
+        ],
+        "hidden": false
+      }
+    },
+    "hover-card": {
+      "$value": "{size.256}",
+      "$description": "shadcn HoverCard w-64"
+    },
+    "popover": {
+      "$value": "{size.288}",
+      "$description": "shadcn Popover w-72"
+    },
+    "sheet": {
+      "$value": "{size.384}",
+      "$description": "shadcn Sheet sm:max-w-sm"
+    },
+    "dialog": {
+      "$value": "{size.512}",
+      "$description": "shadcn Dialog / AlertDialog sm:max-w-lg"
+    }
+  },
   "ring": {
     "$type": "color",
     "$extensions": {
@@ -345,7 +373,7 @@
       "$description": "Sticky bill box and bottom bars"
     },
     "dialog": {
-      "$value": "{shadow.xl}"
+      "$value": "{shadow.lg}"
     },
     "focus-ring": {
       "$value": [
@@ -426,12 +454,9 @@
         "skip": true
       }
     },
-    "$description": "Code only.",
+    "$description": "Code only. Popover layers (menus, popovers, hover cards, combobox lists) sit above dialogs so they work inside them (DS-29).",
     "base": {
       "$value": 0
-    },
-    "dropdown": {
-      "$value": 1000
     },
     "sticky": {
       "$value": 1100
@@ -442,11 +467,14 @@
     "dialog": {
       "$value": 1400
     },
-    "toast": {
+    "popover": {
       "$value": 1500
     },
-    "tooltip": {
+    "toast": {
       "$value": 1600
+    },
+    "tooltip": {
+      "$value": 1700
     }
   }
 }

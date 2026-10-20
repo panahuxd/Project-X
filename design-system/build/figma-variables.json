@@ -1290,6 +1290,54 @@
      }
     },
     {
+     "name": "size/256",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Default": 256.0
+     }
+    },
+    {
+     "name": "size/288",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Default": 288.0
+     }
+    },
+    {
+     "name": "size/384",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Default": 384.0
+     }
+    },
+    {
+     "name": "size/512",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Default": 512.0
+     }
+    },
+    {
      "name": "size/1312",
      "type": "FLOAT",
      "description": "",
@@ -2677,6 +2725,62 @@
      }
     },
     {
+     "name": "width/hover-card",
+     "type": "FLOAT",
+     "description": "shadcn HoverCard w-64",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "size/256"
+      }
+     }
+    },
+    {
+     "name": "width/popover",
+     "type": "FLOAT",
+     "description": "shadcn Popover w-72",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "size/288"
+      }
+     }
+    },
+    {
+     "name": "width/sheet",
+     "type": "FLOAT",
+     "description": "shadcn Sheet sm:max-w-sm",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "size/384"
+      }
+     }
+    },
+    {
+     "name": "width/dialog",
+     "type": "FLOAT",
+     "description": "shadcn Dialog / AlertDialog sm:max-w-lg",
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "size/512"
+      }
+     }
+    },
+    {
      "name": "ring/default",
      "type": "COLOR",
      "description": "shadcn ring-ring/50: keyboard focus on any control",
@@ -3290,16 +3394,16 @@
     {
      "color": "#0000001A",
      "offsetX": "0px",
-     "offsetY": "20px",
-     "blur": "25px",
-     "spread": "-5px"
+     "offsetY": "10px",
+     "blur": "15px",
+     "spread": "-3px"
     },
     {
      "color": "#0000001A",
      "offsetX": "0px",
-     "offsetY": "8px",
-     "blur": "10px",
-     "spread": "-6px"
+     "offsetY": "4px",
+     "blur": "6px",
+     "spread": "-4px"
     }
    ]
   },
