@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.1 — 2026-10-20 (template test, card fix)
+
+- Sandbox test of the template flow: `checkout/payment/mobile` (B2E) started with `startFromTemplate('template/checkout', …)`, all 5 regions found, filled or removed with `fillRegion`; audit 0 errors, 0 warnings
+- Fix `card`: `showContent` now hides the whole content area (it hid only the slot, leaving 96 px of empty space)
+
 ## 0.9.0 — 2026-10-20 (page layout standard and templates)
 
 - `patterns/layouts.md` (DS-36): live B2R survey (desktop 1440, mobile 375), shadcn comparison and the standard: 12/8/4-col grid, content width 1312, grey page with white cards, 5 shells, 10 templates, sticky mobile action bar on checkout and forms
