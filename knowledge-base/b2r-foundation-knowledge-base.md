@@ -294,6 +294,8 @@ These sit on top of the shared principles in the B2E doc. Each comes from eviden
 
 ## 8. Design system for B2R
 
+> **For new designs, use the DKB Design System** (v0.3, Oct 2026; details in the B2E doc and the Project-X repo `design-system/`). B2R is the **B2R brand mode** (Decision D11 done: the mode is named B2R): navy `#093672` at `brand.800`, font **Digikala**, shadcn focus ring. Figma: [DKB Foundations](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) and [DKB Components](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp). The rest of this section describes the **legacy setup still live** (DS - Shadcn, IRANYekanX, three styling systems in code).
+
 The architecture (Figma *DS - Shadcn* with collections TailwindCSS · Theme · Mode · Custom, the code `@digikala/ui-kit`, IRANYekanX, 309 text styles) is shared and described in the B2E doc. As there: this is the **current setup, not the target**; it may be restructured. This section covers only what differs for B2R.
 
 ### Theme
@@ -318,9 +320,11 @@ The B2R app (`apps/website`) runs **three styling systems at once**: legacy `kit
 
 ### Typography & formatting
 
-IRANYekanX, RTL, Persian digits; money as toman with thousands separators (۴۴,۴۹۹,۰۰۰) and a toman sign or word; product titles are long, mixed Persian and Latin (model names) and must wrap to 2–3 lines. Some Figma files write money with the Arabic comma «،» and others with «٬» — see Content.
+Digikala font in new designs (IRANYekanX in the legacy code), RTL, Persian digits; money as toman with thousands separators (۴۴,۴۹۹,۰۰۰) and a toman sign or word; product titles are long, mixed Persian and Latin (model names) and must wrap to 2–3 lines. Some Figma files write money with the Arabic comma «،» and others with «٬» — see Content.
 
 ## 9. Components
+
+> **New designs use DKB Components** (API: `design-system/components.json`, specs: `design-system/components/`). The tables below map what exists today in the legacy Figma files and code; B2R-only components move into DKB Components as they are rebuilt.
 
 Shared tiers (DS primitives → DS - Components → product components) are in the B2E doc. Below are the components **specific to B2R**, where they live and how mature they are. *Status:* **Stable** = in Figma and code and consistent · **Drift** = exists in both but differs · **Figma only** · **Code only**.
 
@@ -600,7 +604,7 @@ All sources were read on 19 Oct 2026. Git access was read-only. Personal data se
 | Figma | [Loyalty Program](https://www.figma.com/design/caOX7jmTuJvWw9pcebAV3G) › Handoff | Club profile, rewards, tiers, banners |
 | Figma | [B2R Platform - C-Credit](https://www.figma.com/design/2JMEivE0r2z4cG95IeZhcc) › Handoff | Instalment resale flow |
 | Figma | [Profile](https://www.figma.com/design/I4xq8drvDqIyhf3NFlDWt0) › Profile | KYB, profile header, menu |
-| Figma | DS - Shadcn, DS - Components | Tokens and components (see B2E doc) |
+| Figma | DKB Foundations, DKB Components (new); DS - Shadcn, DS - Components (legacy) | Tokens and components (see B2E doc) |
 | Confluence | [CE-Platform team space](https://docs.digikala.com/pages/viewpage.action?pageId=175881110) — PRDs: B2B User Operation, Cross-selling, E-Contract, FieldOps activation, Field call plan, Search enhancement, Gold POS, Informal sales, Auto recommendation, Last purchases on home, Dynamic homepage, Segment-based carousels, Dynamic promoters | Product context, target capabilities |
 | Confluence | [Activation analysis](https://docs.digikala.com/pages/viewpage.action?pageId=180767803) | Funnel numbers, blockers |
 | Confluence | [B2B Product Platform Strategy](https://docs.digikala.com/pages/viewpage.action?pageId=180774752) (draft) | Platform direction |

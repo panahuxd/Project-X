@@ -1,0 +1,597 @@
+{
+ "$description": "Generated from Figma by scripts/figma/export-components.js. The agent's API for DKB Components: import a component set with figma.importComponentSetByKeyAsync(key) (or an icon with importComponentByKeyAsync), pick a variant by its variant properties, then set properties with instance.setProperties({ [properties.<name>.id]: value }). Do not edit by hand.",
+ "file": {
+  "name": "DKB Components",
+  "key": "12ErQ1NZV5xHhVCXpvH5Bp",
+  "url": "https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp"
+ },
+ "components": {
+  "button": {
+   "layer": "core",
+   "page": "Button",
+   "nodeId": "3:794",
+   "key": "6b140ee484f9f6dc1b2c9981bcf1905910509f49",
+   "variantCount": 90,
+   "variants": {
+    "variant": [
+     "primary",
+     "secondary",
+     "outline",
+     "ghost",
+     "destructive",
+     "link"
+    ],
+    "size": [
+     "sm",
+     "md",
+     "lg"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "pressed",
+     "focus",
+     "disabled"
+    ]
+   },
+   "defaultVariant": {
+    "variant": "primary",
+    "size": "md",
+    "state": "default"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#3:0",
+     "default": "ادامه"
+    },
+    "showIconStart": {
+     "type": "BOOLEAN",
+     "id": "showIconStart#3:91",
+     "default": false
+    },
+    "showIconEnd": {
+     "type": "BOOLEAN",
+     "id": "showIconEnd#3:182",
+     "default": false
+    },
+    "isLoading": {
+     "type": "BOOLEAN",
+     "id": "isLoading#3:273",
+     "default": false
+    },
+    "iconStart": {
+     "type": "INSTANCE_SWAP",
+     "id": "iconStart#3:364",
+     "default": "icon/circle"
+    },
+    "iconEnd": {
+     "type": "INSTANCE_SWAP",
+     "id": "iconEnd#3:455",
+     "default": "icon/circle"
+    }
+   },
+   "spec": "components/button.md"
+  },
+  "icon-button": {
+   "layer": "core",
+   "page": "Icon button",
+   "nodeId": "4:227",
+   "key": "1ee594010fe38d41014c05d42b73b24eebea8231",
+   "variantCount": 75,
+   "variants": {
+    "variant": [
+     "primary",
+     "secondary",
+     "outline",
+     "ghost",
+     "destructive"
+    ],
+    "size": [
+     "sm",
+     "md",
+     "lg"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "pressed",
+     "focus",
+     "disabled"
+    ]
+   },
+   "defaultVariant": {
+    "variant": "primary",
+    "size": "md",
+    "state": "default"
+   },
+   "properties": {
+    "icon": {
+     "type": "INSTANCE_SWAP",
+     "id": "icon#4:0",
+     "default": "icon/plus"
+    }
+   },
+   "spec": "components/icon-button.md"
+  },
+  "input-field": {
+   "layer": "core",
+   "page": "Input field",
+   "nodeId": "5:243",
+   "key": "47fd3f60887d12650c6feccf6b3b822c35fd152a",
+   "variantCount": 21,
+   "variants": {
+    "size": [
+     "sm",
+     "md",
+     "lg"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "focus",
+     "filled",
+     "error",
+     "disabled",
+     "read-only"
+    ]
+   },
+   "defaultVariant": {
+    "size": "md",
+    "state": "default"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#5:0",
+     "default": "عنوان فیلد"
+    },
+    "value": {
+     "type": "TEXT",
+     "id": "value#5:22",
+     "default": "متن را وارد کنید"
+    },
+    "helperText": {
+     "type": "TEXT",
+     "id": "helperText#5:44",
+     "default": "متن راهنما"
+    },
+    "showLabel": {
+     "type": "BOOLEAN",
+     "id": "showLabel#5:66",
+     "default": true
+    },
+    "isRequired": {
+     "type": "BOOLEAN",
+     "id": "isRequired#5:88",
+     "default": false
+    },
+    "showHelper": {
+     "type": "BOOLEAN",
+     "id": "showHelper#5:110",
+     "default": true
+    },
+    "showIconStart": {
+     "type": "BOOLEAN",
+     "id": "showIconStart#5:132",
+     "default": false
+    },
+    "showIconEnd": {
+     "type": "BOOLEAN",
+     "id": "showIconEnd#5:154",
+     "default": false
+    },
+    "iconStart": {
+     "type": "INSTANCE_SWAP",
+     "id": "iconStart#5:176",
+     "default": "icon/search"
+    },
+    "iconEnd": {
+     "type": "INSTANCE_SWAP",
+     "id": "iconEnd#5:198",
+     "default": "icon/x"
+    }
+   },
+   "spec": "components/input-field.md"
+  },
+  "select": {
+   "layer": "core",
+   "page": "Select",
+   "nodeId": "6:200",
+   "key": "75a141f945669aef7f555adf56f2c7a673207f44",
+   "variantCount": 18,
+   "variants": {
+    "size": [
+     "sm",
+     "md",
+     "lg"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "open",
+     "filled",
+     "error",
+     "disabled"
+    ]
+   },
+   "defaultVariant": {
+    "size": "md",
+    "state": "default"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#6:0",
+     "default": "عنوان فیلد"
+    },
+    "value": {
+     "type": "TEXT",
+     "id": "value#6:19",
+     "default": "انتخاب کنید"
+    },
+    "helperText": {
+     "type": "TEXT",
+     "id": "helperText#6:38",
+     "default": "متن راهنما"
+    },
+    "showLabel": {
+     "type": "BOOLEAN",
+     "id": "showLabel#6:57",
+     "default": true
+    },
+    "isRequired": {
+     "type": "BOOLEAN",
+     "id": "isRequired#6:76",
+     "default": false
+    },
+    "showHelper": {
+     "type": "BOOLEAN",
+     "id": "showHelper#6:95",
+     "default": false
+    },
+    "showIconStart": {
+     "type": "BOOLEAN",
+     "id": "showIconStart#6:114",
+     "default": false
+    },
+    "iconStart": {
+     "type": "INSTANCE_SWAP",
+     "id": "iconStart#6:133",
+     "default": "icon/circle"
+    }
+   },
+   "spec": "components/select.md"
+  },
+  "checkbox": {
+   "layer": "core",
+   "page": "Checkbox",
+   "nodeId": "15:354",
+   "key": "01226ad2cc2f4bb828567121f4fee28fcf09e87d",
+   "variantCount": 15,
+   "variants": {
+    "checked": [
+     "false",
+     "true",
+     "indeterminate"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "focus",
+     "disabled",
+     "error"
+    ]
+   },
+   "defaultVariant": {
+    "checked": "false",
+    "state": "default"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#15:0",
+     "default": "گزینه"
+    },
+    "description": {
+     "type": "TEXT",
+     "id": "description#15:16",
+     "default": "توضیح کوتاه"
+    },
+    "showLabel": {
+     "type": "BOOLEAN",
+     "id": "showLabel#15:32",
+     "default": true
+    },
+    "showDescription": {
+     "type": "BOOLEAN",
+     "id": "showDescription#15:48",
+     "default": false
+    }
+   },
+   "spec": "components/checkbox.md"
+  },
+  "radio": {
+   "layer": "core",
+   "page": "Radio",
+   "nodeId": "16:306",
+   "key": "a756db6956e297929a6bdd3f66b010a08985f8a5",
+   "variantCount": 10,
+   "variants": {
+    "checked": [
+     "false",
+     "true"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "focus",
+     "disabled",
+     "error"
+    ]
+   },
+   "defaultVariant": {
+    "checked": "false",
+    "state": "default"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#16:0",
+     "default": "گزینه"
+    },
+    "description": {
+     "type": "TEXT",
+     "id": "description#16:11",
+     "default": "توضیح کوتاه"
+    },
+    "showDescription": {
+     "type": "BOOLEAN",
+     "id": "showDescription#16:22",
+     "default": false
+    }
+   },
+   "spec": "components/radio.md"
+  },
+  "switch": {
+   "layer": "core",
+   "page": "Switch",
+   "nodeId": "17:298",
+   "key": "44cb943f7e6270a0d711cab64f9eaecd5740d8bb",
+   "variantCount": 8,
+   "variants": {
+    "checked": [
+     "false",
+     "true"
+    ],
+    "state": [
+     "default",
+     "hover",
+     "focus",
+     "disabled"
+    ]
+   },
+   "defaultVariant": {
+    "checked": "false",
+    "state": "default"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#17:0",
+     "default": "گزینه"
+    },
+    "description": {
+     "type": "TEXT",
+     "id": "description#17:9",
+     "default": "توضیح کوتاه"
+    },
+    "showLabel": {
+     "type": "BOOLEAN",
+     "id": "showLabel#17:18",
+     "default": true
+    },
+    "showDescription": {
+     "type": "BOOLEAN",
+     "id": "showDescription#17:27",
+     "default": false
+    }
+   },
+   "spec": "components/switch.md"
+  },
+  "badge": {
+   "layer": "core",
+   "page": "Badge",
+   "nodeId": "7:191",
+   "key": "b465ba6cc5e40c417ad190e78b9cfce87efc2f78",
+   "variantCount": 36,
+   "variants": {
+    "tone": [
+     "neutral",
+     "primary",
+     "success",
+     "warning",
+     "info",
+     "destructive"
+    ],
+    "style": [
+     "subtle",
+     "solid",
+     "outline"
+    ],
+    "size": [
+     "sm",
+     "md"
+    ]
+   },
+   "defaultVariant": {
+    "tone": "neutral",
+    "style": "subtle",
+    "size": "sm"
+   },
+   "properties": {
+    "label": {
+     "type": "TEXT",
+     "id": "label#7:0",
+     "default": "برچسب"
+    },
+    "showIcon": {
+     "type": "BOOLEAN",
+     "id": "showIcon#7:37",
+     "default": false
+    },
+    "icon": {
+     "type": "INSTANCE_SWAP",
+     "id": "icon#7:74",
+     "default": "icon/circle"
+    }
+   },
+   "spec": "components/badge.md"
+  },
+  "alert": {
+   "layer": "core",
+   "page": "Alert",
+   "nodeId": "9:98",
+   "key": "f92ea726b774e27a0b93edea393d3293f5ab9f73",
+   "variantCount": 5,
+   "variants": {
+    "tone": [
+     "info",
+     "success",
+     "warning",
+     "destructive",
+     "neutral"
+    ]
+   },
+   "defaultVariant": {
+    "tone": "info"
+   },
+   "properties": {
+    "title": {
+     "type": "TEXT",
+     "id": "title#9:0",
+     "default": "عنوان پیام"
+    },
+    "description": {
+     "type": "TEXT",
+     "id": "description#9:6",
+     "default": "توضیح کوتاه درباره‌ی آنچه رخ داده و قدم بعدی کاربر."
+    },
+    "showTitle": {
+     "type": "BOOLEAN",
+     "id": "showTitle#9:12",
+     "default": true
+    },
+    "showAction": {
+     "type": "BOOLEAN",
+     "id": "showAction#9:18",
+     "default": false
+    },
+    "showClose": {
+     "type": "BOOLEAN",
+     "id": "showClose#9:24",
+     "default": false
+    }
+   },
+   "spec": "components/alert.md"
+  }
+ },
+ "icons": {
+  "chevron-down": {
+   "key": "005d4071c946bad606a46e1baf9a5f19932b7e8c",
+   "nodeId": "2:19"
+  },
+  "chevron-up": {
+   "key": "ec036bba9d48593fec86177b66fb94247894baac",
+   "nodeId": "2:22"
+  },
+  "chevron-left": {
+   "key": "f7d80a28f8d886a9fe96bcc988741dc1bbbc83b4",
+   "nodeId": "2:25"
+  },
+  "chevron-right": {
+   "key": "2685e0866fa3b569e1f847b02ae615069432b5f9",
+   "nodeId": "2:28"
+  },
+  "arrow-left": {
+   "key": "85b15aaf6946a6513fc3ba4e1a0783b5b63b9a85",
+   "nodeId": "2:32"
+  },
+  "arrow-right": {
+   "key": "b5343b0467d6815f70d9bf6a3f0ddc042d213ffd",
+   "nodeId": "2:38"
+  },
+  "check": {
+   "key": "67d6915306bc6aac04e6eec175d48d69dd217f87",
+   "nodeId": "2:43"
+  },
+  "x": {
+   "key": "62a9af2384c0f4e9f7a8fee0371c416577dcc478",
+   "nodeId": "2:47"
+  },
+  "plus": {
+   "key": "09f2371cbbf3e8ea8a8cccab87003885cbd09f9b",
+   "nodeId": "2:53"
+  },
+  "minus": {
+   "key": "520b64a10815ddbaaab0a402b3c08bb523f52cf9",
+   "nodeId": "2:58"
+  },
+  "search": {
+   "key": "1846917e7d0ce0e41ec66922d8a49e224773ef10",
+   "nodeId": "2:62"
+  },
+  "info": {
+   "key": "e753ea48685db2be349325d59767be3b144b608f",
+   "nodeId": "2:69"
+  },
+  "circle-check": {
+   "key": "b4171e1ddf747e054cd491b6fc446b7e0dd1b3b2",
+   "nodeId": "2:75"
+  },
+  "circle-alert": {
+   "key": "8eb0d03d29b4099083e77c9a13ec6528ab6e746f",
+   "nodeId": "2:82"
+  },
+  "circle-x": {
+   "key": "d297a964ec7946add0b6c380f833b09263370e30",
+   "nodeId": "2:89"
+  },
+  "triangle-alert": {
+   "key": "1479625a2a5a8d02256ca339b5c23efdb870d668",
+   "nodeId": "2:96"
+  },
+  "loader-circle": {
+   "key": "2c85551e6c58f22bce50cd012e4fcc3e03d820c8",
+   "nodeId": "2:101"
+  },
+  "eye": {
+   "key": "86a477ddac47daf767f0e463eb6dc0e868c7f703",
+   "nodeId": "2:105"
+  },
+  "upload": {
+   "key": "12650b095739703df92b82e3e48bee67dbf3f0cf",
+   "nodeId": "2:112"
+  },
+  "trash-2": {
+   "key": "2c786a8b1cbf74e200d3b5c78351cb2396ea7c9b",
+   "nodeId": "2:121"
+  },
+  "shopping-cart": {
+   "key": "54043fbcef2c92cd1e8b63ec95fd26d4958f2310",
+   "nodeId": "2:128"
+  },
+  "calendar": {
+   "key": "2d3730fef7dfb1c116a0a9516b699137d12add12",
+   "nodeId": "2:136"
+  },
+  "user": {
+   "key": "e0354f678cf48467279eca2a5c0ea053ba0da88d",
+   "nodeId": "2:142"
+  },
+  "circle": {
+   "key": "cc786d7a2e97e586bd5a2766f28f09acc9c452ba",
+   "nodeId": "2:147"
+  }
+ }
+}

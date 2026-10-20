@@ -1,6 +1,12 @@
-# Project X — DKB Product & Design Knowledge Base
+# Project X — DKB Product Knowledge & Design System
 
-Markdown knowledge base for the Digikala Business (DKB) product domain, used as context for a UI/UX design agent and skill. Hosted here so other LLMs, agents and tools can reference the same files.
+The repo AI agents and designers work from to design Digikala Business (DKB) products (B2R, B2E, Enterprise Portals) in Figma:
+
+- **Product knowledge:** foundation docs, research and raw findings.
+- **DKB Design System:** tokens, component specs and the component API, kept in sync with the Figma libraries *DKB Foundations* and *DKB Components*.
+- **Designs:** one spec per design task, linked to its Figma file.
+
+**Agents: start with [`AGENTS.md`](AGENTS.md).**
 
 The source of truth for the three foundation docs is the living docs on claude.ai (linked inside each file). The files here are exported knowledge-base copies and must be kept in sync with them.
 
@@ -8,6 +14,9 @@ The source of truth for the three foundation docs is the living docs on claude.a
 
 | Folder | File | What it is |
 | --- | --- | --- |
+| — | `AGENTS.md` | Entry point for agents: what to read, hard rules for designs, the design-task workflow, how to change the design system |
+| `design-system/` | `README.md` and folders | DKB Design System: tokens (source of truth), build, component specs, `components.json` API, Figma sync check. See its README |
+| `designs/` | `<platform>-<feature>.md` | Design-task specs (from `_template.md`), each linked to its Figma file |
 | `knowledge-base/` | `b2e-foundation-knowledge-base.md` | B2E (company procurement) foundation: context, roles, rules, statuses, IA, flows, design system, components, gaps, decisions. Also covers layers shared with B2R and Portals. |
 | `knowledge-base/` | `b2r-foundation-knowledge-base.md` | B2R (retailers, b2b.digikala.com) foundation: B2R-specific rules, statuses, flows, components, gaps and decisions D1–D13. |
 | `knowledge-base/` | `portals-foundation-knowledge-base.md` | Enterprise Portals foundation: tenant model (mehrad, shad, cbi, cbint), rules, statuses, theming, gaps. |
@@ -18,10 +27,13 @@ The source of truth for the three foundation docs is the living docs on claude.a
 
 ## Reading order for an agent
 
-1. `knowledge-base/b2e-foundation-knowledge-base.md` — shared layers (design system, tokens, components, conflict process).
-2. The platform doc you are designing for (B2R or Portals).
-3. `research/research-insights-drive.md` for evidence.
-4. `raw-findings/` only when a detail is missing from the foundation docs.
+The full order and rules are in [`AGENTS.md`](AGENTS.md). In short:
+
+1. `design-system/` — README, `build/token-reference.md`, `components.json`, `components/*.md`.
+2. `knowledge-base/b2e-foundation-knowledge-base.md` — shared product layers (its design-system sections describe the legacy setup still live).
+3. The platform doc you are designing for (B2R or Portals).
+4. `research/research-insights-drive.md` for evidence.
+5. `raw-findings/` only when a detail is missing from the foundation docs.
 
 ## Conventions
 

@@ -67,7 +67,9 @@ design-system/
 ├── foundations/         colour, typography, spacing, radius, elevation, iconography, layout, motion
 ├── components/          one spec per component: anatomy, props, tokens, states, RTL, a11y, Figma link
 ├── patterns/            reusable UX patterns (money ledger, gate with a fix, three-outcome result…)
-├── figma-map.json       token and component ↔ Figma variable and component IDs
+├── components.json      component API for agents: library keys, variants, properties, defaults (generated from Figma)
+├── figma-map.json       file, page and node IDs in the Figma files
+├── figma-library-keys.json  library keys of published Foundations variables and styles
 └── scripts/             build and Figma sync check
 ```
 
@@ -97,6 +99,7 @@ It validates the tokens (types, references, layer rules, same tokens in every mo
    - `python3 scripts/sync_check.py` prints the expected fingerprint of each collection and style group.
    - `scripts/figma/sync-check.js` is run in Figma (with the `use_figma` tool on DKB Foundations) and returns the actual ones.
    - Same fingerprint = in sync. If one differs, set `DETAIL` in the JS (and pass the same name to the Python script) to list and diff that collection's lines.
+   - Components: `scripts/figma/export-components.js` (run on DKB Components) returns the component manifest and a fingerprint; save the manifest as `components.json`; its fingerprint must equal the `components` line of `sync_check.py`.
 4. Every component exists in Figma and as a spec in `components/`, with the same name, props and token bindings. `figma-map.json` links them (instead of Code Connect, which needs a Figma Organization plan).
 5. The design agent reads the specs here, designs in Figma with the library components, and writes new or changed specs back here.
 

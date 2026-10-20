@@ -259,6 +259,8 @@ Proposals derived from the sources; confirm with the design lead.
 
 ## 8. Design system: tenant theming
 
+> **For new designs, use the DKB Design System** (v0.3, Oct 2026; details in the B2E doc and the Project-X repo `design-system/`). A tenant is **one extra mode of the `brand` collection**, made from a single hex with `scripts/make_ramp.py` (the main colour lands at `brand.800`); no component changes. Until each partner identity is decided, tenants use the B2R or B2E mode (decision DS-3). Figma: [DKB Foundations](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3), [DKB Components](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp). The rest of this section describes the **legacy theming still live** (hand-written theme-*.css on DS - Shadcn / ui-kit, IRANYekanX).
+
 Shared architecture (DS - Shadcn, `@digikala/ui-kit`, IRANYekanX) is in the B2E doc. Portals add **per-tenant themes** on top.
 
 ### How theming works (Current)
@@ -286,6 +288,8 @@ Shared architecture (DS - Shadcn, `@digikala/ui-kit`, IRANYekanX) is in the B2E 
 A small, fixed **brand token set per tenant** (primary, primary-foreground, accent for banners, logo, favicon) applied to one shared component library, created from the platform console. Proposal: "limited colour palette, logo, name, favicon, banners" only.
 
 ## 9. Components
+
+> **New designs use DKB Components** (API: `design-system/components.json`, specs: `design-system/components/`). The table below maps portal-specific parts that exist today in the legacy Figma file and code.
 
 Shared commerce components (header, search, PLP row, PDP, cart line, bill box, payment method list) come from the same libraries as B2E and B2R. Below are the parts **specific to portals**. *Status:* Stable · Drift · Figma only · Code only.
 

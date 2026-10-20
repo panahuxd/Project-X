@@ -17,7 +17,7 @@ This is the single reference a designer (or the future AI design agent) reads be
 | What the product should become (capabilities, roles, priorities) | Strategy & PRDs (Confluence) | Research findings in the same docs |
 | How the product behaves today (statuses, rules, steps, limits) | Code (b2b-shop-front, b2b-platform) | Live site |
 | How a screen should look (layout, visual hierarchy) | Latest Figma design for that screen | Live site for what shipped |
-| Token values (color, type, spacing, radius) | DS - Shadcn Figma variables | ui-kit theme.css + app theme overrides |
+| Token values (color, type, spacing, radius) | DKB Design System tokens (Project-X repo design-system/tokens; Figma DKB Foundations) | DS - Shadcn and ui-kit theme.css (legacy: what is live today) |
 | Copy and labels | Code labels for statuses; Figma for new screens | This doc's glossary (Content section) |
 
 When sources disagree, the conflict is listed in **Gaps & debt** instead of being silently resolved.
@@ -358,6 +358,8 @@ These eight principles turn the strategy and research into decisions a designer 
 
 ## Design system: architecture and tokens
 
+> **For new designs, use the DKB Design System** (v0.3, Oct 2026). Source of truth: the Project-X repo `design-system/` (tokens, component specs, decisions). Figma libraries: [DKB Foundations](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) (variables, text and effect styles) and [DKB Components](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp). Font **Digikala**; brand modes B2R (navy `#093672`) and B2E (violet `#5B21B6`); semantic tokens `bg.*`, `text.*`, `border.*`; shadcn focus ring. It resolves Gaps #1, #2, #16 and #17 for new work. The rest of this section describes the **legacy setup still in code and in the old Figma files** (DS - Shadcn, IRANYekanX): use it only to understand what is live today.
+
 The system is the commercial shadcn/ui Figma kit (shadcndesign.com Pro, April 2025, shadcn/ui 2.5 + Tailwind v4) customized with three brand themes and a Persian font; code mirrors it in `@digikala/ui-kit`. The token architecture is sound; the problem is that code and Figma hold different values and B2E's screens were drawn in the wrong theme.
 
 *Everything in this section and in Components describes the current setup, not a target. Its structure is expected to change (see the note under Ecosystem).*
@@ -401,6 +403,8 @@ Tenant themes in code override the same variables on `html` (B2E purple; `theme-
 **Known drift to fix (details in Gaps).** B2E Figma screens render in CE navy because frames have no explicit Theme mode; live B2E background is grey (#F0F1F2) and text dark grey (#4D5053) while Figma uses white and near-black; `apps/b2e/colors.ts` has a broken primary scale; foreground semantics differ (destructive/success foreground = light tint, warning/info foreground = dark).
 
 ## Components: inventory and mapping
+
+> **New designs use DKB Components** (button, icon-button, input-field, select, checkbox, radio, switch, badge, alert, growing in batches). Their API is in `design-system/components.json` and their specs in `design-system/components/`. The tiers below are the legacy libraries and code, kept as a map of what exists today.
 
 Components live in four tiers; new designs should use tier 1 and 2 only and treat tiers 3 and 4 as things to migrate. Only 3 of about 62 ui-kit components have Storybook stories, and Code Connect is not set up, so the Figma ↔ code mapping below is by name.
 
@@ -512,7 +516,7 @@ B2E is designed desktop-first at 1440 and mobile at 360, but nothing defines the
 **Accessibility.**
 
 - Text contrast at least 4.5:1, large text 3:1. B2E uses a white surface; check text tokens on white and every tenant primary on white and on its tint.
-- Focus is always visible: 3 px ring in the ring token (as in ui-kit buttons).
+- Focus is always visible: the shadcn ring, a border.focus border plus a 3 px ring.default ring (DKB decision DS-22).
 - Touch targets at least 40 px high on mobile (ui-kit default button is 36; use lg on mobile).
 - Status never by color alone: badge text plus icon.
 - Forms: visible labels (not placeholder only), errors under the field with the fix, required marker «\*».
@@ -648,6 +652,8 @@ Read on 19 Oct 2026 from the team's Google Drive folder *04\_Research & Insights
 ## Sources
 
 All sources were read on 2026-10-19; repositories and Confluence were read only, nothing was changed. Raw notes with every extracted value are in the Project X doc `claude/b2e-phase1-raw-findings.md`.
+
+Design system from 20 Oct 2026: [DKB Foundations](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3), [DKB Components](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) and the Project-X repo `design-system/`. DS - Shadcn and DS - Components below are the legacy libraries.
 
 | Source | What it covers |
 | --- | --- |
