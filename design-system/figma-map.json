@@ -16,9 +16,9 @@
     "responsive": "VariableCollectionId:2:5"
    },
    "lastSync": {
-    "date": "2026-10-19",
-    "tokens": "0.2.0",
-    "result": "all fingerprints match"
+    "date": "2026-10-20",
+    "tokens": "0.8.0",
+    "result": "all fingerprints match (primitives 3651332e, semantic 450da8a1, effect styles c4264b99)"
    }
   },
   "components": {
@@ -33,15 +33,20 @@
     "Alert dialog": "39:575",
     "Avatar": "54:1389",
     "Badge": "2:10",
+    "Breadcrumb": "66:2187",
     "Button": "2:3",
     "Button group": "28:327",
+    "Calendar": "74:2675",
     "Card": "54:1390",
+    "Carousel": "66:2188",
+    "Chart": "74:2676",
     "Checkbox": "2:7",
     "Collapsible": "54:1391",
     "Combobox": "39:576",
     "Command": "39:577",
     "Context menu": "39:578",
     "Data table": "54:1392",
+    "Date picker": "74:2677",
     "Dialog": "39:579",
     "Drawer": "39:580",
     "Dropdown menu": "39:581",
@@ -57,6 +62,8 @@
     "Label": "28:317",
     "Menubar": "39:583",
     "Native select": "28:323",
+    "Navigation menu": "66:2189",
+    "Pagination": "66:2190",
     "Popover": "39:584",
     "Progress": "28:330",
     "Radio": "2:8",
@@ -65,6 +72,7 @@
     "Select": "2:6",
     "Separator": "28:331",
     "Sheet": "39:585",
+    "Sidebar": "66:2191",
     "Skeleton": "28:332",
     "Slider": "28:324",
     "Slot": "43:575",
@@ -86,7 +94,9 @@
    "reviewBoards": {
     "core": "10:11",
     "overlays": "49:1219",
-    "content": "63:2370"
+    "content": "63:2370",
+    "navigation": "72:2368",
+    "dates-and-charts": "77:2798"
    }
   },
   "sandbox": {
@@ -133,6 +143,12 @@
    "variants": 36,
    "spec": "components/badge.md"
   },
+  "breadcrumb": {
+   "layer": "core",
+   "set": "66:2222",
+   "variants": 2,
+   "spec": "components/breadcrumb.md"
+  },
   "button": {
    "layer": "core",
    "set": "3:794",
@@ -145,11 +161,47 @@
    "variants": 6,
    "spec": "components/button-group.md"
   },
+  "calendar": {
+   "layer": "core",
+   "set": "75:2879",
+   "variants": 2,
+   "spec": "components/calendar.md"
+  },
+  "calendar-day": {
+   "layer": "core",
+   "set": "74:2696",
+   "variants": 9,
+   "spec": "components/calendar-day.md"
+  },
   "card": {
    "layer": "core",
    "set": "56:1418",
    "variants": 2,
    "spec": "components/card.md"
+  },
+  "carousel": {
+   "layer": "core",
+   "set": "68:2199",
+   "variants": 2,
+   "spec": "components/carousel.md"
+  },
+  "chart": {
+   "layer": "core",
+   "set": "77:2797",
+   "variants": 3,
+   "spec": "components/chart.md"
+  },
+  "chart-legend": {
+   "layer": "core",
+   "set": "76:2704",
+   "variants": 1,
+   "spec": "components/chart-legend.md"
+  },
+  "chart-tooltip": {
+   "layer": "core",
+   "set": "76:2727",
+   "variants": 1,
+   "spec": "components/chart-tooltip.md"
   },
   "checkbox": {
    "layer": "core",
@@ -186,6 +238,12 @@
    "set": "63:2340",
    "variants": 1,
    "spec": "components/data-table.md"
+  },
+  "date-picker": {
+   "layer": "core",
+   "set": "75:3138",
+   "variants": 3,
+   "spec": "components/date-picker.md"
   },
   "dialog": {
    "layer": "core",
@@ -283,11 +341,41 @@
    "variants": 15,
    "spec": "components/native-select.md"
   },
+  "navigation-menu": {
+   "layer": "core",
+   "set": "69:2232",
+   "variants": 2,
+   "spec": "components/navigation-menu.md"
+  },
+  "navigation-menu-link": {
+   "layer": "core",
+   "set": "69:2186",
+   "variants": 2,
+   "spec": "components/navigation-menu-link.md"
+  },
+  "navigation-menu-trigger": {
+   "layer": "core",
+   "set": "69:2179",
+   "variants": 4,
+   "spec": "components/navigation-menu-trigger.md"
+  },
   "overlay": {
    "layer": "core",
    "set": "44:589",
    "variants": 1,
    "spec": "components/overlay.md"
+  },
+  "pagination": {
+   "layer": "core",
+   "set": "67:2227",
+   "variants": 2,
+   "spec": "components/pagination.md"
+  },
+  "pagination-link": {
+   "layer": "core",
+   "set": "67:2173",
+   "variants": 5,
+   "spec": "components/pagination-link.md"
   },
   "popover": {
    "layer": "core",
@@ -336,6 +424,18 @@
    "set": "45:695",
    "variants": 4,
    "spec": "components/sheet.md"
+  },
+  "sidebar": {
+   "layer": "core",
+   "set": "72:2291",
+   "variants": 2,
+   "spec": "components/sidebar.md"
+  },
+  "sidebar-menu-button": {
+   "layer": "core",
+   "set": "70:2195",
+   "variants": 8,
+   "spec": "components/sidebar-menu-button.md"
   },
   "skeleton": {
    "layer": "core",
@@ -455,7 +555,11 @@
    "ellipsis": "54:1363",
    "inbox": "54:1369",
    "arrow-up-down": "54:1377",
-   "package": "54:1385"
+   "package": "54:1385",
+   "house": "66:2166",
+   "credit-card": "66:2172",
+   "settings": "66:2178",
+   "wallet": "66:2184"
   }
  }
 }

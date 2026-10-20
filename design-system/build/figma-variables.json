@@ -930,6 +930,46 @@
      }
     },
     {
+     "name": "color/teal/600",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#0D9488"
+     }
+    },
+    {
+     "name": "color/orange/600",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#EA580C"
+     }
+    },
+    {
+     "name": "color/pink/600",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#DB2777"
+     }
+    },
+    {
+     "name": "color/lime/600",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#65A30D"
+     }
+    },
+    {
      "name": "space/0",
      "type": "FLOAT",
      "description": "",
@@ -2637,6 +2677,86 @@
      "values": {
       "Light": {
        "alias": "color/blue/200"
+      }
+     }
+    },
+    {
+     "name": "chart/1",
+     "type": "COLOR",
+     "description": "Series 1: brand (B2R navy 600, B2E violet 600)",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "brand/600"
+      }
+     }
+    },
+    {
+     "name": "chart/2",
+     "type": "COLOR",
+     "description": "Series 2",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/teal/600"
+      }
+     }
+    },
+    {
+     "name": "chart/3",
+     "type": "COLOR",
+     "description": "Series 3",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/orange/600"
+      }
+     }
+    },
+    {
+     "name": "chart/4",
+     "type": "COLOR",
+     "description": "Series 4",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/pink/600"
+      }
+     }
+    },
+    {
+     "name": "chart/5",
+     "type": "COLOR",
+     "description": "Series 5",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/lime/600"
       }
      }
     },

@@ -220,6 +220,55 @@
       },
       "spec": "components/badge.md"
     },
+    "breadcrumb": {
+      "layer": "core",
+      "page": "Breadcrumb",
+      "nodeId": "66:2222",
+      "key": "75b06e42cf2d5ca3e2c645ddf4f0c2432d5dc584",
+      "variantCount": 2,
+      "variants": {
+        "type": [
+          "default",
+          "collapsed"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "item1": {
+          "type": "TEXT",
+          "id": "item1#66:0",
+          "default": "خانه"
+        },
+        "item2": {
+          "type": "TEXT",
+          "id": "item2#66:3",
+          "default": "کالای دیجیتال"
+        },
+        "item3": {
+          "type": "TEXT",
+          "id": "item3#66:6",
+          "default": "لپ‌تاپ"
+        },
+        "current": {
+          "type": "TEXT",
+          "id": "current#66:9",
+          "default": "لپ‌تاپ ایسوس"
+        },
+        "showItem2": {
+          "type": "BOOLEAN",
+          "id": "showItem2#66:12",
+          "default": true
+        },
+        "showItem3": {
+          "type": "BOOLEAN",
+          "id": "showItem3#66:15",
+          "default": true
+        }
+      },
+      "spec": "components/breadcrumb.md"
+    },
     "button": {
       "layer": "core",
       "page": "Button",
@@ -311,6 +360,61 @@
       "properties": {},
       "spec": "components/button-group.md"
     },
+    "calendar": {
+      "layer": "core",
+      "page": "Calendar",
+      "nodeId": "75:2879",
+      "key": "b591ead528edd3d648543d84167d7d5393d04504",
+      "variantCount": 2,
+      "variants": {
+        "mode": [
+          "single",
+          "range"
+        ]
+      },
+      "defaultVariant": {
+        "mode": "single"
+      },
+      "properties": {
+        "month": {
+          "type": "TEXT",
+          "id": "month#75:0",
+          "default": "مهر ۱۴۰۵"
+        }
+      },
+      "spec": "components/calendar.md"
+    },
+    "calendar-day": {
+      "layer": "core",
+      "page": "Calendar",
+      "nodeId": "74:2696",
+      "key": "03d48b6d76e49dc02b77df9e09a2416faed067f8",
+      "variantCount": 9,
+      "variants": {
+        "state": [
+          "default",
+          "today",
+          "selected",
+          "range-start",
+          "range-middle",
+          "range-end",
+          "outside",
+          "disabled",
+          "focus"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "day": {
+          "type": "TEXT",
+          "id": "day#74:0",
+          "default": "۱۵"
+        }
+      },
+      "spec": "components/calendar-day.md"
+    },
     "card": {
       "layer": "core",
       "page": "Card",
@@ -364,6 +468,195 @@
         }
       },
       "spec": "components/card.md"
+    },
+    "carousel": {
+      "layer": "core",
+      "page": "Carousel",
+      "nodeId": "68:2199",
+      "key": "e12f724b0949ff5613abf6d31aadc9c086e438b8",
+      "variantCount": 2,
+      "variants": {
+        "type": [
+          "cards",
+          "banner"
+        ]
+      },
+      "defaultVariant": {
+        "type": "cards"
+      },
+      "properties": {
+        "item": {
+          "type": "INSTANCE_SWAP",
+          "id": "item#68:0",
+          "default": "slot"
+        }
+      },
+      "spec": "components/carousel.md"
+    },
+    "chart": {
+      "layer": "core",
+      "page": "Chart",
+      "nodeId": "77:2797",
+      "key": "d540914077167990a41d958d77247c69b08ff1ba",
+      "variantCount": 3,
+      "variants": {
+        "type": [
+          "bar",
+          "line",
+          "area"
+        ]
+      },
+      "defaultVariant": {
+        "type": "bar"
+      },
+      "properties": {},
+      "spec": "components/chart.md"
+    },
+    "chart-legend": {
+      "layer": "core",
+      "page": "Chart",
+      "nodeId": "76:2704",
+      "key": "429674875a165ea0baafe74c1fa3092efb80adcc",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "series1": {
+          "type": "TEXT",
+          "id": "series1#76:0",
+          "default": "سفارش‌ها"
+        },
+        "series2": {
+          "type": "TEXT",
+          "id": "series2#76:2",
+          "default": "درخواست خرید"
+        },
+        "series3": {
+          "type": "TEXT",
+          "id": "series3#76:4",
+          "default": "مرجوعی"
+        },
+        "series4": {
+          "type": "TEXT",
+          "id": "series4#76:6",
+          "default": "لغو شده"
+        },
+        "series5": {
+          "type": "TEXT",
+          "id": "series5#76:8",
+          "default": "سایر"
+        },
+        "showSeries3": {
+          "type": "BOOLEAN",
+          "id": "showSeries3#76:10",
+          "default": false
+        },
+        "showSeries4": {
+          "type": "BOOLEAN",
+          "id": "showSeries4#76:12",
+          "default": false
+        },
+        "showSeries5": {
+          "type": "BOOLEAN",
+          "id": "showSeries5#76:14",
+          "default": false
+        }
+      },
+      "spec": "components/chart-legend.md"
+    },
+    "chart-tooltip": {
+      "layer": "core",
+      "page": "Chart",
+      "nodeId": "76:2727",
+      "key": "4f28e58d94428e6d5cd4a6ef1255608a4c25b3b4",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#76:16",
+          "default": "تیر ۱۴۰۵"
+        },
+        "series1": {
+          "type": "TEXT",
+          "id": "series1#76:18",
+          "default": "سفارش‌ها"
+        },
+        "value1": {
+          "type": "TEXT",
+          "id": "value1#76:20",
+          "default": "۱۲۰"
+        },
+        "series2": {
+          "type": "TEXT",
+          "id": "series2#76:22",
+          "default": "درخواست خرید"
+        },
+        "value2": {
+          "type": "TEXT",
+          "id": "value2#76:24",
+          "default": "۸۰"
+        },
+        "series3": {
+          "type": "TEXT",
+          "id": "series3#76:26",
+          "default": "مرجوعی"
+        },
+        "value3": {
+          "type": "TEXT",
+          "id": "value3#76:28",
+          "default": "۱۲"
+        },
+        "series4": {
+          "type": "TEXT",
+          "id": "series4#76:30",
+          "default": "لغو شده"
+        },
+        "value4": {
+          "type": "TEXT",
+          "id": "value4#76:32",
+          "default": "۵"
+        },
+        "series5": {
+          "type": "TEXT",
+          "id": "series5#76:34",
+          "default": "سایر"
+        },
+        "value5": {
+          "type": "TEXT",
+          "id": "value5#76:36",
+          "default": "۳"
+        },
+        "showSeries3": {
+          "type": "BOOLEAN",
+          "id": "showSeries3#76:38",
+          "default": false
+        },
+        "showSeries4": {
+          "type": "BOOLEAN",
+          "id": "showSeries4#76:40",
+          "default": false
+        },
+        "showSeries5": {
+          "type": "BOOLEAN",
+          "id": "showSeries5#76:42",
+          "default": false
+        }
+      },
+      "spec": "components/chart-tooltip.md"
     },
     "checkbox": {
       "layer": "core",
@@ -517,6 +810,25 @@
       },
       "properties": {},
       "spec": "components/data-table.md"
+    },
+    "date-picker": {
+      "layer": "core",
+      "page": "Date picker",
+      "nodeId": "75:3138",
+      "key": "a23fddeb9aa667ca7b04890df81c4929c9ac21af",
+      "variantCount": 3,
+      "variants": {
+        "state": [
+          "closed",
+          "open",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "state": "closed"
+      },
+      "properties": {},
+      "spec": "components/date-picker.md"
     },
     "dialog": {
       "layer": "core",
@@ -1194,6 +1506,89 @@
       },
       "spec": "components/native-select.md"
     },
+    "navigation-menu": {
+      "layer": "core",
+      "page": "Navigation menu",
+      "nodeId": "69:2232",
+      "key": "cd5ab46bc9e81affc72e6a9d398746da3b23d84e",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "closed",
+          "open"
+        ]
+      },
+      "defaultVariant": {
+        "state": "closed"
+      },
+      "properties": {},
+      "spec": "components/navigation-menu.md"
+    },
+    "navigation-menu-link": {
+      "layer": "core",
+      "page": "Navigation menu",
+      "nodeId": "69:2186",
+      "key": "1cc4a5e6b32634ab54b545c99908096c976ab9d2",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "default",
+          "highlighted"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#69:10",
+          "default": "لوازم اداری"
+        },
+        "description": {
+          "type": "TEXT",
+          "id": "description#69:13",
+          "default": "کاغذ، خودکار، کلاسور و تجهیزات میز کار"
+        },
+        "showDescription": {
+          "type": "BOOLEAN",
+          "id": "showDescription#69:16",
+          "default": true
+        }
+      },
+      "spec": "components/navigation-menu-link.md"
+    },
+    "navigation-menu-trigger": {
+      "layer": "core",
+      "page": "Navigation menu",
+      "nodeId": "69:2179",
+      "key": "969ed5d370efe61d3842d1c85a2d3d5965be9a58",
+      "variantCount": 4,
+      "variants": {
+        "state": [
+          "default",
+          "hover",
+          "open",
+          "focus"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#69:0",
+          "default": "دسته‌بندی کالاها"
+        },
+        "showChevron": {
+          "type": "BOOLEAN",
+          "id": "showChevron#69:5",
+          "default": true
+        }
+      },
+      "spec": "components/navigation-menu-trigger.md"
+    },
     "overlay": {
       "layer": "core",
       "page": "Dialog",
@@ -1210,6 +1605,51 @@
       },
       "properties": {},
       "spec": "components/overlay.md"
+    },
+    "pagination": {
+      "layer": "core",
+      "page": "Pagination",
+      "nodeId": "67:2227",
+      "key": "02652a638db8fba7287d8f45009ede75f65f23aa",
+      "variantCount": 2,
+      "variants": {
+        "type": [
+          "default",
+          "compact"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {},
+      "spec": "components/pagination.md"
+    },
+    "pagination-link": {
+      "layer": "core",
+      "page": "Pagination",
+      "nodeId": "67:2173",
+      "key": "15c726f80522312a7316a8ee1b2a8094d718fffa",
+      "variantCount": 5,
+      "variants": {
+        "state": [
+          "default",
+          "hover",
+          "active",
+          "focus",
+          "disabled"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#67:0",
+          "default": "۲"
+        }
+      },
+      "spec": "components/pagination-link.md"
     },
     "popover": {
       "layer": "core",
@@ -1487,6 +1927,70 @@
         }
       },
       "spec": "components/sheet.md"
+    },
+    "sidebar": {
+      "layer": "core",
+      "page": "Sidebar",
+      "nodeId": "72:2291",
+      "key": "20444ba0c4bf2ae94c53e3528c2d4f00e7132806",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "expanded",
+          "collapsed"
+        ]
+      },
+      "defaultVariant": {
+        "state": "expanded"
+      },
+      "properties": {},
+      "spec": "components/sidebar.md"
+    },
+    "sidebar-menu-button": {
+      "layer": "core",
+      "page": "Sidebar",
+      "nodeId": "70:2195",
+      "key": "16c6a2e1551ee2056d16b5b0dd72f36e185223d0",
+      "variantCount": 8,
+      "variants": {
+        "state": [
+          "default",
+          "hover",
+          "active",
+          "disabled"
+        ],
+        "collapsed": [
+          "false",
+          "true"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default",
+        "collapsed": "false"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#70:0",
+          "default": "داشبورد"
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#70:9",
+          "default": "icon/house"
+        },
+        "showBadge": {
+          "type": "BOOLEAN",
+          "id": "showBadge#70:18",
+          "default": false
+        },
+        "badge": {
+          "type": "TEXT",
+          "id": "badge#70:27",
+          "default": "۳"
+        }
+      },
+      "spec": "components/sidebar-menu-button.md"
     },
     "skeleton": {
       "layer": "core",
@@ -2034,6 +2538,22 @@
     "package": {
       "key": "7ee8613cd21b5fb7114cfb7efc252cb8ae28c719",
       "nodeId": "54:1385"
+    },
+    "house": {
+      "key": "572df996bfd0fbd0cd2347f9285340596bb4385d",
+      "nodeId": "66:2166"
+    },
+    "credit-card": {
+      "key": "4736ccb53732260ac92780eb3a37cdbb4e7ed8be",
+      "nodeId": "66:2172"
+    },
+    "settings": {
+      "key": "49783bc09efb9180f464ed99e8897702d2e2c5ea",
+      "nodeId": "66:2178"
+    },
+    "wallet": {
+      "key": "2b8855447df2747f1ebfb092487449d0fa89e479",
+      "nodeId": "66:2184"
     }
   }
 }

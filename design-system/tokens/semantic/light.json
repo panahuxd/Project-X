@@ -213,6 +213,40 @@
       "$value": "{color.blue.200}"
     }
   },
+  "chart": {
+    "$type": "color",
+    "$description": "Categorical chart series, used in this fixed order (DS-34). Validated for colour-blind separation and 3:1 on white. Never for status; never for text.",
+    "$extensions": {
+      "dkb.figma": {
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL",
+          "STROKE_COLOR"
+        ],
+        "hidden": false
+      }
+    },
+    "1": {
+      "$value": "{brand.600}",
+      "$description": "Series 1: brand (B2R navy 600, B2E violet 600)"
+    },
+    "2": {
+      "$value": "{color.teal.600}",
+      "$description": "Series 2"
+    },
+    "3": {
+      "$value": "{color.orange.600}",
+      "$description": "Series 3"
+    },
+    "4": {
+      "$value": "{color.pink.600}",
+      "$description": "Series 4"
+    },
+    "5": {
+      "$value": "{color.lime.600}",
+      "$description": "Series 5"
+    }
+  },
   "radius": {
     "$type": "dimension",
     "$extensions": {

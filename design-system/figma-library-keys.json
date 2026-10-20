@@ -114,7 +114,12 @@
     "width/hover-card": "252d3533ddff33c105645ab6bb8603f897933114",
     "width/popover": "49da0c1a0ce41595032991e2bd4675e0029276bb",
     "width/sheet": "9cbb4c4f9905ce338ffd930e2a914bc7ff64c374",
-    "width/dialog": "ad1fbd0b293e371164f088846012c22c5e915643"
+    "width/dialog": "ad1fbd0b293e371164f088846012c22c5e915643",
+    "chart/1": "8b4db76938fe2ed502826e5c86b20da6a44523e6",
+    "chart/2": "76eeaaa9d72f7598c84deeb36783e3577158f25f",
+    "chart/3": "f2a161d405d976ebc5c63c34b0f227e1afaa3758",
+    "chart/4": "81a8e361944167c12cfa8a60a224c272bd09da85",
+    "chart/5": "58dff00f0de27ce612c76106933a222a0925f4e6"
   },
   "textStyles": {
     "display": "76eeb1472c850fe574fc7f2a943ee7e9a390bb5f",

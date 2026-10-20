@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.8.0 — 2026-10-20 (batch 5: dates and charts — shadcn parity complete)
+
+- Tokens (DS-34): `chart.1–5` = brand 600, teal, orange, pink, lime 600 (validated for colour-blind separation and 3:1 on white); 4 single-step primitives; shadcn `--chart-1…5` and `--sidebar-*` mapped in `shadcn-compat.css` and the Tailwind theme
+- Components: `calendar` (Jalali, Saturday first, Persian digits; single and range) with `calendar-day` (9 states); `date-picker` (closed, open in a popover, mobile in a drawer, DS-35); `chart` (bar, line, area) with `chart-legend` and `chart-tooltip`. 69 components in total
+- Review board "dates and charts" on the Cover page (B2R/B2E × Desktop/Mobile)
+- Binding audit: 0 unbound colours, 0 unstyled text in all 6 new sets
+- `components.json` regenerated: 69 components, 34 icons, fingerprint `0fc8a70d`; Foundations fingerprints match (primitives `3651332e`, semantic `450da8a1`, effect styles `c4264b99`)
+- `COVERAGE.md`: every non-AI shadcn/ui component now has a DKB equivalent (55 + 3 spec-only; 8 AI deferred)
+
+## 0.7.0 — 2026-10-20 (batch 4: navigation)
+
+- 5 shadcn components in DKB Components: breadcrumb, carousel, navigation-menu, pagination, sidebar — plus building blocks `pagination-link`, `navigation-menu-trigger`, `navigation-menu-link`, `sidebar-menu-button`. 63 components in total. Specs in `components/`
+- RTL throughout: breadcrumb separators chevron-left, «قبلی» (chevron-right) on the right and «بعدی» on the left, carousels start at the right, sidebar on the right edge with its border on the left, navigation panels drop aligned to the trigger's right edge
+- Sidebar uses the size scale directly (`size.256`, collapsed `size.48`), no new tokens
+- 4 Lucide icons added (34): house, credit-card, settings, wallet
+- Review board "navigation" on the Cover page (B2R/B2E × Desktop/Mobile)
+- Binding audit: 0 unbound colours, 0 unstyled text in all 9 new sets
+- `components.json` regenerated: 63 components, 34 icons, fingerprint `e331b5f8`
+
 ## 0.6.0 — 2026-10-20 (batch 3: content and display)
 
 - 11 shadcn components in DKB Components: accordion, avatar, card, collapsible, data-table, empty, item, resizable, scroll-area, table, tabs — plus building blocks `tab`, `accordion-item` and `table-cell`. 54 components in total. Specs in `components/`

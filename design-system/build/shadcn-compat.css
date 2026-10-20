@@ -28,6 +28,19 @@
   --border: var(--border-default);
   --input: var(--border-input);
   --ring: var(--border-focus);
+  --chart-1: var(--chart-1);
+  --chart-2: var(--chart-2);
+  --chart-3: var(--chart-3);
+  --chart-4: var(--chart-4);
+  --chart-5: var(--chart-5);
+  --sidebar: var(--bg-subtle);
+  --sidebar-foreground: var(--text-default);
+  --sidebar-primary: var(--bg-primary);
+  --sidebar-primary-foreground: var(--text-on-primary);
+  --sidebar-accent: var(--bg-muted);
+  --sidebar-accent-foreground: var(--text-default);
+  --sidebar-border: var(--border-default);
+  --sidebar-ring: var(--border-focus);
   --radius: var(--radius-control);
 }
 

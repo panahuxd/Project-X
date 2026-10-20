@@ -119,6 +119,11 @@ PAIRS = [
     ('border.primary', 'bg.default', UI, 'Selected outline'),
     ('border.destructive', 'bg.default', UI, 'Field in error'),
     ('border.control', 'bg.default', UI, 'Checkbox, radio, switch boundary'),
+    ('chart.1', 'bg.default', UI, 'Chart series 1'),
+    ('chart.2', 'bg.default', UI, 'Chart series 2'),
+    ('chart.3', 'bg.default', UI, 'Chart series 3'),
+    ('chart.4', 'bg.default', UI, 'Chart series 4'),
+    ('chart.5', 'bg.default', UI, 'Chart series 5'),
     ('text.on-destructive', 'bg.destructive', TEXT, 'Destructive button'),
     ('text.on-destructive', 'bg.destructive-hover', TEXT, 'Destructive button (hover)'),
     ('text.destructive', 'bg.destructive-subtle', TEXT, 'Error alert'),
@@ -205,6 +210,9 @@ SHADCN = {  # shadcn / ui-kit name -> DKB token
     'warning': 'bg.warning', 'warning-foreground': 'text.on-warning', 'warning-background': 'bg.warning-subtle',
     'info': 'bg.info', 'info-foreground': 'text.on-info', 'info-background': 'bg.info-subtle',
     'border': 'border.default', 'input': 'border.input', 'ring': 'border.focus',
+    'chart-1': 'chart.1', 'chart-2': 'chart.2', 'chart-3': 'chart.3', 'chart-4': 'chart.4', 'chart-5': 'chart.5',
+    'sidebar': 'bg.subtle', 'sidebar-foreground': 'text.default', 'sidebar-primary': 'bg.primary', 'sidebar-primary-foreground': 'text.on-primary',
+    'sidebar-accent': 'bg.muted', 'sidebar-accent-foreground': 'text.default', 'sidebar-border': 'border.default', 'sidebar-ring': 'border.focus',
     'radius': 'radius.control',
 }
 for k, t in SHADCN.items():
