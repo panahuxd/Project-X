@@ -8,7 +8,7 @@ Follow-up of the DKB Foundations review. Focus ring kept as DS-22.
 - DS-40: `width.*` are max widths (descriptions)
 - DS-41: `font.weight.*` described as CSS only
 - DS-11 documented where it is used: the `responsive` files, the breakpoint primitives, `token-reference.md` and the Foundations page (Mobile below 1024, Desktop from 1024; Figma 360 = Mobile, 1440 = Desktop)
-- DS-42: new effect style `shadow.sticky-bottom` (upward); `action-bar` spec uses it; `shadow.sticky` / `shadow.dialog` descriptions say why they share a value
+- DS-42: new effect style `shadow.sticky-bottom` (upward); `action-bar` (DKB Commerce, both variants) and its spec use it, applied after the Foundations publish; `shadow.sticky` / `shadow.dialog` descriptions say why they share a value
 - `token-reference.md` now lists the `chart` and `width` groups (they were missing)
 - DKB Foundations page: specimens for every semantic group (border.control, rings, opacity, widths, charts, control heights, layout, icon sizes, border widths, sticky-bottom) and a Desktop/Mobile typography comparison
 
