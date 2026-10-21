@@ -32,4 +32,5 @@
 ## Optional
 - [Raw findings](raw-findings/): source notes behind the foundation docs; read only when a detail is missing
 - [Typography foundations](design-system/foundations/typography.md): font facts and OpenType features
+- [Action placement](design-system/foundations/action-placement.md): where main and secondary buttons go in footers, dialogs, sheets, bars, mobile (DS-46)
 - [Interaction states](design-system/foundations/interaction-states.md): hover, pressed, focus, selected, disabled, loading, invalid rules and fill ladders (DS-43)

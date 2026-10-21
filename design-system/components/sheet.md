@@ -6,7 +6,7 @@
 A panel sliding in from a screen edge for secondary content without leaving the page: filters, cart preview, order details, help. **Don't use it** for short confirmations (`alert-dialog`). On mobile, bottom panels are `drawer`.
 
 ## Anatomy
-`close` (top-left) · `header` (`title`, `description`) · `body` with `content` (slot, fills the height) · `footer` (stacked full-width `action`, `cancel`).
+`close` (top-left) · `header` (`title`, `description`) · `body` with `content` (slot, fills the height) · `footer` (stacked full-width: `action` on top, `cancel` below; DS-46).
 
 ## Properties
 | Property (Figma = code) | Type | Values | Default | Notes |

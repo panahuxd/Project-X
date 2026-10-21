@@ -11,7 +11,7 @@ Empty state: nothing here yet, no search results, no access. Says why it is empt
 | `outline` | variant | `true`, `false` | `true` | Dashed border for an empty area inside a page |
 | `title`, `description` | text | | | |
 | `showMedia` / `icon` | boolean / swap | | on / `inbox` | |
-| `showActions` | boolean | | on | `primary` (right), `secondary` exposed |
+| `showActions` | boolean | | on | `primary` (left), `secondary` (right) exposed; centred group (DS-46) |
 
 ## Tokens
 Padding `space.48` (use `space.24` on mobile), gap `space.24`, header gap `space.8`; media 40 tile `bg.muted`, `radius.lg`, icon `icon.size.lg`; title `heading-4`, description `body` `text.muted`, centred; border dashed `border.default`, `radius.lg`.

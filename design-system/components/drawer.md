@@ -6,7 +6,7 @@
 Bottom sheet for mobile: choices, short forms, details and confirmations that would be a `dialog` on desktop (DS-32): delivery slot, address picker, quantity, filters.
 
 ## Anatomy
-`handle` · `header` (centred `title`, `description`) · `body` with `content` (slot) · `footer` (stacked full-width `action`, `cancel`). Over an `overlay`.
+`handle` · `header` (centred `title`, `description`) · `body` with `content` (slot) · `footer` (stacked full-width: `action` on top, `cancel` below; DS-46). Over an `overlay`.
 
 ## Properties
 | Property (Figma = code) | Type | Values | Default | Notes |

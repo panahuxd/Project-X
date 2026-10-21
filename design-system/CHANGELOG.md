@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.0 — 2026-10-21 (action placement)
+
+- DS-46: new `foundations/action-placement.md`: one rule for every button group (row: end-aligned, main action far left; stacked: main on top; tertiary at the opposite edge; one main action; mobile layouts)
+- DKB Components: `card` footer (4 variants) now end-aligned with `primary` at the far left; `empty` (2 variants) `primary` on the left. Dialog, alert-dialog, drawer, sheet and action-bar checked: already matching. API and fingerprint unchanged
+- `audit-design.js`: new error `buttonOrder` (in a group of 2+ non-ghost buttons, the primary/destructive one must be leftmost in a row or topmost in a column)
+- Specs updated: card, empty, dialog, alert-dialog, drawer, sheet
+
 ## 0.12.1 — 2026-10-21 (card edge=full fix)
 
 - `card` `edge=full` (md, sm): title, description, content slot and the show* toggles are linked to the card properties again (the cloned variants had lost their property references); corners bound to `radius.none` (0) instead of staying at 12. Tested on instances of both sizes, including switching `edge`. Component API and fingerprint unchanged (`c34a653e`)

@@ -6,7 +6,7 @@
 Groups related content and actions into one block: dashboard widgets, account summaries, order summary, settings sections. Not for a single line of info (use `item`) or for clickable product tiles (product card, later).
 
 ## Anatomy
-`header` (`titles`: title, description · `action` on the left in RTL) · `content` (slot) · `footer` (buttons from the right).
+`header` (`titles`: title, description · `action` on the left in RTL) · `content` (slot) · `footer` (buttons aligned to the end: `primary` at the far left, `secondary` to its right; DS-46, `foundations/action-placement.md`).
 
 ## Properties
 | Property (Figma = code) | Type | Values | Default | Notes |
@@ -43,3 +43,4 @@ Title is a heading at the right level for the page (`h2`/`h3`).
 - 0.6.0 — created (2 variants).
 - 0.12.0 — `edge` variant (`inset`, `full`) for mobile full-width sections (DS-45); 4 variants.
 - 0.12.1 — `edge=full` fixed: property links restored, corners `radius.none`.
+- 0.13.0 — footer follows DS-46: end-aligned, `primary` at the far left.

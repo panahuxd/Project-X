@@ -8,7 +8,7 @@ const page = PAGE ? figma.root.children.find(p => p.name === PAGE) : figma.root.
 await figma.setCurrentPageAsync(page);
 const inProposal = n => { for (let p = n; p && p.type !== 'PAGE'; p = p.parent) if (p.name && p.name.startsWith('proposal/')) return true; return false; };
 const insideInstance = n => { for (let p = n.parent; p && p.type !== 'PAGE'; p = p.parent) if (p.type === 'INSTANCE') return true; return false; };
-const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [], roundedAtScreenEdge: [] };
+const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [], roundedAtScreenEdge: [], buttonOrder: [] };
 const warnings = { unboundSpacing: [], effectWithoutStyle: [], noBrandMode: [] };
 const nodes = page.findAll(() => true);
 for (const n of nodes) {
@@ -47,6 +47,22 @@ for (const scr of page.children.filter(c => c.type === 'FRAME')) {
     const sides = (n.strokes || []).some(p => p.visible !== false) && ((n.strokeLeftWeight ?? n.strokeWeight) > 0 || (n.strokeRightWeight ?? n.strokeWeight) > 0);
     if (r > 0 || sides) errors.roundedAtScreenEdge.push(`${scr.name} › ${n.name} (${n.id})`);
   }
+}
+// DS-46: in a button group (2+ non-ghost/link buttons in one auto-layout frame), the main action is leftmost (row) or topmost (column)
+for (const g of page.findAll(n => n.type === 'FRAME' && n.layoutMode && n.layoutMode !== 'NONE' && !insideInstance(n) && !inProposal(n))) {
+  const btns = [];
+  for (const c of g.children) {
+    if (c.type !== 'INSTANCE' || !c.visible) continue;
+    const m = await c.getMainComponentAsync();
+    if (!m || !m.parent || m.parent.type !== 'COMPONENT_SET' || m.parent.name !== 'button') continue;
+    const v = (m.name.match(/variant=([a-z]+)/) || [])[1];
+    if (v === 'ghost' || v === 'link') continue;
+    btns.push({ c, main: v === 'primary' || v === 'destructive' });
+  }
+  if (btns.length < 2 || !btns.some(b => b.main)) continue;
+  const key = g.layoutMode === 'HORIZONTAL' ? b => b.c.absoluteBoundingBox.x : b => b.c.absoluteBoundingBox.y;
+  const first = btns.slice().sort((a, b) => key(a) - key(b))[0];
+  if (!first.main) errors.buttonOrder.push(`${g.name} (${g.id}) ${g.layoutMode === 'HORIZONTAL' ? 'main action must be leftmost' : 'main action must be on top'}`);
 }
 for (const f of page.children.filter(c => c.type === 'FRAME' || c.type === 'SECTION')) {
   const modes = f.explicitVariableModes || {};

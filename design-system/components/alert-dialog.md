@@ -23,7 +23,7 @@ As `dialog` (`width.dialog`, `space.24`, `space.16`, `bg.default`, `border.defau
 None.
 
 ## Behaviour and RTL
-Centred on desktop **and mobile** (DS-32), full width minus page margins on small screens. Focus starts on **cancel** for destructive actions. Esc = cancel. Footer: action at the far left, cancel to its right.
+Centred on desktop **and mobile** (DS-32), full width minus page margins on small screens. Focus starts on **cancel** for destructive actions. Esc = cancel. Footer: action at the far left, cancel to its right (DS-46, `foundations/action-placement.md`).
 
 ## Accessibility
 `role="alertdialog"`, labelled by the title, described by the description.

@@ -3,7 +3,7 @@
 One design system for all three DKB platforms: **B2R**, **B2E** and **Enterprise Portals**.
 This folder is the **source of truth for token values and component specs**. The Figma libraries mirror it 1:1.
 
-> Status: v0.12 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
+> Status: v0.13 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
 
 ## Principles of the system
 
@@ -73,7 +73,7 @@ design-system/
 ├── COVERAGE.md          shadcn/ui → DKB component mapping and status
 ├── tokens/              DTCG JSON, one file per layer (source of truth)
 ├── build/               generated: CSS, Tailwind theme, shadcn mapping, token reference, contrast report, Figma variables (never edit by hand)
-├── foundations/         typography.md, interaction-states.md (DS-43)
+├── foundations/         typography.md, interaction-states.md (DS-43), action-placement.md (DS-46)
 ├── components/          INDEX.md (generated) + one spec per component + written guides (aspect-ratio, direction, typography)
 ├── patterns/            layouts.md: page layout standard (grid, shells, templates T1–T10)
 ├── components.json      component API for agents: library keys, variants, properties, defaults (generated from Figma)
