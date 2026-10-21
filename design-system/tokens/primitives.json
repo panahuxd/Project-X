@@ -526,41 +526,52 @@
     "weight": {
       "$type": "fontWeight",
       "thin": {
-        "$value": 100
+        "$value": 100,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "extralight": {
-        "$value": 200
+        "$value": 200,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "light": {
-        "$value": 300
+        "$value": 300,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "regular": {
-        "$value": 400
+        "$value": 400,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "medium": {
-        "$value": 500
+        "$value": 500,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "semibold": {
-        "$value": 600
+        "$value": 600,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "bold": {
-        "$value": 700
+        "$value": 700,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "extrabold": {
-        "$value": 800
+        "$value": 800,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "black": {
-        "$value": 900
+        "$value": 900,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "fat": {
-        "$value": 1000
+        "$value": 1000,
+        "$description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)"
       },
       "$extensions": {
         "dkb.figma": {
           "scopes": [],
           "hidden": true
         }
-      }
+      },
+      "$description": "CSS only (DS-41). Figma text styles set the weight by font style name (Regular, Medium, SemiBold, Bold); typography.json links each style to one of these, and sync_check verifies the style name matches."
     },
     "size": {
       "$type": "dimension",
@@ -719,7 +730,7 @@
   },
   "breakpoint": {
     "$type": "dimension",
-    "$description": "Used by the CSS build and layout docs. Figma frames: 360 mobile, 1440 desktop.",
+    "$description": "Code only. The responsive collection switches at lg: Mobile below 1024 px (phones and tablets), Desktop from 1024 px (DS-11). Figma has no intermediate mode: 360 frames use Mobile, 1440 frames use Desktop. md and xl are layout breakpoints only (patterns/layouts.md).",
     "md": {
       "$value": "768px"
     },

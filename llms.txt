@@ -11,9 +11,10 @@
 ## Design system
 - [Design system README](design-system/README.md): principles, token and component architecture, naming, build and Figma sync
 - [components.json](design-system/components.json): component API for both libraries (DKB Components = Core, DKB Commerce = shell, templates and shared composite parts) — library keys, variants, property ids, defaults
+- [Icon index](design-system/components/ICONS.md): the full Lucide set (1,867 icons) with search tags; keys in components.json
 - [Component specs](design-system/components/): one file per component (purpose, anatomy, properties, tokens, states, RTL, accessibility, content)
 - [figma-library-keys.json](design-system/figma-library-keys.json): library keys of published variables and styles
-- [Agent helpers](design-system/scripts/figma/agent-helpers.js): prelude for use_figma scripts with every library key built in
+- [Agent helpers](design-system/scripts/figma/agent-helpers.js): prelude for use_figma scripts with every library key built in (common icons only; addIcons() for the rest)
 - [Design audit](design-system/scripts/figma/audit-design.js): checks a design page for unbound colours, unstyled text and non-library instances
 - [Decisions](design-system/DECISIONS.md), [Changelog](design-system/CHANGELOG.md), [shadcn coverage](design-system/COVERAGE.md)
 - [Tokens](design-system/tokens/): DTCG JSON source of truth; [build outputs](design-system/build/): CSS, Tailwind theme, shadcn mapping, contrast report

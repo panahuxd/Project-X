@@ -1,5 +1,5 @@
 {
-  "$description": "Layer 4 - responsive, mode Desktop. Values that change between desktop and mobile.",
+  "$description": "Layer 4 - responsive, mode Desktop. Mobile below 1024 px (phones and tablets), Desktop from 1024 px (DS-11). Code: tokens.css media query. Figma: set this mode explicitly on every screen frame (360 = Mobile, 1440 = Desktop); templates come with it.",
   "type": {
     "$type": "dimension",
     "display": {

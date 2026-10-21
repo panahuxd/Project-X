@@ -143,3 +143,7 @@ Pick a component here, then read its spec. Keys, property ids and the library fi
 | [aspect-ratio.md](aspect-ratio.md) | Media ratios for product images, banners, video |
 | [direction.md](direction.md) | RTL rules: what mirrors, LTR islands, digits |
 | [typography.md](typography.md) | shadcn typography examples mapped to the 15 DKB text styles |
+
+## Icons
+
+The full Lucide set (1,867) is in DKB Components: [ICONS.md](ICONS.md) lists every icon with its search tags; keys are in `../components.json` → `icons`.

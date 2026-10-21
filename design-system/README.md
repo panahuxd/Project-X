@@ -3,7 +3,7 @@
 One design system for all three DKB platforms: **B2R**, **B2E** and **Enterprise Portals**.
 This folder is the **source of truth for token values and component specs**. The Figma libraries mirror it 1:1.
 
-> Status: v0.10 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, Commerce page shell (8 components) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
+> Status: v0.11 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
 
 ## Principles of the system
 
@@ -34,7 +34,7 @@ Format: [W3C Design Tokens (DTCG)](https://www.designtokens.org/) JSON. Each lay
 
 | Layer | What goes here | Status | Rule |
 |---|---|---|---|
-| Core (*DKB Components*) | shadcn-based primitives: button, input, select, badge, dialog, sheet, table, tabs, toast… + icons + `template-region` | 70 components, done | Platform-agnostic |
+| Core (*DKB Components*) | shadcn-based primitives: button, input, select, badge, dialog, sheet, table, tabs, toast… + the full Lucide icon set (1,867) + `template-region` | 70 components, done | Platform-agnostic |
 | Commerce (*DKB Commerce*) | Shared composite parts: page shell (header, mobile-header, footer, bottom-nav, action-bar, account-menu, logo), layout templates; next: price, quantity, product card and row, bill box, payment method item, status badge, stepper, order timeline, filters | Shell + 10 templates done | Built only from Core and tokens; platform differences per DS-37 |
 | Platform | Only what one platform really owns (loyalty, approvals, company admin, tenant gate, allowance) | Later | Prefixed components inside DKB Commerce (`b2e/…`, `b2r/…`) until a platform owns many (DS-37) |
 
@@ -111,7 +111,7 @@ After a component change also run `python3 design-system/scripts/make_index.py` 
    - `python3 scripts/sync_check.py` prints the expected fingerprint of each collection and style group.
    - `scripts/figma/sync-check.js` is run in Figma (with the `use_figma` tool on DKB Foundations) and returns the actual ones.
    - Same fingerprint = in sync. If one differs, set `DETAIL` in the JS (and pass the same name to the Python script) to list and diff that collection's lines.
-   - Components: `scripts/figma/export-components.js` (run on DKB Components and on DKB Commerce) returns that file's manifest and a fingerprint; merge it into `components.json` (entries with the same `file`); the fingerprint must equal the `components` or `commerce` line of `sync_check.py`.
+   - Components: `scripts/figma/export-components.js` (run on DKB Components and on DKB Commerce) returns that file's manifest and a fingerprint; merge it into `components.json` (entries with the same `file`); the fingerprint must equal the `components` or `commerce` line of `sync_check.py`. Icons are too many for one result: when they change, run `scripts/figma/export-icons.js` page by page and `scripts/merge_icons.py`.
 4. Every component exists in Figma and as a spec in `components/`, with the same name, props and token bindings. `figma-map.json` links them (instead of Code Connect, which needs a Figma Organization plan).
 5. The design agent reads the specs here, designs in Figma with the library components, and writes new or changed specs back here.
 
@@ -119,8 +119,8 @@ After a component change also run `python3 design-system/scripts/make_index.py` 
 
 | Library | Contents | Link |
 |---|---|---|
-| DKB Foundations | Variables (4 collections, 264 variables), 15 text styles, 6 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
-| DKB Components | 38 Lucide icons; 69 Core components covering every non-AI shadcn/ui component (batches 1–5) + `template-region`. API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
+| DKB Foundations | Variables (4 collections, 264 variables), 15 text styles, 7 effect styles, Cover and Foundations pages | [Figma](https://www.figma.com/design/JRKA3w0gGzh2mDsItotKS3) |
+| DKB Components | Full Lucide 1.52.0 icon set, 1,867 icons (index: `components/ICONS.md`); 69 Core components covering every non-AI shadcn/ui component (batches 1–5) + `template-region`. API in `components.json`, specs in `components/`, status in `COVERAGE.md` | [Figma](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp) |
 | DKB Commerce | Page shell: `header`, `mobile-header`, `footer`, `bottom-nav` (+ `bottom-nav-item`), `action-bar`, `account-menu`, `logo` (official mark); 10 layout templates `template/*`. Uses DKB Components and Foundations (DS-37) | [Figma](https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S) |
 
 The old libraries (*DS - Shadcn*, *DS - Components*) stay as reference until screens are migrated.

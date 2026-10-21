@@ -1438,7 +1438,7 @@
     {
      "name": "font/weight/thin",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1448,7 +1448,7 @@
     {
      "name": "font/weight/extralight",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1458,7 +1458,7 @@
     {
      "name": "font/weight/light",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1468,7 +1468,7 @@
     {
      "name": "font/weight/regular",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1478,7 +1478,7 @@
     {
      "name": "font/weight/medium",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1488,7 +1488,7 @@
     {
      "name": "font/weight/semibold",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1498,7 +1498,7 @@
     {
      "name": "font/weight/bold",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1508,7 +1508,7 @@
     {
      "name": "font/weight/extrabold",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1518,7 +1518,7 @@
     {
      "name": "font/weight/black",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -1528,7 +1528,7 @@
     {
      "name": "font/weight/fat",
      "type": "FLOAT",
-     "description": "",
+     "description": "CSS font-weight. Figma text styles use the font style name instead (DS-41)",
      "scopes": [],
      "hiddenFromPublishing": true,
      "values": {
@@ -2307,7 +2307,7 @@
     {
      "name": "text/disabled",
      "type": "COLOR",
-     "description": "Exempt from contrast rules",
+     "description": "Inactive content only: an item that cannot be used, e.g. the name of an unavailable product. WCAG exempts inactive UI only, not the token: readable secondary text uses text.muted. Disabled controls use opacity.disabled (DS-28)",
      "scopes": [
       "TEXT_FILL",
       "SHAPE_FILL",
@@ -2543,7 +2543,7 @@
     {
      "name": "border/input",
      "type": "COLOR",
-     "description": "Form control border",
+     "description": "Text field border (input, textarea, select). 1.48:1, so never the only cue (DS-20): the field also needs a visible label, a bg.muted fill or its own context. Where none of these exists, use border.control (DS-39)",
      "scopes": [
       "STROKE_COLOR"
      ],
@@ -2557,7 +2557,7 @@
     {
      "name": "border/control",
      "type": "COLOR",
-     "description": "Boundary of selection controls (checkbox, radio, switch track). Meets 3:1",
+     "description": "Boundary that must meet 3:1: checkbox, radio, switch track (DS-21); and text fields that have no visible label or other cue, e.g. a header search field, inline edit in a table, a quantity stepper (override the stroke of the instance, DS-39)",
      "scopes": [
       "STROKE_COLOR"
      ],
@@ -2833,7 +2833,7 @@
     {
      "name": "border-width/focus",
      "type": "FLOAT",
-     "description": "Focus ring width (spread of shadow.focus-ring)",
+     "description": "Focus ring width. Bound to the spread of shadow.focus-ring and shadow.focus-ring-destructive",
      "scopes": [
       "STROKE_FLOAT"
      ],
@@ -2847,7 +2847,7 @@
     {
      "name": "width/hover-card",
      "type": "FLOAT",
-     "description": "shadcn HoverCard w-64",
+     "description": "Max width. shadcn HoverCard w-64. Desktop only (needs hover)",
      "scopes": [
       "WIDTH_HEIGHT"
      ],
@@ -2861,7 +2861,7 @@
     {
      "name": "width/popover",
      "type": "FLOAT",
-     "description": "shadcn Popover w-72",
+     "description": "Max width. shadcn Popover w-72; never wider than viewport - 32",
      "scopes": [
       "WIDTH_HEIGHT"
      ],
@@ -2875,7 +2875,7 @@
     {
      "name": "width/sheet",
      "type": "FLOAT",
-     "description": "shadcn Sheet sm:max-w-sm",
+     "description": "Max width. shadcn Sheet w-3/4 sm:max-w-sm; never wider than viewport - 32",
      "scopes": [
       "WIDTH_HEIGHT"
      ],
@@ -2889,7 +2889,7 @@
     {
      "name": "width/dialog",
      "type": "FLOAT",
-     "description": "shadcn Dialog / AlertDialog sm:max-w-lg",
+     "description": "Max width. shadcn Dialog / AlertDialog max-w-[calc(100%-2rem)] sm:max-w-lg",
      "scopes": [
       "WIDTH_HEIGHT"
      ],
@@ -2917,7 +2917,7 @@
     {
      "name": "ring/destructive",
      "type": "COLOR",
-     "description": "shadcn aria-invalid:ring-destructive/20: field in error",
+     "description": "Supplementary only (shadcn aria-invalid:ring-destructive/20): border.destructive (3:1) marks the error; this ring never stands alone",
      "scopes": [
       "EFFECT_COLOR"
      ],
@@ -3460,6 +3460,7 @@
  "effectStyles": [
   {
    "name": "shadow/card",
+   "description": "",
    "shadows": [
     {
      "color": "#0000000D",
@@ -3468,10 +3469,12 @@
      "blur": "2px",
      "spread": "0px"
     }
-   ]
+   ],
+   "bind": []
   },
   {
    "name": "shadow/dropdown",
+   "description": "",
    "shadows": [
     {
      "color": "#0000001A",
@@ -3487,10 +3490,12 @@
      "blur": "4px",
      "spread": "-2px"
     }
-   ]
+   ],
+   "bind": []
   },
   {
    "name": "shadow/sticky",
+   "description": "Elevated elements at the top or side that cast a shadow downward: sticky header, sticky bill box. Same value as shadow.dialog (shadcn shadow-lg); a separate role so either can change alone",
    "shadows": [
     {
      "color": "#0000001A",
@@ -3506,10 +3511,36 @@
      "blur": "6px",
      "spread": "-4px"
     }
+   ],
+   "bind": []
+  },
+  {
+   "name": "shadow/sticky-bottom",
+   "description": "Bars fixed to the bottom of the screen (action-bar): shadow.lg cast upward (DS-42)",
+   "shadows": [
+    {
+     "color": "#0000001A",
+     "offsetX": "0px",
+     "offsetY": "-10px",
+     "blur": "15px",
+     "spread": "-3px"
+    },
+    {
+     "color": "#0000001A",
+     "offsetX": "0px",
+     "offsetY": "-4px",
+     "blur": "6px",
+     "spread": "-4px"
+    }
+   ],
+   "bind": [
+    {},
+    {}
    ]
   },
   {
    "name": "shadow/dialog",
+   "description": "Dialog, sheet, drawer, toast (shadcn shadow-lg, DS-30)",
    "shadows": [
     {
      "color": "#0000001A",
@@ -3525,10 +3556,12 @@
      "blur": "6px",
      "spread": "-4px"
     }
-   ]
+   ],
+   "bind": []
   },
   {
    "name": "shadow/focus-ring",
+   "description": "Keyboard focus ring (shadcn focus-visible:ring-[3px] ring-ring/50)",
    "shadows": [
     {
      "color": "#A3A3A380",
@@ -3537,10 +3570,16 @@
      "blur": "0px",
      "spread": "3px"
     }
+   ],
+   "bind": [
+    {
+     "spread": "border-width/focus"
+    }
    ]
   },
   {
    "name": "shadow/focus-ring-destructive",
+   "description": "Ring on a field in error (shadcn aria-invalid:ring-destructive/20)",
    "shadows": [
     {
      "color": "#DC262633",
@@ -3548,6 +3587,11 @@
      "offsetY": "0px",
      "blur": "0px",
      "spread": "3px"
+    }
+   ],
+   "bind": [
+    {
+     "spread": "border-width/focus"
     }
    ]
   }

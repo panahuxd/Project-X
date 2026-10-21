@@ -48,6 +48,7 @@
   --shadow-card: var(--shadow-card);
   --shadow-dropdown: var(--shadow-dropdown);
   --shadow-sticky: var(--shadow-sticky);
+  --shadow-sticky-bottom: var(--shadow-sticky-bottom);
   --shadow-dialog: var(--shadow-dialog);
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;

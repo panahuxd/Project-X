@@ -44,6 +44,7 @@ RTL, right to left: `iconStart` (optional) · `value` · `iconEnd` (optional, e.
 
 ## Accessibility
 Needs a label (`field`, `label`, or `aria-label` for search). Error: `aria-invalid` + `aria-describedby` to the error text. Placeholder is never the label.
+- The `border.input` stroke is 1.48:1, so it must not be the only thing that identifies the field (DS-20, DS-39). Use it inside `field` (visible label) or on a `bg.muted` surface. When the input stands alone with no label or context (header search, inline edit in a table, quantity), override the instance stroke to `border.control` (3:1). The same applies to `textarea`, `select`, `native-select` and `input-group`.
 
 ## Content
 Placeholder gives an example or format, not the label: «۰۹۱۲۳۴۵۶۷۸۹».

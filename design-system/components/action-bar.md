@@ -6,7 +6,7 @@
 The sticky bottom bar on mobile checkout steps and multi-step forms (DS-36 D4): keeps the payable amount and the main action in reach. It replaces the bottom nav on those pages.
 
 ## Anatomy
-Full width, white, border and `shadow.sticky` on top, padding `layout.page-margin` × `space.12`.
+Full width, white, border and `shadow.sticky-bottom` (cast upward, DS-42) on top, padding `layout.page-margin` × `space.12`.
 - `type=amount`: amount group (label + amount) on the right, `action` button on the left.
 - `type=button`: one full-width `action` button.
 
@@ -21,7 +21,7 @@ Full width, white, border and `shadow.sticky` on top, padding `layout.page-margi
 ## Tokens
 | Part | Property | Token |
 |---|---|---|
-| bar | fill / border / effect | `bg.surface` / `border.default` top / `shadow.sticky` |
+| bar | fill / border / effect | `bg.surface` / `border.default` top / `shadow.sticky-bottom` |
 | bar | padding / gap | `layout.page-margin`, `space.12` / `space.16` |
 | amount | style | label `body-sm` `text.muted`, value `numeric-lg` |
 

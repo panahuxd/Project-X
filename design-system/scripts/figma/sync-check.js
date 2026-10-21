@@ -26,8 +26,9 @@ for (const c of cols) {
 }
 const ts = (await figma.getLocalTextStylesAsync()).map(s => [s.name, s.fontName.family, s.fontName.style,
   ...['fontFamily', 'fontSize', 'lineHeight'].map(k => (s.boundVariables && s.boundVariables[k]) ? byId[s.boundVariables[k].id].name : '-')].join('|')).sort();
-const es = (await figma.getLocalEffectStylesAsync()).map(s => [s.name, s.effects.length, s.effects.map(e => [hx(e.color.r) + hx(e.color.g) + hx(e.color.b) + hx(e.color.a), Math.round(e.offset.x), Math.round(e.offset.y), Math.round(e.radius), Math.round(e.spread || 0)].join(',')).join(';')].join('|')).sort();
+const es = (await figma.getLocalEffectStylesAsync()).map(s => [s.name, s.effects.length, s.effects.map(e => [hx(e.color.r) + hx(e.color.g) + hx(e.color.b) + hx(e.color.a), Math.round(e.offset.x), Math.round(e.offset.y), Math.round(e.radius), Math.round(e.spread || 0) + (e.boundVariables && e.boundVariables.spread ? '@' + byId[e.boundVariables.spread.id].name : '')].join(',')).join(';')].join('|')).sort();
 out.textStyles = { count: ts.length, fp: fnv(ts.join('\n')) };
 out.effectStyles = { count: es.length, fp: fnv(es.join('\n')) };
 if (DETAIL === 'textStyles') detail.push(...ts);
+if (DETAIL === 'effectStyles') detail.push(...es);
 return DETAIL ? { [DETAIL]: detail } : out;

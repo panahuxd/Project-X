@@ -32,14 +32,17 @@ for c in fig['collections']:
     detail[c['name']] = lines
 ts = sorted('|'.join([t['name'], 'Digikala', W[t['bind']['fontWeight'].split('/')[-1]],
                       t['bind']['fontFamily'], t['bind']['fontSize'], t['bind']['lineHeight']]) for t in fig['textStyles'])
-def shadow_str(x):
+def shadow_str(x, b):
     c = x['color'].lstrip('#').upper(); c = c + 'FF' if len(c) == 6 else c
     n = lambda v: str(int(round(float(str(v).replace('px', '')))))
-    return ','.join([c, n(x['offsetX']), n(x['offsetY']), n(x['blur']), n(x['spread'])])
-es = sorted(f"{e['name']}|{len(e['shadows'])}|" + ';'.join(shadow_str(x) for x in e['shadows']) for e in fig['effectStyles'])
+    sp = n(x['spread']) + ('@' + b['spread'] if 'spread' in b else '')  # bound spread
+    return ','.join([c, n(x['offsetX']), n(x['offsetY']), n(x['blur']), sp])
+es = sorted(f"{e['name']}|{len(e['shadows'])}|" + ';'.join(shadow_str(x, b) for x, b in zip(e['shadows'], e.get('bind') or [{}] * len(e['shadows'])))
+            for e in fig['effectStyles'])
 out['textStyles'] = {'count': len(ts), 'fp': fnv('\n'.join(ts))}
 out['effectStyles'] = {'count': len(es), 'fp': fnv('\n'.join(es))}
 detail['textStyles'] = ts
+detail['effectStyles'] = es
 # components (compare with the fingerprint returned by scripts/figma/export-components.js)
 cm = os.path.join(ROOT, 'components.json')
 if os.path.exists(cm):

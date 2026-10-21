@@ -16,9 +16,9 @@
     "responsive": "VariableCollectionId:2:5"
    },
    "lastSync": {
-    "date": "2026-10-20",
-    "tokens": "0.8.0",
-    "result": "all fingerprints match (primitives 3651332e, semantic 450da8a1, effect styles c4264b99)"
+    "date": "2026-10-21",
+    "tokens": "0.11.1",
+    "result": "all fingerprints match (primitives c98a6c64, brand 2cb41e7a, semantic c7431650, responsive 8ab69163, text styles 2b053d29, effect styles 2888cbb6)"
    }
   },
   "components": {
@@ -90,7 +90,8 @@
    "lastSync": {
     "date": "2026-10-20",
     "components": 70,
-    "result": "component fingerprint ccfe3e00 matches"
+    "icons": 1867,
+    "result": "component fingerprint 0f29d0a4 matches"
    },
    "reviewBoards": {
     "core": "10:11",
@@ -101,21 +102,21 @@
    }
   },
   "commerce": {
-      "name": "DKB Commerce",
-      "fileKey": "0xda5d6a7EF5fo2Yiqh91S",
-      "url": "https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S",
-      "pages": {
-        "Cover": "0:1",
-        "Shell": "1:2",
-        "Templates": "1:3"
-      },
-      "lastSync": {
-        "date": "2026-10-20",
-        "components": 18,
-        "result": "commerce fingerprint d68da4b6 matches"
-      }
-    },
-    "sandbox": {
+   "name": "DKB Commerce",
+   "fileKey": "0xda5d6a7EF5fo2Yiqh91S",
+   "url": "https://www.figma.com/design/0xda5d6a7EF5fo2Yiqh91S",
+   "pages": {
+    "Cover": "0:1",
+    "Shell": "1:2",
+    "Templates": "1:3"
+   },
+   "lastSync": {
+    "date": "2026-10-20",
+    "components": 18,
+    "result": "commerce fingerprint d68da4b6 matches"
+   }
+  },
+  "sandbox": {
    "name": "DKB · Agent sandbox",
    "fileKey": "p3EPUXwCXQpxjriYd1etGW",
    "url": "https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW",
@@ -539,43 +540,10 @@
   }
  },
  "icons": {
-  "source": "Lucide (SVG redrawn as 24×24 components, stroke 2, glyph stroke bound to text/default)",
+  "source": "Lucide 1.52.0, full set (SVG redrawn as 24×24 components, stroke 2, glyph stroke bound to text/default)",
   "page": "2:2",
-  "components": {
-   "chevron-down": "2:19",
-   "chevron-up": "2:22",
-   "chevron-left": "2:25",
-   "chevron-right": "2:28",
-   "arrow-left": "2:32",
-   "arrow-right": "2:38",
-   "check": "2:43",
-   "x": "2:47",
-   "plus": "2:53",
-   "minus": "2:58",
-   "search": "2:62",
-   "info": "2:69",
-   "circle-check": "2:75",
-   "circle-alert": "2:82",
-   "circle-x": "2:89",
-   "triangle-alert": "2:96",
-   "loader-circle": "2:101",
-   "eye": "2:105",
-   "upload": "2:112",
-   "trash-2": "2:121",
-   "shopping-cart": "2:128",
-   "calendar": "2:136",
-   "user": "2:142",
-   "circle": "2:147",
-   "chevrons-up-down": "54:1346",
-   "grip-vertical": "54:1356",
-   "ellipsis": "54:1363",
-   "inbox": "54:1369",
-   "arrow-up-down": "54:1377",
-   "package": "54:1385",
-   "house": "66:2166",
-   "credit-card": "66:2172",
-   "settings": "66:2178",
-   "wallet": "66:2184"
-  }
+  "frame": "2:16",
+  "count": 1867,
+  "keys": "components.json → icons (key and node id per icon); index with tags: components/ICONS.md"
  }
 }

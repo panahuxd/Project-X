@@ -115,7 +115,7 @@
     },
     "disabled": {
       "$value": "{color.neutral.400}",
-      "$description": "Exempt from contrast rules"
+      "$description": "Inactive content only: an item that cannot be used, e.g. the name of an unavailable product. WCAG exempts inactive UI only, not the token: readable secondary text uses text.muted. Disabled controls use opacity.disabled (DS-28)"
     },
     "inverse": {
       "$value": "{color.white}",
@@ -178,11 +178,11 @@
     },
     "input": {
       "$value": "{color.neutral.300}",
-      "$description": "Form control border"
+      "$description": "Text field border (input, textarea, select). 1.48:1, so never the only cue (DS-20): the field also needs a visible label, a bg.muted fill or its own context. Where none of these exists, use border.control (DS-39)"
     },
     "control": {
       "$value": "{color.neutral.500}",
-      "$description": "Boundary of selection controls (checkbox, radio, switch track). Meets 3:1"
+      "$description": "Boundary that must meet 3:1: checkbox, radio, switch track (DS-21); and text fields that have no visible label or other cue, e.g. a header search field, inline edit in a table, a quantity stepper (override the stroke of the instance, DS-39)"
     },
     "focus": {
       "$value": "{color.neutral.400}",
@@ -286,12 +286,12 @@
     },
     "focus": {
       "$value": "{border-width.3}",
-      "$description": "Focus ring width (spread of shadow.focus-ring)"
+      "$description": "Focus ring width. Bound to the spread of shadow.focus-ring and shadow.focus-ring-destructive"
     }
   },
   "width": {
     "$type": "dimension",
-    "$description": "Overlay widths, matching shadcn (DS-29). On mobile, dialogs and sheets become full-width bottom sheets.",
+    "$description": "Overlay widths, matching shadcn (DS-31). All are MAX widths (DS-40): the overlay is never wider than the viewport minus 2 x space.16 (shadcn max-w-[calc(100%-2rem)]). Below 1024 px dialog and sheet become a drawer (DS-32).",
     "$extensions": {
       "dkb.figma": {
         "scopes": [
@@ -302,19 +302,19 @@
     },
     "hover-card": {
       "$value": "{size.256}",
-      "$description": "shadcn HoverCard w-64"
+      "$description": "Max width. shadcn HoverCard w-64. Desktop only (needs hover)"
     },
     "popover": {
       "$value": "{size.288}",
-      "$description": "shadcn Popover w-72"
+      "$description": "Max width. shadcn Popover w-72; never wider than viewport - 32"
     },
     "sheet": {
       "$value": "{size.384}",
-      "$description": "shadcn Sheet sm:max-w-sm"
+      "$description": "Max width. shadcn Sheet w-3/4 sm:max-w-sm; never wider than viewport - 32"
     },
     "dialog": {
       "$value": "{size.512}",
-      "$description": "shadcn Dialog / AlertDialog sm:max-w-lg"
+      "$description": "Max width. shadcn Dialog / AlertDialog max-w-[calc(100%-2rem)] sm:max-w-lg"
     }
   },
   "ring": {
@@ -334,7 +334,7 @@
     },
     "destructive": {
       "$value": "{color.alpha.red-600-20}",
-      "$description": "shadcn aria-invalid:ring-destructive/20: field in error"
+      "$description": "Supplementary only (shadcn aria-invalid:ring-destructive/20): border.destructive (3:1) marks the error; this ring never stands alone"
     }
   },
   "icon": {
@@ -404,10 +404,30 @@
     },
     "sticky": {
       "$value": "{shadow.lg}",
-      "$description": "Sticky bill box and bottom bars"
+      "$description": "Elevated elements at the top or side that cast a shadow downward: sticky header, sticky bill box. Same value as shadow.dialog (shadcn shadow-lg); a separate role so either can change alone"
+    },
+    "sticky-bottom": {
+      "$value": [
+        {
+          "color": "{color.black-alpha.10}",
+          "offsetX": "0px",
+          "offsetY": "-10px",
+          "blur": "15px",
+          "spread": "-3px"
+        },
+        {
+          "color": "{color.black-alpha.10}",
+          "offsetX": "0px",
+          "offsetY": "-4px",
+          "blur": "6px",
+          "spread": "-4px"
+        }
+      ],
+      "$description": "Bars fixed to the bottom of the screen (action-bar): shadow.lg cast upward (DS-42)"
     },
     "dialog": {
-      "$value": "{shadow.lg}"
+      "$value": "{shadow.lg}",
+      "$description": "Dialog, sheet, drawer, toast (shadcn shadow-lg, DS-30)"
     },
     "focus-ring": {
       "$value": [
@@ -416,7 +436,7 @@
           "offsetX": "0px",
           "offsetY": "0px",
           "blur": "0px",
-          "spread": "3px"
+          "spread": "{border-width.focus}"
         }
       ],
       "$description": "Keyboard focus ring (shadcn focus-visible:ring-[3px] ring-ring/50)"
@@ -428,7 +448,7 @@
           "offsetX": "0px",
           "offsetY": "0px",
           "blur": "0px",
-          "spread": "3px"
+          "spread": "{border-width.focus}"
         }
       ],
       "$description": "Ring on a field in error (shadcn aria-invalid:ring-destructive/20)"

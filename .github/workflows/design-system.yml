@@ -19,4 +19,4 @@ jobs:
       - name: Sync fingerprints compute
         run: python3 design-system/scripts/sync_check.py
       - name: Generated files are committed and up to date
-        run: git diff --exit-code -- design-system/build design-system/components/INDEX.md design-system/scripts/figma/agent-helpers.js
+        run: git diff --exit-code -- design-system/build design-system/components/INDEX.md design-system/components/ICONS.md design-system/scripts/figma/agent-helpers.js
