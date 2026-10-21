@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.13.2 — 2026-10-21 (action-bar layout)
+
+- DKB Commerce `action-bar`: `responsive` mode set to Mobile on both variants (side padding 16, button 48 instead of the desktop 24 / 40); `type=amount`: button fills the width next to the amount, amount group pinned at the right edge (it used to sit next to a narrow button with empty space on its right). Spec: safe-area padding in code
+
 ## 0.13.1 — 2026-10-21 (header cart badge)
 
 - DKB Commerce `header` (storefront rows=1 and rows=2): the cart counter badge was cut at the top and left because `actions` and `row-1` clipped content; clip turned off on both. Checked every absolutely positioned part in DKB Commerce: no other clipped badge
