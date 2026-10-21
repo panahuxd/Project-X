@@ -3,7 +3,7 @@
 > Layer: Core · Status: draft · Figma: [DKB Components › navigation-menu](https://www.figma.com/design/12ErQ1NZV5xHhVCXpvH5Bp?node-id=69-2232) · Code: `NavigationMenu`, `NavigationMenuList`, `NavigationMenuItem`, `NavigationMenuTrigger`, `NavigationMenuContent`, `NavigationMenuLink` (shadcn `navigation-menu`)
 
 ## Purpose
-Desktop site navigation with dropdown panels: the second header row «دسته‌بندی کالاها / پرفروش‌ترین‌ها / درخواست خرید» and the category mega menu. Mobile uses a sheet menu instead.
+Desktop site navigation with dropdown panels: the second header row «دسته‌بندی کالاها / پرفروش‌ترین‌ها / درخواست خرید» and the category mega menu. The category mega menu itself is the Commerce component `mega-menu` (DS-47); mobile opens the categories page (`mega-menu` `screen=mobile`) from the bottom nav.
 
 ## Anatomy
 Row of `item 1…n` (`navigation-menu-trigger`, first on the right); when open, a `panel` below the trigger, aligned to its right edge, with a grid of `navigation-menu-link`s (filled right to left).

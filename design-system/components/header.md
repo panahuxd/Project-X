@@ -9,6 +9,7 @@ The desktop page header of every storefront, account and checkout page: brand, s
 Full width, white, border at the bottom; content 1312 centred (`layout.content-max-width`).
 - `type=storefront` row 1 (64), reading order: `logo` · `categories` (rows=1 only) · `search` (fills) · `actions`: `orders`, `account`, divider, `cart` with `cart-count` badge.
 - `rows=2` adds row 2 (44): `categories` (with chevron) and up to 4 `link-*` triggers.
+- `categories` opens the `mega-menu` (`screen=desktop`) below the header, aligned to the right edge of the content width (DS-47).
 - `type=focused` (checkout and task flows): `back` + `title` on the right, `logo` centred, nothing on the left.
 
 ## Properties

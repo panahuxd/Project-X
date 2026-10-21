@@ -1602,6 +1602,110 @@
       "properties": {},
       "spec": "components/logo.md"
     },
+    "mega-menu": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "40:540",
+      "key": "80f30867bcd62e99ad44f4c70827d221e86738bb",
+      "variantCount": 2,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop"
+      },
+      "properties": {},
+      "spec": "components/mega-menu.md"
+    },
+    "mega-menu-category": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "37:168",
+      "key": "c7ec4e45897ad527434ff30ddc1b465225fe1343",
+      "variantCount": 6,
+      "variants": {
+        "screen": [
+          "desktop",
+          "mobile"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "active"
+        ]
+      },
+      "defaultVariant": {
+        "screen": "desktop",
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#37:3",
+          "default": "مانیتور و تجهیزات ذخیره‌سازی"
+        },
+        "icon": {
+          "type": "INSTANCE_SWAP",
+          "id": "icon#37:10",
+          "default": "icon/monitor"
+        }
+      },
+      "spec": "components/mega-menu.md"
+    },
+    "mega-menu-group": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "40:1362",
+      "key": "3b9eae47a3e24fd98a69fac35fe62f142b5db24e",
+      "variantCount": 1,
+      "variants": {
+        "type": [
+          "default"
+        ]
+      },
+      "defaultVariant": {
+        "type": "default"
+      },
+      "properties": {
+        "title": {
+          "type": "TEXT",
+          "id": "title#40:0",
+          "default": "مانیتور"
+        }
+      },
+      "spec": "components/mega-menu.md"
+    },
+    "mega-menu-link": {
+      "file": "commerce",
+      "layer": "commerce",
+      "page": "Shell",
+      "nodeId": "37:143",
+      "key": "e9a302b0a4f7f62aa723eb98e8ce38c964975d42",
+      "variantCount": 2,
+      "variants": {
+        "state": [
+          "default",
+          "hover"
+        ]
+      },
+      "defaultVariant": {
+        "state": "default"
+      },
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "id": "label#37:0",
+          "default": "مانیتور گیمینگ"
+        }
+      },
+      "spec": "components/mega-menu.md"
+    },
     "menu-item": {
       "file": "components",
       "layer": "core",

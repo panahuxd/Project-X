@@ -3,7 +3,7 @@
 One design system for all three DKB platforms: **B2R**, **B2E** and **Enterprise Portals**.
 This folder is the **source of truth for token values and component specs**. The Figma libraries mirror it 1:1.
 
-> Status: v0.13 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
+> Status: v0.14 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and the category mega menu (4) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
 
 ## Principles of the system
 

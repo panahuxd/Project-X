@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.0 — 2026-10-21 (mega menu)
+
+- DS-47: DKB Commerce `mega-menu` (`screen=desktop|mobile`) with parts `mega-menu-category` (6 variants, `label`, `icon`), `mega-menu-group` (`title`, `link-1…6` exposed) and `mega-menu-link` (2 variants). Baseline: B2E Platform Phase 2 «Mega menu & Categories», rebuilt with DKB tokens, Digikala text styles, Lucide icons, auto layout and real B2E categories
+- Spec `components/mega-menu.md` (anatomy, tokens, behaviour, accessibility, UX grounding, differences from the baseline)
+- `header`, `navigation-menu`, `layouts.md` and `interaction-states.md` link to it; `components.json` (commerce fingerprint `402998dd`), INDEX, agent helpers, export and audit lists updated
+
 ## 0.13.2 — 2026-10-21 (action-bar layout)
 
 - DKB Commerce `action-bar`: `responsive` mode set to Mobile on both variants (side padding 16, button 48 instead of the desktop 24 / 40); `type=amount`: button fills the width next to the amount, amount group pinned at the right edge (it used to sit next to a narrow button with empty space on its right). Spec: safe-area padding in code

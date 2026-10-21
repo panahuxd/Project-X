@@ -54,6 +54,7 @@ Links inside body text are always underlined (colour alone fails WCAG 1.4.1); st
 |---|---|
 | Navigation, current page (sidebar, account-menu) | `bg.muted` + `label` text style; `aria-current="page"` |
 | Bottom-nav item | `text.primary` icon and label (no fill) |
+| Category rail (`mega-menu-category`) | Works like vertical tabs on a `bg.muted` rail: active `bg.surface` + `text.primary` label and icon; hover `bg.muted-hover` (DS-47) |
 | Tab | `default` style: `bg.default` + `shadow.card`; `line` style: `text.default` + 2 px `border.primary` |
 | Pagination page | outline look: `bg.default` + `border.input` + `shadow.card` |
 | Table / list row selected | `bg.muted` (shadcn `data-[state=selected]:bg-muted`) |

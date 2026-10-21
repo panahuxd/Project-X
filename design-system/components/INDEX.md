@@ -136,6 +136,15 @@ Pick a component here, then read its spec. Keys, property ids and the library fi
 | `template/result` | T9 Thank-you, payment result, 404 and access gates: centred 480 block. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
 | `template/auth` | T10 Login, OTP and sign-up: centred 384 card. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
 
+## Other
+
+| Component | Use it for | Variants | Spec |
+|---|---|---|---|
+| `mega-menu` | Browse the whole catalogue by category. | screen: desktop/mobile | [mega-menu.md](mega-menu.md) |
+| `mega-menu-category` |  | screen: desktop/mobile; state: default/hover/active | [mega-menu.md](mega-menu.md) |
+| `mega-menu-group` |  | type: default | [mega-menu.md](mega-menu.md) |
+| `mega-menu-link` |  | state: default/hover | [mega-menu.md](mega-menu.md) |
+
 ## Written guides (no Figma component)
 
 | Guide | What it covers |
