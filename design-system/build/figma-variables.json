@@ -1975,7 +1975,7 @@
     {
      "name": "bg/muted",
      "type": "COLOR",
-     "description": "Quiet fills: secondary buttons, tags, chips, table header, skeleton, read-only fields",
+     "description": "Quiet fills: secondary buttons, tags, chips, table header, skeleton, read-only fields; selected rows and current nav item (DS-43)",
      "scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"
@@ -2110,7 +2110,7 @@
     {
      "name": "bg/primary-subtle",
      "type": "COLOR",
-     "description": "Brand tint: selected rows and cards, highlighted bands",
+     "description": "Brand tint: selected cards and options the user chooses (with border.primary), highlighted bands. Selected rows and the current page use bg.muted (DS-43)",
      "scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"

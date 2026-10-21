@@ -8,6 +8,7 @@ This repo is your context and your output destination. Figma is where you design
 | # | What | Where |
 |---|---|---|
 | 1 | Design system rules, architecture, naming | `design-system/README.md`, `design-system/DECISIONS.md` |
+| 1b | Interaction states: which state looks how, fill ladders, selected vs current | `design-system/foundations/interaction-states.md` |
 | 2 | Every usable token, its value per brand and its use | `design-system/build/token-reference.md` |
 | 3 | Which component to use for what (all 69, grouped) and the 10 layout templates | `design-system/components/INDEX.md` |
 | 4 | Component API: library keys, variants, properties, defaults | `design-system/components.json` |
@@ -25,7 +26,7 @@ Where the knowledge-base docs describe the **legacy** design system (DS - Shadcn
 3. **Missing component?** Don't fake it silently. Build it from tokens in a clearly named frame `proposal/<name>` and list it under *Component requests* in the design spec. The design lead decides whether it joins the library.
 4. **Right-to-left and Persian.** Layouts read right to left (start = right). Copy is Persian, polite «شما», Persian digits, toman with `numeric` text styles, Jalali dates, terms from the platform glossary. Real-looking content, never lorem ipsum.
 5. **Brand and screen.** Set the `brand` mode (B2R or B2E) on every screen frame explicitly. Portals use the B2R or B2E mode until they have their own (DS-3). Design mobile 360 and desktop 1440 when the feature exists on both; set the `responsive` mode (Mobile / Desktop) on the frame.
-6. **States are part of the design.** Empty, loading, error, disabled, long content and permission/verification gates, using the product's status dictionaries.
+6. **States are part of the design.** Empty, loading, error, disabled, long content and permission/verification gates, using the product's status dictionaries. Interaction states follow `foundations/interaction-states.md` (DS-43): never invent a hover or pressed colour.
 7. **Evidence over taste.** Tie decisions to the foundation docs' principles and research; log conflicts as open questions, never resolve them silently.
 
 ## 3. Workflow for a design task

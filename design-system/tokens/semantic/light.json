@@ -25,7 +25,7 @@
     },
     "muted": {
       "$value": "{color.neutral.100}",
-      "$description": "Quiet fills: secondary buttons, tags, chips, table header, skeleton, read-only fields"
+      "$description": "Quiet fills: secondary buttons, tags, chips, table header, skeleton, read-only fields; selected rows and current nav item (DS-43)"
     },
     "muted-hover": {
       "$value": "{color.neutral.200}"
@@ -57,7 +57,7 @@
     },
     "primary-subtle": {
       "$value": "{brand.50}",
-      "$description": "Brand tint: selected rows and cards, highlighted bands"
+      "$description": "Brand tint: selected cards and options the user chooses (with border.primary), highlighted bands. Selected rows and the current page use bg.muted (DS-43)"
     },
     "primary-subtle-hover": {
       "$value": "{brand.100}"

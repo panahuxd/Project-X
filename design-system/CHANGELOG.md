@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.11.2 — 2026-10-21 (interaction-state policy)
+
+- DS-43: new `foundations/interaction-states.md`: state names and Figma variant mapping, fill ladders, links, selected/current, focus, disabled/loading/invalid/read-only, precedence, touch, motion, rules for agents
+- `bg.primary-subtle` and `bg.muted` descriptions say which one is for user choices and which for position
+- `button` spec: pressed per ladder (secondary and destructive reuse hover), link underline on hover
+- DKB Components: `button` link variant, hover state (3 sizes) now underlined, as the spec always said
+
 ## 0.11.1 — 2026-10-21 (Foundations review fixes)
 
 Follow-up of the DKB Foundations review. Focus ring kept as DS-22.

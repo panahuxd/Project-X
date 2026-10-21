@@ -73,7 +73,7 @@ design-system/
 ├── COVERAGE.md          shadcn/ui → DKB component mapping and status
 ├── tokens/              DTCG JSON, one file per layer (source of truth)
 ├── build/               generated: CSS, Tailwind theme, shadcn mapping, token reference, contrast report, Figma variables (never edit by hand)
-├── foundations/         typography.md (more foundation notes as needed)
+├── foundations/         typography.md, interaction-states.md (DS-43)
 ├── components/          INDEX.md (generated) + one spec per component + written guides (aspect-ratio, direction, typography)
 ├── patterns/            layouts.md: page layout standard (grid, shells, templates T1–T10)
 ├── components.json      component API for agents: library keys, variants, properties, defaults (generated from Figma)

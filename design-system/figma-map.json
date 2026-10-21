@@ -17,8 +17,8 @@
    },
    "lastSync": {
     "date": "2026-10-21",
-    "tokens": "0.11.1",
-    "result": "all fingerprints match (primitives c98a6c64, brand 2cb41e7a, semantic c7431650, responsive 8ab69163, text styles 2b053d29, effect styles 2888cbb6)"
+    "tokens": "0.11.2",
+    "result": "all fingerprints match (primitives c98a6c64, brand 2cb41e7a, semantic 9fba2e18, responsive 8ab69163, text styles 2b053d29, effect styles 2888cbb6)"
    }
   },
   "components": {
