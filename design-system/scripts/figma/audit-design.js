@@ -9,7 +9,7 @@ await figma.setCurrentPageAsync(page);
 const inProposal = n => { for (let p = n; p && p.type !== 'PAGE'; p = p.parent) if (p.name && p.name.startsWith('proposal/')) return true; return false; };
 const insideInstance = n => { for (let p = n.parent; p && p.type !== 'PAGE'; p = p.parent) if (p.type === 'INSTANCE') return true; return false; };
 const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [], roundedAtScreenEdge: [], buttonOrder: [] };
-const warnings = { unboundSpacing: [], effectWithoutStyle: [], noBrandMode: [] };
+const warnings = { unboundSpacing: [], effectWithoutStyle: [], noBrandMode: [], clippedOverhang: [] };
 const nodes = page.findAll(() => true);
 for (const n of nodes) {
   if (inProposal(n)) continue;
@@ -46,6 +46,14 @@ for (const scr of page.children.filter(c => c.type === 'FRAME')) {
     const r = typeof n.cornerRadius === 'number' ? n.cornerRadius : Math.max(n.topLeftRadius || 0, n.topRightRadius || 0);
     const sides = (n.strokes || []).some(p => p.visible !== false) && ((n.strokeLeftWeight ?? n.strokeWeight) > 0 || (n.strokeRightWeight ?? n.strokeWeight) > 0);
     if (r > 0 || sides) errors.roundedAtScreenEdge.push(`${scr.name} › ${n.name} (${n.id})`);
+  }
+}
+// an absolutely positioned node (badge, counter) that sticks out of a clipping ancestor gets cut
+for (const n of page.findAll(n => n.layoutPositioning === 'ABSOLUTE' && n.visible && !insideInstance(n))) {
+  const b = n.absoluteBoundingBox; if (!b) continue;
+  for (let p = n.parent; p && p.type !== 'PAGE'; p = p.parent) {
+    if (!p.clipsContent || !p.absoluteBoundingBox) continue; const q = p.absoluteBoundingBox;
+    if (b.x < q.x - 0.5 || b.y < q.y - 0.5 || b.x + b.width > q.x + q.width + 0.5 || b.y + b.height > q.y + q.height + 0.5) { warnings.clippedOverhang.push(`${n.name} (${n.id}) cut by ${p.name}`); break; }
   }
 }
 // DS-46: in a button group (2+ non-ghost/link buttons in one auto-layout frame), the main action is leftmost (row) or topmost (column)

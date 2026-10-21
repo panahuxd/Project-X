@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.13.1 — 2026-10-21 (header cart badge)
+
+- DKB Commerce `header` (storefront rows=1 and rows=2): the cart counter badge was cut at the top and left because `actions` and `row-1` clipped content; clip turned off on both. Checked every absolutely positioned part in DKB Commerce: no other clipped badge
+- `audit-design.js`: new warning `clippedOverhang` (an absolutely positioned node cut by a clipping ancestor); AGENTS.md §5 lesson
+
 ## 0.13.0 — 2026-10-21 (action placement)
 
 - DS-46: new `foundations/action-placement.md`: one rule for every button group (row: end-aligned, main action far left; stacked: main on top; tertiary at the opposite edge; one main action; mobile layouts)
