@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.3 — 2026-10-21 (UX grounding)
+
+- DS-44: new `designs/UX-GROUNDING.md` (steps, source priority, reference library incl. Shopify app, checkout and B2B docs); AGENTS.md hard rule 8 and workflow step 1b; *UX grounding* section in `designs/_template.md`; example spec, designs README, root README and llms.txt updated
+
 ## 0.11.2 — 2026-10-21 (interaction-state policy)
 
 - DS-43: new `foundations/interaction-states.md`: state names and Figma variant mapping, fill ladders, links, selected/current, focus, disabled/loading/invalid/read-only, precedence, touch, motion, rules for agents

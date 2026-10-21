@@ -18,7 +18,7 @@ The source of truth for the three foundation docs is the living docs on claude.a
 | — | `llms.txt` | Index of the repo for AI tools (llmstxt.org format) |
 | `.github/` | `workflows/design-system.yml`, `copilot-instructions.md` | CI: builds the tokens and fails if generated files are stale · pointer to AGENTS.md for Copilot |
 | `design-system/` | `README.md` and folders | DKB Design System: tokens (source of truth), build, component specs, `components.json` API, Figma sync check. See its README |
-| `designs/` | `<platform>-<feature>.md` | Design-task specs (from `_template.md`), each linked to its Figma file |
+| `designs/` | `<platform>-<feature>.md`, `UX-GROUNDING.md` | Design-task specs (from `_template.md`), each linked to its Figma file · the UX-grounding rule and reference library every task starts with (DS-44) |
 | `knowledge-base/` | `b2e-foundation-knowledge-base.md` | B2E (company procurement) foundation: context, roles, rules, statuses, IA, flows, design system, components, gaps, decisions. Also covers layers shared with B2R and Portals. |
 | `knowledge-base/` | `b2r-foundation-knowledge-base.md` | B2R (retailers, b2b.digikala.com) foundation: B2R-specific rules, statuses, flows, components, gaps and decisions D1–D13. |
 | `knowledge-base/` | `portals-foundation-knowledge-base.md` | Enterprise Portals foundation: tenant model (mehrad, shad, cbi, cbint), rules, statuses, theming, gaps. |
@@ -36,6 +36,7 @@ The full order and rules are in [`AGENTS.md`](AGENTS.md). In short:
 3. The platform doc you are designing for (B2R or Portals).
 4. `research/research-insights-drive.md` for evidence.
 5. `raw-findings/` only when a detail is missing from the foundation docs.
+6. `designs/UX-GROUNDING.md` before designing: the UX principles, standards and best practices for the task's context, applied to the product (DS-44).
 
 ## Conventions
 

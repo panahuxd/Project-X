@@ -11,6 +11,14 @@ Who uses this (persona / role from the foundation doc) and what they must be abl
 ## Constraints
 Business rules, statuses, limits, feature flags and tenants that apply (cite the foundation doc). Platforms and breakpoints in scope. Brand modes.
 
+## UX grounding
+Patterns in this task: <checkout, form, table, …>. Guidance collected before designing (`UX-GROUNDING.md`, priority: product rules › accessibility › DKB principles and research › DKB Design System › external practice).
+
+| Guideline | Source (link or doc section) | How it applies here |
+|---|---|---|
+
+Conflicts between sources → *Open questions*.
+
 ## Flow
 Numbered steps, or a diagram if it branches. Entry points and exits.
 
@@ -30,6 +38,8 @@ Numbered steps, or a diagram if it branches. Entry points and exits.
 Anything built as `proposal/<name>` because the library lacks it: what it is, why existing components don't fit, a proposed API.
 
 ## Decisions
+Every decision cites the UX grounding table, a foundation/research section or a DS decision.
+
 | Decision | Why (evidence) |
 |---|---|
 

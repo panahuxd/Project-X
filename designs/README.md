@@ -1,6 +1,6 @@
 # Designs
 
-One spec per design task: `designs/<platform>-<feature>.md`, written from `_template.md`. The Figma file for the task is linked from the spec. Agents follow `../AGENTS.md`.
+One spec per design task: `designs/<platform>-<feature>.md`, written from `_template.md`. The Figma file for the task is linked from the spec. Agents follow `../AGENTS.md`. Before designing, every task fills its *UX grounding* section from [UX-GROUNDING.md](UX-GROUNDING.md) (DS-44): the UX principles, standards and best practices for the task's context, applied to the product.
 
 | Spec | Platform | Status | Figma |
 |---|---|---|---|

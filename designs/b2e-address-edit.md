@@ -16,6 +16,16 @@ Buyer «مسئول خرید» (B2E foundation › Users and roles). Goal: change
 - Platforms: B2E desktop (this screen); on mobile the same content goes in a `drawer` (DS-32).
 - Brand mode B2E, screen mode Desktop.
 
+## UX grounding
+Patterns: edit a detail inside a task (modal edit), address form. Added after the dry run to show the section (DS-44).
+
+| Guideline | Source | How it applies here |
+|---|---|---|
+| Let users fix a detail without leaving the task, with a clear way out | [NN/g heuristic 3: user control and freedom](https://www.nngroup.com/articles/ten-usability-heuristics/) | Dialog over the shipping step; «انصراف» and Esc close without saving |
+| Modal dialogs trap focus and return it to the trigger | [WAI-ARIA APG: dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) | `dialog` component behaviour; focus returns to «ویرایش آدرس» |
+| Address forms: only the fields needed, labelled, with errors next to the field | [GOV.UK addresses pattern](https://design-system.service.gov.uk/patterns/addresses/) · [Baymard checkout research](https://baymard.com/research/checkout-usability) | `field` per part (province, city, street, alley, number, unit), required marked, error under the field |
+| One-handed reach on mobile | [Material 3 bottom sheets](https://m3.material.io/components/bottom-sheets/overview) | Mobile uses `drawer` (DS-32) |
+
 ## Flow
 1. Buyer opens «ویرایش آدرس» from the shipping step.
 2. Dialog opens with the current address filled in.

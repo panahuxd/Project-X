@@ -16,6 +16,7 @@ This repo is your context and your output destination. Figma is where you design
 | 5b | Page layout standard: grid, shells, templates T1–T10 (DS-36) | `design-system/patterns/layouts.md` |
 | 6 | The product you design for: users, rules, statuses, flows, principles, glossary, gaps | `knowledge-base/<platform>-foundation-knowledge-base.md` (B2E first: it holds the shared layers) |
 | 7 | Evidence: interviews, heuristic evaluation, tests, CSAT | `research/research-insights-drive.md` |
+| 8 | **UX grounding**: how to find and apply the UX principles, standards and best practices for the task (WCAG, NN/g, Baymard, Shopify, platform guidelines…) and the priority when they disagree | `designs/UX-GROUNDING.md` |
 
 Where the knowledge-base docs describe the **legacy** design system (DS - Shadcn, IRANYekanX, old themes), that is what is live today. **New designs always use the DKB Design System.**
 
@@ -28,14 +29,16 @@ Where the knowledge-base docs describe the **legacy** design system (DS - Shadcn
 5. **Brand and screen.** Set the `brand` mode (B2R or B2E) on every screen frame explicitly. Portals use the B2R or B2E mode until they have their own (DS-3). Design mobile 360 and desktop 1440 when the feature exists on both; set the `responsive` mode (Mobile / Desktop) on the frame.
 6. **States are part of the design.** Empty, loading, error, disabled, long content and permission/verification gates, using the product's status dictionaries. Interaction states follow `foundations/interaction-states.md` (DS-43): never invent a hover or pressed colour.
 7. **Evidence over taste.** Tie decisions to the foundation docs' principles and research; log conflicts as open questions, never resolve them silently.
+8. **UX grounding first (DS-44).** Before designing anything, collect the UX principles, guidelines, standards and best practices that apply to the task's context (`designs/UX-GROUNDING.md`: accessibility, usability heuristics, e-commerce and B2B research such as Baymard and Shopify, platform guidelines, real-app patterns) and apply them in line with the product's users, rules and constraints. Every decision cites a source; product rules and accessibility outrank external practice.
 
 ## 3. Workflow for a design task
 
 1. **Brief.** Copy `designs/_template.md` to `designs/<platform>-<feature>.md`. Fill problem, users, constraints and the questions you need answered from the knowledge base. Ask the human only for what the sources can't answer.
+1b. **UX grounding.** Name the patterns in the task, collect the applicable guidance from `designs/UX-GROUNDING.md` (in its priority order), translate each item to DKB (which rule, user or component it meets) and fill the spec's *UX grounding* table before any Figma work.
 2. **Figma file.** One file per feature in the Digikala B2B team, Project X folder, named `<Platform> · <Feature>` (e.g. `B2E · Company admin`). Pages: `Cover`, `Flows`, `Screens`, `States`, `proposals` (only if needed). The DKB libraries enabled (Foundations, Components, Commerce).
 3. **Design.** Start every screen from its layout template (`design-system/patterns/layouts.md` §6): `startFromTemplate(name, screen, brand, frameName)`, then replace each region with `fillRegion` or remove it. Build the content from library components and tokens, section by section. Paste `design-system/scripts/figma/agent-helpers.js` (generated, every library key built in) at the top of every `use_figma` script, then `await use({ tokens, styles, components, icons })` with the names you need (icons: the common ones are built in; for any other Lucide icon find it in `design-system/components/ICONS.md`, copy its key from `components.json` → `icons` and call `addIcons({ name: key })` first) and build with `paint`, `bind`, `text`, `instance`, `setProps`, `child`, `icon`, `vstack`, `hrow` (RTL-aware) and `setModes`. Name frames `<flow>/<screen>/<breakpoint>` (e.g. `checkout/payment/mobile`).
 4. **Check.** Run `design-system/scripts/figma/audit-design.js` on the Screens page (with `use_figma`). It must report 0 unbound colours, 0 text without a style, 0 non-library instances outside `proposal/` frames, and no slot or template region left visible. Screenshot each screen in both brand modes and fix clipping, overlap and contrast.
-5. **Spec.** Complete `designs/<platform>-<feature>.md`: screen table with Figma links, components used, component requests, decisions, open questions.
+5. **Spec.** Complete `designs/<platform>-<feature>.md`: UX grounding, screen table with Figma links, components used, component requests, decisions (each citing a source), open questions.
 6. **Hand over.** Commit on a branch `design/<platform>-<feature>` and open a pull request with the summary and Figma link. If you have no push access, leave the changes in the working tree and tell the human what to review and push.
 
 ## 4. Changing the design system itself

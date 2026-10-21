@@ -26,6 +26,7 @@
 - [Research insights](research/research-insights-drive.md): interviews, heuristic evaluation, tests, CSAT
 
 ## Designs
+- [UX grounding](designs/UX-GROUNDING.md): required first step of every design task: which UX principles, standards and best practices (WCAG, NN/g, Baymard, Shopify, platform guidelines) to apply and in what priority (DS-44)
 - [Design specs](designs/README.md): one spec per design task, from [the template](designs/_template.md); example: [B2E address edit](designs/b2e-address-edit.md)
 
 ## Optional
