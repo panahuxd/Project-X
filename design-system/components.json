@@ -551,15 +551,20 @@
       "page": "Card",
       "nodeId": "56:1418",
       "key": "be7a31145a3c9f074330727981fc0b71366ce2f9",
-      "variantCount": 2,
+      "variantCount": 4,
       "variants": {
         "size": [
           "md",
           "sm"
+        ],
+        "edge": [
+          "inset",
+          "full"
         ]
       },
       "defaultVariant": {
-        "size": "md"
+        "size": "md",
+        "edge": "inset"
       },
       "properties": {
         "title": {

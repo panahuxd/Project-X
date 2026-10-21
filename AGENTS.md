@@ -70,6 +70,7 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - **Charts**: series colours are `chart.1…5` in that order; text stays in text tokens; one y-axis; time left to right. See `components/chart.md`.
 - When binding a paint to a variable, give the placeholder paint a real colour (not white): a binding to the same variable the node already had can keep showing the placeholder.
 - **Commerce parts that differ per platform** (DS-37): set the `brand` mode for colour; change content through properties and exposed items (e.g. `account-menu` items, `bottom-nav` items, `header` links); use a `platform` variant only where one exists. Never detach a shell part to change it.
+- **Mobile sections are full width (DS-45)**: on a Mobile screen every page section is a `card` with `edge=full` and `size=sm`, stacked with `space.8` between. Never leave a rounded or side-bordered container touching the screen edges (the audit fails `roundedAtScreenEdge`). Selectable options inside a section keep their rounded border.
 - **Layout templates**: detaching keeps the grid, the bound widths and gaps and the `template-region` instances (they become direct library instances). Asides are fixed widths (3 cols = 310, 4 cols = 421 at 1312); the main column is FILL. Set the `brand` mode after detaching; the `responsive` mode comes with the template.
 
 ## 6. Sandbox and example

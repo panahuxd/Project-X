@@ -8,7 +8,7 @@ const page = PAGE ? figma.root.children.find(p => p.name === PAGE) : figma.root.
 await figma.setCurrentPageAsync(page);
 const inProposal = n => { for (let p = n; p && p.type !== 'PAGE'; p = p.parent) if (p.name && p.name.startsWith('proposal/')) return true; return false; };
 const insideInstance = n => { for (let p = n.parent; p && p.type !== 'PAGE'; p = p.parent) if (p.type === 'INSTANCE') return true; return false; };
-const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [] };
+const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [], roundedAtScreenEdge: [] };
 const warnings = { unboundSpacing: [], effectWithoutStyle: [], noBrandMode: [] };
 const nodes = page.findAll(() => true);
 for (const n of nodes) {
@@ -37,6 +37,16 @@ for (const n of nodes) {
     for (const k of ['paddingLeft', 'paddingRight', 'paddingTop', 'paddingBottom', 'itemSpacing']) if (n[k] > 0 && !b[k]) { warnings.unboundSpacing.push(`${n.name} (${n.id}) ${k}=${n[k]}`); break; }
   }
   if ('effects' in n && n.effects.length && !n.effectStyleId && !inInst) warnings.effectWithoutStyle.push(`${n.name} (${n.id})`);
+}
+// DS-45: a container with rounded corners or side borders must not touch both side edges of its screen frame
+for (const scr of page.children.filter(c => c.type === 'FRAME')) {
+  const L = scr.absoluteBoundingBox.x, R = L + scr.width;
+  for (const n of scr.findAll(n => (n.type === 'FRAME' || n.type === 'INSTANCE') && n.visible && !insideInstance(n))) {
+    const b = n.absoluteBoundingBox; if (!b || b.x > L + 0.5 || b.x + b.width < R - 0.5) continue;
+    const r = typeof n.cornerRadius === 'number' ? n.cornerRadius : Math.max(n.topLeftRadius || 0, n.topRightRadius || 0);
+    const sides = (n.strokes || []).some(p => p.visible !== false) && ((n.strokeLeftWeight ?? n.strokeWeight) > 0 || (n.strokeRightWeight ?? n.strokeWeight) > 0);
+    if (r > 0 || sides) errors.roundedAtScreenEdge.push(`${scr.name} › ${n.name} (${n.id})`);
+  }
 }
 for (const f of page.children.filter(c => c.type === 'FRAME' || c.type === 'SECTION')) {
   const modes = f.explicitVariableModes || {};

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.0 — 2026-10-21 (mobile full-width sections)
+
+- DS-45: `card` variant `edge` = `inset` (default, unchanged) | `full` (no radius, no side borders, no shadow); 4 variants. Components fingerprint `c34a653e`
+- `patterns/layouts.md`: mobile sections are `card` `edge=full` `size=sm` with `space.8` between (§3.1, §3.4, T4, decision D5)
+- `audit-design.js`: new error `roundedAtScreenEdge` (a rounded or side-bordered container touching both edges of its screen frame)
+- Card spec: when to use each edge, code classes
+
 ## 0.11.3 — 2026-10-21 (UX grounding)
 
 - DS-44: new `designs/UX-GROUNDING.md` (steps, source priority, reference library incl. Shopify app, checkout and B2B docs); AGENTS.md hard rule 8 and workflow step 1b; *UX grounding* section in `designs/_template.md`; example spec, designs README, root README and llms.txt updated

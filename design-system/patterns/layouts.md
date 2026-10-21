@@ -56,7 +56,7 @@ shadcn has no e-commerce layouts (listing, product detail, checkout); those come
 | Page margin | `layout.page-margin` (24, grows to centre) | 24 | 16 |
 | Columns / gutter | 12 / `layout.gutter` 24 | 8 / 16 | 4 / 16 |
 | Section gap | `layout.section-gap` 48 | 32 | 32 between page sections; 16 inside a section |
-| Page background | `bg.subtle`; content sits in white `card`s (D2) | same | same; sections are full-width white blocks with `space.8`–`space.16` between them |
+| Page background | `bg.subtle`; content sits in white `card`s (D2) | same as mobile | same; sections are full-width white blocks: `card` `edge=full` `size=sm` (no radius, no side borders, no shadow), `space.8` of `bg.subtle` between them (D5, DS-45) |
 
 ### 3.2 Shells (header, navigation, footer)
 | Shell | Desktop | Mobile | Used by |
@@ -73,7 +73,7 @@ shadcn has no e-commerce layouts (listing, product detail, checkout); those come
 | T1 | **Home / Landing** | Optional full-bleed hero; stacked sections; each = section header (title right, «مشاهده همه» link left) + content (carousel, grid 4–6, banner). Home hero row 3 · 6 · 3 | Sections full width, carousels scroll; categories as 4-col icon grid |
 | T2 | **Listing** (PLP, search, carousel list) | Sticky sub-header (breadcrumb, chips); filters 3 cols (sticky) · results 9 cols with sticky sort bar; results as rows or grid 3–4 | Sticky toolbar (sort, filter button → full-screen `sheet`, chips); single column; infinite scroll or `pagination` compact |
 | T3 | **Detail** (PDP, bundle) | Breadcrumb; gallery 3 · info 5 · buy box 4 (sticky); below: tabs or sections 8 cols + sticky buy box | Single column; sticky buy bar 64 above the bottom nav |
-| T4 | **Checkout step** | Page title + optional stepper; steps content 8 cols (cards) · bill box 4 cols (sticky) | Cards full width; bill box at the end; sticky bottom bar (amount + main button) |
+| T4 | **Checkout step** | Page title + optional stepper; steps content 8 cols (cards) · bill box 4 cols (sticky) | Sections as `card` `edge=full`; bill box at the end; sticky bottom bar (amount + main button) |
 | T5 | **Account page** | Side nav 3 · content 9: page header (title, description, actions) + cards / table / form | Back header; content full width; tables become items |
 | T6 | **Form / task** (RFQ, KYC, credit request) | Form 8 cols (max 720) · optional summary 4 cols sticky; stepper for multi-step | Single column; sticky bottom bar with the main button |
 | T7 | **Workspace page** | Inset header; page header + KPI cards grid (1 → 2 → 4) + chart / data-table | Stacked |
@@ -83,6 +83,7 @@ shadcn has no e-commerce layouts (listing, product detail, checkout); those come
 
 ### 3.4 Surfaces and rhythm
 - Cards: `card` component (`bg.surface`, `border.default`, `radius.card`, `shadow.card`), padding `space.24` desktop / `space.16` mobile. One radius everywhere (`radius.card` = 12).
+- **Mobile sections are full width (D5, DS-45).** Below 1024 a page section is `card` `edge=full` (`size=sm`): edge to edge, top and bottom `border.default` only, no radius, no shadow, separated by `space.8`. Inside a section, content keeps `space.16` side padding and selectable options keep their rounded border (a rounded border = something you can choose). **A rounded or side-bordered container never touches the screen edge**: either it is full-width without radius and side borders, or it is inset by `layout.page-margin` on both sides (the audit fails it otherwise). Inset cards on mobile are only for cards inside a container (drawer, dialog, carousel).
 - Asides span columns, never a fixed pixel width: filters and account side nav 3 cols (310 at 1312: 3 × 87.3 + 2 × 24; live 322–336); bill box, buy box and summaries 4 cols (≈ 421, live 400).
 - Sticky offsets: header height + `space.16`.
 - Z-order: header and bottom nav `z-index.sticky`; drawers/sheets `z-index.dialog`.
@@ -109,6 +110,7 @@ Shell parts are DKB Commerce components and come placed in every template: `head
 | D2 | Page background `bg.subtle` with content in white cards, for B2R and B2E (revises the B2E "white surface" decision of 2026-10-19) |
 | D3 | Desktop storefront header has one or two rows, decided per platform and page later |
 | D4 | Mobile checkout and multi-step forms get a sticky bottom action bar with the amount and the main button |
+| D5 | Mobile page sections are full-width blocks (`card` `edge=full`), never rounded cards touching the screen edge (DS-45, 2026-10-21) |
 
 ## 6. Templates in Figma
 
