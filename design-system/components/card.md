@@ -42,3 +42,4 @@ Title is a heading at the right level for the page (`h2`/`h3`).
 ## Changelog
 - 0.6.0 — created (2 variants).
 - 0.12.0 — `edge` variant (`inset`, `full`) for mobile full-width sections (DS-45); 4 variants.
+- 0.12.1 — `edge=full` fixed: property links restored, corners `radius.none`.

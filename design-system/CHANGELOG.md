@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.1 — 2026-10-21 (card edge=full fix)
+
+- `card` `edge=full` (md, sm): title, description, content slot and the show* toggles are linked to the card properties again (the cloned variants had lost their property references); corners bound to `radius.none` (0) instead of staying at 12. Tested on instances of both sizes, including switching `edge`. Component API and fingerprint unchanged (`c34a653e`)
+- AGENTS.md §5: two lessons (cloned variants lose property references; library variables must be imported by key)
+
 ## 0.12.0 — 2026-10-21 (mobile full-width sections)
 
 - DS-45: `card` variant `edge` = `inset` (default, unchanged) | `full` (no radius, no side borders, no shadow); 4 variants. Components fingerprint `c34a653e`
