@@ -58,7 +58,7 @@ Only with the design lead's approval. The repo is the source of truth (DS-4):
 - The **top-left variant** of a component set is its default; keep the default (`md`) top-left.
 - Nested instances can only be exposed (`isExposedInstance`) after they are inside a component.
 - Assets from a library can be imported by key only after the library is **published**.
-- Text properties override the text of every variant; variant-specific sample text needs its own text node.
+- Text properties override the text of every variant; variant-specific sample text needs its own text node. The same goes for text formatting: changing `textDecoration` (or other text styling) on a text node bound to a component TEXT property changes it in **every** variant. Per-variant text styling isn't possible on a shared label.
 - The `brand` collection is hidden from publishing, but its modes still work in other files: reach it through the alias of any brand-coloured token (`setModes` in agent-helpers does this).
 - Library variables, styles and components import by key without enabling the library in the file's UI.
 - After a library publish, existing instances keep the old version until updated: `instance.swapComponent(<variant from importComponentSetByKeyAsync>)` moves them to the latest and keeps their overrides.

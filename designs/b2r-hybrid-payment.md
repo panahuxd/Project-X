@@ -51,19 +51,19 @@ Patterns: checkout payment step, multi-source (split) payment ledger, mutually e
 | Screen | Breakpoint | Brand | Figma frame | Notes |
 |---|---|---|---|---|
 | Payment — hybrid, remaining ≤ cap (S4) | Desktop 1440 | B2R | `checkout/payment/desktop` [38:1788](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=38-1788) | Methods 8 cols + sticky ledger 4 cols; CTA «پرداخت آنلاین» |
-| Payment — hybrid, remaining ≤ cap (S4) | Mobile 360 | B2R | `checkout/payment/mobile` [38:1512](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=38-1512) | Plan strip on top, ledger at the end, `action-bar` with «مبلغ پرداخت آنلاین» |
+| Payment — hybrid, remaining ≤ cap (S4) | Mobile 360 | B2R | `checkout/payment/mobile` [47:2282](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-2282) | Plan strip on top, ledger at the end, `action-bar` with «مبلغ پرداخت آنلاین» |
 
 Scenario data: order 700M; cheque 123456 (150M) → cheque 789012 (120M, under review) → wallet (100M); online 330M.
 
 ## States
 | Screen | State (PRD scenario / AC) | Figma frame |
 |---|---|---|
-| Payment | Over the IPG cap, nothing selected → «پرداخت» disabled + warning that quantifies the gap (S2, AC-11) | desktop [38:2029](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=38-2029) · mobile [38:2228](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=38-2228) |
-| Payment | Remaining = 0 after over-allocation; last cheque trimmed + info alert; «ثبت سفارش» (S6/S12, AC-12, AC-14) | mobile [39:1738](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=39-1738) |
-| Payment | Digipay selected after other methods → others deallocated, info alert with «بازگرداندن», discount applied, «پرداخت با دیجی‌پی» (S10, AC-05/06/07) | mobile [39:2010](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=39-2010) |
-| Payment | Recalculating → ledger, strip and amount as `skeleton`, touched row `spinner`, CTA loading (AC-16…19) | mobile [39:2251](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=39-2251) |
-| Payment | Final validation changed the wallet balance → plan rebuilt, warning alert, user confirms again (S11, AC-20/21) | mobile [39:2499](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=39-2499) |
-| Payment | Recalculation error → destructive alert «تلاش دوباره», amounts «—», CTA disabled (AC-23) | mobile [39:2750](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=39-2750) |
+| Payment | Over the IPG cap, nothing selected → «پرداخت» disabled + warning that quantifies the gap (S2, AC-11) | desktop [38:2029](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=38-2029) · mobile [47:2903](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-2903) |
+| Payment | Remaining = 0 after over-allocation; last cheque trimmed + info alert; «ثبت سفارش» (S6/S12, AC-12, AC-14) | mobile [47:3379](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-3379) |
+| Payment | Digipay selected after other methods → others deallocated, info alert with «بازگرداندن», discount applied, «پرداخت با دیجی‌پی» (S10, AC-05/06/07) | mobile [47:3954](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-3954) |
+| Payment | Recalculating → ledger, strip and amount as `skeleton`, touched row `spinner`, CTA loading (AC-16…19) | mobile [47:4506](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-4506) |
+| Payment | Final validation changed the wallet balance → plan rebuilt, warning alert, user confirms again (S11, AC-20/21) | mobile [47:5088](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-5088) |
+| Payment | Recalculation error → destructive alert «تلاش دوباره», amounts «—», CTA disabled (AC-23) | mobile [47:5643](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=47-5643) |
 | Payment | Method visibility: EN loan active, DKB credit suspended (disabled + «سقف اعتبار شما غیرفعال است»), cheque active (§6) | every frame |
 
 Not designed in this pass: add-cheque flow, cheque-delivery sheet, gift-card entry, wallet top-up return, payment result screens, desktop versions of the five mobile-only states (same content in the 8 + 4 layout).
@@ -72,6 +72,7 @@ Not designed in this pass: add-cheque flow, cheque-delivery sheet, gift-card ent
 | Component | Variants / properties used | Notes |
 |---|---|---|
 | `template/checkout` | desktop, mobile | Detached; regions replaced (`page-title`, `step-card-1`, `bill-box`), `step-card-2` removed |
+| `card` | `edge=full`, `size=sm`; `title`, `description`, `showFooter=false`, `content` = local `content/payment-<state>/<section>` | Mobile sections, ledger, plan strip (DS-45) |
 | `header` | `type=focused`, `title` | Desktop |
 | `mobile-header` | `type=inner`, `title` «پرداخت» | Mobile |
 | `action-bar` | `type=amount`; `amountLabel` = PRD §9.2 grey-box label; nested `action` label/state/`isLoading` | Mobile CTA |
@@ -84,7 +85,9 @@ Not designed in this pass: add-cheque flow, cheque-delivery sheet, gift-card ent
 | `separator`, `skeleton` (line), `spinner` (sm, primary) | | |
 | Icons | landmark, smartphone, wallet, ticket-percent, plus, x | Section headers and buttons |
 
-Sections are token-built frames (`bg.surface`, `border.default`, `radius.card`, `shadow.card`, `space.16/24`), as in `layouts.md` §3.4: the `card` component's fixed header/content-slot/footer doesn't fit a list of selectable rows.
+Sections, by breakpoint (DS-45):
+- **Mobile:** every section is a `card` `edge=full` `size=sm` (title, description, `showFooter` off), stacked with `space.8`; its content is a local component `content/payment-<state>/<section>` swapped into the card's `content` slot (DS-33 pattern). The ledger and the plan strip are cards too («صورتحساب», «خلاصه پرداخت»). Alerts sit in an `alert-wrap` inset by `layout.page-margin`, so no rounded box touches the screen edge. Selectable rows (`proposal/payment-method`) keep their rounded border.
+- **Desktop:** token-built frames with the `card` `edge=inset` look (`bg.surface`, `border.default`, `radius.card`, `shadow.card`, `space.24`), as in `layouts.md` §3.4.
 
 ## Component requests
 | Proposal | What it is | Why the library doesn't cover it | Proposed API |
@@ -102,6 +105,7 @@ Sections are token-built frames (`bg.surface`, `border.default`, `radius.card`, 
 | Ledger lists sources in allocation (selection) order, numbered | PRD §10 · B2R principle 4 |
 | Every allocated row shows «سهم این سفارش»; cheques show their used share | Principle 4 · PRD §2.5 (balance checks before choosing wallet) |
 | Mobile: plan strip on top + ledger at end + `action-bar` with the §9.2 label | PRD §2.7 · Gap #26 · DS-36 D4 |
+| Mobile sections are full-width `card` `edge=full` with `space.8` between; alerts inset by the page margin; selectable rows stay rounded | DS-45 · `layouts.md` D5 |
 | Disabled CTA explained right above it with the exact missing amount | `action-bar` spec · NN/g H9 |
 | System-made changes (trim, deallocation, changed balance) announced with an alert; Digipay deallocation offers undo | Principle 4 · NN/g H1, H3 · PRD §10, §11 |
 | During recalculation amounts become skeletons and the CTA shows loading | PRD §15, AC-17…19 |
@@ -119,6 +123,6 @@ Sections are token-built frames (`bg.surface`, `border.default`, `radius.card`, 
 - [ ] Credit (7-day) vs. «اعتبار دیجی‌کالا بیزنس» naming: PRD uses both; glossary should settle one label.
 
 ## Audit
-`audit-design.js` (PAGE = «B2R · Hybrid payment», 1,570 nodes): **pass**, 0 unbound colours, 0 unstyled text, 0 non-library instances, 0 detached-looking frames, 0 slots/regions left, 0 templates not detached; warnings 0. Checked in B2R mode (Mobile and Desktop); the feature is B2R-only, so B2E mode wasn't reviewed. Note: the scripts used `agent-helpers.js` with `KEYS` trimmed to the names they import (functions unchanged).
+`audit-design.js` v0.12 (PAGE = «B2R · Hybrid payment», 2,582 nodes, after the DS-45 update of the 7 mobile frames): **pass**: 0 unbound colours, 0 unstyled text, 0 non-library instances, 0 detached-looking frames, 0 slots/regions left, 0 templates not detached, 0 `roundedAtScreenEdge`; warnings 0. Checked in B2R mode (Mobile and Desktop); the feature is B2R-only, so B2E mode wasn't reviewed. The scripts used `agent-helpers.js` with `KEYS` trimmed to the names they import (functions unchanged).
 
-Re-audit 2026-10-21 after DS-45: 0 errors including the new `roundedAtScreenEdge` check (5 full-width alerts inset by the page margin, 42 section frames made full width), 0 warnings.
+Revision 2026-10-21 (DS 0.12.0/0.12.1): mobile frames rebuilt with `card` `edge=full` sections, `space.8` rhythm and inset alerts; the Digipay options now sit above the row's share line; the empty-plan copy in the over-cap state no longer claims online payment will cover the total. Desktop frames unchanged.

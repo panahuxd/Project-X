@@ -4,6 +4,7 @@
 
 - `card` `edge=full` (md, sm): title, description, content slot and the show* toggles are linked to the card properties again (the cloned variants had lost their property references); corners bound to `radius.none` (0) instead of staying at 12. Tested on instances of both sizes, including switching `edge`. Component API and fingerprint unchanged (`c34a653e`)
 - AGENTS.md §5: two lessons (cloned variants lose property references; library variables must be imported by key)
+- `button`: underline removed from all 90 labels. The 0.11.2 change (underline on link hover) had spread to every variant, because the label is a shared text property. Link hover underline is now code-only (button spec, interaction-states.md); AGENTS.md §5 notes that text styling on a shared label applies to every variant
 
 ## 0.12.0 — 2026-10-21 (mobile full-width sections)
 

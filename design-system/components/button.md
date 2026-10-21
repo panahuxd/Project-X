@@ -41,7 +41,7 @@ RTL order, right to left: `iconStart` · `spinner` · `label` · `iconEnd`. In F
 ## States
 | State | What changes |
 |---|---|
-| hover | Fill one step up its ladder (see tokens and `foundations/interaction-states.md`); link: underline |
+| hover | Fill one step up its ladder (see tokens and `foundations/interaction-states.md`); link: underline (code only: `hover:underline`; the Figma `link` hover variant shows no underline, because the label is a shared text property) |
 | pressed | Next ladder step: primary `bg.primary-active`; outline and ghost `bg.muted-hover`; secondary and destructive reuse their hover fill (DS-43); link `text.primary` |
 | focus | 3 px translucent grey ring around the button (`shadow.focus-ring`); outline border becomes `border.focus`. Keyboard focus only (`:focus-visible`) |
 | disabled | Whole button at `opacity.disabled`; not focusable. Prefer explaining why (helper text or tooltip) over a silent disabled button |

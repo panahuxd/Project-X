@@ -42,7 +42,7 @@ Never invent a step (for example `bg.destructive` darkened by hand, or an opacit
 | State | Look |
 |---|---|
 | default | `text.link` |
-| hover | `text.link` + underline |
+| hover | `text.link` + underline (code; not drawn in the Figma `button` link variant, see `components/button.md`) |
 | pressed | `text.primary` |
 | focus | focus ring (§5) |
 
