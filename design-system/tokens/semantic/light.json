@@ -247,6 +247,264 @@
       "$description": "Series 5"
     }
   },
+  "campaign": {
+    "$type": "color",
+    "$description": "Dark campaign surface for event and campaign landings (DS-48). Use only inside a campaign section, never in product UI. Same values in B2R and B2E for now.",
+    "bg": {
+      "$value": "{color.midnight.950}",
+      "$description": "Campaign page and section background",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "bg-raised": {
+      "$value": "{color.midnight.900}",
+      "$description": "Raised areas on the campaign surface: input fill, info panels",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "text": {
+      "$value": "{color.white}",
+      "$description": "Titles and main text on the campaign surface",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "text-muted": {
+      "$value": "{color.navy.200}",
+      "$description": "Body and secondary text on the campaign surface",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "text-subtle": {
+      "$value": "{color.navy.300}",
+      "$description": "Meta, hints and placeholders on the campaign surface",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "text-error": {
+      "$value": "{color.red.300}",
+      "$description": "Error text under a field on the campaign surface (text.destructive fails on navy)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "text-success": {
+      "$value": "{color.green.300}",
+      "$description": "Success text and icons on the campaign surface",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "border": {
+      "$value": "{color.navy.700}",
+      "$description": "Dividers and section rules on the campaign surface (decorative)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "border-control": {
+      "$value": "{color.navy.500}",
+      "$description": "Input boundary on the campaign surface (3:1, DS-39)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "border-error": {
+      "$value": "{color.red.400}",
+      "$description": "Field in error on the campaign surface",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "cta": {
+      "$value": "{color.electric.600}",
+      "$description": "Main campaign button fill",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "cta-hover": {
+      "$value": "{color.electric.500}",
+      "$description": "Main campaign button, hover (one step lighter on a dark surface)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "cta-active": {
+      "$value": "{color.electric.700}",
+      "$description": "Main campaign button, pressed",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "text-on-cta": {
+      "$value": "{color.white}",
+      "$description": "Label and icon on campaign.cta",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "ring": {
+      "$value": "{color.cyan.400}",
+      "$description": "Keyboard focus ring on the campaign surface (ring.default is invisible on navy)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "EFFECT_COLOR",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "accent-1": {
+      "$value": "{color.cyan.400}",
+      "$description": "Decorative only: ornaments, separators, illustration strokes (cyan). Never text",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "accent-2": {
+      "$value": "{color.electric.600}",
+      "$description": "Decorative only: illustration strokes, column rules (electric blue)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "accent-3": {
+      "$value": "{color.violet.500}",
+      "$description": "Decorative only: illustration strokes (violet)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    },
+    "accent-4": {
+      "$value": "{color.amber.400}",
+      "$description": "Decorative only: illustration strokes (amber)",
+      "$extensions": {
+        "dkb.figma": {
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "hidden": false
+        }
+      }
+    }
+  },
   "radius": {
     "$type": "dimension",
     "$extensions": {

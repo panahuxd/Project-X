@@ -3,7 +3,7 @@
 One design system for all three DKB platforms: **B2R**, **B2E** and **Enterprise Portals**.
 This folder is the **source of truth for token values and component specs**. The Figma libraries mirror it 1:1.
 
-> Status: v0.11 — tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
+> Status: v0.15 — campaign surface tokens (DS-48); tokens for B2R and B2E, 69 Core components covering every non-AI shadcn/ui component, the full Lucide icon set, Commerce page shell (8 components) and the category mega menu (4) and 10 layout templates (DS-36, DS-37). Next: Commerce product and checkout parts (price, quantity, product card and row, bill box, status badge). Owner and approver of every token or library change: the design lead.
 
 ## Principles of the system
 
@@ -28,7 +28,7 @@ Format: [W3C Design Tokens (DTCG)](https://www.designtokens.org/) JSON. Each lay
 - **Dark mode** will be a second mode of `semantic` that picks other brand steps (for example `bg.primary = brand.300`). No token is renamed.
 - **Text styles** live in `tokens/typography.json` (15 roles: display, heading-1…4, body, label, caption, numeric). Headings take their size from `responsive`.
 - **Domain statuses** (order, payment, cheque, RFQ…) are **not** tokens. They map to a `badge` tone (`success`, `warning`, `info`, `destructive`, `neutral`, `primary`); the agreed mapping will live in the status-badge spec (Commerce, next).
-- **Extension groups** are added to `semantic` as named groups when their components are built: `chart.1–5` exists (DS-34); B2R loyalty tiers come with their components.
+- **Extension groups** are added to `semantic` as named groups when their components are built: `chart.1–5` exists (DS-34); `campaign.*` (dark event and campaign landings, DS-48) exists; B2R loyalty tiers come with their components.
 
 ## Component architecture
 
@@ -73,7 +73,7 @@ design-system/
 ├── COVERAGE.md          shadcn/ui → DKB component mapping and status
 ├── tokens/              DTCG JSON, one file per layer (source of truth)
 ├── build/               generated: CSS, Tailwind theme, shadcn mapping, token reference, contrast report, Figma variables (never edit by hand)
-├── foundations/         typography.md, interaction-states.md (DS-43)
+├── foundations/         typography.md, interaction-states.md (DS-43), action-placement.md (DS-46)
 ├── components/          INDEX.md (generated) + one spec per component + written guides (aspect-ratio, direction, typography)
 ├── patterns/            layouts.md: page layout standard (grid, shells, templates T1–T10)
 ├── components.json      component API for agents: library keys, variants, properties, defaults (generated from Figma)

@@ -28,8 +28,10 @@
 ## Designs
 - [UX grounding](designs/UX-GROUNDING.md): required first step of every design task: which UX principles, standards and best practices (WCAG, NN/g, Baymard, Shopify, platform guidelines) to apply and in what priority (DS-44)
 - [Design specs](designs/README.md): one spec per design task, from [the template](designs/_template.md); example: [B2E address edit](designs/b2e-address-edit.md)
+- [B2R event landing](designs/b2r-event-landing.md): dark campaign landing + RSVP (DS-48 campaign tokens); web build in [implementations/b2r-event-landing](implementations/b2r-event-landing/README.md)
 
 ## Optional
 - [Raw findings](raw-findings/): source notes behind the foundation docs; read only when a detail is missing
 - [Typography foundations](design-system/foundations/typography.md): font facts and OpenType features
+- [Action placement](design-system/foundations/action-placement.md): where main and secondary buttons go in footers, dialogs, sheets, bars, mobile (DS-46)
 - [Interaction states](design-system/foundations/interaction-states.md): hover, pressed, focus, selected, disabled, loading, invalid rules and fill ladders (DS-43)

@@ -65,7 +65,7 @@ Pick a component here, then read its spec. Keys, property ids and the library fi
 
 | Component | Use it for | Variants | Spec |
 |---|---|---|---|
-| `card` | Groups related content and actions into one block: dashboard widgets, account summaries, order summary, settings sections. | size: md/sm | [card.md](card.md) |
+| `card` | Groups related content and actions into one block: dashboard widgets, account summaries, order summary, settings sections. | size: md/sm; edge: inset/full | [card.md](card.md) |
 | `item` | A row for one thing with media, text and actions: an order, an address, an invoice, a seller, a notification, a saved list. | variant: default/outline/muted; size: md/sm | [item.md](item.md) |
 | `table` | Rows and columns of data to compare and scan on desktop: orders, invoices, installments, users. | type: default | [table.md](table.md) |
 | `data-table` | A full-featured table for admin and finance work: search, column visibility, sorting, row selection and pagination. | type: default | [data-table.md](data-table.md) |
@@ -135,6 +135,15 @@ Pick a component here, then read its spec. Keys, property ids and the library fi
 | `template/content` | T8 Terms, privacy, help and FAQ: reading column 720 with an optional table of contents. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
 | `template/result` | T9 Thank-you, payment result, 404 and access gates: centred 480 block. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
 | `template/auth` | T10 Login, OTP and sign-up: centred 384 card. | screen: desktop/mobile | [layouts.md](../patterns/layouts.md) |
+
+## Other
+
+| Component | Use it for | Variants | Spec |
+|---|---|---|---|
+| `mega-menu` | Browse the whole catalogue by category. | screen: desktop/mobile | [mega-menu.md](mega-menu.md) |
+| `mega-menu-category` |  | screen: desktop/mobile; state: default/hover/active | [mega-menu.md](mega-menu.md) |
+| `mega-menu-group` |  | type: default | [mega-menu.md](mega-menu.md) |
+| `mega-menu-link` |  | state: default/hover | [mega-menu.md](mega-menu.md) |
 
 ## Written guides (no Figma component)
 

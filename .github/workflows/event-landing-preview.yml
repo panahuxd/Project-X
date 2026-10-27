@@ -1,0 +1,56 @@
+# Live preview of the B2R event landing on GitHub Pages:
+#   https://<owner>.github.io/<repo>/   (e.g. https://panahuxd.github.io/Project-X/)
+# Builds implementations/b2r-event-landing as a static export (RSVP answered by the in-browser mock,
+# placeholders allowed) and publishes it to the gh-pages branch.
+# One-time setup: Settings → Pages → Build and deployment → Source: "Deploy from a branch" → gh-pages / (root).
+# The page is noindex. The site is public even when the repo is private.
+name: event-landing-preview
+on:
+  push:
+    branches: [main, design/b2r-event-landing]
+    paths:
+      - implementations/b2r-event-landing/**
+      - design-system/build/**
+      - design-system/assets/fonts/**
+      - .github/workflows/event-landing-preview.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: event-landing-preview
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: implementations/b2r-event-landing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: implementations/b2r-event-landing/package-lock.json
+      - run: npm ci
+      - name: "Static export (no server: the RSVP API route is left out, the form uses the browser mock)"
+        env:
+          STATIC_PREVIEW: '1'
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_RSVP_MOCK: '1'
+          ALLOW_PLACEHOLDERS: '1'
+        run: |
+          rm -rf app/api
+          npm run build
+          touch out/.nojekyll
+      - name: Publish to gh-pages
+        working-directory: implementations/b2r-event-landing/out
+        run: |
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Preview: ${GITHUB_SHA::7} (${GITHUB_REF_NAME})"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
+      - name: Preview link
+        run: echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" >> "$GITHUB_STEP_SUMMARY"

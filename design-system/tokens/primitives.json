@@ -348,6 +348,33 @@
       "600": {
         "$value": "#65A30D"
       }
+    },
+    "midnight": {
+      "$description": "Campaign surfaces only (DS-48)",
+      "900": {
+        "$value": "#0B2452"
+      },
+      "950": {
+        "$value": "#071A3E"
+      }
+    },
+    "electric": {
+      "$description": "Campaign call to action only (DS-48)",
+      "500": {
+        "$value": "#2E5FFF"
+      },
+      "600": {
+        "$value": "#0646FC"
+      },
+      "700": {
+        "$value": "#0538CF"
+      }
+    },
+    "cyan": {
+      "$description": "Campaign accent only (DS-48)",
+      "400": {
+        "$value": "#22D3EE"
+      }
     }
   },
   "space": {
@@ -611,6 +638,12 @@
           "scopes": [],
           "hidden": true
         }
+      },
+      "56": {
+        "$value": "56px"
+      },
+      "96": {
+        "$value": "96px"
       }
     },
     "line-height": {
@@ -651,6 +684,9 @@
           "scopes": [],
           "hidden": true
         }
+      },
+      "112": {
+        "$value": "112px"
       }
     }
   },

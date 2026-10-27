@@ -47,6 +47,14 @@
         "scopes": [],
         "hidden": true
       }
+    },
+    "campaign-display": {
+      "size": {
+        "$value": "{font.size.96}"
+      },
+      "line-height": {
+        "$value": "{font.line-height.112}"
+      }
     }
   },
   "control": {

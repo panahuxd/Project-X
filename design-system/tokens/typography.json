@@ -12,6 +12,16 @@
       },
       "$description": "Hero and campaign titles. Responsive."
     },
+    "campaign-display": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{type.campaign-display.size}",
+        "fontWeight": "{font.weight.black}",
+        "lineHeight": "{type.campaign-display.line-height}",
+        "letterSpacing": "0px"
+      },
+      "$description": "Campaign hero title only (DS-48): event and campaign landings. Black weight. Responsive."
+    },
     "heading-1": {
       "$value": {
         "fontFamily": "{font.family.sans}",

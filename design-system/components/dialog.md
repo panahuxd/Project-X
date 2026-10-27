@@ -31,7 +31,7 @@ None.
 ## Behaviour and RTL
 - Centred; max height 85% of the viewport, content scrolls.
 - Focus moves to the first field (or the dialog), is trapped inside, and returns to the trigger on close. Esc, `close` and an overlay click close it.
-- Footer order in RTL: action at the far left, cancel to its right.
+- Footer order in RTL: action at the far left, cancel to its right (DS-46, `foundations/action-placement.md`).
 - Motion: fade + zoom from 95%, `motion.duration.normal`. `z-index.dialog`.
 
 ## Accessibility

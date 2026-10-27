@@ -1,5 +1,47 @@
 # Changelog
 
+## 0.15.0 — 2026-10-27 (campaign surface)
+
+- DS-48: `campaign.*` semantic group (20 colours) for dark event and campaign landings; primitives `midnight.900/950`, `electric.500/600/700`, `cyan.400`, `font.size.56/96`, `font.line-height.112`; responsive `type.campaign-display.*`; text style `campaign-display` (Digikala Black)
+- `build.py`: 13 campaign contrast pairs (0 failures) and 2 info rows; `campaign` section in the token reference; `--color-campaign-*` in the Tailwind theme
+- `sync_check.py`: Black weight mapped to the font style name
+- First use: `designs/b2r-event-landing.md`
+
+## 0.14.0 — 2026-10-21 (mega menu)
+
+- DS-47: DKB Commerce `mega-menu` (`screen=desktop|mobile`) with parts `mega-menu-category` (6 variants, `label`, `icon`), `mega-menu-group` (`title`, `link-1…6` exposed) and `mega-menu-link` (2 variants). Baseline: B2E Platform Phase 2 «Mega menu & Categories», rebuilt with DKB tokens, Digikala text styles, Lucide icons, auto layout and real B2E categories
+- Spec `components/mega-menu.md` (anatomy, tokens, behaviour, accessibility, UX grounding, differences from the baseline)
+- `header`, `navigation-menu`, `layouts.md` and `interaction-states.md` link to it; `components.json` (commerce fingerprint `402998dd`), INDEX, agent helpers, export and audit lists updated
+
+## 0.13.2 — 2026-10-21 (action-bar layout)
+
+- DKB Commerce `action-bar`: `responsive` mode set to Mobile on both variants (side padding 16, button 48 instead of the desktop 24 / 40); `type=amount`: button fills the width next to the amount, amount group pinned at the right edge (it used to sit next to a narrow button with empty space on its right). Spec: safe-area padding in code
+
+## 0.13.1 — 2026-10-21 (header cart badge)
+
+- DKB Commerce `header` (storefront rows=1 and rows=2): the cart counter badge was cut at the top and left because `actions` and `row-1` clipped content; clip turned off on both. Checked every absolutely positioned part in DKB Commerce: no other clipped badge
+- `audit-design.js`: new warning `clippedOverhang` (an absolutely positioned node cut by a clipping ancestor); AGENTS.md §5 lesson
+
+## 0.13.0 — 2026-10-21 (action placement)
+
+- DS-46: new `foundations/action-placement.md`: one rule for every button group (row: end-aligned, main action far left; stacked: main on top; tertiary at the opposite edge; one main action; mobile layouts)
+- DKB Components: `card` footer (4 variants) now end-aligned with `primary` at the far left; `empty` (2 variants) `primary` on the left. Dialog, alert-dialog, drawer, sheet and action-bar checked: already matching. API and fingerprint unchanged
+- `audit-design.js`: new error `buttonOrder` (in a group of 2+ non-ghost buttons, the primary/destructive one must be leftmost in a row or topmost in a column)
+- Specs updated: card, empty, dialog, alert-dialog, drawer, sheet
+
+## 0.12.1 — 2026-10-21 (card edge=full fix)
+
+- `card` `edge=full` (md, sm): title, description, content slot and the show* toggles are linked to the card properties again (the cloned variants had lost their property references); corners bound to `radius.none` (0) instead of staying at 12. Tested on instances of both sizes, including switching `edge`. Component API and fingerprint unchanged (`c34a653e`)
+- AGENTS.md §5: two lessons (cloned variants lose property references; library variables must be imported by key)
+- `button`: underline removed from all 90 labels. The 0.11.2 change (underline on link hover) had spread to every variant, because the label is a shared text property. Link hover underline is now code-only (button spec, interaction-states.md); AGENTS.md §5 notes that text styling on a shared label applies to every variant
+
+## 0.12.0 — 2026-10-21 (mobile full-width sections)
+
+- DS-45: `card` variant `edge` = `inset` (default, unchanged) | `full` (no radius, no side borders, no shadow); 4 variants. Components fingerprint `c34a653e`
+- `patterns/layouts.md`: mobile sections are `card` `edge=full` `size=sm` with `space.8` between (§3.1, §3.4, T4, decision D5)
+- `audit-design.js`: new error `roundedAtScreenEdge` (a rounded or side-bordered container touching both edges of its screen frame)
+- Card spec: when to use each edge, code classes
+
 ## 0.11.3 — 2026-10-21 (UX grounding)
 
 - DS-44: new `designs/UX-GROUNDING.md` (steps, source priority, reference library incl. Shopify app, checkout and B2B docs); AGENTS.md hard rule 8 and workflow step 1b; *UX grounding* section in `designs/_template.md`; example spec, designs README, root README and llms.txt updated

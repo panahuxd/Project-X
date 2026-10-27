@@ -41,6 +41,7 @@ Cite the page you used, not just the site. Add a source here when a task finds a
 | Source | Use for |
 |---|---|
 | [Baymard Institute research](https://baymard.com/research) · [checkout usability](https://baymard.com/research/checkout-usability) | Product lists and pages, cart, checkout, account, search and filters, mobile commerce |
+| [Baymard: payment UX](https://baymard.com/blog/payment-ux) · [payment method selection](https://baymard.com/research-articles/payment-method-selection) | Payment step: show the full total first, group methods, radios over drop-downs, CTA names the next step per method, collapse promo codes |
 | [Shopify app design guidelines](https://shopify.dev/docs/apps/design) | Admin and app patterns: layout, navigation, forms, feedback, empty states, visual design |
 | [Shopify checkout best practices](https://shopify.dev/docs/apps/checkout/best-practices) · [UX for checkout fields and banners](https://shopify.dev/docs/apps/build/checkout/fields-banners/ux-for-fields) | Fields, messages and banners inside checkout |
 | [Shopify B2B overview](https://help.shopify.com/en/manual/b2b/getting-started/features) · [companies](https://help.shopify.com/en/manual/b2b/companies/creating-companies) · [payment terms](https://help.shopify.com/manual/b2b/payment-terms) | B2B models to compare with DKB: companies and locations (B2E company, branches), catalogs and price lists (portal catalog scope, volume prices), payment terms (credit, cheque, invoice payment), draft orders and quotes (RFQ, proforma) |
