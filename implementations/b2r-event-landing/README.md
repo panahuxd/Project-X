@@ -24,6 +24,12 @@ The mock RSVP API answers by number, so every state can be reviewed:
 | `09120000003` | server error (retry) |
 | any other valid number | confirmed |
 
+## Live preview (GitHub Pages)
+
+`.github/workflows/event-landing-preview.yml` builds a static export on every push to `design/b2r-event-landing` or `main` that touches this folder or the design-system build, and publishes it to the `gh-pages` branch: **https://panahuxd.github.io/Project-X/**. In the preview the RSVP form answers in the browser with the same mock as above (no server), and the placeholder banner stays on. It is public (noindex) and serves the Digikala web fonts; the design lead confirmed permission on 2026-10-27.
+
+One-time setup: *Settings → Pages → Build and deployment → Source: Deploy from a branch → `gh-pages` / (root)*. Run locally: `STATIC_PREVIEW=1 NEXT_PUBLIC_BASE_PATH=/Project-X NEXT_PUBLIC_RSVP_MOCK=1 ALLOW_PLACEHOLDERS=1 npm run build` (with `app/api` moved aside; static export has no route handlers).
+
 ## Before launch (the production build fails until these are done)
 
 1. **Event details** in `src/event-landing/config.ts`: `date`, `time`, `venue` (+ `mapUrl`), `startsAt` / `endsAt` (these turn on «افزودن به تقویم»), `confirmationNote` (only what the backend really does, e.g. an SMS). Values in `[brackets]` are placeholders. `assertNoPlaceholders` stops `next build` while any remain (`ALLOW_PLACEHOLDERS=1` is for preview builds only).

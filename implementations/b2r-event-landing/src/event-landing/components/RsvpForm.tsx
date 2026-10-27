@@ -8,6 +8,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import type { EventConfig } from '../config';
 import { eventIcs } from '../lib/ics';
 import { formatMobile, normaliseMobile, toPersianDigits } from '../lib/phone';
+import { mockRsvp } from '../lib/rsvp-mock';
 import { buttonClass, CampaignButton } from './CampaignButton';
 import { CampaignField } from './CampaignField';
 
@@ -67,13 +68,19 @@ export function RsvpForm({ event }: { event: EventConfig }) {
     const mobile = normaliseMobile(values.mobile)!;
     setSending(true); setFailed(false);
     try {
-      const res = await fetch('/api/rsvp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ event: event.slug, name: values.name.trim(), mobile, shop: values.shop.trim() }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok && (data.status === 'confirmed' || data.status === 'already')) {
+      let ok: boolean, data: { status?: string };
+      if (process.env.NEXT_PUBLIC_RSVP_MOCK === '1') {
+        // Static preview (GitHub Pages) has no server: answer in the browser with the same mock.
+        const m = await mockRsvp(mobile); ok = m.code < 300; data = { status: m.status };
+      } else {
+        const res = await fetch('/api/rsvp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ event: event.slug, name: values.name.trim(), mobile, shop: values.shop.trim() }),
+        });
+        ok = res.ok; data = await res.json().catch(() => ({}));
+      }
+      if (ok && (data.status === 'confirmed' || data.status === 'already')) {
         setResult({ kind: data.status, name: values.name.trim(), mobile });
       } else if (data.status === 'not_invited') {
         setErrors({ mobile: MSG.notInvited }); refs.mobile.current?.focus();

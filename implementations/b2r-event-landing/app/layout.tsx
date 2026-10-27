@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { BASE } from '@/event-landing/lib/base';
 
 export const metadata: Metadata = {
   title: 'در مدار بیزینس · رویداد اختصاصی دیجی‌کالا بیزینس در مشهد',
@@ -14,9 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     // DKB: lang/dir on <html> (B2E foundation › Accessibility); brand mode B2R.
     <html lang="fa" dir="rtl" data-brand="b2r">
       <head>
-        <link rel="preload" href="/fonts/Digikala-Black.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/Digikala-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/Digikala-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href={`${BASE}/fonts/Digikala-Black.woff2`} as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href={`${BASE}/fonts/Digikala-Bold.woff2`} as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href={`${BASE}/fonts/Digikala-Regular.woff2`} as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="min-h-svh bg-campaign-bg">{children}</body>
     </html>

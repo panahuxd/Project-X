@@ -1,7 +1,9 @@
 // The event key visual (swirl), cut from the brand file and colour-matched to campaign.bg (DS-48).
 // Decorative: empty alt. Source: 579×1029 JPG upscaled 2× — ask for a higher-resolution master
 // (spec, Open questions). The hero copy is the LCP; the visual loads with fetchPriority only in the hero.
-const SRC = '/landing/dar-madar-business';
+import { BASE } from '../lib/base';
+
+const SRC = `${BASE}/landing/dar-madar-business`;
 
 export function KeyVisual({ className = '', priority = false, rotate = 0 }: { className?: string; priority?: boolean; rotate?: number }) {
   return (

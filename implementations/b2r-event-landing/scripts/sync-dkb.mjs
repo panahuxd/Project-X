@@ -13,6 +13,7 @@ const out = join(app, 'src', 'styles', 'dkb');
 const fonts = join(app, 'public', 'fonts');
 // Only the weights this page uses (text styles: Regular, Medium, SemiBold, Bold; campaign-display: Black).
 const WEIGHTS = ['Regular', 'Medium', 'SemiBold', 'Bold', 'Black'];
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''; // GitHub Pages preview serves from /<repo>
 
 if (!existsSync(join(ds, 'build', 'tokens.css'))) {
   if (existsSync(join(out, 'tokens.css'))) { console.log('[sync-dkb] design-system not found, keeping existing copies'); process.exit(0); }
@@ -25,7 +26,7 @@ let tokens = readFileSync(join(ds, 'build', 'tokens.css'), 'utf8');
 tokens = tokens.replace(/@font-face \{[\s\S]*?\}\n?/g, block => {
   const w = WEIGHTS.find(n => block.includes(`Digikala-${n}.woff2`));
   if (!w) return '';
-  return block.replace(/src: [\s\S]*?;/, `src: url("/fonts/Digikala-${w}.woff2") format("woff2");`);
+  return block.replace(/src: [\s\S]*?;/, `src: url("${BASE}/fonts/Digikala-${w}.woff2") format("woff2");`);
 });
 writeFileSync(join(out, 'tokens.css'), tokens);
 for (const f of ['shadcn-compat.css', 'tailwind-theme.css']) copyFileSync(join(ds, 'build', f), join(out, f));

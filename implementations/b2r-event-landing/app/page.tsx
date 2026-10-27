@@ -1,6 +1,8 @@
-import { redirect } from 'next/navigation';
+// The landing at the site root too (stand-alone preview and GitHub Pages). In apps/website only
+// app/landing/dar-madar-business/page.tsx is copied.
+import { event } from '@/event-landing/config';
+import { EventLanding } from '@/event-landing/components/EventLanding';
 
-// Stand-alone preview only: in apps/website the page lives at /landing/dar-madar-business.
 export default function Home() {
-  redirect('/landing/dar-madar-business');
+  return <EventLanding event={event} />;
 }
