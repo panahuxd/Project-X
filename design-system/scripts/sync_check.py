@@ -8,7 +8,7 @@ Same fingerprint = Figma matches the repo. Usage:
 import json, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 fig = json.load(open(os.path.join(ROOT, 'build', 'figma-variables.json')))
-W = {'bold': 'Bold', 'semibold': 'SemiBold', 'medium': 'Medium', 'regular': 'Regular'}
+W = {'black': 'Black', 'bold': 'Bold', 'semibold': 'SemiBold', 'medium': 'Medium', 'regular': 'Regular'}
 
 def fnv(s):
     h = 0x811c9dc5

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.15.0 — 2026-10-27 (campaign surface)
+
+- DS-48: `campaign.*` semantic group (20 colours) for dark event and campaign landings; primitives `midnight.900/950`, `electric.500/600/700`, `cyan.400`, `font.size.56/96`, `font.line-height.112`; responsive `type.campaign-display.*`; text style `campaign-display` (Digikala Black)
+- `build.py`: 13 campaign contrast pairs (0 failures) and 2 info rows; `campaign` section in the token reference; `--color-campaign-*` in the Tailwind theme
+- `sync_check.py`: Black weight mapped to the font style name
+- First use: `designs/b2r-event-landing.md`
+
 ## 0.14.0 — 2026-10-21 (mega menu)
 
 - DS-47: DKB Commerce `mega-menu` (`screen=desktop|mobile`) with parts `mega-menu-category` (6 variants, `label`, `icon`), `mega-menu-group` (`title`, `link-1…6` exposed) and `mega-menu-link` (2 variants). Baseline: B2E Platform Phase 2 «Mega menu & Categories», rebuilt with DKB tokens, Digikala text styles, Lucide icons, auto layout and real B2E categories

@@ -970,6 +970,66 @@
      }
     },
     {
+     "name": "color/midnight/900",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#0B2452"
+     }
+    },
+    {
+     "name": "color/midnight/950",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#071A3E"
+     }
+    },
+    {
+     "name": "color/electric/500",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#2E5FFF"
+     }
+    },
+    {
+     "name": "color/electric/600",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#0646FC"
+     }
+    },
+    {
+     "name": "color/electric/700",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#0538CF"
+     }
+    },
+    {
+     "name": "color/cyan/400",
+     "type": "COLOR",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": "#22D3EE"
+     }
+    },
+    {
      "name": "space/0",
      "type": "FLOAT",
      "description": "",
@@ -1636,6 +1696,26 @@
      }
     },
     {
+     "name": "font/size/56",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": 56.0
+     }
+    },
+    {
+     "name": "font/size/96",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": 96.0
+     }
+    },
+    {
      "name": "font/line-height/18",
      "type": "FLOAT",
      "description": "",
@@ -1733,6 +1813,16 @@
      "hiddenFromPublishing": true,
      "values": {
       "Default": 64.0
+     }
+    },
+    {
+     "name": "font/line-height/112",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Default": 112.0
      }
     },
     {
@@ -2761,6 +2851,298 @@
      }
     },
     {
+     "name": "campaign/bg",
+     "type": "COLOR",
+     "description": "Campaign page and section background",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/midnight/950"
+      }
+     }
+    },
+    {
+     "name": "campaign/bg-raised",
+     "type": "COLOR",
+     "description": "Raised areas on the campaign surface: input fill, info panels",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/midnight/900"
+      }
+     }
+    },
+    {
+     "name": "campaign/text",
+     "type": "COLOR",
+     "description": "Titles and main text on the campaign surface",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/white"
+      }
+     }
+    },
+    {
+     "name": "campaign/text-muted",
+     "type": "COLOR",
+     "description": "Body and secondary text on the campaign surface",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/navy/200"
+      }
+     }
+    },
+    {
+     "name": "campaign/text-subtle",
+     "type": "COLOR",
+     "description": "Meta, hints and placeholders on the campaign surface",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/navy/300"
+      }
+     }
+    },
+    {
+     "name": "campaign/text-error",
+     "type": "COLOR",
+     "description": "Error text under a field on the campaign surface (text.destructive fails on navy)",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/red/300"
+      }
+     }
+    },
+    {
+     "name": "campaign/text-success",
+     "type": "COLOR",
+     "description": "Success text and icons on the campaign surface",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/green/300"
+      }
+     }
+    },
+    {
+     "name": "campaign/border",
+     "type": "COLOR",
+     "description": "Dividers and section rules on the campaign surface (decorative)",
+     "scopes": [
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/navy/700"
+      }
+     }
+    },
+    {
+     "name": "campaign/border-control",
+     "type": "COLOR",
+     "description": "Input boundary on the campaign surface (3:1, DS-39)",
+     "scopes": [
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/navy/500"
+      }
+     }
+    },
+    {
+     "name": "campaign/border-error",
+     "type": "COLOR",
+     "description": "Field in error on the campaign surface",
+     "scopes": [
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/red/400"
+      }
+     }
+    },
+    {
+     "name": "campaign/cta",
+     "type": "COLOR",
+     "description": "Main campaign button fill",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/electric/600"
+      }
+     }
+    },
+    {
+     "name": "campaign/cta-hover",
+     "type": "COLOR",
+     "description": "Main campaign button, hover (one step lighter on a dark surface)",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/electric/500"
+      }
+     }
+    },
+    {
+     "name": "campaign/cta-active",
+     "type": "COLOR",
+     "description": "Main campaign button, pressed",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/electric/700"
+      }
+     }
+    },
+    {
+     "name": "campaign/text-on-cta",
+     "type": "COLOR",
+     "description": "Label and icon on campaign.cta",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/white"
+      }
+     }
+    },
+    {
+     "name": "campaign/ring",
+     "type": "COLOR",
+     "description": "Keyboard focus ring on the campaign surface (ring.default is invisible on navy)",
+     "scopes": [
+      "EFFECT_COLOR",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/cyan/400"
+      }
+     }
+    },
+    {
+     "name": "campaign/accent-1",
+     "type": "COLOR",
+     "description": "Decorative only: ornaments, separators, illustration strokes (cyan). Never text",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/cyan/400"
+      }
+     }
+    },
+    {
+     "name": "campaign/accent-2",
+     "type": "COLOR",
+     "description": "Decorative only: illustration strokes, column rules (electric blue)",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/electric/600"
+      }
+     }
+    },
+    {
+     "name": "campaign/accent-3",
+     "type": "COLOR",
+     "description": "Decorative only: illustration strokes (violet)",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/violet/500"
+      }
+     }
+    },
+    {
+     "name": "campaign/accent-4",
+     "type": "COLOR",
+     "description": "Decorative only: illustration strokes (amber)",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "hiddenFromPublishing": false,
+     "values": {
+      "Light": {
+       "alias": "color/amber/400"
+      }
+     }
+    },
+    {
      "name": "radius/control",
      "type": "FLOAT",
      "description": "Buttons, inputs, selects",
@@ -3156,6 +3538,36 @@
      }
     },
     {
+     "name": "type/campaign-display/size",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Desktop": {
+       "alias": "font/size/96"
+      },
+      "Mobile": {
+       "alias": "font/size/56"
+      }
+     }
+    },
+    {
+     "name": "type/campaign-display/line-height",
+     "type": "FLOAT",
+     "description": "",
+     "scopes": [],
+     "hiddenFromPublishing": true,
+     "values": {
+      "Desktop": {
+       "alias": "font/line-height/112"
+      },
+      "Mobile": {
+       "alias": "font/line-height/64"
+      }
+     }
+    },
+    {
      "name": "control/height-sm",
      "type": "FLOAT",
      "description": "",
@@ -3291,6 +3703,17 @@
     "fontSize": "type/display/size",
     "fontWeight": "font/weight/bold",
     "lineHeight": "type/display/line-height"
+   }
+  },
+  {
+   "name": "campaign-display",
+   "description": "Campaign hero title only (DS-48): event and campaign landings. Black weight. Responsive.",
+   "fontFeatures": [],
+   "bind": {
+    "fontFamily": "font/family/sans",
+    "fontSize": "type/campaign-display/size",
+    "fontWeight": "font/weight/black",
+    "lineHeight": "type/campaign-display/line-height"
    }
   },
   {

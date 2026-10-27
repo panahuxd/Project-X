@@ -178,6 +178,12 @@
   --color-orange-600: #EA580C;
   --color-pink-600: #DB2777;
   --color-lime-600: #65A30D;
+  --color-midnight-900: #0B2452;
+  --color-midnight-950: #071A3E;
+  --color-electric-500: #2E5FFF;
+  --color-electric-600: #0646FC;
+  --color-electric-700: #0538CF;
+  --color-cyan-400: #22D3EE;
   --space-0: 0px;
   --space-2: 2px;
   --space-4: 4px;
@@ -237,6 +243,8 @@
   --font-size-32: 32px;
   --font-size-40: 40px;
   --font-size-48: 48px;
+  --font-size-56: 56px;
+  --font-size-96: 96px;
   --font-line-height-18: 18px;
   --font-line-height-20: 20px;
   --font-line-height-24: 24px;
@@ -247,6 +255,7 @@
   --font-line-height-48: 48px;
   --font-line-height-56: 56px;
   --font-line-height-64: 64px;
+  --font-line-height-112: 112px;
   --shadow-sm: 0px 1px 2px 0px #0000000D;
   --shadow-md: 0px 4px 6px -1px #0000001A, 0px 2px 4px -2px #0000001A;
   --shadow-lg: 0px 10px 15px -3px #0000001A, 0px 4px 6px -4px #0000001A;
@@ -343,6 +352,25 @@
   --chart-3: var(--color-orange-600);
   --chart-4: var(--color-pink-600);
   --chart-5: var(--color-lime-600);
+  --campaign-bg: var(--color-midnight-950);
+  --campaign-bg-raised: var(--color-midnight-900);
+  --campaign-text: var(--color-white);
+  --campaign-text-muted: var(--color-navy-200);
+  --campaign-text-subtle: var(--color-navy-300);
+  --campaign-text-error: var(--color-red-300);
+  --campaign-text-success: var(--color-green-300);
+  --campaign-border: var(--color-navy-700);
+  --campaign-border-control: var(--color-navy-500);
+  --campaign-border-error: var(--color-red-400);
+  --campaign-cta: var(--color-electric-600);
+  --campaign-cta-hover: var(--color-electric-500);
+  --campaign-cta-active: var(--color-electric-700);
+  --campaign-text-on-cta: var(--color-white);
+  --campaign-ring: var(--color-cyan-400);
+  --campaign-accent-1: var(--color-cyan-400);
+  --campaign-accent-2: var(--color-electric-600);
+  --campaign-accent-3: var(--color-violet-500);
+  --campaign-accent-4: var(--color-amber-400);
   --radius-control: var(--radius-md);
   --radius-card: var(--radius-lg);
   --radius-dialog: var(--radius-xl);
@@ -394,6 +422,8 @@
   --type-heading-3-line-height: var(--font-line-height-30);
   --type-heading-4-size: var(--font-size-16);
   --type-heading-4-line-height: var(--font-line-height-28);
+  --type-campaign-display-size: var(--font-size-56);
+  --type-campaign-display-line-height: var(--font-line-height-64);
   --control-height-sm: var(--size-36);
   --control-height-md: var(--size-40);
   --control-height-lg: var(--size-48);
@@ -415,6 +445,8 @@
     --type-heading-3-line-height: var(--font-line-height-32);
     --type-heading-4-size: var(--font-size-18);
     --type-heading-4-line-height: var(--font-line-height-30);
+    --type-campaign-display-size: var(--font-size-96);
+    --type-campaign-display-line-height: var(--font-line-height-112);
     --control-height-sm: var(--size-32);
     --control-height-md: var(--size-36);
     --control-height-lg: var(--size-40);
@@ -432,6 +464,13 @@
   font-size: var(--type-display-size);
   line-height: var(--type-display-line-height);
   font-weight: var(--font-weight-bold);
+}
+
+.text-campaign-display {
+  font-family: var(--font-family-sans);
+  font-size: var(--type-campaign-display-size);
+  line-height: var(--type-campaign-display-line-height);
+  font-weight: var(--font-weight-black);
 }
 
 .text-heading-1 {
