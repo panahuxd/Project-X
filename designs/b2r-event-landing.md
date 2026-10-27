@@ -105,6 +105,7 @@ Desktop uses the same states inside the form column.
 | Icons follow the mockup in the meta row and the details list (after the text); in inputs they stay at the start | Mockup fidelity; the input anatomy comes from the library |
 | Decorative motion (KV drift, orbit glow, entrance) only without `prefers-reduced-motion` | WCAG 2.3.3 |
 | Key visual cut from the brand file, upscaled 2×, background matched to `campaign.bg`, served as WebP 720/1152 (48/97 KB) | Research › performance is UX (Tabriz, PLP) |
+| Desktop hero visual: larger (1168 wide, centre 430 · 547, 28°) with a radial vignette, transparent → `campaign.bg` #071A3E, set by the design lead in Figma (2026-10-27). Web bakes the vignette into `kv-hero-*.webp` (27/56 KB) at the same box. The gradient stops stay raw hex: binding a variable to a gradient stop forces alpha to 1 in Figma, which would hide the image | Design lead edit; Figma limitation (per-stop alpha can't be token-bound) |
 | `noindex` on the page | Invite-only event |
 
 ## Open questions

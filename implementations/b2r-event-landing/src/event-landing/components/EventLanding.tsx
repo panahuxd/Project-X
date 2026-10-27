@@ -29,8 +29,10 @@ export function EventLanding({ event }: { event: EventConfig }) {
       <header className="relative">
         {/* Key visual: bleeds off the end (left) edge on desktop, sits under the copy on mobile */}
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <KeyVisual priority rotate={-28}
-            className="absolute left-[-14%] top-[-26%] hidden w-[64%] max-w-[1100px] lg:block" />
+          {/* Same box as Figma hero › kv-swirl at 1440×860: centre (430, 547), width 1168, rotation 28° */}
+          <div className="absolute left-[29.9%] top-[547px] hidden w-[81.1%] -translate-x-1/2 -translate-y-1/2 lg:block">
+            <KeyVisual variant="hero" priority rotate={-28} className="block h-auto w-full" />
+          </div>
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--campaign-bg)] to-transparent" />
         </div>
 
@@ -40,7 +42,7 @@ export function EventLanding({ event }: { event: EventConfig }) {
           </a>
         </div>
 
-        <div className={`${container} flex flex-col items-start pb-0 pt-10 lg:min-h-[min(860px,calc(100svh-80px))] lg:justify-center lg:pb-24 lg:pt-16`}>
+        <div className={`${container} flex flex-col items-start pb-0 pt-10 lg:min-h-[min(800px,calc(100svh-140px))] lg:justify-center lg:pb-24 lg:pt-16`}>
           <div className="flex w-full max-w-[600px] flex-col items-start">
             <p className="rise flex items-center gap-3 text-body-lg text-campaign-text-muted">
               <span>{event.eyebrow}</span>

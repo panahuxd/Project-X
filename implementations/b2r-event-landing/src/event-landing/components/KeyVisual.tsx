@@ -5,15 +5,23 @@ import { BASE } from '../lib/base';
 
 const SRC = `${BASE}/landing/dar-madar-business`;
 
-export function KeyVisual({ className = '', priority = false, rotate = 0 }: { className?: string; priority?: boolean; rotate?: number }) {
+// variant "hero": the desktop hero version with the design lead's radial vignette baked in
+// (Figma: hero › kv-swirl, radial gradient transparent → campaign.bg over the image, 2026-10-27).
+const VARIANTS = {
+  swirl: { file: 'kv-swirl', sizes: [720, 1152], w: 1158, h: 1518 },
+  hero: { file: 'kv-hero', sizes: [720, 1168], w: 1168, h: 1532 },
+} as const;
+
+export function KeyVisual({ className = '', priority = false, rotate = 0, variant = 'swirl' }: { className?: string; priority?: boolean; rotate?: number; variant?: keyof typeof VARIANTS }) {
+  const v = VARIANTS[variant];
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${SRC}/kv-swirl-1152.webp`}
-      srcSet={`${SRC}/kv-swirl-720.webp 720w, ${SRC}/kv-swirl-1152.webp 1152w`}
-      sizes="(min-width: 1024px) 60vw, 100vw"
-      width={1158}
-      height={1518}
+      src={`${SRC}/${v.file}-${v.sizes[1]}.webp`}
+      srcSet={`${SRC}/${v.file}-${v.sizes[0]}.webp ${v.sizes[0]}w, ${SRC}/${v.file}-${v.sizes[1]}.webp ${v.sizes[1]}w`}
+      sizes="(min-width: 1024px) 80vw, 100vw"
+      width={v.w}
+      height={v.h}
       alt=""
       aria-hidden
       decoding="async"
