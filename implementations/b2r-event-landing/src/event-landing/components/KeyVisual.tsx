@@ -5,11 +5,12 @@ import { BASE } from '../lib/base';
 
 const SRC = `${BASE}/landing/dar-madar-business`;
 
-// variant "hero": the desktop hero version with the design lead's radial vignette baked in
-// (Figma: hero › kv-swirl, radial gradient transparent → campaign.bg over the image, 2026-10-27).
+// variant "hero": the desktop hero visual exactly as in Figma (hero › kv-swirl): the design lead's
+// high-resolution master (3125×4096) with its radial vignette (transparent → campaign.bg), rendered
+// from Figma at 1× and 2× of its 1168×1532 box (2026-10-27).
 const VARIANTS = {
   swirl: { file: 'kv-swirl', sizes: [720, 1152], w: 1158, h: 1518 },
-  hero: { file: 'kv-hero', sizes: [720, 1168], w: 1168, h: 1532 },
+  hero: { file: 'kv-hero', sizes: [720, 1168, 2336], w: 1168, h: 1532 },
 } as const;
 
 export function KeyVisual({ className = '', priority = false, rotate = 0, variant = 'swirl' }: { className?: string; priority?: boolean; rotate?: number; variant?: keyof typeof VARIANTS }) {
@@ -18,7 +19,7 @@ export function KeyVisual({ className = '', priority = false, rotate = 0, varian
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={`${SRC}/${v.file}-${v.sizes[1]}.webp`}
-      srcSet={`${SRC}/${v.file}-${v.sizes[0]}.webp ${v.sizes[0]}w, ${SRC}/${v.file}-${v.sizes[1]}.webp ${v.sizes[1]}w`}
+      srcSet={v.sizes.map(w => `${SRC}/${v.file}-${w}.webp ${w}w`).join(', ')}
       sizes="(min-width: 1024px) 80vw, 100vw"
       width={v.w}
       height={v.h}
