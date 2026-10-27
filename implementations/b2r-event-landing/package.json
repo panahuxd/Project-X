@@ -9,6 +9,7 @@
     "prebuild": "npm run sync:dkb",
     "dev": "next dev",
     "build": "next build",
+    "build:preview": "node scripts/build-preview.mjs",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },

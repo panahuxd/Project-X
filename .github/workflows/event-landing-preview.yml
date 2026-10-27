@@ -33,16 +33,10 @@ jobs:
           cache: npm
           cache-dependency-path: implementations/b2r-event-landing/package-lock.json
       - run: npm ci
-      - name: "Static export (no server: the RSVP API route is left out, the form uses the browser mock)"
+      - name: "Static export (no server: the RSVP form uses the browser mock)"
         env:
-          STATIC_PREVIEW: '1'
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-          NEXT_PUBLIC_RSVP_MOCK: '1'
-          ALLOW_PLACEHOLDERS: '1'
-        run: |
-          rm -rf app/api
-          npm run build
-          touch out/.nojekyll
+        run: npm run build:preview
       - name: Publish to gh-pages
         working-directory: implementations/b2r-event-landing/out
         run: |
