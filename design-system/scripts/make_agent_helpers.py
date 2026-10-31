@@ -85,13 +85,18 @@ async function setModes(frame, brand, screen) {
 }
 // Layout templates (patterns/layouts.md). Start every screen from one:
 // const f = await startFromTemplate('template/checkout', 'mobile', 'B2E', 'checkout/payment/mobile');
-// It places the template, detaches it (templates are the ONE thing you detach), names the frame and sets brand + screen modes.
+// It places the template, detaches it (templates are the ONE thing you detach), names the frame, sets brand + screen modes and the minimum height (DS-49: 1024 desktop, 800 mobile).
 async function startFromTemplate(name, screen, brand, frameName, parent = figma.currentPage) {
   await use({ components: [name] });
   const v = C[name].children.find(c => c.name === `screen=${screen}`); if (!v) throw new Error(`${name} has no screen=${screen}`);
   const inst = v.createInstance(); parent.appendChild(inst);
   const frame = inst.detachInstance(); frame.name = frameName;
   await setModes(frame, brand, screen === 'desktop' ? 'Desktop' : 'Mobile');
+  // DS-49: minimum height 1024 desktop / 800 mobile, hug above that; the body (workspace: workspace + inset) fills the extra height
+  const minH = screen === 'desktop' ? 1024 : 800;
+  if (frame.layoutMode !== 'NONE') { frame.primaryAxisSizingMode = 'AUTO'; frame.minHeight = minH; } else if (frame.height < minH) frame.resize(frame.width, minH);
+  const grow = frame.children.find(c => c.name === 'body') || frame.children.find(c => c.name === 'workspace');
+  if (grow) { grow.layoutSizingVertical = 'FILL'; const inset = grow.children.find(c => c.name === 'inset'); if (inset) inset.layoutSizingVertical = 'FILL'; }
   return frame;
 }
 // The regions still to fill, by name: const r = await regions(f); r.filters, r['bill-box'] …

@@ -5,10 +5,8 @@ import { Calendar, Clock, Gift, LayoutGrid, MapPin, MessagesSquare } from 'lucid
 import type { ReactNode } from 'react';
 import { assertNoPlaceholders, type EventConfig } from '../config';
 import { EyebrowTrail, Orbit, RingIcon, SectionOrnament } from './Decor';
-import { JumpToRsvp } from './JumpToRsvp';
 import { KeyVisual } from './KeyVisual';
 import { Logo } from './Logo';
-import { RsvpForm } from './RsvpForm';
 
 const container = 'relative mx-auto w-full max-w-[calc(var(--layout-content-max-width)+2*var(--layout-page-margin))] px-[var(--layout-page-margin)]';
 const AGENDA_ICON = { 'layout-grid': LayoutGrid, 'messages-square': MessagesSquare, gift: Gift } as const;
@@ -29,8 +27,10 @@ export function EventLanding({ event }: { event: EventConfig }) {
       <header className="relative">
         {/* Key visual: bleeds off the end (left) edge on desktop, sits under the copy on mobile */}
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <KeyVisual priority rotate={-28}
-            className="absolute left-[-14%] top-[-26%] hidden w-[64%] max-w-[1100px] lg:block" />
+          {/* Same box as Figma hero › kv-swirl at 1440×860: centre (430, 547), width 1168, rotation 28° */}
+          <div className="absolute left-[29.9%] top-[547px] hidden w-[81.1%] -translate-x-1/2 -translate-y-1/2 lg:block">
+            <KeyVisual variant="hero" priority rotate={-28} className="block h-auto w-full" />
+          </div>
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--campaign-bg)] to-transparent" />
         </div>
 
@@ -40,7 +40,7 @@ export function EventLanding({ event }: { event: EventConfig }) {
           </a>
         </div>
 
-        <div className={`${container} flex flex-col items-start pb-0 pt-10 lg:min-h-[min(860px,calc(100svh-80px))] lg:justify-center lg:pb-24 lg:pt-16`}>
+        <div className={`${container} flex flex-col items-start pb-0 pt-10 lg:min-h-[min(800px,calc(100svh-140px))] lg:justify-center lg:pb-24 lg:pt-16`}>
           <div className="flex w-full max-w-[600px] flex-col items-start">
             <p className="rise flex items-center gap-3 text-body-lg text-campaign-text-muted">
               <span>{event.eyebrow}</span>
@@ -69,11 +69,9 @@ export function EventLanding({ event }: { event: EventConfig }) {
                 </li>
               ))}
             </ul>
-
-            <JumpToRsvp label="تأیید حضور" className="rise mt-8 w-full sm:w-auto sm:min-w-[13rem] [animation-delay:280ms]" />
           </div>
         </div>
-        {/* Mobile: the key visual sits under the call to action, never behind text */}
+        {/* Mobile: the key visual sits under the event details, never behind text */}
         <div aria-hidden className="pointer-events-none relative mt-6 h-[300px] overflow-hidden sm:h-[420px] lg:hidden">
           <KeyVisual className="absolute left-1/2 top-[-34%] w-[150%] max-w-[760px] -translate-x-1/2" />
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[var(--campaign-bg)] to-transparent" />
@@ -107,24 +105,19 @@ export function EventLanding({ event }: { event: EventConfig }) {
           </div>
         </section>
 
-        {/* ---------------- RSVP ---------------- */}
-        <section id="rsvp" aria-labelledby="rsvp-title" className="relative scroll-mt-6 border-t border-campaign-border py-16 lg:py-24">
+        {/* ---------------- Event details (closing) ---------------- */}
+        <section aria-labelledby="details-title" className="relative border-t border-campaign-border py-16 lg:py-24">
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <KeyVisual rotate={-150} className="absolute -bottom-[40%] -left-[18%] w-[70%] opacity-90 lg:w-[38%]" />
+            <KeyVisual rotate={-150} className="absolute -bottom-[40%] -left-[18%] hidden w-[38%] opacity-90 lg:block" />
           </div>
           <div className={container}>
             <SectionOrnament />
-            <h2 id="rsvp-title" className="mt-5 text-center text-display text-campaign-text">{event.rsvpTitle}</h2>
-            <div className="mx-auto mt-12 grid max-w-[1056px] grid-cols-1 gap-12 lg:mt-16 lg:grid-cols-2 lg:gap-0">
-              <div className="lg:border-e lg:border-[var(--campaign-accent-2)]/60 lg:pe-12">
-                <RsvpForm event={event} />
-              </div>
-              <ul aria-label="جزئیات رویداد" className="flex w-full max-w-[22rem] flex-col gap-6 lg:ps-12">
-                {meta.map(({ label, value, icon: Icon }) => (
-                  <InfoRow key={label} label={label} icon={<Icon aria-hidden className="size-6" strokeWidth={1.75} />}>{value}</InfoRow>
-                ))}
-              </ul>
-            </div>
+            <h2 id="details-title" className="mt-5 text-center text-display text-campaign-text">{event.closingTitle}</h2>
+            <ul aria-label="جزئیات رویداد" className="mx-auto mt-12 grid max-w-[1056px] grid-cols-1 gap-6 lg:mt-16 lg:grid-cols-3 lg:gap-0">
+              {meta.map(({ label, value, icon: Icon }) => (
+                <InfoRow key={label} label={label} icon={<Icon aria-hidden className="size-6" strokeWidth={1.75} />}>{value}</InfoRow>
+              ))}
+            </ul>
           </div>
         </section>
       </main>
@@ -139,14 +132,16 @@ export function EventLanding({ event }: { event: EventConfig }) {
   );
 }
 
+// Mobile: a row (icon at the start, text with a rule under it). Desktop: three centred columns with
+// column rules, like the agenda (Figma: section/details › event-details).
 function InfoRow({ label, icon, children }: { label: string; icon: ReactNode; children: ReactNode }) {
   return (
-    <li className="flex items-start gap-4">
-      <div className="flex min-w-0 flex-1 flex-col gap-1 border-b border-campaign-border pb-3">
+    <li className="flex items-start gap-4 border-campaign-border lg:flex-col lg:items-center lg:gap-2 lg:px-6 lg:py-2 lg:text-center lg:not-first:border-s">
+      <span className="mt-1 text-campaign-text-subtle lg:mt-0">{icon}</span>
+      <div className="flex min-w-0 flex-1 flex-col gap-1 border-b border-campaign-border pb-3 lg:items-center lg:border-b-0 lg:pb-0">
         <span className="text-label text-campaign-text-subtle">{label}</span>
         <span className="text-heading-4 text-campaign-text">{children}</span>
       </div>
-      <span className="order-first mt-1 text-campaign-text-subtle lg:order-last">{icon}</span>
     </li>
   );
 }

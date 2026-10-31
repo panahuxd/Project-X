@@ -5,15 +5,24 @@ import { BASE } from '../lib/base';
 
 const SRC = `${BASE}/landing/dar-madar-business`;
 
-export function KeyVisual({ className = '', priority = false, rotate = 0 }: { className?: string; priority?: boolean; rotate?: number }) {
+// variant "hero": the desktop hero visual exactly as in Figma (hero › kv-swirl): the design lead's
+// high-resolution master (3125×4096) with its radial vignette (transparent → campaign.bg), rendered
+// from Figma at 1× and 2× of its 1168×1532 box (2026-10-27).
+const VARIANTS = {
+  swirl: { file: 'kv-swirl', sizes: [720, 1152], w: 1158, h: 1518 },
+  hero: { file: 'kv-hero', sizes: [720, 1168, 2336], w: 1168, h: 1532 },
+} as const;
+
+export function KeyVisual({ className = '', priority = false, rotate = 0, variant = 'swirl' }: { className?: string; priority?: boolean; rotate?: number; variant?: keyof typeof VARIANTS }) {
+  const v = VARIANTS[variant];
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${SRC}/kv-swirl-1152.webp`}
-      srcSet={`${SRC}/kv-swirl-720.webp 720w, ${SRC}/kv-swirl-1152.webp 1152w`}
-      sizes="(min-width: 1024px) 60vw, 100vw"
-      width={1158}
-      height={1518}
+      src={`${SRC}/${v.file}-${v.sizes[1]}.webp`}
+      srcSet={v.sizes.map(w => `${SRC}/${v.file}-${w}.webp ${w}w`).join(', ')}
+      sizes="(min-width: 1024px) 80vw, 100vw"
+      width={v.w}
+      height={v.h}
       alt=""
       aria-hidden
       decoding="async"

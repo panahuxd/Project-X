@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.16.0 — 2026-10-31 (screen minimum height)
+
+- DS-49: every screen frame has a minimum height, 1024 px desktop and 800 px mobile (`minHeight`, hug above that); `layouts.md` §4 and AGENTS.md (hard rule 5, check step, §5 lesson)
+- DKB Commerce: the 20 layout template variants get `minHeight` (desktop 1024, mobile 800) and a FILL `body` (workspace: `workspace` + `inset`); 9 short variants grew (checkout D, account D/M, form D/M, result D/M, auth D/M); template sets restacked on the *Templates* page. Component API unchanged. **Publish DKB Commerce** for files to get it
+- `startFromTemplate` (agent helpers) sets the same minimum and FILL body, so detached templates are right even before the publish
+- `audit-design.js`: new error `belowMinHeight` (a top-level screen frame under 1024, or under 800 when narrower than 768)
+- First use: `designs/portals-admin-dashboard.md` (5 desktop screens)
+
 ## 0.15.0 — 2026-10-27 (campaign surface)
 
 - DS-48: `campaign.*` semantic group (20 colours) for dark event and campaign landings; primitives `midnight.900/950`, `electric.500/600/700`, `cyan.400`, `font.size.56/96`, `font.line-height.112`; responsive `type.campaign-display.*`; text style `campaign-display` (Digikala Black)

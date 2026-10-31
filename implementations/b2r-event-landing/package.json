@@ -2,13 +2,14 @@
   "name": "b2r-event-landing",
   "version": "0.1.0",
   "private": true,
-  "description": "B2R event landing «در مدار بیزینس» (Mashhad invite + RSVP). DKB Design System tokens, DS-48 campaign surface. Drop-in for b2b-shop-front apps/website.",
+  "description": "B2R event landing «در مدار بیزینس» (Mashhad event invite, informational). DKB Design System tokens, DS-48 campaign surface. Drop-in for b2b-shop-front apps/website.",
   "scripts": {
     "sync:dkb": "node scripts/sync-dkb.mjs",
     "predev": "npm run sync:dkb",
     "prebuild": "npm run sync:dkb",
     "dev": "next dev",
     "build": "next build",
+    "build:preview": "node scripts/build-preview.mjs",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },

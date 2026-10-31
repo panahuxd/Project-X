@@ -1,6 +1,6 @@
 # Live preview of the B2R event landing on GitHub Pages:
 #   https://<owner>.github.io/<repo>/   (e.g. https://panahuxd.github.io/Project-X/)
-# Builds implementations/b2r-event-landing as a static export (RSVP answered by the in-browser mock,
+# Builds implementations/b2r-event-landing as a static export (npm run build:preview,
 # placeholders allowed) and publishes it to the gh-pages branch.
 # One-time setup: Settings → Pages → Build and deployment → Source: "Deploy from a branch" → gh-pages / (root).
 # The page is noindex. The site is public even when the repo is private.
@@ -33,16 +33,10 @@ jobs:
           cache: npm
           cache-dependency-path: implementations/b2r-event-landing/package-lock.json
       - run: npm ci
-      - name: "Static export (no server: the RSVP API route is left out, the form uses the browser mock)"
+      - name: "Static export"
         env:
-          STATIC_PREVIEW: '1'
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-          NEXT_PUBLIC_RSVP_MOCK: '1'
-          ALLOW_PLACEHOLDERS: '1'
-        run: |
-          rm -rf app/api
-          npm run build
-          touch out/.nojekyll
+        run: npm run build:preview
       - name: Publish to gh-pages
         working-directory: implementations/b2r-event-landing/out
         run: |
