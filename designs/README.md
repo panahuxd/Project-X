@@ -7,3 +7,4 @@ One spec per design task: `designs/<platform>-<feature>.md`, written from `_temp
 | [b2e-address-edit.md](b2e-address-edit.md) | B2E | example (agent dry run) | [Sandbox](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=15-97) |
 | [b2r-hybrid-payment.md](b2r-hybrid-payment.md) | B2R | in review | [Sandbox › B2R · Hybrid payment](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=38-1788) |
 | [b2r-event-landing.md](b2r-event-landing.md) | B2R | in review | [Sandbox › B2R · Event landing](https://www.figma.com/design/p3EPUXwCXQpxjriYd1etGW?node-id=224-269) · web: `implementations/b2r-event-landing/` |
+| [portals-admin-dashboard.md](portals-admin-dashboard.md) | Portals | in design | [Portals · Admin dashboard](https://www.figma.com/design/7XQ7yHeGH9gzzQq7tnDnPK) |
