@@ -95,10 +95,13 @@ shadcn has no e-commerce layouts (listing, product detail, checkout); those come
 | Frame | 1440 wide, `<flow>/<screen>/desktop` | 360 wide, `<flow>/<screen>/mobile` |
 | Layout grid | 12 columns, gutter 24, margin 64 (centres 1312) | 4 columns, gutter 16, margin 16 |
 | Modes | `brand` B2R/B2E, `responsive` Desktop | `brand`, `responsive` Mobile |
+| Height | **min 1024** (`minHeight`), hugs the content above that (DS-49) | **min 800** (`minHeight`), hugs the content above that (DS-49) |
 | Fill | `bg.subtle` | `bg.subtle` |
 | Shell parts | Header, footer (storefront); focused header (checkout); side nav (account); `sidebar` (workspace) | Header or back bar, bottom nav or sticky action bar |
 
-Don't set this up by hand: start from a template (§6), which already has the frame size, grid, fill, responsive mode and regions.
+Don't set this up by hand: start from a template (§6), which already has the frame size, grid, fill, responsive mode and regions; the minimum height comes with the template too.
+
+**Minimum height (DS-49).** Every screen frame has a minimum height: **1024 px on desktop, 800 px on mobile** (a common phone viewport). Set it as `minHeight` on the auto-layout frame, never as a fixed height: a long page keeps growing, a short one (an empty list, a result page, a page behind a dialog) is shown at a realistic viewport height instead of collapsing to its content. In every template the `body` region is FILL (workspace: `workspace` and `inset`), so the extra height goes to the body: the footer, `bottom-nav` and `action-bar` stay at the bottom and the workspace `sidebar` reaches it. The audit fails a screen frame below its minimum (`belowMinHeight`; frames narrower than 768 count as mobile).
 
 Shell parts are DKB Commerce components and come placed in every template: `header` (storefront rows=1|2, focused), `mobile-header` (home, inner), `footer` (desktop, mobile), `bottom-nav`, `action-bar` (amount, button), `account-menu`. Configure them (title, rows, active item, amount); don't redraw them.
 

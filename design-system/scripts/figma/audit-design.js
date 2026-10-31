@@ -8,7 +8,7 @@ const page = PAGE ? figma.root.children.find(p => p.name === PAGE) : figma.root.
 await figma.setCurrentPageAsync(page);
 const inProposal = n => { for (let p = n; p && p.type !== 'PAGE'; p = p.parent) if (p.name && p.name.startsWith('proposal/')) return true; return false; };
 const insideInstance = n => { for (let p = n.parent; p && p.type !== 'PAGE'; p = p.parent) if (p.type === 'INSTANCE') return true; return false; };
-const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [], roundedAtScreenEdge: [], buttonOrder: [] };
+const errors = { unboundColour: [], textWithoutStyle: [], nonLibraryInstance: [], detachedLooking: [], slotLeftInDesign: [], regionLeftInDesign: [], templateNotDetached: [], roundedAtScreenEdge: [], buttonOrder: [], belowMinHeight: [] };
 const warnings = { unboundSpacing: [], effectWithoutStyle: [], noBrandMode: [], clippedOverhang: [] };
 const nodes = page.findAll(() => true);
 for (const n of nodes) {
@@ -72,6 +72,8 @@ for (const g of page.findAll(n => n.type === 'FRAME' && n.layoutMode && n.layout
   const first = btns.slice().sort((a, b) => key(a) - key(b))[0];
   if (!first.main) errors.buttonOrder.push(`${g.name} (${g.id}) ${g.layoutMode === 'HORIZONTAL' ? 'main action must be leftmost' : 'main action must be on top'}`);
 }
+// DS-49: minimum screen height 1024 desktop / 800 mobile (frames narrower than 768 are mobile)
+for (const f of page.children.filter(c => c.type === 'FRAME')) { const min = f.width < 768 ? 800 : 1024; if (f.height < min - 0.5) errors.belowMinHeight.push(`${f.name} (${f.id}) ${Math.round(f.height)}px < ${min}`); }
 for (const f of page.children.filter(c => c.type === 'FRAME' || c.type === 'SECTION')) {
   const modes = f.explicitVariableModes || {};
   if (!Object.keys(modes).length) warnings.noBrandMode.push(`${f.name} (${f.id})`);
